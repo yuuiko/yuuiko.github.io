@@ -329,29 +329,25 @@
 					display: none;
 				}
 
-			@-webkit-keyframes ticker {
-				0% {
-					-webkit-transform: translate3d(0, 0, 0);
-					transform: translate3d(0, 0, 0);
-					visibility: visible;
-				}
-
-				100% {
-					-webkit-transform: translate3d(-50%, 0, 0);
-					transform: translate3d(-50%, 0, 0);
-				}
-			}
-
 			@keyframes ticker {
 				0% {
-					-webkit-transform: translate3d(0, 0, 0);
-					transform: translate3d(0, 0, 0);
-					visibility: visible;
+					-webkit-transform: translateX(0);
+					transform: translateX(0);
+					opacity: 0%;
+				}
+
+				5% {
+					opacity: 100%;
+				}
+
+				95% {
+					opacity: 100%;
 				}
 
 				100% {
-					-webkit-transform: translate3d(-50%, 0, 0);
-					transform: translate3d(-50%, 0, 0);
+					-webkit-transform: translateX(-50%);
+					transform: translateX(-50%);
+					opacity: 0%;
 				}
 			}
 
@@ -364,6 +360,7 @@
 			.ticker {
 				display: inline-block;
 				white-space: nowrap;
+				opacity: 100%;
 
 				-webkit-animation-iteration-count: infinite;
 				animation-iteration-count: infinite;
@@ -380,7 +377,7 @@
 
 			.ticker__item {
 				display: inline-block;
-				text-align: center;
+				text-align: left;
 				font-weight: bold;
 				font-size: 3.5vw;
 
@@ -563,7 +560,7 @@
 							<div class="ticker__item">Skip this song.</div>
 							<div class="ticker__item">All without switching apps.</div>
 							<div class="ticker__item">--------</div>
-							<div class="ticker__item">Pause that, Play that.</div>
+							<div class="ticker__item">Pause this, Play that.</div>
 							<div class="ticker__item">Control specific apps.</div>
 						</div>
 					</div>
