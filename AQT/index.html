@@ -45,13 +45,18 @@
         body {
             font-family: Kollektif;
 						background-color: #32374d;
-						transition: all 0.6s ;
+						transition: all 1s linear;
         }
 
         p {
             font-size: 25px;
             letter-spacing: 1px;
         }
+
+				h1 {
+					font-weight: bold;
+				}
+
         .container-abstract {
             padding: 0px 0px;
             height: auto;
@@ -90,18 +95,17 @@
 
 					border-top-left-radius: 0px;
 					border-top-right-radius: 0px;
-					transition: all 0.6s cubic-bezier(0.85, 0, 0.15, 1);
+					transition: all 1s cubic-bezier(0.85, 0, 0.15, 1);
 				}
 
 				.first {
 					border-top-left-radius: 0px;
 					border-top-right-radius: 0px;
-					transition: all 0.6s cubic-bezier(0.85, 0, 0.15, 1);
+					transition: all 1s cubic-bezier(0.85, 0, 0.15, 1);
 				}
 
 				.artworksection {
             width: 100%;
-						/* transition: all 0.6s cubic-bezier(0.85, 0, 0.15, 1); */
         }
 
         /*█████████████████████████████████████████████████████████████████████████████████████████████████████████ Sidenav ██████*/
@@ -150,17 +154,24 @@
             font-size: 20px;
         }
 
-				/* ************************************************************ */
-				.applist {
-					background-color: rgba(0, 0, 0, 0.2);
-					padding: 20px 20px 20px 8vh;
+				/*█████████████████████████████████████████████████████████████████████████████████████████████████████████ Applists ██████*/
+				.htmlinsert {
 					height: 550px;
-					overflow-y: scroll;
-					overflow-x: hidden;
-					/* background-image: linear-gradient(180deg, #1C1E2A, #1C1E2A, #1C1E2A, #1C1E2A, #32374d); */
 				}
 
-				/* .applist::before{
+				.applist {
+					padding: 20px 20px 20px 8vh;
+					background-color: rgba(0, 0, 0, 0.2);
+					overflow-y: scroll;
+					overflow-x: hidden;
+				}
+
+				.quickstripdemo {
+					background-color: white;
+					overflow: hidden;
+				}
+
+				/* .htmlinsert::before{
 					content: "";
 					position: absolute;
 					top: 0;
@@ -178,6 +189,7 @@
 					margin-right: 20px;
 		      opacity: 1;
 		    }
+
 
 		    .pvimg {
 		      width: 1200px;
@@ -220,7 +232,31 @@
 		      filter: blur(0px);
 		    }
 
+				/*█████████████████████████████████████████████████████████████████████████████████████████████████████████ QS Demo ██████*/
 
+				.touchbarimg {
+		      width: 1250px;
+		      border-radius: 20px;
+					border: 8px solid black;
+					transform-origin: left;
+					margin: 20px 60px;
+					outline: none;
+					box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+
+		      /* transform: scale(0.98); */
+		      -webkit-transition: opacity 1s cubic-bezier(0.19, 1, 0.22, 1), filter 1s cubic-bezier(0.19, 1, 0.22, 1), transform 1s cubic-bezier(0.19, 1, 0.22, 1); /* Safari prior 6.1 */
+		      transition: opacity 1s cubic-bezier(0.19, 1, 0.22, 1), filter 1s cubic-bezier(0.19, 1, 0.22, 1), transform 1s cubic-bezier(0.19, 1, 0.22, 1);
+		    }
+
+				#qs1 {
+
+				}
+
+				#qs2 {
+					float: right;
+				}
+
+				/*█████████████████████████████████████████████████████████████████████████████████████████████████████████ QS Demo ██████*/
 
         @media only screen and (max-width: 800px) {
             .title {font-size: 100px;}
@@ -256,21 +292,13 @@
 
 						}
 
-					  .artworksection {
-							/* margin: 0px 30vh;
-							width: calc(100% - 60vh); */
-						}
-
 						.first {
-							/* margin-top: 80px; */
 							border-top-left-radius: 50px;
 							border-top-right-radius: 50px;
 						}
 
 						.applist {
-							/* margin: 0px 30vh; */
 							padding-left: 5vh;
-							/* width: calc(100% - 60vh); */
 						}
 
 						body {
@@ -302,10 +330,20 @@
     <div id="artwork" class="container-abstract bg-3 text-centre">
       <img class="artworksection first" src="img/1.jpg">
 			<img class="artworksection" src="img/2.jpg">
+			<div class="htmlinsert quickstripdemo">
+				<div class="switcher">
+					<h1>AAAA</h1>
+				</div>
+				<div class="ticker">
+					<h3>TICKKKER</h3>
+				</div>
+				<img id="qs1" class="touchbarimg" src="img/AE1_PV.png" alt="AE_PV"/></td></table>
+				<img id="qs2" class="touchbarimg" src="img/AE1_PV.png" alt="AE_PV"/></td></table>
+			</div>
 
 
 			<img class="artworksection" src="img/3.jpg">
-			<div class="applist">
+			<div class="htmlinsert applist">
 
 				<div class="item"><table style="width:100%"><td width="50px">
 					<img class="icon" src="img/PS_ICN.png" alt="PS_ICN"/></td><td>
@@ -449,7 +487,7 @@
 
 			<img class="artworksection" src="img/4.jpg">
 
-			<div class="applist">
+			<div class="htmlinsert applist">
 				<div class="item"><table style="width:100%"><td width="50px">
 					<img class="icon" src="img/SF_Youtube_ICN.png" alt="Messenger_ICN"/></td><td>
 					<span class="label">YouTube <br></span>
