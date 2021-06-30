@@ -293,6 +293,10 @@
 					grid-area: item4;
 				}
 
+				.hidden {
+					display: none;
+				}
+
 			@-webkit-keyframes ticker {
 				0% {
 					-webkit-transform: translate3d(0, 0, 0);
@@ -352,9 +356,43 @@
 				color: #999;
 			}
 
+			/*█████████████████████████████████████████████████████████████████████████████████████████████████████████ Footer ██████*/
+			.footer {
+				display: grid;
+				grid-template-rows: 1fr ;
+				grid-template-columns: : 0.5fr 1fr 1fr 1.5fr ;
+				grid-template-areas: 'footer0 footer1 footer2 footer3';
+				width: 100%;
+				padding: 50px 4vh;
+				color: white;
+				vertical-align: bottom;
+				background-color: #272b3c;
+			}
+
+			.footericon {
+				width: 7vw;
+				height: 7vw;
+				border-radius: 50%;
+				border: 0.5vw solid black;
+				margin-right: 2vw;
+			}
+
+			.footerlink {
+				color: white;
+				font-size: 3vw;
+				margin: 0;
+			}
+			.footerlink:hover {
+				color: white;
+			}
+			.socialicon {
+				height: 3vw;
+				width: 3vw;
+				margin-right: 1vw;
+			}
 
 
-			/*█████████████████████████████████████████████████████████████████████████████████████████████████████████ QS Demo ██████*/
+			/*█████████████████████████████████████████████████████████████████████████████████████████████████████████ RESPONSIVE ██████*/
 
 			@media only screen and (max-width: 800px) {
 				.title {font-size: 100px;}
@@ -414,18 +452,26 @@
 			}
 
 			.touchbarimg {
-				height: 110px;
-				border-radius: 45px;
+				height: 100px;
+				border-radius: 40px;
 				border: 19px solid black;
 				margin: 30px 90px;
 			}
 
-			.switcheritem {
-				font-size: 60px;
+			.footericon {
+				width: 80px;
+				height: 80px;
+				border: 5px solid black;
 			}
 
-			.ticker__item {
-				font-size: 40px;
+			.footerlink {
+				font-size: 30px;
+			}
+
+			.socialicon {
+				height: 30px;
+				width: 30px;
+				margin-right: 10px;
 			}
 
 			body {
@@ -462,13 +508,35 @@
 
 			<div class="htmlinsert quickstripdemo">
 				<div class="switcher">
-					<h1 class="switcheritem" id="qsPlaying">Playing</h1>
-					<h1 class="switcheritem switcheritemactive" id="qsSchedules">Schedules</h1>
-					<h1 class="switcheritem" id="qsControls">Controls</h1>
-					<h1 class="switcheritem" id="qsApps">Apps</h1>
+					<h1 class="switcheritem switcheritemactive" onclick="showPlay();" id="qsPlaying">Playing</h1>
+					<h1 class="switcheritem" onclick="showSchedule();" id="qsSchedules">Schedules</h1>
+					<h1 class="switcheritem" onclick="showControl();" id="qsControls">Controls</h1>
+					<h1 class="switcheritem" onclick="showApp();" id="qsApps">Apps</h1>
 				</div>
 
-				<div id="qsSchedules">
+				<div class="" id="qsPlayingContent">
+					<div class="ticker-wrap">
+						<div class="ticker">
+							<div class="ticker__item">What's playing?</div>
+							<div class="ticker__item">Skip this song.</div>
+							<div class="ticker__item">All without switching apps.</div>
+							<div class="ticker__item">--------</div>
+							<div class="ticker__item">Pause this, Play that.</div>
+							<div class="ticker__item">Control specific apps.</div>
+							<div class="ticker__item">What's playing?</div>
+							<div class="ticker__item">Skip this song.</div>
+							<div class="ticker__item">All without switching apps.</div>
+							<div class="ticker__item">--------</div>
+							<div class="ticker__item">Pause that, Play that.</div>
+							<div class="ticker__item">Control specific apps.</div>
+						</div>
+					</div>
+
+					<img id="qstop" class="touchbarimg" src="img/QS_Play_PV.png" alt="AE_PV"/></td></table>
+					<img id="qsbtm" class="touchbarimg" src="img/QS_Play_PV.png" alt="AE_PV"/></td></table>
+				</div>
+
+				<div class="hidden" id="qsSchedulesContent">
 					<div class="ticker-wrap">
 						<div class="ticker">
 							<div class="ticker__item">What do I have up next?</div>
@@ -481,10 +549,55 @@
 							<div class="ticker__item">Did I need to get something done?</div>
 						</div>
 					</div>
+
+					<img id="qstop" class="touchbarimg" src="img/QS_Cal_PV.png" alt="AE_PV"/></td></table>
+					<img id="qsbtm" class="touchbarimg" src="img/QS_Cal_PV.png" alt="AE_PV"/></td></table>
 				</div>
 
-				<img id="qstop" class="touchbarimg" src="img/AE1_PV.png" alt="AE_PV"/></td></table>
-				<img id="qsbtm" class="touchbarimg" src="img/AE1_PV.png" alt="AE_PV"/></td></table>
+				<div class="hidden" id="qsControlsContent">
+					<div class="ticker-wrap">
+						<div class="ticker">
+							<div class="ticker__item">Hide Desktop Icons</div>
+							<div class="ticker__item">Connect AirPods</div>
+							<div class="ticker__item">Toggle Dark Mode</div>
+							<div class="ticker__item">Disable Auto-Sleep</div>
+							<div class="ticker__item">Connect Bluetooth Devices</div>
+							<div class="ticker__item">Hide Desktop Icons</div>
+							<div class="ticker__item">Connect AirPods</div>
+							<div class="ticker__item">Toggle Dark Mode</div>
+							<div class="ticker__item">Disable Auto-Sleep</div>
+							<div class="ticker__item">Connect Bluetooth Devices</div>
+						</div>
+					</div>
+
+					<img id="qstop" class="touchbarimg" src="img/QS_Ctrl_PV.png" alt="AE_PV"/></td></table>
+					<img id="qsbtm" class="touchbarimg" src="img/QS_Ctrl_PV.png" alt="AE_PV"/></td></table>
+				</div>
+
+				<div class="hidden" id="qsAppsContent">
+					<div class="ticker-wrap">
+						<div class="ticker">
+							<div class="ticker__item">Dock in Touch Bar</div>
+							<div class="ticker__item">App Switcher</div>
+							<div class="ticker__item">Clipboard Manager</div>
+							<div class="ticker__item">Emojis and Emotes</div>
+							<div class="ticker__item">Quick Notes</div>
+							<div class="ticker__item">Quick Voice Memo</div>
+							<div class="ticker__item">External Disks</div>
+							<div class="ticker__item">Dock in Touch Bar</div>
+							<div class="ticker__item">App Switcher</div>
+							<div class="ticker__item">Clipboard Manager</div>
+							<div class="ticker__item">Emojis and Emotes</div>
+							<div class="ticker__item">Quick Notes</div>
+							<div class="ticker__item">Quick Voice Memo</div>
+							<div class="ticker__item">External Disks</div>
+						</div>
+					</div>
+
+					<img id="qstop" class="touchbarimg" src="img/QS_Apps_PV.png" alt="AE_PV"/></td></table>
+					<img id="qsbtm" class="touchbarimg" src="img/QS_Apps_PV.png" alt="AE_PV"/></td></table>
+				</div>
+
 			</div>
 
 
@@ -712,6 +825,34 @@
 			<img class="artworksection" src="img/6.jpg">
 			<a href="https://community.folivora.ai/t/1704"><img class="artworksection" src="img/7.jpg"></a>
 			<img class="artworksection" src="img/8.jpg">
+			<div class="footer">
+				<!-- <img src="img/9a.jpg"/> -->
+				<!-- <div style="grid-area: footer0;">
+					<img class="footericon" src="img/profile.png" alt="">
+				</div> -->
+				<div style="grid-area: footer1; left:0;">
+					<table>
+						<tr>
+							<td><img class="footericon" src="img/profile.png" alt=""></td>
+							<td>
+								<p class="footerlink">yuuiko creation.</p>
+								<a class="footerlink" href="https://patreon.com/yuuiko"><img src="img/social_Discord.png" class="socialicon" alt="">patreon.com/yyuuiko</a> &nbsp;
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div style="grid-area: footer2;">
+					<p class="footerlink">&nbsp;</p>
+					<a class="footerlink" href="https://reddit.com/u/yyuuiko"><img src="img/social_Patreon.png" class="socialicon" alt="">u/yyuuiko</a> &nbsp;
+				</div>
+				<div style="grid-area: footer3;">
+					<p class="footerlink">&nbsp;</p>
+					<a class="footerlink" href="https://discord.gg/GjHCg9h"><img src="img/social_Reddit.png" class="socialicon" alt="">discord.gg/GjHCg9h</a> &nbsp;
+				</div>
+				<!-- <a href="https://patreon.com/yuuiko"><img class="footsection" src="img/9a.jpg"/></a>
+				<a href="https://reddit.com/u/yyuuiko"><img class="footsection" src="img/9b.jpg"/></a>
+				<a href="https://discord.gg/GjHCg9h"><img class="footsection" src="img/9c.jpg"/></a> -->
+			</div>
 
       <!-- <a href="https://rebrand.ly/yuuiko-switchthemelight"><img class="artworksection" src="img/2btn.png"></a> -->
     </div>
@@ -731,6 +872,59 @@
 				once: true,
 				passive: false
 			});
+		}
+
+		/* █ QS TABS  ███████████████████████████████████████████ */
+		function showPlay() {
+			console.log("show play fired");
+			document.getElementById("qsPlaying").classList.add('switcheritemactive');
+			document.getElementById("qsSchedules").classList.remove('switcheritemactive');
+			document.getElementById("qsControls").classList.remove('switcheritemactive');
+			document.getElementById("qsApps").classList.remove('switcheritemactive');
+
+			document.getElementById("qsPlayingContent").classList.remove('hidden');
+			document.getElementById("qsSchedulesContent").classList.add('hidden');
+			document.getElementById("qsControlsContent").classList.add('hidden');
+			document.getElementById("qsAppsContent").classList.add('hidden');
+		}
+
+		function showSchedule() {
+			console.log("show wasdjfkajsdbfla fired");
+			document.getElementById("qsPlaying").classList.remove('switcheritemactive');
+			document.getElementById("qsSchedules").classList.add('switcheritemactive');
+			document.getElementById("qsControls").classList.remove('switcheritemactive');
+			document.getElementById("qsApps").classList.remove('switcheritemactive');
+
+			document.getElementById("qsPlayingContent").classList.add('hidden');
+			document.getElementById("qsSchedulesContent").classList.remove('hidden');
+			document.getElementById("qsControlsContent").classList.add('hidden');
+			document.getElementById("qsAppsContent").classList.add('hidden');
+		}
+
+		function showControl() {
+			console.log("snowctrly fired");
+			document.getElementById("qsPlaying").classList.remove('switcheritemactive');
+			document.getElementById("qsSchedules").classList.remove('switcheritemactive');
+			document.getElementById("qsControls").classList.add('switcheritemactive');
+			document.getElementById("qsApps").classList.remove('switcheritemactive');
+
+			document.getElementById("qsPlayingContent").classList.add('hidden');
+			document.getElementById("qsSchedulesContent").classList.add('hidden');
+			document.getElementById("qsControlsContent").classList.remove('hidden');
+			document.getElementById("qsAppsContent").classList.add('hidden');
+		}
+
+		function showApp() {
+			console.log("showapp fired");
+			document.getElementById("qsPlaying").classList.remove('switcheritemactive');
+			document.getElementById("qsSchedules").classList.remove('switcheritemactive');
+			document.getElementById("qsControls").classList.remove('switcheritemactive');
+			document.getElementById("qsApps").classList.add('switcheritemactive');
+
+			document.getElementById("qsPlayingContent").classList.add('hidden');
+			document.getElementById("qsSchedulesContent").classList.add('hidden');
+			document.getElementById("qsControlsContent").classList.add('hidden');
+			document.getElementById("qsAppsContent").classList.remove('hidden');
 		}
 		</script>
 </body>
