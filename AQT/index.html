@@ -164,18 +164,6 @@
 					overflow-x: hidden;
 				}
 
-				/* .htmlinsert::before{
-					content: "";
-					position: absolute;
-					top: 0;
-					left: 0;
-					width: 100%;
-					height: 100%;
-					background-image: linear-gradient(180deg, #32374d, #1C1E2A, #1C1E2A, #1C1E2A, #1C1E2A, #32374d);
-					opacity: 1;
-					z-index: 20;
-				} */
-
 				.icon {
 					width: 80px;
 					height: 80px;
@@ -266,20 +254,30 @@
 					grid-gap: 10px;
 					margin: 50px 1vh !important;
 					height: 80px;
+					-webkit-user-select: none;
+	        -webkit-touch-callout: none;
+	        -moz-user-select: none;
+	        -ms-user-select: none;
+	        user-select: none;
 				}
 
 				.switcheritem {
 					text-align: center;
 					font-size: 6vw;
 					color: #FFB2B8;
-					transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+					transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+					user-select: none;
 				}
 				.switcheritem:hover {
 					padding-top: 20px;
 				}
 				.switcheritem:active {
+					padding-top: 40px;
+				}
+				.switcheritemactive{
 					color: black;
 					padding-top: 40px;
+					pointer-events: none;
 				}
 
 				#qsPlaying {
@@ -465,21 +463,23 @@
 			<div class="htmlinsert quickstripdemo">
 				<div class="switcher">
 					<h1 class="switcheritem" id="qsPlaying">Playing</h1>
-					<h1 class="switcheritem" id="qsSchedules">Schedules</h1>
+					<h1 class="switcheritem switcheritemactive" id="qsSchedules">Schedules</h1>
 					<h1 class="switcheritem" id="qsControls">Controls</h1>
 					<h1 class="switcheritem" id="qsApps">Apps</h1>
 				</div>
 
-				<div class="ticker-wrap">
-					<div class="ticker">
-						<div class="ticker__item">What do I have up next?</div>
-						<div class="ticker__item">Will it rain soon?</div>
-						<div class="ticker__item">Whats the date today?</div>
-						<div class="ticker__item">Did I need to get something done?</div>
-						<div class="ticker__item">What do I have up next?</div>
-						<div class="ticker__item">Will it rain soon?</div>
-						<div class="ticker__item">Whats the date today?</div>
-						<div class="ticker__item">Did I need to get something done?</div>
+				<div id="qsSchedules">
+					<div class="ticker-wrap">
+						<div class="ticker">
+							<div class="ticker__item">What do I have up next?</div>
+							<div class="ticker__item">Will it rain soon?</div>
+							<div class="ticker__item">Whats the date today?</div>
+							<div class="ticker__item">Did I need to get something done?</div>
+							<div class="ticker__item">What do I have up next?</div>
+							<div class="ticker__item">Will it rain soon?</div>
+							<div class="ticker__item">Whats the date today?</div>
+							<div class="ticker__item">Did I need to get something done?</div>
+						</div>
 					</div>
 				</div>
 
