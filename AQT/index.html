@@ -35,17 +35,22 @@
 				/* width */
 				::-webkit-scrollbar {
 					width: 2px;
+					height: 2px
 				}
 
 				/* Track */
 				::-webkit-scrollbar-track {
-					background-color: black;
+					background-color: none;
 					border-radius: 1px;
 				}
 
 				/* Handle */
 				::-webkit-scrollbar-thumb {
 					background: #686D9F;
+				}
+
+				::-webkit-scrollbar-corner {
+					background: none;
 				}
 
 				/* Handle on hover */
@@ -127,7 +132,20 @@
 					height: 550px;
 					overflow-y: scroll;
 					overflow-x: hidden;
+					/* background-image: linear-gradient(180deg, #1C1E2A, #1C1E2A, #1C1E2A, #1C1E2A, #32374d); */
 				}
+
+				/* .applist::before{
+					content: "";
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					background-image: linear-gradient(180deg, #32374d, #1C1E2A, #1C1E2A, #1C1E2A, #1C1E2A, #32374d);
+					opacity: 1;
+					z-index: 20;
+				} */
 
 				.icon {
 					width: 80px;
@@ -185,6 +203,11 @@
             .headertext {padding: 100px 50px;}
             .abstract {padding: 100px 50px;}
             .viewart {padding: 100px 50px;}
+
+						.applist {
+							padding-left: 3vh;
+							overflow-x: scroll;
+						}
         }
 
         @media only screen and (max-width: 600px) {.title {font-size: 70px;}
