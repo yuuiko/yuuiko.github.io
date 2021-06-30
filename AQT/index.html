@@ -53,9 +53,25 @@
 					background: #white;
 				}
 
+				#artwork {
+					box-shadow: 0px 0px p0px rgba(0, 0, 0, 0.0);
+					margin: 0px;
+					width: 100%;
+
+					border-top-left-radius: 0px;
+					border-top-right-radius: 0px;
+					transition: all 0.6s cubic-bezier(0.85, 0, 0.15, 1);
+				}
+
+				.first {
+					border-top-left-radius: 0px;
+					border-top-right-radius: 0px;
+					transition: all 0.6s cubic-bezier(0.85, 0, 0.15, 1);
+				}
+
 				.artworksection {
             width: 100%;
-						transition: all 0.6s cubic-bezier(0.85, 0, 0.15, 1);
+						/* transition: all 0.6s cubic-bezier(0.85, 0, 0.15, 1); */
         }
 
         /*█████████████████████████████████████████████████████████████████████████████████████████████████████████ Sidenav ██████*/
@@ -108,11 +124,9 @@
 				.applist {
 					background-color: rgba(0, 0, 0, 0.2);
 					padding: 20px 20px 20px 8vh;
-					height: 51vh;
+					height: 550px;
 					overflow-y: scroll;
 					overflow-x: hidden;
-					/* border: 2px solid black; */
-					/* border-radius: 30px; */
 				}
 
 				.icon {
@@ -183,22 +197,32 @@
         }
 
 				@media only screen and (min-width: 1300px) {
-					  .artworksection {
+						#artwork {
+							box-shadow: 0px 20px 60px rgba(0, 0, 0, 0.5);
 							margin: 0px 30vh;
 							width: calc(100% - 60vh);
-							box-shadow: 0px 20px 60px rgba(0, 0, 0, 0.5);
+							margin-top: 80px;
+
+							border-top-left-radius: 50px;
+							border-top-right-radius: 50px;
+
+						}
+
+					  .artworksection {
+							/* margin: 0px 30vh;
+							width: calc(100% - 60vh); */
 						}
 
 						.first {
-							margin-top: 80px;
+							/* margin-top: 80px; */
 							border-top-left-radius: 50px;
 							border-top-right-radius: 50px;
 						}
 
 						.applist {
-							margin: 0px 30vh;
+							/* margin: 0px 30vh; */
 							padding-left: 5vh;
-							width: calc(100% - 60vh);
+							/* width: calc(100% - 60vh); */
 						}
 
 						body {
