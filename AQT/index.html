@@ -19,6 +19,20 @@
         }
 
 				/*█████████████████████████████████████████████████ TRANSITION OVERLAY █████ */
+				@-webkit-keyframes loadfade {
+					0% {
+						color: rgba(255,255,255,1);
+
+					}
+
+					50% {
+						color: rgba(255,255,255,0.4);
+					}
+
+					100% {
+						color: rgba(255,255,255,1);
+					}
+				}
 
 				.transitionoverlay {
 					position: fixed;
@@ -28,11 +42,29 @@
 					height: 100%;
 					z-index: 1000;
 
+					color: rgba(255,255,255,0.8);
+					text-align: center;
+					font-size: 5vw;
+					padding-top: 45vh;
+					font-weight: bold;
+
 					opacity: 93%;
 					background-color: #32374d;
 
 					pointer-events: none;
 					transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+
+					-webkit-animation-iteration-count: infinite;
+					animation-iteration-count: infinite;
+
+					-webkit-animation-timing-function: cubic-bezier(0.45, 0, 0.55, 1);
+					animation-timing-function: cubic-bezier(0.45, 0, 0.55, 1);
+
+					-webkit-animation-name: loadfade;
+					animation-name: loadfade;
+
+					-webkit-animation-duration: 4s;
+					animation-duration: 4s;
 				}
 
 				.transparent {
@@ -484,7 +516,8 @@
 		</style>
 </head>
 <body onload="unloadtransition('transitionoverlay');">
-	<div class="transitionoverlay" id="transitionoverlay"></div>
+	<!-- onload="unloadtransition('transitionoverlay');" -->
+	<div class="transitionoverlay" id="transitionoverlay">yuuiko design</div>
 	<script type="module" async>
 	// console.log('asyncdone');
 	//
