@@ -436,17 +436,16 @@
 
 	setTimeout(function () {
 		let box = document.getElementById('transitionoverlay');
-
 		box.classList.add('transparent');
 		box.addEventListener('transitionend', function(e) {
 			box.classList.add('hidden');
-			window.scrollTo(xCoord, yCoord);
 		}, {
 			capture: false,
 			once: true,
 			passive: false
 		});
-	}, 30);
+		window.scrollTo(0, 0);
+	}, 1300);
 	</script>
 
     <div id="artwork" class="container-abstract bg-3 text-centre">
