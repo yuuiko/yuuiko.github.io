@@ -28,7 +28,7 @@
 					height: 100%;
 					z-index: 1000;
 
-					opacity: 100%;
+					opacity: 93%;
 					background-color: #32374d;
 
 					pointer-events: none;
@@ -483,23 +483,23 @@
 		}
 		</style>
 </head>
-<body>
+<body onload="unloadtransition('transitionoverlay');">
 	<div class="transitionoverlay" id="transitionoverlay"></div>
 	<script type="module" async>
-	console.log('asyncdone');
-
-	setTimeout(function () {
-		let box = document.getElementById('transitionoverlay');
-		box.classList.add('transparent');
-		box.addEventListener('transitionend', function(e) {
-			box.classList.add('hidden');
-		}, {
-			capture: false,
-			once: true,
-			passive: false
-		});
-		window.scrollTo(0, 0);
-	}, 1300);
+	// console.log('asyncdone');
+	//
+	// setTimeout(function () {
+	// 	let box = document.getElementById('transitionoverlay');
+	// 	box.classList.add('transparent');
+	// 	box.addEventListener('transitionend', function(e) {
+	// 		box.classList.add('hidden');
+	// 	}, {
+	// 		capture: false,
+	// 		once: true,
+	// 		passive: false
+	// 	});
+	// 	window.scrollTo(0, 0);
+	// }, 1300);
 	</script>
 
     <div id="artwork" class="container-abstract bg-3 text-centre">
@@ -863,8 +863,6 @@
 		<script type="text/javascript">
 		//███████████████████████████████████████████████████ FADE OUT TRANSITION ███//
 		function unloadtransition (divID) {
-			console.log('fadeout');
-
 			let box = document.getElementById(divID);
 
 			box.classList.add('transparent');
@@ -875,7 +873,9 @@
 				once: true,
 				passive: false
 			});
+			window.scrollTo(0, 0);
 		}
+
 
 		/* █ QS TABS  ███████████████████████████████████████████ */
 		function showPlay() {
