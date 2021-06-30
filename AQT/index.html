@@ -515,24 +515,24 @@
 		}
 		</style>
 </head>
-<body onload="unloadtransition('transitionoverlay');">
+<body>
 	<!-- onload="unloadtransition('transitionoverlay');" -->
 	<div class="transitionoverlay" id="transitionoverlay">yuuiko design</div>
 	<script type="module" async>
-	// console.log('asyncdone');
-	//
-	// setTimeout(function () {
-	// 	let box = document.getElementById('transitionoverlay');
-	// 	box.classList.add('transparent');
-	// 	box.addEventListener('transitionend', function(e) {
-	// 		box.classList.add('hidden');
-	// 	}, {
-	// 		capture: false,
-	// 		once: true,
-	// 		passive: false
-	// 	});
-	// 	window.scrollTo(0, 0);
-	// }, 1300);
+	console.log('asyncdone');
+
+	setTimeout(function () {
+		let box = document.getElementById('transitionoverlay');
+		box.classList.add('transparent');
+		box.addEventListener('transitionend', function(e) {
+			box.classList.add('hidden');
+		}, {
+			capture: false,
+			once: true,
+			passive: false
+		});
+		window.scrollTo(0, 0);
+	}, 1300);
 	</script>
 
     <div id="artwork" class="container-abstract bg-3 text-centre">
