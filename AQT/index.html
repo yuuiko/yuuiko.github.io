@@ -20,7 +20,9 @@
         body {
             font-family: Kollektif;
 						background-color: #32374d;
+						transition: all 0.6s ;
         }
+
         p {
             font-size: 25px;
             letter-spacing: 1px;
@@ -31,6 +33,7 @@
         }
         .artworksection {
             width: 100%;
+						transition: all 0.6s cubic-bezier(0.85, 0, 0.15, 1);
         }
 
         /*█████████████████████████████████████████████████████████████████████████████████████████████████████████ Sidenav ██████*/
@@ -69,7 +72,7 @@
             transition: all 0.5s cubic-bezier(0, 0.55, 0.45, 1);
         }
         .sidenav a:hover {
-            color: #4040ff;
+            color: ;
             padding-right: 20px;
         }
         .sidenav a:active {
@@ -85,6 +88,7 @@
 					padding: 20px 20px 20px 8vh;
 					height: 51vh;
 					overflow-y: scroll;
+					overflow-x: hidden;
 					/* border: 2px solid black; */
 					/* border-radius: 30px; */
 				}
@@ -111,6 +115,7 @@
 		    .label {
 		      margin-bottom: -5px;
 					font-size: 20px;
+					font-weight: normal;
 		      opacity: 0.4;
 		      -webkit-transition: opacity 1s cubic-bezier(0.19, 1, 0.22, 1), filter 1s cubic-bezier(0.19, 1, 0.22, 1), transform 1s cubic-bezier(0.19, 1, 0.22, 1); /* Safari prior 6.1 */
 		      transition: opacity 1s cubic-bezier(0.19, 1, 0.22, 1), filter 1s cubic-bezier(0.19, 1, 0.22, 1), transform 1s cubic-bezier(0.19, 1, 0.22, 1);
@@ -162,7 +167,7 @@
 							box-shadow: 0px 20px 60px rgba(0, 0, 0, 0.5);
 						}
 
-						.artworksection:first-of-type {
+						.first {
 							margin-top: 80px;
 							border-top-left-radius: 50px;
 							border-top-right-radius: 50px;
@@ -182,179 +187,222 @@
 </head>
 <body>
     <div id="artwork" class="container-abstract bg-3 text-centre">
-      <img class="artworksection" src="img/1.jpg">
+      <img class="artworksection first" src="img/1.jpg">
 			<img class="artworksection" src="img/2.jpg">
 
 
 			<img class="artworksection" src="img/3.jpg">
 			<div class="applist">
-				<div class="item"><table style="width:100%"><td width="50px">
-					<img class="icon" src="AE_ICN.png" alt="AE_ICN"/></td><td>
-					<span class="label">Adobe After Effects <br></span>
-					<img class="pvimg" src="AE_PV.png" alt="AE_PV"/></td></table>
-				</div>
-				<div class="item"><table style="width:100%"><td width="50px">
-					<img class="icon" src="AE_ICN.png" alt="AE_ICN"/></td><td>
-					<span class="label">Adobe After Effects • Keyframes<br></span>
-					<img class="pvimg" src="AE1_PV.png" alt="AE_PV"/></td></table>
-				</div>
 
 				<div class="item"><table style="width:100%"><td width="50px">
-					<img class="icon" src="AI_ICN.png" alt="AI_ICN"/></td><td>
-					<span class="label">Adobe Illustrator<br></span>
-					<img class="pvimg" src="AI2_PV.png" alt="AI2_PV"/></td></table>
-				</div>
-
-				<div class="item"><table style="width:100%"><td width="50px">
-					<img class="icon" src="PS_ICN.png" alt="PS_ICN"/></td><td>
+					<img class="icon" src="img/PS_ICN.png" alt="PS_ICN"/></td><td>
 					<span class="label">Adobe Photoshop <br></span>
-					<img class="pvimg" src="PS_PV.png" alt="PS_PV"/></td></table>
+					<img class="pvimg" src="img/PS_PV.png" alt="PS_PV"/></td></table>
 				</div>
 
 				<div class="item"><table style="width:100%"><td width="50px">
-					<img class="icon" src="Atom_ICN.png" alt="atom_ICN"/></td><td>
-					<span class="label">Atom • Pastecells hold things to paste.<br></span>
-					<img class="pvimg" src="Atom_PV.png" alt="atom_PV"/></td></table>
+					<img class="icon" src="img/AI_ICN.png" alt="AI_ICN"/></td><td>
+					<span class="label">Adobe Illustrator<br></span>
+					<img class="pvimg" src="img/AI2_PV.png" alt="AI2_PV"/></td></table>
 				</div>
 
 				<div class="item"><table style="width:100%"><td width="50px">
-					<img class="icon" src="Blender_ICN.png" alt="Blender_ICN"/></td><td>
-					<span class="label">Blender <br></span>
-					<img class="pvimg" src="Blender_PV.png" alt="Blender_PV"/></td></table>
+					<img class="icon" src="img/AE_ICN.png" alt="AE_ICN"/></td><td>
+					<span class="label">Adobe After Effects<br></span>
+					<img class="pvimg" src="img/AE1_PV.png" alt="AE_PV"/></td></table>
 				</div>
 
 				<div class="item"><table style="width:100%"><td width="50px">
-					<img class="icon" src="Chrome_ICN.png" alt="Chrome_ICN"/></td><td>
-					<span class="label">Google Chrome <br></span>
-					<img class="pvimg" src="Chrome_PV.png" alt="Chrome_PV"/></td></table>
+					<img class="icon" src="img/XD_ICN.png" alt="AE_ICN"/></td><td>
+					<span class="label">Adobe Xd<br></span>
+					<img class="pvimg" src="img/XD_PV.png" alt="AE_PV"/></td></table>
 				</div>
 
 				<div class="item"><table style="width:100%"><td width="50px">
-					<img class="icon" src="Dictionary_ICN.png" alt="Dictionary_ICN"/></td><td>
-					<span class="label">Dictionary <br></span>
-					<img class="pvimg" src="Dictionary_PV.png" alt="Dictionary_PV"/></td></table>
+					<img class="icon" src="img/iTunes_ICN.png" alt="iTunes_ICN"/></td><td>
+					<span class="label">Music <br></span>
+					<img class="pvimg" src="img/iTunes_PV.png" alt="iTunes_PV"/></td></table>
 				</div>
 
 				<div class="item"><table style="width:100%"><td width="50px">
-					<img class="icon" src="Discord_ICN.png" alt="Discord_ICN"/></td><td>
-					<span class="label">Discord <br></span>
-					<img class="pvimg" src="Discord_PV.png" alt="Discord_PV"/></td></table>
-				</div>
-
-				<div class="item"><table style="width:100%"><td width="50px">
-					<img class="icon" src="iTunes_ICN.png" alt="iTunes_ICN"/></td><td>
-					<span class="label">iTunes <br></span>
-					<img class="pvimg" src="iTunes_PV.png" alt="iTunes_PV"/></td></table>
-				</div>
-
-				<div class="item"><table style="width:100%"><td width="50px">
-					<img class="icon" src="Messenger_ICN.png" alt="Messenger_ICN"/></td><td>
-					<span class="label">Caprine (Facebook Messenger Client) <br></span>
-					<img class="pvimg" src="Messenger_PV.png" alt="Messenger_PV"/></td></table>
-				</div>
-
-				<div class="item"><table style="width:100%"><td width="50px">
-					<img class="icon" src="OneNote_ICN.png" alt="OneNote_ICN"/></td><td>
-					<span class="label">Microsoft OneNote <br></span>
-					<img class="pvimg" src="OneNote_PV.png" alt="OneNote_PV"/></td></table>
-				</div>
-
-				<div class="item"><table style="width:100%"><td width="50px">
-					<img class="icon" src="Safari_ICN.png" alt="Safari_ICN"/></td><td>
-					<span class="label">Safari <br></span>
-					<img class="pvimg" src="Safari_PV.png" alt="Safari_PV"/></td></table>
-				</div>
-
-				<div class="item"><table style="width:100%"><td width="50px">
-					<img class="icon" src="Spotify_ICN.png" alt="Spotify_ICN"/></td><td>
+					<img class="icon" src="img/Spotify_ICN.png" alt="Spotify_ICN"/></td><td>
 					<span class="label">Spotify <br></span>
-					<img class="pvimg" src="Spotify_PV.png" alt="Spotify_PV"/></td></table>
+					<img class="pvimg" src="img/Spotify_PV.png" alt="Spotify_PV"/></td></table>
 				</div>
 
 				<div class="item"><table style="width:100%"><td width="50px">
-					<img class="icon" src="Stickies_ICN.png" alt="Stickies_ICN"/></td><td>
+					<img class="icon" src="img/Discord_ICN.png" alt="Discord_ICN"/></td><td>
+					<span class="label">Discord <br></span>
+					<img class="pvimg" src="img/Discord_PV.png" alt="Discord_PV"/></td></table>
+				</div>
+
+				<div class="item"><table style="width:100%"><td width="50px">
+					<img class="icon" src="img/Messages_ICN.png" alt="Dictionary_ICN"/></td><td>
+					<span class="label">Messages <br></span>
+					<img class="pvimg" src="img/Messages_PV.png" alt="Dictionary_PV"/></td></table>
+				</div>
+
+				<div class="item"><table style="width:100%"><td width="50px">
+					<img class="icon" src="img/Messenger_ICN.png" alt="Messenger_ICN"/></td><td>
+					<span class="label">Caprine (Facebook Messenger Client)<br></span>
+					<img class="pvimg" src="img/Messenger_PV.png" alt="Messenger_PV"/></td></table>
+				</div>
+
+				<div class="item"><table style="width:100%"><td width="50px">
+					<img class="icon" src="img/Telegram_ICN.png" alt="Messenger_ICN"/></td><td>
+					<span class="label">Telegram<br></span>
+					<img class="pvimg" src="img/Telegram_PV.png" alt="Messenger_PV"/></td></table>
+				</div>
+
+				<div class="item"><table style="width:100%"><td width="50px">
+					<img class="icon" src="img/Whatsapp_ICN.png" alt="Messenger_ICN"/></td><td>
+					<span class="label">Whatsapp<br></span>
+					<img class="pvimg" src="img/Whatsapp_PV.png" alt="Messenger_PV"/></td></table>
+				</div>
+
+				<div class="item"><table style="width:100%"><td width="50px">
+					<img class="icon" src="img/Outlook_ICN.png" alt="Discord_ICN"/></td><td>
+					<span class="label">Microsoft Outlook<br></span>
+					<img class="pvimg" src="img/Outlook_PV.png" alt="Discord_PV"/></td></table>
+				</div>
+
+				<div class="item"><table style="width:100%"><td width="50px">
+					<img class="icon" src="img/OneNote_ICN.png" alt="OneNote_ICN"/></td><td>
+					<span class="label">Microsoft OneNote<br></span>
+					<img class="pvimg" src="img/OneNote_PV.png" alt="OneNote_PV"/></td></table>
+				</div>
+
+				<div class="item"><table style="width:100%"><td width="50px">
+					<img class="icon" src="img/Notes_ICN.png" alt="OneNote_ICN"/></td><td>
+					<span class="label">Notes<br></span>
+					<img class="pvimg" src="img/Notes_PV.png" alt="OneNote_PV"/></td></table>
+				</div>
+
+				<div class="item"><table style="width:100%"><td width="50px">
+					<img class="icon" src="img/Stickies_ICN.png" alt="Stickies_ICN"/></td><td>
 					<span class="label">Stickies <br></span>
-					<img class="pvimg" src="Stickies_PV.png" alt="Stickies_PV"/></td></table>
+					<img class="pvimg" src="img/Stickies_PV.png" alt="Stickies_PV"/></td></table>
 				</div>
 
 				<div class="item"><table style="width:100%"><td width="50px">
-					<img class="icon" src="VLC_ICN.png" alt="VLC_ICN"/></td><td>
-					<span class="label">VLC <br></span>
-					<img class="pvimg" src="VLC_PV.png" alt="VLC_PV"/></td></table>
+					<img class="icon" src="img/Atom_ICN.png" alt="atom_ICN"/></td><td>
+					<span class="label">Atom<br></span>
+					<img class="pvimg" src="img/Atom_PV.png" alt="atom_PV"/></td></table>
+				</div>
+
+				<div class="item"><table style="width:100%"><td width="50px">
+					<img class="icon" src="img/Github_ICN.png" alt="VLC_ICN"/></td><td>
+					<span class="label">Github <br></span>
+					<img class="pvimg" src="img/Github_PV.png" alt="VLC_PV"/></td></table>
+				</div>
+
+				<div class="item"><table style="width:100%"><td width="50px">
+					<img class="icon" src="img/Blender_ICN.png" alt="Blender_ICN"/></td><td>
+					<span class="label">Blender <br></span>
+					<img class="pvimg" src="img/Blender_PV.png" alt="Blender_PV"/></td></table>
+				</div>
+
+				<div class="item"><table style="width:100%"><td width="50px">
+					<img class="icon" src="img/Chrome_ICN.png" alt="Chrome_ICN"/></td><td>
+					<span class="label">Google Chrome<br></span>
+					<img class="pvimg" src="img/Chrome_PV.png" alt="Chrome_PV"/></td></table>
+				</div>
+
+				<div class="item"><table style="width:100%"><td width="50px">
+					<img class="icon" src="img/Safari_ICN.png" alt="Safari_ICN"/></td><td>
+					<span class="label">Safari<br></span>
+					<img class="pvimg" src="img/Safari_PV.png" alt="Safari_PV"/></td></table>
+				</div>
+
+				<div class="item"><table style="width:100%"><td width="50px">
+					<img class="icon" src="img/Settings_ICN.png" alt="OneNote_ICN"/></td><td>
+					<span class="label">System Preferences<br></span>
+					<img class="pvimg" src="img/Settings_PV.png" alt="OneNote_PV"/></td></table>
+				</div>
+
+				<div class="item"><table style="width:100%"><td width="50px">
+					<img class="icon" src="img/ColorMeter_ICN.png" alt="OneNote_ICN"/></td><td>
+					<span class="label">Digital Colour Meter<br></span>
+					<img class="pvimg" src="img/ColorMeter_PV.png" alt="OneNote_PV"/></td></table>
+				</div>
+
+				<div class="item"><table style="width:100%"><td width="50px">
+					<img class="icon" src="img/Fontbook_ICN.png" alt="OneNote_ICN"/></td><td>
+					<span class="label">Font Book<br></span>
+					<img class="pvimg" src="img/Fontbook_PV.png" alt="OneNote_PV"/></td></table>
 				</div>
 			</div>
 
 
-
-
-
 			<img class="artworksection" src="img/4.jpg">
+
 			<div class="applist">
 				<div class="item"><table style="width:100%"><td width="50px">
-					<img class="icon" src="AE_ICN.png" alt="AE_ICN"/></td><td>
-					<span class="label">Facebook <br></span>
-					<img class="pvimg" src="AE_PV.png" alt="AE_PV"/></td></table>
-				</div>
-
-				<div class="item"><table style="width:100%"><td width="50px">
-					<img class="icon" src="AI_ICN.png" alt="AI_ICN"/></td><td>
-					<span class="label">Google Docs <br></span>
-					<img class="pvimg" src="AI_PV.png" alt="AI_PV"/></td></table>
-				</div>
-
-				<div class="item"><table style="width:100%"><td width="50px">
-					<img class="icon" src="PS_ICN.png" alt="PS_ICN"/></td><td>
-					<span class="label">Google Drive <br></span>
-					<img class="pvimg" src="PS_PV.png" alt="PS_PV"/></td></table>
-				</div>
-
-				<div class="item"><table style="width:100%"><td width="50px">
-					<img class="icon" src="Atom_ICN.png" alt="atom_ICN"/></td><td>
-					<span class="label">Google Mail • Pastecells hold things to paste.<br></span>
-					<img class="pvimg" src="Atom_PV.png" alt="atom_PV"/></td></table>
-				</div>
-
-				<div class="item"><table style="width:100%"><td width="50px">
-					<img class="icon" src="Blender_ICN.png" alt="Blender_ICN"/></td><td>
-					<span class="label">Google Sheets <br></span>
-					<img class="pvimg" src="Blender_PV.png" alt="Blender_PV"/></td></table>
-				</div>
-
-				<div class="item"><table style="width:100%"><td width="50px">
-					<img class="icon" src="Chrome_ICN.png" alt="Chrome_ICN"/></td><td>
-					<span class="label">Google Slides <br></span>
-					<img class="pvimg" src="Chrome_PV.png" alt="Chrome_PV"/></td></table>
-				</div>
-
-				<div class="item"><table style="width:100%"><td width="50px">
-					<img class="icon" src="Dictionary_ICN.png" alt="Dictionary_ICN"/></td><td>
-					<span class="label">Kahoot <br></span>
-					<img class="pvimg" src="Dictionary_PV.png" alt="Dictionary_PV"/></td></table>
-				</div>
-
-				<div class="item"><table style="width:100%"><td width="50px">
-					<img class="icon" src="Discord_ICN.png" alt="Discord_ICN"/></td><td>
-					<span class="label">Netflix <br></span>
-					<img class="pvimg" src="Discord_PV.png" alt="Discord_PV"/></td></table>
-				</div>
-
-				<div class="item"><table style="width:100%"><td width="50px">
-					<img class="icon" src="iTunes_ICN.png" alt="iTunes_ICN"/></td><td>
-					<span class="label">SoundCloud <br></span>
-					<img class="pvimg" src="iTunes_PV.png" alt="iTunes_PV"/></td></table>
-				</div>
-
-				<div class="item"><table style="width:100%"><td width="50px">
-					<img class="icon" src="Messenger_ICN.png" alt="Messenger_ICN"/></td><td>
-					<span class="label">Twitch <br></span>
-					<img class="pvimg" src="Messenger_PV.png" alt="Messenger_PV"/></td></table>
-				</div>
-
-				<div class="item"><table style="width:100%"><td width="50px">
-					<img class="icon" src="OneNote_ICN.png" alt="OneNote_ICN"/></td><td>
+					<img class="icon" src="img/SF_Youtube_ICN.png" alt="Messenger_ICN"/></td><td>
 					<span class="label">YouTube <br></span>
-					<img class="pvimg" src="OneNote_PV.png" alt="OneNote_PV"/></td></table>
+					<img class="pvimg" src="img/SF_Youtube_PV.png" alt="Messenger_PV"/></td></table>
 				</div>
+
+				<div class="item"><table style="width:100%"><td width="50px">
+					<img class="icon" src="img/SF_Twitch_ICN.png" alt="Messenger_ICN"/></td><td>
+					<span class="label">Twitch <br></span>
+					<img class="pvimg" src="img/SF_Twitch_PV.png" alt="Messenger_PV"/></td></table>
+				</div>
+
+				<div class="item"><table style="width:100%"><td width="50px">
+					<img class="icon" src="img/SF_Soundcloud_ICN.png" alt="iTunes_ICN"/></td><td>
+					<span class="label">SoundCloud <br></span>
+					<img class="pvimg" src="img/SF_Soundcloud_PV.png" alt="iTunes_PV"/></td></table>
+				</div>
+
+				<div class="item"><table style="width:100%"><td width="50px">
+					<img class="icon" src="img/SF_Facebook_ICN.png" alt="AE_ICN"/></td><td>
+					<span class="label">Facebook <br></span>
+					<img class="pvimg" src="img/SF_Facebook_PV.png" alt="AE_PV"/></td></table>
+				</div>
+
+				<div class="item"><table style="width:100%"><td width="50px">
+					<img class="icon" src="img/SF_Gmail_ICN.png" alt="atom_ICN"/></td><td>
+					<span class="label">Google Mail<br></span>
+					<img class="pvimg" src="img/SF_Gmail_PV.png" alt="atom_PV"/></td></table>
+				</div>
+
+				<div class="item"><table style="width:100%"><td width="50px">
+					<img class="icon" src="img/SF_Gdrive_ICN.png" alt="PS_ICN"/></td><td>
+					<span class="label">Google Drive <br></span>
+					<img class="pvimg" src="img/SF_Gdrive_PV.png" alt="PS_PV"/></td></table>
+				</div>
+
+				<div class="item"><table style="width:100%"><td width="50px">
+					<img class="icon" src="img/SF_Gdocs_ICN.png" alt="AI_ICN"/></td><td>
+					<span class="label">Google Docs <br></span>
+					<img class="pvimg" src="img/SF_Gdocs_PV.png" alt="AI_PV"/></td></table>
+				</div>
+
+				<div class="item"><table style="width:100%"><td width="50px">
+					<img class="icon" src="img/SF_Gsheets_ICN.png" alt="Blender_ICN"/></td><td>
+					<span class="label">Google Sheets <br></span>
+					<img class="pvimg" src="img/SF_Gsheets_PV.png" alt="Blender_PV"/></td></table>
+				</div>
+
+				<div class="item"><table style="width:100%"><td width="50px">
+					<img class="icon" src="img/SF_Gslides_ICN.png" alt="Chrome_ICN"/></td><td>
+					<span class="label">Google Slides <br></span>
+					<img class="pvimg" src="img/SF_Gslides_PV.png" alt="Chrome_PV"/></td></table>
+				</div>
+
+				<div class="item"><table style="width:100%"><td width="50px">
+					<img class="icon" src="img/SF_Kahoot_ICN.png" alt="Dictionary_ICN"/></td><td>
+					<span class="label">Kahoot <br></span>
+					<img class="pvimg" src="img/SF_Kahoot_PV.png" alt="Dictionary_PV"/></td></table>
+				</div>
+
+				<div class="item"><table style="width:100%"><td width="50px">
+					<img class="icon" src="img/SF_Netflix_ICN.png" alt="Discord_ICN"/></td><td>
+					<span class="label">Netflix <br></span>
+					<img class="pvimg" src="img/SF_Netflix_PV.png" alt="Discord_PV"/></td></table>
+				</div>
+
 			</div>
 
 
@@ -364,6 +412,8 @@
 
 			<img class="artworksection" src="img/5.jpg">
 			<img class="artworksection" src="img/6.jpg">
+			<a href="https://community.folivora.ai/t/1704"><img class="artworksection" src="img/7.jpg"></a>
+			<img class="artworksection" src="img/8.jpg">
 
       <!-- <a href="https://rebrand.ly/yuuiko-switchthemelight"><img class="artworksection" src="img/2btn.png"></a> -->
     </div>
