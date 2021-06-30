@@ -64,19 +64,19 @@
 
 				/* width */
 				::-webkit-scrollbar {
-					width: 2px;
-					height: 2px
+					width: 4px;
+					height: 4px
 				}
 
 				/* Track */
 				::-webkit-scrollbar-track {
 					background-color: none;
-					border-radius: 1px;
 				}
 
 				/* Handle */
 				::-webkit-scrollbar-thumb {
 					background: #686D9F;
+					border-radius: 4px 0px 0px 4px;
 				}
 
 				::-webkit-scrollbar-corner {
@@ -159,6 +159,7 @@
 					height: 550px;
 					padding: 20px 20px 20px 8vh;
 					background-color: rgba(0, 0, 0, 0.2);
+					/* background-image: linear-gradient(90deg, #32374d, #1C1E2A, #1C1E2A, #1C1E2A, #1C1E2A, #1C1E2A, #1C1E2A); */
 					overflow-y: scroll;
 					overflow-x: hidden;
 				}
@@ -227,6 +228,7 @@
 				/*█████████████████████████████████████████████████████████████████████████████████████████████████████████ QS Demo ██████*/
 				.quickstripdemo {
 					background-color: white;
+					background-image: linear-gradient(174deg, #FFF, #FFF, #FFF, #FFF, #FFF, #FFF, #FFE0E3);
 					overflow: hidden;
 					padding: 20px 0px 80px 0px;
 					/* height:  */
@@ -263,7 +265,6 @@
 						'item1 item2 item3 item4';
 					grid-gap: 10px;
 					margin: 50px 1vh !important;
-					/* background: red; */
 					height: 80px;
 				}
 
@@ -271,7 +272,6 @@
 					text-align: center;
 					font-size: 6vw;
 					color: #FFB2B8;
-					/* background-color: gray; */
 					transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1);
 				}
 				.switcheritem:hover {
@@ -295,12 +295,6 @@
 					grid-area: item4;
 				}
 
-				/* .ticker__item {
-				text-align: center;
-				font-weight: bold;
-				font-size: 30px;
-			}
-			*/
 			@-webkit-keyframes ticker {
 				0% {
 					-webkit-transform: translate3d(0, 0, 0);
@@ -375,6 +369,16 @@
 					padding-left: 3vh;
 					overflow-x: scroll;
 				}
+				.quickstripdemo {
+					padding: 0px 0px 20px 0px;
+				}
+				.ticker-wrap {
+					margin-bottom: 20px;
+				}
+				.switcher {
+					margin-top: 30px !important;
+					margin-bottom: 30px !important;
+				}
 			}
 
 			@media only screen and (max-width: 600px) {.title {font-size: 70px;}
@@ -384,13 +388,16 @@
 			.abstract {padding: 100px 25px;}
 			.viewart {padding: 100px 25px;}
 			p {font-size: 19px;}
+			.switcher {
+				margin-top: 20px !important;
+				margin-bottom: 20px !important;
+			}
 		}
 
 		@media only screen and (min-width: 1250px) {
 			#artwork {
 				box-shadow: 0px 20px 60px rgba(0, 0, 0, 0.5);
 				margin-left: 50vw;
-				/* width: calc(100% - 60vh); */
 				width: 1250px;
 				margin-top: 80px;
 				transform: translateX(-50%);
