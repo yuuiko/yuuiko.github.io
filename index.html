@@ -5,9 +5,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <style>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+		<link rel="manifest" href="/site.webmanifest">
+		
+		<style>
         @font-face {
             font-family: 'Kollektif';
             src: url(fonts/Kollektif.ttf) format('truetype');
@@ -418,6 +424,32 @@
 				margin-right: 1vw;
 			}
 
+			.trybtn {
+				display: block;
+				position: fixed;
+				top: 50px;
+				right: 50px;
+				background-color: rgba(0,0,0,0.2);
+				color: #8DDBD3;
+				padding: 10px 18px;
+				font-weight: bold;
+				font-size: 25px;
+				border-radius: 50px;
+				z-index: 10;
+				box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+				backdrop-filter: blur(7px);
+				-webkit-backdrop-filter: blur(7px);
+
+				transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+			}
+			.trybtn:hover {
+				background-color: #8DDBD3;
+				transform: scale(1.1);
+			}
+			.trybtn:active {
+				transform: scale(0.9);
+			}
+
 
 			/*█████████████████████████████████████████████████████████████████████████████████████████████████████████ RESPONSIVE ██████*/
 
@@ -460,11 +492,11 @@
 			}
 		}
 
-		@media only screen and (min-width: 1250px) {
+		@media only screen and (min-width: 1000px) {
 			#artwork {
 				box-shadow: 0px 20px 60px rgba(0, 0, 0, 0.5);
 				margin-left: 50vw;
-				width: 1250px;
+				width: 1000px;
 				margin-top: 80px;
 				transform: translateX(-50%);
 
@@ -477,7 +509,7 @@
 			}
 
 			.switcheritem {
-				font-size: 70px;
+				font-size: 60px;
 			}
 
 			.ticker__item {
@@ -521,6 +553,17 @@
 			}
 		}
 		</style>
+
+		<script type="text/javascript">
+		$(document).ready(function() {
+				 $("#trybtn").click(function() {
+						 $("html, body").animate({
+								 scrollTop: $(
+									 'html, body').get(0).scrollHeight
+						 }, 500);
+				 });
+		 });
+		</script>
 </head>
 <body>
 	<!-- onload="unloadtransition('transitionoverlay');" -->
@@ -542,10 +585,12 @@
 	}, 1300);
 	</script>
 
+	<a class="trybtn" id="trybtn">
+		Try it out!
+	</a>
+
     <div id="artwork" class="container-abstract bg-3 text-centre">
       <img class="artworksection first" src="img/1.jpg">
-
-
 
 			<!-- <img class="artworksection" src="img/2.jpg"> -->
 
