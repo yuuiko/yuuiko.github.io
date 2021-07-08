@@ -96,6 +96,47 @@
 		background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.6));
 	}
 
+	.comingsoonbox {
+		display: flex;
+		margin: 10px;
+		height: 340px;
+		width: 340px;
+		padding: 30px 0px 0px 0px;
+
+		color: white;
+		font-size: 10em;
+		text-align: center;
+		vertical-align: bottom;
+
+		background-color: rgba(0,0,0,0.1);
+		border: 5px solid rgba(255,255,255,0.1);
+		/* background-attachment: ; */
+
+		box-shadow: inset 0px 8px 30px rgba(0,0,0,0.2);
+
+		border-radius: 20px;
+
+		transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+	}
+
+	.comingsoonbox:hover {
+		box-shadow: inset 0px 4px 15px rgba(0,0,0,0.2);
+		background-color: rgba(0,0,0,0.05);
+	}
+
+	.comingsoonbox:active {
+		box-shadow: inset 0px 10px 50px rgba(0,0,0,0.4);
+		background-color: rgba(0,0,0,0.15);
+	}
+
+	.comingsoontitle {
+		align-self: flex-end;
+		padding: 30px 30px;
+		margin: 0;
+		width: 100%;
+		border-radius: 0px 0px 20px 20px;
+	}
+
 	@media only screen and (max-width: 600px) {
 		body {
 			padding: 10px;
@@ -133,20 +174,24 @@
 		</a>
 
 		<!-- <div class="box" style="background-image: url(img/freshOS.jpg);">
-		<p class="title">FreshOS</p>
-	</div> -->
+			<p class="title">FreshOS</p>
+		</div> -->
 
-	<!-- <div class="box" style="background-image: url(img/projswiich.jpg);">
-	<p class="title">sWiich</p>
-</div> -->
+		<!-- <div class="box" style="background-image: url(img/projswiich.jpg);">
+			<p class="title">sWiich</p>
+		</div> -->
 
-<!-- <div class="box" style="background-image: url(img/bkg_ipodtheme.jpg);">
-<p class="title">Desktop Icons</p>
-</div> -->
+		<!-- <div class="box" style="background-image: url(img/bkg_ipodtheme.jpg);">
+			<p class="title">Desktop Icons</p>
+		</div> -->
 
-<!-- <div class="box">
-<p></p>
-</div> -->
+		<!-- <div class="box">
+			<p></p>
+		</div> -->
+
+		<a class="comingsoonbox" style="background-image: url(img/comingsoon.png);">
+			<!-- <p class="comingsoontitle">More Coming Soon! Follow to keep updated.</p> -->
+		</a>
 </div>
 </body>
 </html>
