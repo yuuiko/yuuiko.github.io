@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>bleeeehhhhhhh</title>
+
+	<link rel="stylesheet" href="style.css">
+	<script type="text/javascript" src="script.js"></script>
+
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.15.0/TweenMax.min.js'></script>
+</head>
+
+<body>
+	<div class="transitionoverlay" id="transitionoverlay"></div>
+
+	<script type="module" async>
+	setTimeout(function () {
+		let box = document.getElementById('transitionoverlay');
+
+		box.classList.add('transparent');
+		box.addEventListener('transitionend', function(e) {
+			box.classList.add('goneReducedToAtoms');
+		}, {
+			capture: false,
+			once: true,
+			passive: false
+		});
+	}, 50);
+	</script>
+
+	<div class="window" id="window">
+
+		<!-- █████████████████████████████████████████ HEADER ███ -->
+		<div class="box" id="cursor"></div>
+
+		<!-- █████████████████████████████████████████ INTROOVERLAY ███ -->
+		<div class="introoverlay" id="introoverlay" onclick="hideintro('introoverlay'); setTimeout(function () {hidewindow('title')}, 5000);">
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<h1>Welcome to my place.</h1>
+			<h2>
+				But unlike the place most people call home, mine's a little different. <br>
+				<br>
+				I spend my time in the world of imagination.<br>
+				In worlds created by the minds of many,<br>
+				A beautiful universe of fiction.<br>
+				<br>
+				I've long explored this place of imagination,<br>
+				Found places and creations that I love, becoming a regular to some,<br>
+				And even created my own little space out there.<br>
+				<br>
+				Come, let me show you around,<br>
+				Come in and see my local place!<br>
+				<br>
+			</h2>
+		</div>
+
+		<div class="title" id="title" style="z-index: 1;">
+			<h1>Welcome to the universe of imagination.</h1>
+		</div>
+
+		<!-- <a class="topbutton" id="addbtn" onmouseover="toggleadd(); excitecursor();" onmouseout="normalcursor();">
+			+
+		</a> -->
+
+		<a class="topbutton" id="infobtn" onmouseover="showwindow('contentinfo'); excitecursor();" onmouseout="normalcursor();" onclick="hidewindow('contentinfo');">
+			i
+		</a>
+
+		<!-- █████████████████████████████████████████ ADD / INFO WINDOWS ███ -->
+		<div class="actionwindow hidden" id="contentinfo">
+			<p>
+				<span class="itemname">🔎&nbsp; About This Page</span><br>
+				<span style="margin-top: 20px;" class="itemdescription">
+					Hello Friend!!<br>
+					<br>
+					This is my imaginary room, filled with the things that i've created, found and enjoy!<br>
+					In my free time, I like to step away from reality and into the world of imagination. It's really a whole 'nother world in there, and this is my small corner of it!<br>
+					<br>
+					Feel free to roam around and explore what I love to do.
+					<br>
+					<br>
+					<strong>Statement of Environment</strong><br>
+					This website is hosted on Github Pages, which has servers based in the United States. Some mentioned locations are "Seattle", and "one on each cost of the states". <a href="https://github.blog/2017-10-12-evolution-of-our-data-centers/">Read More</a><br>
+					<br>
+					I aim to avoid 3rd party javascript runners, sites and fonts, which should get less servers involved, and in turn reduce the energy impact that is required to run this site.
+				</span><br>
+			</p>
+		</div>
+
+		<div class="actionwindow hidden goneReducedToAtoms" onmouseover="blackcursor();" onmouseout="unblackcursor();" id="contentadd">
+			<p>
+				<span class="itemname">Add your own!</span><br>
+				<span style="margin-top: 20px;" class="itemdescription">
+					<input id="inpEmoji" title="Emoji Icon" onmouseover="textcursor();" onmouseout="untextcursor();" class="addemoji" type="text" name="Emoji" maxlength="1" value="🤨">
+					<input id="inpTitle" title="Title" onmouseover="textcursor();" onmouseout="untextcursor();" class="addtextbox" type="text" name="Title" placeholder="Title">
+					<input id="inpAuthor" title="Your Name" onmouseover="textcursor();" onmouseout="untextcursor();" class="addtextbox" type="text" name="YourName" placeholder="Your Name">
+					<textarea id="inpComment" title="Your Comment" onmouseover="textcursor();" onmouseout="untextcursor();" class="addtextarea" placeholder="Your Comment"></textarea>
+					<button id="addbtn2" titl="Add me somewhere" class="addokbtn" type="button" name="add" onclick="createelement(); toggleadd();" onmouseover="excitecursor()" onmouseout="normalcursor();">Add Me In Somewhere</button>
+				</span>
+			</p>
+		</div>
+
+
+		<!-- █████████████████████████████████████████ PREMADE CONTENT ███ -->
+		<div class="contentbox">
+
+			<!-- MAIN IMAGE -->
+			<img src="img/Mainroombkg.png" srcset="img/Mainroombkg@2x.png 2x" alt="">
+			<!-- <img src="img/Mainroombkg.jpg"> -->
+
+			<!-- -------------------------------------- IPOD THEME ----------------- -->
+			<a href="#" class="item" style="top: 36%; right: 25.5%;"
+				id="item1"
+				onmouseover="excitecursor(); showwindow('content1');"
+				onmouseout="normalcursor(); hidewindow('content1');"
+				onfocusin="showwindow('content1');"
+				onfocusout="hidewindow('content1');"
+				onclick=""></a>
+			<div class="textwindow hidden windowTR" style="top: 36%; right: 25.5%;" id="content1">
+				<p>
+					<span class="itemname">iPod Themes</span><br>
+					<span class="itemsubtitle">2 Downloadable Projects</span><br>
+					<span class="itemdescription">No ads, no notifications, no calls, no texts, no internet, 1 month battery life: no interruptions.</span><br>
+					<img loading="lazy" class="plantselfie" src="img/selfipod.png" alt="A photo of yuuiko's iPod Themes">
+				</p>
+			</div>
+
+			<!-- -------------------------------------- AQUATOUCH ------------------ -->
+			<a href="#" class="item" style="top: 25%; right: 20%;"
+			id="item2"
+			onmouseover="excitecursor(); showwindow('content2');"
+			onmouseout="normalcursor(); hidewindow('content2');"
+			onclick="gotolink('https://yuuiko.github.io/AQT/index.html')"
+			onfocusin="showwindow('content2');"
+			onfocusout="hidewindow('content2');"></a>
+			<div class="textwindow hidden windowTR nointeract" style="top: 25%; right: 20%;" id="content2">
+				<p>
+					<span class="itemname">AquaTouch</span><br>
+					<span class="itemsubtitle">Downloadable Project</span><br>
+					<span class="itemdescription">Revolutionise your MacBook TouchBar</span><br>
+					<img loading="lazy" class="plantselfie" src="img/projaquatouch.jpg" alt="A photo by yuuiko">
+				</p>
+			</div>
+
+			<!-- -------------------------------------- SPD GAR 02 ------------------ -->
+			<a href="#" class="item" style="top: 35%; right: 30%;"
+			id="item21"
+			onmouseover="excitecursor(); showwindow('content21');"
+			onclick="hidewindow('content21')"
+			onfocusin="permashowwindow('content21');"
+			onfocusout="permahidewindow('content21');"></a>
+
+			<div class="textwindow hidden windowTR" style="top: 35%; right: 30%;" id="content21">
+				<p>
+					<span class="itemname">SPD GAR 02 MIX</span><br>
+					<span class="itemsubtitle">Album by Lapix on SoundCloud</span><br>
+					<span class="itemdescription">future wheeeeeeee</span><br>
+				</p>
+					<!-- <img loading="lazy" class="plantselfie" src="img/projaquatouch.jpg" alt="A photo by yuuiko"> -->
+					<iframe width="100%" height="300" style="border-radius: 10px;" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/657970181&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+			</div>
+
+			<!-- -------------------------------------- GENSHIN IMPACT ------------------ -->
+			<a href="#" class="item" style="top: 35%; right: 40%;"
+			id="item22"
+			onmouseover="excitecursor(); permashowwindow('content22');"
+			onclick="permahidewindow('content22')"
+			onfocusin="permashowwindow('content22');"
+			onfocusout="permahidewindow('content22');"></a>
+
+			<div class="textwindow hidden windowTR wide" style="top: 35%; right: 40%;" id="content22">
+				<p>
+					<span class="itemname">Land of Tranquil Eternity</span><br>
+					<span class="itemsubtitle">Genshin Impact Soundtrack</span><br>
+					<span class="itemdescription">floaty whaaaaaaaaa</span><br>
+				</p>
+					<iframe width="560" height="315" style="border-radius: 10px;" src="https://www.youtube.com/embed/e4bptIoZFDE?controls=0&amp;start=10" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>
+
+			<!-- -------------------------------------- BEDSIDE TABLE ------------------ -->
+			<a href="#" class="item" style="top: 24%; left: 14.5%;"
+			id="item3"
+			onmouseover="excitecursor(); showwindow('content3');"
+			onmouseout="normalcursor(); hidewindow('content3');"
+			onclick=""
+			onfocusin="showwindow('content3');"
+			onfocusout="hidewindow('content3');"></a>
+			<div class="textwindow hidden windowTL nointeract" style="top: 24%; left: 14.5%;" id="content3">
+				<p>
+					<span class="itemname">Side Table</span><br>
+					<span class="itemsubtitle">Project</span><br>
+					<span class="itemdescription">A foldable bedside table I made</span><br>
+					<img loading="lazy" class="plantselfie" src="img/projtable.jpg" alt="A photo by yuuiko">
+				</p>
+			</div>
+
+			<!-- -------------------------------------- LINEAR FOLDERS ------------------ -->
+			<a href="#" class="item" style="top: 7%; right: 20%;"
+			id="item4"
+			onmouseover="excitecursor(); showwindow('content4');"
+			onmouseout="normalcursor(); hidewindow('content4');"
+			onclick="gotolink('https://yuuiko.github.io/AQT/index.html')"
+			onfocusin="showwindow('content4');"
+			onfocusout="hidewindow('content4');"></a>
+			
+			<div class="textwindow hidden windowTR nointeract" style="top: 7%; right: 20%;" id="content4">
+				<p>
+					<span class="itemname">Linear Folders</span><br>
+					<span class="itemsubtitle">Downloadable Project</span><br>
+					<span class="itemdescription">Cleanup your desktop.</span><br>
+					<img loading="lazy" class="plantselfie" src="img/projLinearFolders.jpg" alt="A photo by yuuiko">
+				</p>
+			</div>
+
+		</div>
+	</div>
+
+
+
+	<!-- █████████████████████████████████████████ MOVE CURSOR with jquery ███ -->
+	<!-- FROM https://codepen.io/igcorreia/pen/pJvOpL -->
+	<script type="module" async>
+	var $box = $('.box'),
+	speed = 0;
+
+	function moveBox(e) {
+		$box.each(
+			function(index){
+				TweenLite.to($(this),0.02,{css: {left: e.pageX,top: e.pageY},delay:0+(index/750)});
+			}
+		);
+	}
+
+	$(window).on('mousemove', moveBox);
+
+	</script>
+</body>
+
+</html>

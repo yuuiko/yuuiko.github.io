@@ -1,0 +1,555 @@
+@font-face {
+	font-family: kollektif;
+	src: url(fonts/Kollektif.ttf);
+}
+
+/*█████████████████████████████████████████ Z-INDEX GUIDE ███
+
++++MAIN UI+++
+1000 - .box (cursor)
+900 - .transitionoverlay
+
++++INTRO OVERLAYS+++
+300 - .introoverlay
+-
+-
+
++++TOP MENU+++
+200 - #infobtn
+199 - #contentinfo
+199 - #contentadd
+-
+-
+
++++MAIN CONTENT+++
+100 - infobtn
+-
+ATO - content pins and windows
+-
+
++++CONTENT CONTAINERS+++
+000
+-1 - .window
+-2 - .contentbox (background image)
+
+*/
+
+
+/*█████████████████████████████████████████ DOCUMENT STYLE ███*/
+body {
+	font-family: kollektif;
+
+	/* background-image: url('img/Mainroombkg.jpg'); */
+	background-color: #000;
+	background-size: cover;
+
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+
+	margin: 0px;
+	padding: 0px;
+
+	/* cursor: none; */
+	/* -webkit-cursor: none; */
+	transition: all 2s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+p {
+	margin: 0;
+}
+
+h1 {
+	font-size: 50px;
+}
+
+h2 {
+	font-size: 30px;
+	font-weight: normal;
+}
+
+.title {
+	display: block;
+	position: fixed;
+	width: calc(100vw - 260px);
+	z-index: 2000;
+	padding-left: 30px;
+
+	color: white;
+	font-size: 30px;
+
+	transform-origin: top left;
+
+	/* white-space: nowrap; */
+
+	/* cursor: none; */
+	pointer-events: none;
+	user-select: none;
+	-webkit-user-select: none;
+	transition: all 2s cubic-bezier(0.12, 0, 0.39, 0);
+}
+
+/*█████████████████████████████████████████ MAIN CONTAINER / CURSOR SENSOR ███*/
+.window {
+	display: block;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+	overflow: scroll;
+	z-index: -1;
+}
+
+/*█████████████████████████████████████████ CURSOR STYLE ███*/
+.box {
+	display: none;
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	top: 70px;
+	right: 70px;
+	margin: -50 0 0 -50px;
+	z-index: 1000;
+
+	background: rgba(0, 0, 0, 1);
+	border-radius: 50px;
+	opacity: 1;
+
+	pointer-events: none;
+	transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.excite {
+	width: 50px;
+	height: 50px;
+	opacity: 50%;
+	transform: translateX(-25px) translateY(-25px);
+}
+.textcursor {
+	height: 30px;
+	width: 5px;
+
+	background: black;
+	transform: translateY(-15px);
+}
+.blackcursor {
+	background: black;
+}
+
+/*█████████████████████████████████████████████████ TRANSITION OVERLAY █████ */
+.transitionoverlay {
+	position: fixed;
+	display: block;
+	width: 100%;
+	height: 100%;
+	z-index: 900;
+
+	opacity: 100%;
+	background-color: #FFF0D5;
+
+	pointer-events: none;
+	transition: all 2s cubic-bezier(0.65, 0, 0.35, 1);
+}
+.transparent {
+	opacity: 0%;
+}
+
+/*█████████████████████████████████████████████████ INTRO OVERLAY █████ */
+
+.introoverlay {
+	position: fixed;
+	display: block;
+	width: calc(100% - 100px);
+	height: calc(100% - 100px);
+	z-index: 300;
+	padding: 50px;
+
+	opacity: 100%;
+	background-color: #1D2444;
+	color: white;
+	text-align: center;
+	vertical-align: middle;
+
+	transition: all 1s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+/*█████████████████████████████████████████ ACTION BUTTONS STYLE ███*/
+.topbutton {
+	display: block;
+	position: fixed;
+	width: 50px;
+	height: 50px;
+	top: 0px;
+	right: 0px;
+	float: right;
+	margin: 50px 50px 0px 0px;
+
+	color: #1D2444;
+	text-align: center;
+	vertical-align: middle;
+	font-size: 40px;
+
+	background-color: white;
+	border-radius: 50%;
+
+	user-select: none;
+	-webkit-user-select: none;
+	transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.topbutton:hover {
+	transform: scale(1.5);
+}
+
+/* ADD WINDOW */
+.topbuttonactive {
+	transform: rotate(135deg);
+}
+
+#infobtn {
+	/* right: 80px; */
+	z-index: 200;
+}
+
+.goneReducedToAtoms {
+	display: none !important;
+	cursor: none !important;
+	pointer-events: none !important;
+	user-select: none !important;
+}
+
+/* ACTION WINDOWS */
+#contentinfo{
+	top: 5px;
+	/* right: 90px; */
+	right: 5px;
+	transform-origin: top right;
+	z-index: 199;
+}
+
+#contentadd{
+	top: 5px;
+	right: 5px;
+	transform-origin: top right;
+	z-index: 199;
+}
+
+/*█████████████████████████████████████████ ADD WINDOW STYLE ███*/
+.addemoji {
+	width: 50px;
+	height: 50px;
+	margin-bottom: 5px;
+	padding: 5px;
+
+	font-size: 45px;
+
+	border: 2px solid black;
+	border-radius: 5pt;
+
+	pointer-events: all;
+	/* cursor: none; */
+}
+.addtextbox {
+	width: calc(100% - 10px);
+	margin-bottom: 5pt;
+	padding: 5px;
+
+	font-size: 15px;
+	font-family: kollektif;
+
+	border: 2px solid black;
+	border-radius: 5pt;
+
+	pointer-events: all;
+	/* cursor: none; */
+}
+.addtextarea {
+	width: calc(100% - 10px);
+	margin-bottom: 5px;
+	padding: 5px;
+
+	border: 2px solid black;
+	border-radius: 5pt;
+
+	font-size: 15px;
+	font-family: kollektif;
+
+	pointer-events: all;
+	resize: vertical;
+	/* cursor: none; */
+}
+.addokbtn {
+	padding: 9px 10px 5px 10px;
+	margin-bottom: 5px;
+
+	background-color: #1F6457;
+	border: 2px solid black;
+	border-radius: 5pt;
+
+	color: white;
+	font-size: 15px;
+	font-family: kollektif;
+
+	pointer-events: all;
+	/* cursor: none; */
+	transition: 0.5s 0s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.addokbtn:hover {
+	background-color: black;
+	transform: scale(1.1) translateX(8px);
+}
+.addokbtn:active {
+	background-color: black;
+	transform: scale(0.9);
+}
+
+/* ████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████ */
+
+/*█████████████████████████████████████████ MAIN CONTENT BOUNDS ███*/
+.contentbox {
+	background-color: #000;
+
+	background-image: url('img/backdrop.jpg');
+	background-color: #000;
+	background-size: cover;
+
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+
+	display: inline-block;
+	position: relative;
+	/* width: 2048px; */
+	/* height: 2039px; */
+	/* padding-top: 56.25%; /* 16:9 Aspect Ratio */ */
+	z-index: -2;
+	/* background-image: url('img/Mainroombkg.jpg'); */
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+/*█████████████████████████████████████████ INTEREST POINT STYLE ███*/
+.item {
+	/* display: block; */
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	margin: 30px;
+	/* padding: 12px 20px 27px 20px; */
+	/* z-index: -; */
+	/* left: 50%; */
+
+	text-align: center;
+	font-size: 10pt;
+	vertical-align: middle;
+	text-decoration: none;
+	color: black;
+
+	/* background-color: rgba(255,255,255,128); */
+	background-image: url('img/closebtnidle.png');
+	background-size: cover;
+
+	/* background-attachment: fixed; */
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+
+	border: 2px solid white;
+	border-radius: 50%;
+
+	/* cursor: none; */
+	transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.item:hover {
+	transform: scale(2.5);
+	color: black;
+	background-color: rgba(255,255,255,0);
+
+	background-image: url('img/closebtn@2x.png');
+
+	border: 2px solid white;
+}
+.item:active {
+	transform: scale(1.5);
+	color: black;
+	background-color: rgba(255,255,255,255);
+	border: 2px solid black;
+}
+
+/*█████████████████████████████████████████ WINDOW STYLE ███*/
+.textwindow {
+	display: inline-block;
+	position: absolute;
+	width: 300px;
+	height: auto;
+	margin: 50px;
+	padding: 10px 10px 5px 10px;
+
+	opacity: 1;
+	color: #8DDBD3;
+	background-color: #1D2444;
+	border: 5px solid white;
+	border-radius: 20px;
+
+	transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+	transform: scale(1);
+}
+.windowTL {
+	border-radius: 0% 20px 20px 20px;
+	transform-origin: top left;
+}
+.windowTR {
+	border-radius: 20px 0% 20px 20px;
+	transform-origin: top right;
+}
+.windowBR {
+	border-radius: 20px 20px 0% 20px;
+	transform-origin: bottom right;
+}
+.windowBL {
+	border-radius: 20px 20px 20px 0%;
+	transform-origin: bottom left;
+}
+.wide {
+	width: auto !important;
+}
+
+.nointeract {
+	pointer-events: none;
+	-webkit-pointer-events: none;
+}
+
+.actionwindow {
+	display: block;
+	position: fixed;
+	width: 300px;
+	height: auto;
+	margin: 70px;
+	padding: 10px;
+
+	opacity: 1;
+	color: #1F6457;
+	background-color: #FFF0D5;
+	border: 5px solid black;
+	border-radius: 20px;
+
+	pointer-events: none;
+	transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+	transform: scale(1);
+}
+.activepoitner {
+	pointer-events: all;
+}
+
+.hidden {
+	opacity: 0;
+	transform: scale(0.8);
+}
+
+.itemname {
+	display: inline-block;
+	font-weight: bold;
+	font-size: 15pt;
+}
+
+.itemsubtitle {
+	display: inline-block;
+	padding-bottom: 10px;
+	opacity: 70%;
+}
+
+.itemdescription {
+	display: inline-block;
+	padding-bottom: 10px;
+}
+
+.plantselfie {
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	border-radius: 10px;
+
+	background-color: #e8d8bb;
+}
+
+/*█████████████████████████████████████████ SYSTEM DARK MODE SUPPORT ███*/
+@media screen and (prefers-color-scheme: dark) {
+
+	/* body {
+		background-color: #BC967A;
+		transition: all 2s cubic-bezier(0.65, 0, 0.35, 1);
+	}
+	*/
+
+	.transitionoverlay {
+		background-color: #222
+	}
+
+	/* .title {
+		color: white;
+	} */
+
+	/* .topbutton {
+		background-color: white;
+		color: black;
+	} */
+
+	/* .item {
+		color: white;
+	} */
+
+	/* CURSORS */
+	/* .box {
+		background: rgba(255, 255, 255, 1);
+	}
+	.textcursor {
+		background: black;
+	}
+	.blackcursor {
+		background: black;
+	} */
+}
+
+@media screen and (max-width: 700px) {
+	.title {
+		font-size: 15px;
+		margin-top: 25px;
+		content: "Wall of <br><br> Comments";
+	}
+
+	.item {
+		width: 25px;
+		height: 25px;
+		padding: 6px 10px 13.5px 10px;
+
+		font-size: 20pt;
+	}
+
+	.topbutton {
+		margin: 25px 25px 0px 0px;
+	}
+
+	#infobtn {
+		right: 0;
+	}
+
+	#addbtn {
+		top: 80px;
+	}
+
+	#contentinfo {
+		right: 0;
+	}
+
+	#contentadd {
+		top: 80px;
+	}
+
+	/* .textwindow {
+		left: 10vw !important;
+		margin: 45px 45px 45px 0px;
+		transform-origin: center !important;
+	} */
+}
