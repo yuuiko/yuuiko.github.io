@@ -209,7 +209,14 @@ h2 {
 #infobtn {
 	/* right: 80px; */
 	z-index: 200;
+	background-image: url('img/infobtn.png');
+	background-position: center;
+	background-size: cover;
 }
+#infobtn:hover {
+	background-image: url('img/infobtnclose.png');
+	background-position: center;
+	background-size: cover;}
 
 .goneReducedToAtoms {
 	display: none !important;
@@ -431,12 +438,12 @@ h2 {
 	padding: 10px;
 
 	opacity: 1;
-	color: #1F6457;
+	color: #374481;
 	background-color: #FFF0D5;
-	border: 5px solid black;
+	border: 5px solid #374481;
 	border-radius: 20px;
 
-	pointer-events: none;
+	/* pointer-events: none; */
 	transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 	transform: scale(1);
 }
