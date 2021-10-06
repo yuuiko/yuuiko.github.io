@@ -37,11 +37,21 @@ function showwindow(divID) {
 	var item = document.getElementById(divID);
 	item.classList.remove('hidden');
 }
-
 function hidewindow(divID) {
 	console.log("hidewindow fired");
 	var item = document.getElementById(divID);
 	item.classList.add('hidden');
+}
+
+function pinactive(divID) {
+	console.log("hidewindow fired");
+	var item = document.getElementById(divID);
+	item.classList.add('itemactive');
+}
+function pindeactive(divID) {
+	console.log("showwindow fired");
+	var item = document.getElementById(divID);
+	item.classList.remove('itemactive');
 }
 
 function permashowwindow(divID) {

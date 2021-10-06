@@ -38,11 +38,6 @@
 
 		<!-- █████████████████████████████████████████ INTROOVERLAY ███ -->
 		<div class="introoverlay" id="introoverlay" onclick="hideintro('introoverlay'); setTimeout(function () {hidewindow('title')}, 5000);">
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
 			<h1>Where do you go to hang out, relax and recollect?</h1>
 			<h2>
 				A park? A bedroom? A particular spot in the city?
@@ -93,8 +88,7 @@
 					With some eco-awareness in mind, I aim to avoid 3rd party javascript runners, sites and fonts, which should get less servers involved, and in turn reduce the energy impact that is required to run this site. <br>
 					This site was built on pure HTML, CSS and JS, and does not need to request resources from other servers to run, excluding embedded content.<br>
 					<br>
-					All credits go to the original artists, I do not claim to have created any of these wonderful places. <br>
-					Do go ahead and check them out if any of them fancy you!
+					All credits go to the original artists, I do not claim to have created any of these wonderful places. Do go ahead and look into them if any fancy you!
 				</span><br>
 			</p>
 		</div>
@@ -117,7 +111,8 @@
 		<div class="contentbox">
 
 			<!-- MAIN IMAGE -->
-			<img src="img/Mainroombkg.png" srcset="img/Mainroombkg@2x.png 2x" alt="">
+			<!-- <img src="img/Mainroombkg.png" srcset="img/Mainroombkg@2x.png 2x" alt=""> -->
+			<img src="img/Mainroombkg.png">
 
 			<!-- -------------------------------------- LINK ------------------
 			<a href="#" class="item" style="top: 25%; right: 20%;"
@@ -162,8 +157,8 @@
 			<!-- -------------------------------------- INAZUMA ------------------ -->
 			<a href="#" class="item" style="top: 550px; left: 550px;"
 			id="item4"
-			onmouseover="excitecursor(); permashowwindow('content4');"
-			onclick="permahidewindow('content4')"
+			onmouseover="excitecursor(); permashowwindow('content4'); pinactive('item4');"
+			onclick="permahidewindow('content4'); pindeactive('item4');"
 			onfocusin="permashowwindow('content4');"
 			onfocusout="permahidewindow('content4');"></a>
 
@@ -176,11 +171,29 @@
 					<iframe width="560" height="315" style="border-radius: 10px;" src="https://www.youtube.com/embed/e4bptIoZFDE?controls=0&amp;start=10" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 			</div>
 
+			<!-- --██---------------------------------- GENSHIN MAP CREDIT ----------------██-- -->
+			<a href="#" class="creditpin" style="top: 700px; left: 90px;"
+			id="creditpin1"
+			onmouseover="showwindow('credit1');"
+			onmouseout="hidewindow('credit1');"
+			onclick="gotolink('https://upload-os-bbs.mihoyo.com/upload/2020/04/27/1092397/22a1c86b56d190b8a4db0ce258106e38_9055681943946436727.png')"
+			onfocusin="showwindow('credit1');"
+			onfocusout="hidewindow('credit1');"></a>
+
+			<div class="textwindow hidden windowTL nointeract" style="top: 700px; left: 90px;" id="credit1">
+				<p>
+					<span class="itemsubtitle">Image Credit</span><br>
+					<span class="itemname">Artwork by Mihoyo</span><br>
+					<span class="itemdescription">"Map of Teyvat"</span>
+					<span class="itemsubtitle"> - Click to visit source site.</span><br>
+				</p>
+			</div>
+
 			<!-- -------------------------------------- SLIME ------------------ -->
 			<a href="#" class="item" style="top: 40px; left: 100px;"
 			id="item1"
-			onmouseover="excitecursor(); permashowwindow('content1');"
-			onclick="permahidewindow('content1')"
+			onmouseover="excitecursor(); permashowwindow('content1'); pinactive('item1');"
+			onclick="permahidewindow('content1'); pindeactive('item1')"
 			onfocusin="permashowwindow('content1');"
 			onfocusout="permahidewindow('content1');"></a>
 
@@ -196,8 +209,8 @@
 			<!-- -------------------------------------- AZDAHA ------------------ -->
 			<a href="#" class="item" style="top: 450px; left: 130px;"
 			id="item3"
-			onmouseover="excitecursor(); permashowwindow('content3');"
-			onclick="permahidewindow('content3')"
+			onmouseover="excitecursor(); permashowwindow('content3'); pinactive('item3');"
+			onclick="permahidewindow('content3'); pindeactive('item3');"
 			onfocusin="permashowwindow('content3');"
 			onfocusout="permahidewindow('content3');"></a>
 
@@ -213,8 +226,8 @@
 			<!-- -------------------------------------- BOAT ------------------ -->
 			<a href="#" class="item" style="top: 270px; left: 90px;"
 			id="item2"
-			onmouseover="excitecursor(); permashowwindow('content2');"
-			onclick="permahidewindow('content2')"
+			onmouseover="excitecursor(); permashowwindow('content2'); pinactive('item2');"
+			onclick="permahidewindow('content2'); pindeactive('item2');"
 			onfocusin="permashowwindow('content2');"
 			onfocusout="permahidewindow('content2');"></a>
 
@@ -227,11 +240,29 @@
 					<iframe width="560" height="315" style="border-radius: 10px;" src="https://www.youtube.com/embed/KLGN-tilodo?controls=1&amp;" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 			</div>
 
+			<!-- --██--██--██--██--██--██--██-- LULL IN THE SEA IMAGE CREDIT --██--██--██--██--██--██-- -->
+			<a href="#" class="creditpin" style="top: 350px; left: 1350px"
+			id="creditpin6"
+			onmouseover="showwindow('credit6');"
+			onmouseout="hidewindow('credit6');"
+			onclick="gotolink('http://nagiasu.jp/movie/index.html')"
+			onfocusin="showwindow('credit6');"
+			onfocusout="hidewindow('credit6');"></a>
+
+			<div class="textwindow hidden windowTL nointeract" style="top: 350px; left: 1350px" id="credit6">
+				<p>
+					<span class="itemsubtitle">Image Credit</span><br>
+					<span class="itemname">Artwork by P.A. Works</span><br>
+					<span class="itemdescription">"Shioshishio" - underwater city</span>
+					<span class="itemsubtitle">Click to visit source site.</span><br>
+				</p>
+			</div>
+
 			<!-- -------------------------------------- Lull in the Sea Trailer ------------------ -->
 			<a href="#" class="item" style="top: 450px; left: 1200px;"
 			id="item5"
-			onmouseover="excitecursor(); permashowwindow('content5');"
-			onclick="permahidewindow('content5')"
+			onmouseover="excitecursor(); permashowwindow('content5'); pinactive('item5');"
+			onclick="permahidewindow('content5'); pindeactive('item5');"
 			onfocusin="permashowwindow('content5');"
 			onfocusout="permahidewindow('content5');"></a>
 
@@ -249,11 +280,29 @@
 			<!-- ------██---------------------------------------------------------- -->
 			<!-- ------------------------------------------------------------------ -->
 
+			<!-- --██--██--██--██--██--██--██--██-- COMET OBSERVATORY IMAGE CREDIT --██--██--██--██--██-- -->
+			<a href="#" class="creditpin" style="top: 300px; right: 2000px;"
+			id="creditpin17"
+			onmouseover="showwindow('credit17');"
+			onmouseout="hidewindow('credit17');"
+			onclick="gotolink('https://www.mariowiki.com/Comet_Observatory#/media/File:SMG_Comet_Observatory_Front_Overview.png')"
+			onfocusin="showwindow('credit17');"
+			onfocusout="hidewindow('credit17');"></a>
+
+			<div class="textwindow hidden windowTR nointeract wide" style="top: 300px; right: 2000px;" id="credit17">
+				<p>
+					<span class="itemsubtitle">Image Credit</span><br>
+					<span class="itemname">Game by Nintendo</span><br>
+					<span class="itemdescription">"The Comet Observatory" <br>from Super Mario Galaxy</span><br>
+					<span class="itemsubtitle">Click to view source picture.</span><br>
+				</p>
+			</div>
+
 			<!-- -------------------------------------- Shelter ------------------ -->
 			<a href="#" class="item" style="top: 450px; right: 1000px;"
 			id="item6"
-			onmouseover="excitecursor(); permashowwindow('content6');"
-			onclick="permahidewindow('content6')"
+			onmouseover="excitecursor(); permashowwindow('content6'); pinactive('item6');"
+			onclick="permahidewindow('content6'); pindeactive('item6');"
 			onfocusin="permashowwindow('content6');"
 			onfocusout="permahidewindow('content6');"
 			style="background-color: rgba(0,0,0,128);"></a>
@@ -267,11 +316,29 @@
 					<iframe width="560" height="315" style="border-radius: 10px;" src="https://www.youtube.com/embed/fzQ6gRAEoy0?controls=0&amp;start=0;" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 			</div>
 
+			<!-- --██--██--██--██--██--██--██--██-- SHELTER IMAGE CREDIT --██--██--██--██--██-- -->
+			<a href="#" class="creditpin" style="top: 490px; right: 895px;"
+			id="creditpin15"
+			onmouseover="showwindow('credit15');"
+			onmouseout="hidewindow('credit15');"
+			onclick="gotolink('https://www.deviantart.com/vincebundaberg/art/Shelter-around-the-Lonely-Tree-660263866')"
+			onfocusin="showwindow('credit15');"
+			onfocusout="hidewindow('credit15');"></a>
+
+			<div class="textwindow hidden windowTR nointeract wide" style="top: 490px; right: 895px;" id="credit15">
+				<p>
+					<span class="itemsubtitle">Image Credit</span><br>
+					<span class="itemname">Fan Art by VinceBundaberg</span><br>
+					<span class="itemdescription">"Shelter Around the Lonley Tree"</span><br>
+					<span class="itemsubtitle">Click to view artwork.</span><br>
+				</p>
+			</div>
+
 			<!-- -------------------------------------- Mario Galaxy ------------------ -->
 			<a href="#" class="item" style="top: 100px; right: 1800px;"
 			id="item7"
-			onmouseover="excitecursor(); permashowwindow('content7');"
-			onclick="permahidewindow('content7')"
+			onmouseover="excitecursor(); permashowwindow('content7'); pinactive('item7');"
+			onclick="permahidewindow('content7'); pindeactive('item7');"
 			onfocusin="permashowwindow('content7');"
 			onfocusout="permahidewindow('content7');"
 			style="background-color: rgba(0,0,0,128);"></a>
@@ -285,11 +352,29 @@
 					<iframe width="560" height="315" style="border-radius: 10px;" src="https://www.youtube.com/embed/aXIoLHN2hrY?controls=0&amp;start=0;" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 			</div>
 
+			<!-- --██--██--██--██--██--██--██--██-- Mini Metro IMAGE CREDIT --██--██--██--██--██-- -->
+			<a href="#" class="creditpin" style="top: 1050px; right: 895px;"
+			id="creditpin16"
+			onmouseover="showwindow('credit16');"
+			onmouseout="hidewindow('credit16');"
+			onclick="gotolink('https://dinopoloclub.com/games/mini-metro/')"
+			onfocusin="showwindow('credit16');"
+			onfocusout="hidewindow('credit16');"></a>
+
+			<div class="textwindow hidden windowTR nointeract wide" style="top: 1050px; right: 895px;" id="credit16">
+				<p>
+					<span class="itemsubtitle">Image Credit</span><br>
+					<span class="itemname">Game by Dinosaur Polo Club</span><br>
+					<span class="itemdescription">"Mini Metro"</span><br>
+					<span class="itemsubtitle">Click to view website.</span><br>
+				</p>
+			</div>
+
 			<!-- -------------------------------------- Mini Metro ------------------ -->
 			<a href="#" class="item" style="top: 750px; right: 700px;"
 			id="item8"
-			onmouseover="excitecursor(); permashowwindow('content8');"
-			onclick="permahidewindow('content8')"
+			onmouseover="excitecursor(); permashowwindow('content8'); pinactive('item8');"
+			onclick="permahidewindow('content8'); pindeactive('item8');"
 			onfocusin="permashowwindow('content8');"
 			onfocusout="permahidewindow('content8');"
 			style="background-color: rgba(0,0,0,128);"></a>
@@ -303,16 +388,52 @@
 					<iframe width="560" height="315" style="border-radius: 10px;" src="https://www.youtube.com/embed/yD0bsGheH2U?controls=1&amp;start=0;" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 			</div>
 
+			<!-- --██--██--██--██--██--██--██-- MY ROOM --██--██--██--██--██--██-- -->
+			<a href="#" class="creditpin" style="top: 900px; left: 2050px"
+			id="creditpin18"
+			onmouseover="showwindow('credit18');"
+			onmouseout="hidewindow('credit18');"
+			onclick="gotolink('####')"
+			onfocusin="showwindow('credit18');"
+			onfocusout="hidewindow('credit18');"></a>
+
+			<div class="textwindow hidden windowTL nointeract" style="top: 900px; left: 2050px" id="credit18">
+				<p>
+					<!-- <span class="itemsubtitle">Image Credit</span><br> -->
+					<span class="itemname">Home</span><br>
+					<span class="itemdescription">Prolougue under construction!</span>
+					<span class="itemsubtitle">Click to visit.</span><br>
+				</p>
+			</div>
+
 			<!-- ------------------------------------------------------------------ -->
 			<!-- ----██------------  BOTTOM LEFT LINKS   -------------------------- -->
 			<!-- ----████---------------------------------------------------------- -->
 			<!-- ------------------------------------------------------------------ -->
 
+			<!-- --██---------------------------------- SCIFI IMAGE CREDIT ----------------██-- -->
+			<a href="#" class="creditpin" style="bottom: 450px; left: 200px;"
+			id="creditpin2"
+			onmouseover="showwindow('credit2');"
+			onmouseout="hidewindow('credit2');"
+			onclick="gotolink('https://www.artstation.com/artwork/0XQwnK')"
+			onfocusin="showwindow('credit2');"
+			onfocusout="hidewindow('credit2');"></a>
+
+			<div class="textwindow hidden windowBL nointeract" style="bottom: 450px; left: 200px;" id="credit2">
+				<p>
+					<span class="itemsubtitle">Image Credit</span><br>
+					<span class="itemname">Artwork by Xuteng Pan</span><br>
+					<span class="itemdescription">"City"</span>
+					<span class="itemsubtitle"> - Click to visit source site.</span><br>
+				</p>
+			</div>
+
 			<!-- -------------------------------------- Dimension W ------------------ -->
 			<a href="#" class="item" style="bottom: 50px; left: 1050px;"
 			id="item9"
-			onmouseover="excitecursor(); permashowwindow('content9');"
-			onclick="permahidewindow('content9')"
+			onmouseover="excitecursor(); permashowwindow('content9'); pinactive('item9');"
+			onclick="permahidewindow('content9'); pindeactive('item9');"
 			onfocusin="permashowwindow('content9');"
 			onfocusout="permahidewindow('content9');"
 			style="background-color: rgba(0,0,0,128);"></a>
@@ -326,11 +447,29 @@
 					<iframe width="560" height="315" style="border-radius: 10px;" src="https://www.youtube.com/embed/9Cqzz88jrxY?controls=1&amp;start=0;" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 			</div>
 
+			<!-- --██--██--██--██--██--██--██ LEMAITRE IMAGE CREDIT --██--██--██--██--██--██-- -->
+			<a href="#" class="creditpin" style="bottom: 990px; left: 1350px"
+			id="creditpin5"
+			onmouseover="showwindow('credit5');"
+			onmouseout="hidewindow('credit5');"
+			onclick="gotolink('https://www.youtube.com/watch?v=owk8uVeG-3I')"
+			onfocusin="showwindow('credit5');"
+			onfocusout="hidewindow('credit5');"></a>
+
+			<div class="textwindow hidden windowBL nointeract wide" style="bottom: 990px; left: 1350px" id="credit5">
+				<p>
+					<span class="itemsubtitle">Image Credit</span><br>
+					<span class="itemname">Artwork by Laurie Greasly</span><br>
+					<span class="itemdescription">Song cover for Lemaitre's "Sparrow"</span>
+					<span class="itemsubtitle">Click to visit source site.</span><br>
+				</p>
+			</div>
+
 			<!-- -------------------------------------- Lemaitre ------------------ -->
 			<a href="#" class="item" style="bottom: 700px; left: 1070px;"
 			id="item17"
-			onmouseover="excitecursor(); showwindow('content17');"
-			onclick="hidewindow('content17')"
+			onmouseover="excitecursor(); showwindow('content17'); pinactive('item17');"
+			onclick="hidewindow('content17'); pindeactive('item17');"
 			onfocusin="showwindow('content17');"
 			onfocusout="hidewindow('content17');"></a>
 
@@ -346,8 +485,8 @@
 			<!-- -------------------------------------- SPD GAR 02 ------------------ -->
 			<a href="#" class="item" style="bottom: 400px; left: 750px;"
 			id="item11"
-			onmouseover="excitecursor(); showwindow('content11');"
-			onclick="hidewindow('content11')"
+			onmouseover="excitecursor(); showwindow('content11'); pinactive('item11');"
+			onclick="hidewindow('content11'); pindeactive('item11');"
 			onfocusin="permashowwindow('content11');"
 			onfocusout="permahidewindow('content11');"></a>
 
@@ -363,8 +502,8 @@
 			<!-- -------------------------------------- Cytus II the whole rest ------------------ -->
 			<a href="#" class="item" style="bottom: 445px; left: 480px;"
 			id="item13"
-			onmouseover="excitecursor(); permashowwindow('content13');"
-			onclick="permahidewindow('content13')"
+			onmouseover="excitecursor(); permashowwindow('content13'); pinactive('item13');"
+			onclick="permahidewindow('content13'); pindeactive('item13');"
 			onfocusin="permashowwindow('content13');"
 			onfocusout="permahidewindow('content13');"
 			style="background-color: rgba(0,0,0,128);"></a>
@@ -381,8 +520,8 @@
 			<!-- -------------------------------------- Cytus II ------------------ -->
 			<!-- <a href="#" class="item" style="bottom: 400px; left: 440px;"
 			id="item12"
-			onmouseover="excitecursor(); permashowwindow('content12');"
-			onclick="permahidewindow('content12')"
+			onmouseover="excitecursor(); permashowwindow('content12'); pinactive('item12');"
+			onclick="permahidewindow('content12'); pindeactive('item12');"
 			onfocusin="permashowwindow('content12');"
 			onfocusout="permahidewindow('content12');"
 			style="background-color: rgba(0,0,0,128);"></a>
@@ -399,8 +538,8 @@
 			<!-- -------------------------------------- Spin Eternally ------------------ -->
 			<a href="#" class="item" style="bottom: 310px; left: 810px;"
 			id="item15"
-			onmouseover="excitecursor(); permashowwindow('content15');"
-			onclick="permahidewindow('content15')"
+			onmouseover="excitecursor(); permashowwindow('content15'); pinactive('item15');"
+			onclick="permahidewindow('content15'); pindeactive('item15');"
 			onfocusin="permashowwindow('content15');"
 			onfocusout="permahidewindow('content15');"
 			style="background-color: rgba(0,0,0,128);"></a>
@@ -417,8 +556,8 @@
 			<!-- -------------------------------------- How to sound like Camellia ------------------ -->
 			<a href="#" class="item" style="bottom: 270px; left: 750px;"
 			id="item14"
-			onmouseover="excitecursor(); permashowwindow('content14');"
-			onclick="permahidewindow('content14')"
+			onmouseover="excitecursor(); permashowwindow('content14'); pinactive('item14');"
+			onclick="permahidewindow('content14'); pindeactive('item14');"
 			onfocusin="permashowwindow('content14');"
 			onfocusout="permahidewindow('content14');"
 			style="background-color: rgba(0,0,0,128);"></a>
@@ -435,8 +574,8 @@
 			<!-- -------------------------------------- Concept of Reality ------------------ -->
 			<a href="#" class="item" style="bottom: 230px; left: 590px;"
 			id="item10"
-			onmouseover="excitecursor(); permashowwindow('content10');"
-			onclick="permahidewindow('content10')"
+			onmouseover="excitecursor(); permashowwindow('content10'); pinactive('item10');"
+			onclick="permahidewindow('content10'); pindeactive('item10');"
 			onfocusin="permashowwindow('content10');"
 			onfocusout="permahidewindow('content10');"
 			style="background-color: rgba(0,0,0,128);"></a>
@@ -453,8 +592,8 @@
 			<!-- -------------------------------------- Osu Lazer ------------------ -->
 			<a href="#" class="item" style="bottom: 300px; left: 350px;"
 			id="item16"
-			onmouseover="excitecursor(); permashowwindow('content16');"
-			onclick="permahidewindow('content16')"
+			onmouseover="excitecursor(); permashowwindow('content16'); pinactive('item16');"
+			onclick="permahidewindow('content16'); pindeactive('item16');"
 			onfocusin="permashowwindow('content16');"
 			onfocusout="permahidewindow('content16');"
 			style="background-color: rgba(0,0,0,128);"></a>
@@ -468,11 +607,44 @@
 					<iframe width="560" height="315" style="border-radius: 10px;" src="https://www.youtube.com/embed/lrWyqpNUwBo?controls=1&amp;start=0;" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 			</div>
 
+			<!-- --██---------------------------------- U IMAGE CREDIT ----------------██-- -->
+			<a href="#" class="creditpin" style="bottom: 1050px; left: 300px"
+			id="creditpin3"
+			onmouseover="showwindow('credit3');"
+			onmouseout="hidewindow('credit3');"
+			onclick="permashowwindow('content18'); pinactive('item18')"
+			onfocusin="showwindow('credit3');"
+			onfocusout="hidewindow('credit3');"></a>
+
+			<div class="textwindow hidden windowBL nointeract wide" style="bottom: 1050px; left: 300px" id="credit3">
+				<p>
+					<span class="itemname">Artwork</span><br>
+					<span class="itemdescription">"U"</span><br>
+					<span class="itemsubtitle">
+						Creative Director / Producer: Shu Sasaki (PERIMETRON)<br>
+						Director: MARGT (PERIMETRON)<br>
+						MARGT are Arata Takabatake & Isamu Maeda<br>
+						<br>
+						VFX Producer: Yusuke Makita (KASSEN)<br>
+						VFX Supervisor: Takahiro Ota (KASSEN)<br>
+						VFX Designer: UMA Otuka (KASSEN)<br>
+						VFX Designer: Tomoyo Akiyama (KASSEN)<br>
+						VFX Designer: Akiko Aoyama (KASSEN)<br>
+						VFX Designer: Mr.Y<br>
+						Motion Graphics: Keitaro Toyoda（Khaki）<br>
+						Rotoscope: Rudiez<br>
+						<br>
+						©️2021 スタジオ地図<br>
+					</span><br>
+					<span class="itemdescription">Image shown is a screenshot capture from Video "U". <br> - Click to view video.</span>
+				</p>
+			</div>
+
 			<!-- -------------------------------------- SUMMER WARS ------------------ -->
-			<a href="#" class="item" style="bottom: 1160px; left: 1000px;"
+			<a href="#" class="item" style="bottom: 1160px; left: 990px;"
 			id="item19"
-			onmouseover="excitecursor(); permashowwindow('content19');"
-			onclick="permahidewindow('content19')"
+			onmouseover="excitecursor(); permashowwindow('content19'); pinactive('item19');"
+			onclick="permahidewindow('content19'); pindeactive('item19');"
 			onfocusin="permashowwindow('content19');"
 			onfocusout="permahidewindow('content19');"
 			style="background-color: rgba(0,0,0,128);"></a>
@@ -486,11 +658,39 @@
 					<iframe width="560" height="315" style="border-radius: 10px;" src="https://www.youtube.com/embed/HjLE8BmWfKA?controls=1&amp;start=0;" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 			</div>
 
+			<!-- --██---------------------------------- U IMAGE CREDIT ----------------██-- -->
+			<a href="#" class="creditpin" style="bottom: 1260px; left: 850px"
+			id="creditpin4"
+			onmouseover="showwindow('credit4');"
+			onmouseout="hidewindow('credit4');"
+			onclick="permashowwindow('content19'); pinactive('item19')"
+			onfocusin="showwindow('credit4');"
+			onfocusout="hidewindow('credit4');"></a>
+
+			<div class="textwindow hidden windowBL nointeract wide" style="bottom: 1260px; left: 850px" id="credit4">
+				<p>
+					<span class="itemname">Artwork</span><br>
+					<span class="itemdescription">"Oz"</span><br>
+					<span class="itemsubtitle">
+						Director: Mamoru Hosoda<br>
+						Written by Satoko Okudera,<br>
+						from a story by Hosoda.<br>
+						<br>
+						Produced by: Madhouse<br>
+						Released by: Warner Bros. Pictures Japan.<br>
+					</span><br>
+					<span class="itemdescription">
+						Image shown is a screenshot capture from Video:<br>
+						"Summer Wars trailer". Click to view video.
+					 </span>
+				</p>
+			</div>
+
 			<!-- -------------------------------------- Millenium Parade U ------------------ -->
 			<a href="#" class="item" style="bottom: 1020px; left: 750px;"
 			id="item18"
-			onmouseover="excitecursor(); permashowwindow('content18');"
-			onclick="permahidewindow('content18')"
+			onmouseover="excitecursor(); permashowwindow('content18'); pinactive('item18');"
+			onclick="permahidewindow('content18'); pindeactive('item18');"
 			onfocusin="permashowwindow('content18');"
 			onfocusout="permahidewindow('content18');"
 			style="background-color: rgba(0,0,0,128);"></a>
@@ -499,16 +699,34 @@
 				<p>
 					<span class="itemname">U</span><br>
 					<span class="itemsubtitle">Song by Millenium Parade, for movie "Belle"</span><br>
-					<span class="itemdescription">The successor to Summer Wars</span>
+					<span class="itemdescription">Is this the Internet?</span>
 				</p>
 					<iframe width="560" height="315" style="border-radius: 10px;" src="https://www.youtube.com/embed/R3V4sAXUJ-g?controls=1&amp;start=0;" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>
+
+			<!-- --██--██--██--██--██--██--██ ARCAEA IMAGE CREDIT --██--██--██--██--██--██-- -->
+			<a href="#" class="creditpin" style="bottom: 50px; left: 1400px"
+			id="creditpin7"
+			onmouseover="showwindow('credit7');"
+			onmouseout="hidewindow('credit7');"
+			onclick="gotolink('https://arcaea.lowiro.com/en')"
+			onfocusin="showwindow('credit7');"
+			onfocusout="hidewindow('credit7');"></a>
+
+			<div class="textwindow hidden windowBL nointeract" style="bottom: 50px; left: 1400px" id="credit7">
+				<p>
+					<span class="itemsubtitle">Image Credit</span><br>
+					<span class="itemname">Artworks by Lowiro.</span><br>
+					<span class="itemdescription">Arcaea Game Backgrounds</span>
+					<span class="itemsubtitle">Click to view game.</span><br>
+				</p>
 			</div>
 
 			<!-- -------------------------------------- ARCAEA GAMEPLAY ------------------ -->
 			<a href="#" class="item" style="bottom: 300px; left: 1500px;"
 			id="item20"
-			onmouseover="excitecursor(); permashowwindow('content20');"
-			onclick="permahidewindow('content20')"
+			onmouseover="excitecursor(); permashowwindow('content20'); pinactive('item20');"
+			onclick="permahidewindow('content20'); pindeactive('item20');"
 			onfocusin="permashowwindow('content20');"
 			onfocusout="permahidewindow('content20');"
 			style="background-color: rgba(0,0,0,128);"></a>
@@ -525,8 +743,8 @@
 			<!-- -------------------------------------- ARCAEA STORY SNIPPET ------------------ -->
 			<a href="#" class="item" style="bottom: 170px; left: 1670px;"
 			id="item21"
-			onmouseover="excitecursor(); permashowwindow('content21');"
-			onclick="permahidewindow('content21')"
+			onmouseover="excitecursor(); permashowwindow('content21'); pinactive('item21');"
+			onclick="permahidewindow('content21'); pindeactive('item21');"
 			onfocusin="permashowwindow('content21');"
 			onfocusout="permahidewindow('content21');"></a>
 
@@ -539,11 +757,29 @@
 					<iframe width="560" height="315" style="border-radius: 10px;" src="https://www.youtube.com/embed/rXCfnZ8IUhU?controls=0&amp;start=0;" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 			</div>
 
+			<!-- --██--██--██--██--██--██--██ BERMEI/TAISHI IMAGE CREDIT --██--██--██--██--██--██-- -->
+			<a href="#" class="creditpin" style="bottom: 50px; left: 1890px"
+			id="creditpin8"
+			onmouseover="showwindow('credit8');"
+			onmouseout="hidewindow('credit8');"
+			onclick="gotolink('https://www.pixiv.net/en/artworks/72911378')"
+			onfocusin="showwindow('credit8');"
+			onfocusout="hidewindow('credit8');"></a>
+
+			<div class="textwindow hidden windowBL nointeract" style="bottom: 50px; left: 1890px" id="credit8">
+				<p>
+					<span class="itemsubtitle">Image Credit</span><br>
+					<span class="itemname">Artwork by Kaitan</span><br>
+					<span class="itemdescription">⎣ 五番街のアパート ⎦</span>
+					<span class="itemsubtitle">Click to view Artwork.</span><br>
+				</p>
+			</div>
+
 			<!-- -------------------------------------- BERMEI Tones ------------------ -->
 			<a href="#" class="item" style="bottom: 240px; left: 1940px;"
 			id="item22"
-			onmouseover="excitecursor(); permashowwindow('content22');"
-			onclick="permahidewindow('content22')"
+			onmouseover="excitecursor(); permashowwindow('content22'); pinactive('item22');"
+			onclick="permahidewindow('content22'); pindeactive('item22');"
 			onfocusin="permashowwindow('content22');"
 			onfocusout="permahidewindow('content22');"></a>
 
@@ -559,8 +795,8 @@
 			<!-- -------------------------------------- BERMEI Ensembles ------------------ -->
 			<a href="#" class="item" style="bottom: 210px; left: 2270px;"
 			id="item23"
-			onmouseover="excitecursor(); permashowwindow('content23');"
-			onclick="permahidewindow('content23')"
+			onmouseover="excitecursor(); permashowwindow('content23'); pinactive('item23');"
+			onclick="permahidewindow('content23'); pindeactive('item23');"
 			onfocusin="permashowwindow('content23');"
 			onfocusout="permahidewindow('content23');"></a>
 
@@ -576,8 +812,8 @@
 			<!-- -------------------------------------- Taishi Escape from this world ------------------ -->
 			<a href="#" class="item" style="bottom: 335px; left: 1960px;"
 			id="item24"
-			onmouseover="excitecursor(); permashowwindow('content24');"
-			onclick="permahidewindow('content24')"
+			onmouseover="excitecursor(); permashowwindow('content24'); pinactive('item24');"
+			onclick="permahidewindow('content24'); pindeactive('item24');"
 			onfocusin="permashowwindow('content24');"
 			onfocusout="permahidewindow('content24');"></a>
 
@@ -593,8 +829,8 @@
 			<!-- -------------------------------------- Taishi Clock Tower ------------------ -->
 			<a href="#" class="item" style="bottom: 315px; left: 1900px;"
 			id="item26"
-			onmouseover="excitecursor(); permashowwindow('content26');"
-			onclick="permahidewindow('content26')"
+			onmouseover="excitecursor(); permashowwindow('content26'); pinactive('item26');"
+			onclick="permahidewindow('content26'); pindeactive('item26');"
 			onfocusin="permashowwindow('content26');"
 			onfocusout="permahidewindow('content26');"></a>
 
@@ -615,8 +851,8 @@
 			<!-- -------------------------------------- Deemo II ------------------ -->
 			<a href="#" class="item" style="bottom: 600px; right: 1320px;"
 			id="item25"
-			onmouseover="excitecursor(); permashowwindow('content25');"
-			onclick="permahidewindow('content25')"
+			onmouseover="excitecursor(); permashowwindow('content25'); pinactive('item25');"
+			onclick="permahidewindow('content25'); pindeactive('item25');"
 			onfocusin="permashowwindow('content25');"
 			onfocusout="permahidewindow('content25');"></a>
 
@@ -629,11 +865,32 @@
 					<iframe width="560" height="315" style="border-radius: 10px;" src="https://www.youtube.com/embed/0dUpQsGH6_g?controls=0&amp;start=0;" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 			</div>
 
+			<!-- --██--██--██--██--██--██--██--██-- DEEMO II IMAGE CREDIT --██--██--██--██--██-- -->
+			<a href="#" class="creditpin" style="bottom: 500px; left: 2050px"
+			id="creditpin9"
+			onmouseover="showwindow('credit9');"
+			onmouseout="hidewindow('credit9');"
+			onclick="permashowwindow('content25'); pinactive('item25')"
+			onfocusin="showwindow('credit9');"
+			onfocusout="hidewindow('credit9');"></a>
+
+			<div class="textwindow hidden windowBL nointeract wide" style="bottom: 500px; left: 2050px; z-index: 100;" id="credit9">
+				<p>
+					<span class="itemname">Artwork by Rayark Inc.</span><br>
+					<span class="itemdescription">"Deemo II Concept Video"</span><br>
+					<span class="itemsubtitle">
+						Image shown is a screenshot capture from <br>
+						"Deemo II Concept Video".<br>
+						Click to view video.
+					 </span>
+				</p>
+			</div>
+
 			<!-- -------------------------------------- Houseki Review ------------------ -->
 			<a href="#" class="item" style="bottom: 200px; right: 1100px;"
 			id="item28"
-			onmouseover="excitecursor(); permashowwindow('content28');"
-			onclick="permahidewindow('content28')"
+			onmouseover="excitecursor(); permashowwindow('content28'); pinactive('item28');"
+			onclick="permahidewindow('content28'); pindeactive('item28');"
 			onfocusin="permashowwindow('content28');"
 			onfocusout="permahidewindow('content28');"></a>
 
@@ -649,8 +906,8 @@
 			<!-- -------------------------------------- Houseki Trailer ------------------ -->
 			<a href="#" class="item" style="bottom: 280px; right: 820px;"
 			id="item30"
-			onmouseover="excitecursor(); permashowwindow('content30');"
-			onclick="permahidewindow('content30')"
+			onmouseover="excitecursor(); permashowwindow('content30'); pinactive('item30');"
+			onclick="permahidewindow('content30'); pindeactive('item30');"
 			onfocusin="permashowwindow('content30');"
 			onfocusout="permahidewindow('content30');"></a>
 
@@ -666,8 +923,8 @@
 			<!-- -------------------------------------- Houseki Scene ------------------ -->
 			<a href="#" class="item" style="bottom: 260px; right: 750px;"
 			id="item27"
-			onmouseover="excitecursor(); permashowwindow('content27');"
-			onclick="permahidewindow('content27')"
+			onmouseover="excitecursor(); permashowwindow('content27'); pinactive('item27');"
+			onclick="permahidewindow('content27'); pindeactive('item27');"
 			onfocusin="permashowwindow('content27');"
 			onfocusout="permahidewindow('content27');"></a>
 
@@ -680,11 +937,36 @@
 					<iframe width="560" height="315" style="border-radius: 10px;" src="https://www.youtube.com/embed/yOrfhH77ynY?controls=0&amp;start=0;" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 			</div>
 
+			<!-- --██--██--██--██--██--██--██--██-- HOUSEKI IMAGE CREDIT --██--██--██--██--██-- -->
+			<a href="#" class="creditpin" style="bottom: 100px; right: 700px"
+			id="creditpin10"
+			onmouseover="showwindow('credit10');"
+			onmouseout="hidewindow('credit10');"
+			onclick="gotolink('https://houseki-no-kuni.fandom.com/wiki/The_Land')"
+			onfocusin="showwindow('credit10');"
+			onfocusout="hidewindow('credit10');"></a>
+
+			<div class="textwindow hidden windowBR nointeract wide" style="bottom: 100px; right: 700px;" id="credit10">
+				<p>
+					<span class="itemname">Artwork</span><br>
+					<span class="itemdescription">"The Land"</span><br>
+					<span class="itemsubtitle">
+						Original Manga Writen by: Haruko Ichikawa<br>
+						Anime Directed by	Takahiko Kyōgoku<br>
+						Studio: Orange.
+					</span><br>
+					<span class="itemdescription">
+						Image shown is a screenshot capture from <br>
+						"Houseki no Kuni". - Click to view source Website.
+					 </span>
+				</p>
+			</div>
+
 			<!-- -------------------------------------- NieR OST ------------------ -->
 			<a href="#" class="item" style="bottom: 500px; right: 500px;"
 			id="item31"
-			onmouseover="excitecursor(); permashowwindow('content31');"
-			onclick="permahidewindow('content31')"
+			onmouseover="excitecursor(); permashowwindow('content31'); pinactive('item31');"
+			onclick="permahidewindow('content31'); pindeactive('item31');"
 			onfocusin="permashowwindow('content31');"
 			onfocusout="permahidewindow('content31');"></a>
 
@@ -700,8 +982,8 @@
 			<!-- -------------------------------------- NieR Trailer ------------------ -->
 			<a href="#" class="item" style="bottom: 450px; right: 450px;"
 			id="item32"
-			onmouseover="excitecursor(); permashowwindow('content32');"
-			onclick="permahidewindow('content32')"
+			onmouseover="excitecursor(); permashowwindow('content32'); pinactive('item32');"
+			onclick="permahidewindow('content32'); pindeactive('item32');"
 			onfocusin="permashowwindow('content32');"
 			onfocusout="permahidewindow('content32');"></a>
 
@@ -714,11 +996,29 @@
 					<iframe width="560" height="315" style="border-radius: 10px;" src="https://www.youtube.com/embed/ARHVKZ5K1b0?controls=0&amp;start=0;" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 			</div>
 
+			<!-- --██--██--██--██--██--██--██--██-- NieR IMAGE CREDIT --██--██--██--██--██-- -->
+			<a href="#" class="creditpin" style="bottom: 370px; right: 280px;"
+			id="creditpin12"
+			onmouseover="showwindow('credit12');"
+			onmouseout="hidewindow('credit12');"
+			onclick="gotolink('https://www.platinumgames.com/games/nier-automata')"
+			onfocusin="showwindow('credit12');"
+			onfocusout="hidewindow('credit12');"></a>
+
+			<div class="textwindow hidden windowBR nointeract wide" style="bottom: 370px; right: 280px;" id="credit12">
+				<p>
+					<span class="itemsubtitle">Image Credit</span><br>
+					<span class="itemname">Artwork by Platinum Games Inc.</span><br>
+					<span class="itemdescription">NieR Automata Concept Art</span><br>
+					<span class="itemsubtitle">Click to view game.</span><br>
+				</p>
+			</div>
+
 			<!-- -------------------------------------- Nightgate ------------------ -->
 			<a href="#" class="item" style="bottom: 85px; right: 150px;"
 			id="item33"
-			onmouseover="excitecursor(); permashowwindow('content33');"
-			onclick="permahidewindow('content33')"
+			onmouseover="excitecursor(); permashowwindow('content33'); pinactive('item33');"
+			onclick="permahidewindow('content33'); pindeactive('item33');"
 			onfocusin="permashowwindow('content33');"
 			onfocusout="permahidewindow('content33');"></a>
 
@@ -731,11 +1031,29 @@
 					<iframe width="560" height="315" style="border-radius: 10px;" src="https://www.youtube.com/embed/i0Xtdo8UrBA?controls=0&amp;start=0;" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 			</div>
 
+			<!-- --██--██--██--██--██--██--██--██-- NIGHTGATE IMAGE CREDIT --██--██--██--██--██-- -->
+			<a href="#" class="creditpin" style="bottom: 8px; right: 300px;"
+			id="creditpin11"
+			onmouseover="showwindow('credit11');"
+			onmouseout="hidewindow('credit11');"
+			onclick="gotolink('http://nightgate.co')"
+			onfocusin="showwindow('credit11');"
+			onfocusout="hidewindow('credit11');"></a>
+
+			<div class="textwindow hidden windowBR nointeract wide" style="bottom: 8px; right: 300px;" id="credit11">
+				<p>
+					<span class="itemsubtitle">Image Credit</span><br>
+					<span class="itemname">Artwork by Semidome.</span><br>
+					<span class="itemdescription">A screenshot of a Nightgate Level</span><br>
+					<span class="itemsubtitle">Click to view game.</span><br>
+				</p>
+			</div>
+
 			<!-- -------------------------------------- Minecraft ------------------ -->
 			<a href="#" class="item" style="bottom: 700px; right: 1000px;"
 			id="item34"
-			onmouseover="excitecursor(); permashowwindow('content34');"
-			onclick="permahidewindow('content34')"
+			onmouseover="excitecursor(); permashowwindow('content34'); pinactive('item34');"
+			onclick="permahidewindow('content34'); pindeactive('item34');"
 			onfocusin="permashowwindow('content34');"
 			onfocusout="permahidewindow('content34');"></a>
 
@@ -751,8 +1069,8 @@
 			<!-- -------------------------------------- Minecraft MMX ------------------ -->
 			<a href="#" class="item" style="bottom: 700px; right: 600px;"
 			id="item35"
-			onmouseover="excitecursor(); permashowwindow('content35');"
-			onclick="permahidewindow('content35')"
+			onmouseover="excitecursor(); permashowwindow('content35'); pinactive('item35');"
+			onclick="permahidewindow('content35'); pindeactive('item35');"
 			onfocusin="permashowwindow('content35');"
 			onfocusout="permahidewindow('content35');"></a>
 
@@ -765,11 +1083,29 @@
 					<iframe width="560" height="315" style="border-radius: 10px;" src="https://www.youtube.com/embed/a_QgyahFHYk?controls=1&amp;start=0;" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 			</div>
 
+			<!-- --██--██--██--██--██--██--██--██-- MINECRAFT IMAGE CREDIT --██--██--██--██--██-- -->
+			<a href="#" class="creditpin" style="bottom: 640px; right: 800px;"
+			id="creditpin14"
+			onmouseover="showwindow('credit14');"
+			onmouseout="hidewindow('credit14');"
+			onclick="gotolink('https://www.youtube.com/watch?v=_6XjfohyyRg')"
+			onfocusin="showwindow('credit14');"
+			onfocusout="hidewindow('credit14');"></a>
+
+			<div class="textwindow hidden windowBR nointeract wide" style="bottom: 640px; right: 800px;" id="credit14">
+				<p>
+					<span class="itemsubtitle">Image Credit</span><br>
+					<span class="itemname">Game by Mojang</span><br>
+					<span class="itemdescription">Screenshot of Minecraft 1.18 world generation</span><br>
+					<span class="itemsubtitle">Click to view source video.</span><br>
+				</p>
+			</div>
+
 			<!-- -------------------------------------- Real MM ------------------ -->
 			<a href="#" class="item" style="bottom: 730px; right: 400px;"
 			id="item36"
-			onmouseover="excitecursor(); permashowwindow('content36');"
-			onclick="permahidewindow('content36')"
+			onmouseover="excitecursor(); permashowwindow('content36'); pinactive('item36');"
+			onclick="permahidewindow('content36'); pindeactive('item36');"
 			onfocusin="permashowwindow('content36');"
 			onfocusout="permahidewindow('content36');"></a>
 
@@ -785,8 +1121,8 @@
 			<!-- -------------------------------------- MMX Engineering Video ------------------ -->
 			<!-- <a href="#" class="item" style="bottom: 730px; right: 400px;"
 			id="item38"
-			onmouseover="excitecursor(); permashowwindow('content38');"
-			onclick="permahidewindow('content38')"
+			onmouseover="excitecursor(); permashowwindow('content38'); pinactive('item38');"
+			onclick="permahidewindow('content38'); pindeactive('item38');"
 			onfocusin="permashowwindow('content38');"
 			onfocusout="permahidewindow('content38');"></a>
 
@@ -802,8 +1138,8 @@
 			<!-- -------------------------------------- DankPods ------------------ -->
 			<a href="#" class="item" style="bottom: 800px; right: 150px;"
 			id="item39"
-			onmouseover="excitecursor(); permashowwindow('content39');"
-			onclick="permahidewindow('content39')"
+			onmouseover="excitecursor(); permashowwindow('content39'); pinactive('item39');"
+			onclick="permahidewindow('content39'); pindeactive('item39');"
 			onfocusin="permashowwindow('content39');"
 			onfocusout="permahidewindow('content39');"></a>
 
@@ -819,8 +1155,8 @@
 			<!-- -------------------------------------- MMX Compilation ------------------ -->
 			<a href="#" class="item" style="bottom: 750px; right: 50px;"
 			id="item37"
-			onmouseover="excitecursor(); permashowwindow('content37');"
-			onclick="permahidewindow('content37')"
+			onmouseover="excitecursor(); permashowwindow('content37'); pinactive('item37');"
+			onclick="permahidewindow('content37'); pindeactive('item37');"
 			onfocusin="permashowwindow('content37');"
 			onfocusout="permahidewindow('content37');"></a>
 
@@ -831,6 +1167,24 @@
 					<!-- <span class="itemdescription">Comfy coffee yumm</span> -->
 				</p>
 					<iframe width="560" height="315" style="border-radius: 10px;" src="https://www.youtube.com/embed/M8R8iFf9ltE?controls=1&amp;start=0;" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>
+
+			<!-- --██--██--██--██--██--██--██--██-- PATEMA IMAGE CREDIT --██--██--██--██--██-- -->
+			<a href="#" class="creditpin" style="bottom: 680px; right: 200px;"
+			id="creditpin13"
+			onmouseover="showwindow('credit13');"
+			onmouseout="hidewindow('credit13');"
+			onclick="gotolink('http://studio-rikka.com/patema/')"
+			onfocusin="showwindow('credit13');"
+			onfocusout="hidewindow('credit13');"></a>
+
+			<div class="textwindow hidden windowBR nointeract wide" style="bottom: 680px; right: 200px;" id="credit13">
+				<p>
+					<span class="itemsubtitle">Image Credit</span><br>
+					<span class="itemname">Artwork by Studio Rikka</span><br>
+					<span class="itemdescription">Patema Inverted: Underground City</span><br>
+					<span class="itemsubtitle">Click to view website.</span><br>
+				</p>
 			</div>
 
 		</div>
