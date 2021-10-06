@@ -9,11 +9,11 @@
 	<link rel="stylesheet" href="style.css">
 	<script type="text/javascript" src="script.js"></script>
 
-	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-	<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.15.0/TweenMax.min.js'></script>
+	<!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script> -->
+	<!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.15.0/TweenMax.min.js'></script> -->
 </head>
 
-<body>
+<body onclick="gotolinkself('https://yuuiko.github.io/BBP/Map/index.html')">
 	<div class="transitionoverlay" id="transitionoverlay"></div>
 
 	<script type="module" async>
@@ -31,13 +31,13 @@
 	}, 50);
 	</script>
 
-	<div class="window" id="window">
+	<!-- <div class="window" id="window"> -->
 
 		<!-- █████████████████████████████████████████ HEADER ███ -->
-		<div class="box" id="cursor"></div>
+		<!-- <div class="box" id="cursor"></div> -->
 
 		<!-- █████████████████████████████████████████ INTROOVERLAY ███ -->
-		<div class="introoverlay goneReducedToAtoms hidden" id="introoverlay" onclick="hideintro('introoverlay');">
+		<!-- <div class="introoverlay goneReducedToAtoms hidden" id="introoverlay" onclick="hideintro('introoverlay');">
 			<br>
 			<br>
 			<br>
@@ -47,7 +47,7 @@
 			<p>aaaaaaa. AAAAAAAA. aaaaaaa. AAAAAAAA. aaaaaaa. AAAAAAAA. aaaaaaa. AAAAAAAA. aaaaaaa. AAAAAAAA. aaaaaaa. AAAAAAAA. aaaaaaa. AAAAAAAA. </p>
 
 			<p>clicky click</p>
-		</div>
+		</div> -->
 
 		<div class="title" style="z-index: 1;">
 			<h1>Hello!</h1>
@@ -57,9 +57,9 @@
 			+
 		</a> -->
 
-		<a class="topbutton" id="infobtn" onmouseover="showwindow('contentinfo'); excitecursor();" onmouseout="normalcursor(); hidewindow('contentinfo');">
+		<!-- <a class="topbutton" id="infobtn" onmouseover="showwindow('contentinfo'); excitecursor();" onmouseout="normalcursor(); hidewindow('contentinfo');">
 			i
-		</a>
+		</a> -->
 
 
 
@@ -141,12 +141,9 @@
 				</p>
 			</div>
 
-			<a href="https://yuuiko.github.io/BBP/Map/index.html" target="_self" class="item" style="top: 10%; right: 35%;"
-			id="item5"
-			onmouseover="excitecursor();"
-			onmouseout="normalcursor();"
-			onclick=""></a>
-			<div class="textwindow windowTR" style="top: 10%; right: 35%;" id="content5">
+			<a href="https://yuuiko.github.io/BBP/Map/index.html" target="_self" class="item" style="top: 10%; right: 35%; z-index: 1000;"
+			id="item5"></a>
+			<div class="textwindow windowTR" style="top: 10%; right: 35%; z-index: 1000;" id="content5">
 				<p>
 					<span class="itemname">I'm still working on this place!</span><br>
 					<span class="itemsubtitle">This will be the prologue for the thing you saw outside.</span><br>
@@ -156,13 +153,13 @@
 			</div>
 
 		</div>
-	</div>
+	<!-- </div> -->
 
 
 
 	<!-- █████████████████████████████████████████ MOVE CURSOR with jquery ███ -->
 	<!-- FROM https://codepen.io/igcorreia/pen/pJvOpL -->
-	<script type="module" async>
+	<!-- <script type="module" async>
 	var $box = $('.box'),
 	speed = 0;
 
@@ -176,7 +173,7 @@
 
 	$(window).on('mousemove', moveBox);
 
-	</script>
+	</script> -->
 </body>
 
 </html>

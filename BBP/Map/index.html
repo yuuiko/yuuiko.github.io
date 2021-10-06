@@ -34,7 +34,12 @@
 	<div class="window" id="window">
 
 		<!-- █████████████████████████████████████████ HEADER ███ -->
-		<div class="box" id="cursor"></div>
+		<!-- <div class="box" id="cursor"></div> -->
+
+		<!-- █████████████████████████████████████████ MOBILEONLY ███ -->
+		<div class="toosmalloverlay" id="toosmalloverlay">
+			<!-- <img src="img/toosmall.png" alt=""> -->
+		</div>
 
 		<!-- █████████████████████████████████████████ INTROOVERLAY ███ -->
 		<div class="introoverlay" id="introoverlay" onclick="hideintro('introoverlay'); setTimeout(function () {hidewindow('title')}, 5000);">
@@ -605,6 +610,28 @@
 					<span class="itemdescription">CIRCLE NATION RISE</span>
 				</p>
 					<iframe width="560" height="315" style="border-radius: 10px;" src="https://www.youtube.com/embed/lrWyqpNUwBo?controls=1&amp;start=0;" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>
+
+			<!-- -------------------------------------- DJ MAX ------------------ -->
+			<a href="#" class="item" style="bottom: 250px; left: 280px;"
+			id="item16a"
+			onmouseover="excitecursor(); permashowwindow('content16a'); pinactive('item16a');"
+			onclick="permahidewindow('content16a'); pindeactive('item16a');"
+			onfocusin="permashowwindow('content16a');"
+			onfocusout="permahidewindow('content16a');"
+			style="background-color: rgba(0,0,0,128);"></a>
+
+			<div class="textwindow hidden goneReducedToAtoms windowBL wide" style="bottom: 250px; left: 280px;" id="content16a">
+				<p>
+					<span class="itemname">Let's DJ MAX</span><br>
+					<span class="itemsubtitle">A rhythm game that looks epic </span><br>
+					<span class="itemdescription">
+						I just found this and loved it, haven't even played the game ahaha, <br>
+						it has such a soul, really pretty song. Want to visit!<br>
+						Even marshmello and Porter Robinson is in!
+					</span>
+				</p>
+					<iframe width="560" height="315" style="border-radius: 10px;" src="https://www.youtube.com/embed/icxKWxuirMc?controls=1&amp;start=0;" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 			</div>
 
 			<!-- --██---------------------------------- U IMAGE CREDIT ----------------██-- -->
@@ -1194,7 +1221,7 @@
 
 	<!-- █████████████████████████████████████████ MOVE CURSOR with jquery ███ -->
 	<!-- FROM https://codepen.io/igcorreia/pen/pJvOpL -->
-	<script type="module" async>
+	<!-- <script type="module" async>
 	var $box = $('.box'),
 	speed = 0;
 
@@ -1208,7 +1235,7 @@
 
 	$(window).on('mousemove', moveBox);
 
-	</script>
+	</script> -->
 </body>
 
 </html>

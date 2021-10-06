@@ -40,7 +40,7 @@ body {
 	font-family: kollektif;
 
 	/* background-image: url('img/Mainroombkg.jpg'); */
-	background-color: #000;
+	background-color: #001928;
 	background-size: cover;
 
 	background-attachment: fixed;
@@ -142,24 +142,24 @@ h2 {
 
 /* width */
 ::-webkit-scrollbar {
-	width: 6px;
-	height: 6px
+	width: 8px;
+	height: 8px
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-	background-color: none;
+	background-color: rgba(0,0,0,0);
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
 	background: #686D9F;
 	/* background-image: linear-gradient(90deg, #686D9F, #32374d); */
-	border-radius: 4px 0px 0px 4px;
+	border-radius: 4px 4px;
 }
 
 ::-webkit-scrollbar-corner {
-	background: none;
+	background: #001928;
 }
 
 /* Handle on hover */
@@ -196,12 +196,41 @@ h2 {
 	padding: 70px 50px;
 
 	overflow-y: scroll;
+	user-select: none;
 
 	opacity: 100%;
 	background-color: #1D2444;
 	color: white;
 	text-align: center;
 	vertical-align: middle;
+
+	transition: all 2s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+/*█████████████████████████████████████████████████ Mobile Warning OVERLAY █████ */
+
+.toosmalloverlay {
+	position: fixed;
+	display: block;
+	width: 100%;
+	height: 100%;
+	z-index: 901;
+
+	opacity: 0%;
+
+	background-color: rgba(29, 36, 68, 0.5);
+	background-image: url('img/toosmall.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 400px;
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+
+	pointer-events: none;
+	user-select: none;
+
+	transform: scale(0.8);
+	border-radius: 50px;
 
 	transition: all 1s cubic-bezier(0.65, 0, 0.35, 1);
 }
@@ -618,6 +647,14 @@ h2 {
 }
 
 @media screen and (max-width: 700px) {
+	.toosmalloverlay {
+		opacity: 100%;
+		/* display: block; */
+		transform: scale(1);
+
+		border-radius: 0px;
+	}
+
 	.title {
 		/* font-size: 12px !important; */
 		/* margin-top: 25px; */

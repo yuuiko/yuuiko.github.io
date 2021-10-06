@@ -18,8 +18,7 @@ body {
 	margin: 0px;
 	padding: 0px;
 
-	cursor: none;
-	-webkit-cursor: none;
+	/*cursor: none;*/
 	transition: all 2s cubic-bezier(0.65, 0, 0.35, 1);
 }
 
@@ -39,10 +38,10 @@ p {
 
 	white-space: nowrap;
 
-	cursor: none;
-	pointer-events: none;
-	user-select: none;
-	-webkit-user-select: none;
+	/* cursor: none; */
+	/*pointer-events: none;*/
+	/* user-select: none; */
+	/* -webkit-user-select: none; */
 	transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
@@ -70,7 +69,7 @@ p {
 	border-radius: 50px;
 	opacity: 1;
 
-	pointer-events: none;
+	/*pointer-events: none;*/
 	transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 .excite {
@@ -101,7 +100,7 @@ p {
 	opacity: 100%;
 	background-color: #FFF0D5;
 
-	pointer-events: none;
+	/*pointer-events: none;*/
 	transition: all 2s cubic-bezier(0.65, 0, 0.35, 1);
 }
 .transparent {
@@ -146,8 +145,8 @@ p {
 	background-color: black;
 	border-radius: 50%;
 
-	user-select: none;
-	-webkit-user-select: none;
+	/* user-select: none; */
+	/* -webkit-user-select: none; */
 	transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 .topbutton:hover {
@@ -194,7 +193,7 @@ p {
 	border-radius: 5pt;
 
 	pointer-events: all;
-	cursor: none;
+	/*cursor: none;*/
 }
 .addtextbox {
 	width: calc(100% - 10px);
@@ -208,7 +207,7 @@ p {
 	border-radius: 5pt;
 
 	pointer-events: all;
-	cursor: none;
+	/*cursor: none;*/
 }
 .addtextarea {
 	width: calc(100% - 10px);
@@ -223,7 +222,7 @@ p {
 
 	pointer-events: all;
 	resize: vertical;
-	cursor: none;
+	/*cursor: none;*/
 }
 .addokbtn {
 	padding: 9px 10px 5px 10px;
@@ -238,7 +237,7 @@ p {
 	font-family: kollektif;
 
 	pointer-events: all;
-	cursor: none;
+	/*cursor: none;*/
 	transition: 0.5s 0s cubic-bezier(0.22, 1, 0.36, 1);
 }
 .addokbtn:hover {
@@ -286,7 +285,7 @@ p {
 	border: 2px solid white;
 	border-radius: 50%;
 
-	cursor: none;
+	/*cursor: none;*/
 	transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 .item:hover {
@@ -317,8 +316,7 @@ p {
 	border: 5px solid white;
 	border-radius: 20px;
 
-	pointer-events: none;
-	-webkit-pointer-events: none;
+	/*pointer-events: none;*/
 	transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 	transform: scale(1);
 }
@@ -353,7 +351,7 @@ p {
 	border: 5px solid black;
 	border-radius: 20px;
 
-	pointer-events: none;
+	/*pointer-events: none;*/
 	transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 	transform: scale(1);
 }
