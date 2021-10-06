@@ -78,6 +78,12 @@ function gotolink(inURL) {
 	window.open(theURL);
 }
 
+function gotolinkself(inURL) {
+	var theURL = inURL;
+	console.log("REQUESTED URL " + theURL);
+	window.open(theURL,"_self");
+}
+
 function hideintro(divID) {
 	console.log("hidewindow fired");
 	var item = document.getElementById(divID);
