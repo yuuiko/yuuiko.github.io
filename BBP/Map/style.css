@@ -646,7 +646,7 @@ h2 {
 	} */
 }
 
-@media only screen and (orientation: landscape) and (max-height: 600px) {
+@media only screen and (orientation: landscape) and (max-height: 500px) {
 	.toosmalloverlay {
 		opacity: 100%;
 		transform: scale(1);
