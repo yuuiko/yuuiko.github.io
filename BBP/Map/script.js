@@ -46,7 +46,17 @@ function hidewindow(divID) {
 function pinactive(divID) {
 	console.log("hidewindow fired");
 	var item = document.getElementById(divID);
-	item.classList.add('itemactive');
+
+	if (item.classList.contains('itemactive')) {
+	}
+	else {
+		item.classList.add('itemactive');
+
+		setTimeout(function () {
+			item.classList.remove('nointeract');
+		}, 350);
+		item.classList.add('nointeract');
+	}
 }
 function pindeactive(divID) {
 	console.log("showwindow fired");
