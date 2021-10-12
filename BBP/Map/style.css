@@ -39,7 +39,7 @@ ATO - content pins and windows
 body {
 	font-family: kollektif;
 
-	/* background-image: url('img/Mainroombkg.jpg'); */
+	background-image: url('img/backdrop.jpg');
 	background-color: #001928;
 	background-size: cover;
 
@@ -51,8 +51,6 @@ body {
 	margin: 0px;
 	padding: 0px;
 
-	/* cursor: none; */
-	/* -webkit-cursor: none; */
 	transition: all 2s cubic-bezier(0.65, 0, 0.35, 1);
 }
 
@@ -72,7 +70,9 @@ h2 {
 .title {
 	display: block;
 	position: fixed;
-	width: calc(100vw - 260px);
+	box-sizing: border-box;
+	width: 100vw;
+
 	z-index: 2000;
 	padding-left: 30px;
 
@@ -81,9 +81,6 @@ h2 {
 
 	transform-origin: top left;
 
-	/* white-space: nowrap; */
-
-	/* cursor: none; */
 	pointer-events: none;
 	user-select: none;
 	-webkit-user-select: none;
@@ -141,31 +138,52 @@ h2 {
 /*█████████████████████████████████████████████████ SCROLLBARS █████ */
 
 /* width */
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
 	width: 8px;
 	height: 8px
-}
+} */
 
 /* Track */
-::-webkit-scrollbar-track {
+/* ::-webkit-scrollbar-track {
 	background-color: rgba(0,0,0,0);
-}
+} */
 
 /* Handle */
-::-webkit-scrollbar-thumb {
+/* ::-webkit-scrollbar-thumb {
 	background: #686D9F;
-	/* background-image: linear-gradient(90deg, #686D9F, #32374d); */
 	border-radius: 4px 4px;
-}
+} */
 
 ::-webkit-scrollbar-corner {
 	background: #001928;
 }
 
 /* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
+/* ::-webkit-scrollbar-thumb:hover {
 	background: #white;
+} */
+
+/* total width */
+::-webkit-scrollbar {
+  width: 14px;
 }
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 14px 14px transparent;
+  border: solid 4px transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  box-shadow: inset 0 0 14px 14px rgba(104,	109,159, 1);
+  border: solid 4px transparent;
+  border-radius: 14px;
+}
+
+/* set button(top and bottom of the scrollbar) */
+::-webkit-scrollbar-button {
+  display: none;
+}
+
 
 /*█████████████████████████████████████████████████ TRANSITION OVERLAY █████ */
 .transitionoverlay {
@@ -190,8 +208,11 @@ h2 {
 .introoverlay {
 	position: fixed;
 	display: block;
-	width: calc(100% - 100px);
-	height: calc(100% - 140px);
+
+	box-sizing: border-box;
+	width: 100%;
+	height: 100%;
+
 	z-index: 300;
 	padding: 70px 50px;
 
@@ -303,7 +324,7 @@ h2 {
 }
 
 /*█████████████████████████████████████████ ADD WINDOW FORM STYLE ███*/
-.addemoji {
+/* .addemoji {
 	width: 50px;
 	height: 50px;
 	margin-bottom: 5px;
@@ -315,7 +336,6 @@ h2 {
 	border-radius: 5pt;
 
 	pointer-events: all;
-	/* cursor: none; */
 }
 .addtextbox {
 	width: calc(100% - 10px);
@@ -329,7 +349,6 @@ h2 {
 	border-radius: 5pt;
 
 	pointer-events: all;
-	/* cursor: none; */
 }
 .addtextarea {
 	width: calc(100% - 10px);
@@ -344,7 +363,6 @@ h2 {
 
 	pointer-events: all;
 	resize: vertical;
-	/* cursor: none; */
 }
 .addokbtn {
 	padding: 9px 10px 5px 10px;
@@ -359,7 +377,6 @@ h2 {
 	font-family: kollektif;
 
 	pointer-events: all;
-	/* cursor: none; */
 	transition: 0.5s 0s cubic-bezier(0.22, 1, 0.36, 1);
 }
 .addokbtn:hover {
@@ -369,33 +386,41 @@ h2 {
 .addokbtn:active {
 	background-color: black;
 	transform: scale(0.9);
-}
+} */
 
 /* ████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████ */
 
 /*█████████████████████████████████████████ MAIN CONTENT BOUNDS ███*/
 .contentbox {
-	background-color: #000;
-
-	background-image: url('img/backdrop.jpg');
-	background-color: #000;
-	background-size: cover;
-
-	background-attachment: fixed;
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover;
-
 	display: inline-block;
 	position: relative;
-	width: 3840px;
-	height: 2160px;
-	/* padding-top: 56.25%; /* 16:9 Aspect Ratio */ */
+	margin: 0;
+	padding: 0;
+
 	z-index: -2;
-	/* background-image: url('img/Mainroombkg.jpg'); */
-	background-position: center;
-	background-size: cover;
-	background-repeat: no-repeat;
+}
+
+.roomcontentbox {
+	display: inline-block;
+	position: relative;
+	width: 100vw;
+	/* height: 100vh; */
+	margin: 0;
+	padding: 0;
+
+	z-index: -2;
+}
+
+/*█████████████████████████████████████████ ROOM: background fit ███*/
+.roombkg {
+	width: 100%;
+	height: 100%;
+}
+
+.heightfiller {
+	width: 100%;
+	height: 100vh;
+	background-color: #CCA68A;
 }
 
 /*█████████████████████████████████████████ INTEREST POINT STYLE ███*/
@@ -557,8 +582,11 @@ h2 {
 .actionwindow {
 	display: block;
 	position: fixed;
+
+	box-sizing: border-box;
 	width: 300px;
-	max-height: calc(100vh - 160px);
+	max-height: 80vh;
+
 	overflow-y: scroll;
 	margin: 70px;
 	padding: 10px;
@@ -569,7 +597,6 @@ h2 {
 	border: 5px solid #374481;
 	border-radius: 20px;
 
-	/* pointer-events: none; */
 	transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 	transform: scale(1);
 }
@@ -673,19 +700,19 @@ h2 {
 	}
 
 	.item {
-		width: 25px;
+		/* width: 25px;
 		height: 25px;
 		padding: 6px 10px 13.5px 10px;
 
-		font-size: 20pt;
+		font-size: 20pt; */
 	}
 
 	.creditpin {
-		width: 25px;
+		/* width: 25px;
 		height: 25px;
 		padding: 6px 10px 13.5px 10px;
 
-		font-size: 20pt;
+		font-size: 20pt; */
 	}
 
 	.topbutton {
@@ -695,8 +722,6 @@ h2 {
 	.introoverlay {
 		padding: 30px;
 		text-align: left;
-		width: calc(100% - 60px);
-		height: calc(100% - 60px);
 	}
 
 	#infobtn {

@@ -256,12 +256,14 @@ p {
 	position: relative;
 	width: 100%;
 	padding-top: 56.25%; /* 16:9 Aspect Ratio */
-	z-index: -1;
+
 	overflow-y: scroll;
 	background-image: url('img/Mainroombkg.jpg');
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
+
+	z-index: -1;
 }
 
 /*█████████████████████████████████████████ INTEREST POINT STYLE ███*/

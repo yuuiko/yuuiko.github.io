@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>yuuiko's room</title>
+	<title>Explore my Magispace</title>
 
 	<link rel="stylesheet" href="style.css">
 	<script type="text/javascript" src="script.js"></script>
@@ -31,25 +31,43 @@
 	}, 50);
 	</script>
 
-	<!-- <div class="window" id="window"> -->
+	<div class="window" id="window">
 
 		<!-- █████████████████████████████████████████ HEADER ███ -->
 		<div class="box" id="cursor"></div>
 
-		<!-- █████████████████████████████████████████ INTROOVERLAY ███ -->
-		<!-- <div class="introoverlay goneReducedToAtoms hidden" id="introoverlay" onclick="hideintro('introoverlay');">
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<h1>Some test text.</h1>
-			<p>aaaaaaa. AAAAAAAA. aaaaaaa. AAAAAAAA. aaaaaaa. AAAAAAAA. aaaaaaa. AAAAAAAA. aaaaaaa. AAAAAAAA. aaaaaaa. AAAAAAAA. aaaaaaa. AAAAAAAA. </p>
+		<!-- █████████████████████████████████████████ MOBILEONLY ███ -->
+		<div class="toosmalloverlay" id="toosmalloverlay">
+			<!-- <img src="img/toosmall.png" alt=""> -->
+		</div>
 
-			<p>clicky click</p>
+		<!-- █████████████████████████████████████████ INTROOVERLAY ███ -->
+		<!-- <div class="introoverlay" id="introoverlay" onclick="hideintro('introoverlay'); setTimeout(function () {hidewindow('title')}, 5000);">
+			<h1>Where do you go to hang out, relax and recollect?</h1>
+			<h2>
+				A park? A bedroom? A particular spot in the city?
+				For me, it's a little different. <br>
+				I've discovered a world of imagination.<br>
+				<br>
+				I spend my time in this world of imagination.<br>
+				In worlds created by the dreams of many,<br>
+				A beautiful universe unbound by reality.<br>
+				<br>
+				I've long explored this "Magispace",<br>
+				Found places and creations that I love, becoming a regular to some...<br>
+				I've even created my own little space out there.<br>
+				<br>
+				Let me show you around,<br>
+				Come in and see my local place!<br>
+				<br>
+				<span style="color: #8DDBD3">
+				For the best experience,<br>
+				I recommending watching videos wholly, with Headphones.<br>
+				</span>
+			</h2>
 		</div> -->
 
-		<div class="title" style="z-index: 1;">
+		<div class="title" id="title" style="z-index: 1;">
 			<h1>Hello!</h1>
 		</div>
 
@@ -57,29 +75,29 @@
 			+
 		</a> -->
 
-		<!-- <a class="topbutton" id="infobtn" onmouseover="showwindow('contentinfo'); excitecursor();" onmouseout="normalcursor(); hidewindow('contentinfo');">
-			i
-		</a> -->
-
-
+		<a class="topbutton" id="infobtn" onmouseover="permashowwindow('contentinfo'); excitecursor();" onmouseout="normalcursor();" onclick="permahidewindow('contentinfo');"></a>
 
 		<!-- █████████████████████████████████████████ ADD / INFO WINDOWS ███ -->
-		<div class="actionwindow hidden" id="contentinfo">
+		<div class="actionwindow hidden goneReducedToAtoms" id="contentinfo">
 			<p>
-				<span class="itemname">🔎&nbsp; About This Page</span><br>
+				<span class="itemname">About This Page</span><br>
 				<span style="margin-top: 20px;" class="itemdescription">
 					Hello Friend!!<br>
 					<br>
-					This is my imaginary room, filled with the things that i've created, found and enjoy!<br>
-					In my free time, I like to step away from reality and into the world of imagination. It's really a whole 'nother world in there, and this is my small corner of it!<br>
+					Where do you go to hang out, relax and recollect?<br>
+					I like to step away from reality and into the world of imagination. It's really quite another world in there, and this is my small corner of it!<br>
 					<br>
-					Feel free to roam around and explore what I love to do.
+					Collected here are the worlds that i've discovered, and some that I even regular!
+					Roam around with me, let me show you this small corner of "The Magispace".
 					<br>
 					<br>
 					<strong>Statement of Environment</strong><br>
-					This website is hosted on Github Pages, which has servers based in .....<br>
+					This website is hosted on Github Pages, which has servers based in the United States. Some mentioned locations are "Seattle", and "one on each cost of the states". I pay full respect to the traditional and current owners of the land. <a style="color: black;" href="https://github.blog/2017-10-12-evolution-of-our-data-centers/" target="_blank">Read More</a><br>
 					<br>
-					I aim to avoid 3rd party javascript runners, sites and fonts, which gets less servers involved, and in turn should reduce the energy impact of this site.
+					With some eco-awareness in mind, I aim to avoid 3rd party javascript runners, sites and fonts, which should get less servers involved, and in turn reduce the energy impact that is required to run this site. <br>
+					This site was built on pure HTML, CSS and JS, and does not need to request resources from other servers to run, excluding embedded content.<br>
+					<br>
+					All credits go to the original artists, I do not claim to have created any of these wonderful places. Do go ahead and look into them if any fancy you!
 				</span><br>
 			</p>
 		</div>
@@ -100,9 +118,10 @@
 
 		<!-- █████████████████████████████████████████ PREMADE CONTENT ███ -->
 		<div class="contentbox">
-			<img src="img/roombkg.jpg" alt="">
 
-			<a href="#" class="item" style="top: 36%; right: 25.5%;" id="item1" onmouseover="excitecursor(); showwindow('content1');" onmouseout="normalcursor(); hidewindow('content1');" onclick=""></a>
+			<img src="img/roombkg.jpg" class="roombkg">
+
+			<!-- <a href="#" class="item" style="top: 36%; right: 25.5%;" id="item1" onmouseover="excitecursor(); showwindow('content1');" onmouseout="normalcursor(); hidewindow('content1');" onclick=""></a>
 			<div class="textwindow hidden windowTR" style="top: 36%; right: 25.5%;" id="content1">
 				<p>
 					<span class="itemname">iPod Themes</span><br>
@@ -110,7 +129,7 @@
 					<span class="itemdescription">No ads, no notifications, no calls, no texts, no internet, 1 month battery life: no interruptions.</span><br>
 					<img loading="lazy" class="plantselfie" src="img/selfipod.png" alt="A photo of yuuiko's iPod Themes">
 				</p>
-			</div>
+			</div> -->
 
 			<a href="#" class="item" style="top: 25%; right: 20%;" id="item2" onmouseover="excitecursor(); showwindow('content2');" onmouseout="normalcursor(); hidewindow('content2');" onclick="gotolink('https://yuuiko.github.io/AQT/index.html')"></a>
 			<div class="textwindow hidden windowTR" style="top: 25%; right: 20%;" id="content2">
@@ -149,12 +168,11 @@
 					<span class="itemname">I'm still working on this place!</span><br>
 					<span class="itemsubtitle">This will be the prologue for the thing you saw outside.</span><br>
 					<span class="itemdescription">Click to head outside again.</span><br>
-					<!-- <img loading="lazy" class="plantselfie" src="img/selfipod.png" alt="A photo of yuuiko's iPod Themes"> -->
 				</p>
 			</div>
 
 		</div>
-	<!-- </div> -->
+	</div>
 
 
 
