@@ -646,10 +646,18 @@ h2 {
 	} */
 }
 
+@media only screen and (orientation: landscape) and (max-height: 600px) {
+	.toosmalloverlay {
+		opacity: 100%;
+		transform: scale(1);
+
+		border-radius: 0px;
+	}
+}
+
 @media screen and (max-width: 700px) {
 	.toosmalloverlay {
 		opacity: 100%;
-		/* display: block; */
 		transform: scale(1);
 
 		border-radius: 0px;

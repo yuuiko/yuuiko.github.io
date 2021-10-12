@@ -73,10 +73,14 @@ function permahidewindow(divID) {
 }
 
 function pausevideo(divID) {
+	console.log("pausevideo fired");
+
 	var div = document.getElementById(divID);
 	var iframe = div.getElementsByTagName("iframe")[0].contentWindow;
 	// func = state == 'hide' ? 'pauseVideo' : 'playVideo';
 	iframe.postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*');
+	// iframe.postMessage('{"event":"command","func":"setVolume(volume:10)","args":""}', '*');
+	// player.setVolume(volume:10)
 }
 
 
