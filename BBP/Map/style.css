@@ -650,6 +650,7 @@ h2 {
 	.toosmalloverlay {
 		opacity: 100%;
 		transform: scale(1);
+		background-size: 80vh;
 
 		border-radius: 0px;
 	}
