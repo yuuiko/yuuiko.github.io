@@ -11,9 +11,16 @@
 
 	<!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script> -->
 	<!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.15.0/TweenMax.min.js'></script> -->
+
+	<style media="screen">
+		body {
+			background-color: #FFF0D5;
+		}
+	</style>
+
 </head>
 
-<body>
+<body onclick="gotolinkself('index.html')">
 	<div class="transitionoverlay" id="transitionoverlay"></div>
 
 	<script type="module" async>
@@ -31,10 +38,10 @@
 	}, 50);
 	</script>
 
-	<div class="window" id="window">
+	<div class="storymainwindow">
 
 		<!-- █████████████████████████████████████████ HEADER ███ -->
-		<div class="box" id="cursor"></div>
+		<!-- <div class="box" id="cursor"></div> -->
 
 		<!-- █████████████████████████████████████████ MOBILEONLY ███ -->
 		<div class="toosmalloverlay" id="toosmalloverlay">
@@ -117,51 +124,91 @@
 
 
 		<!-- █████████████████████████████████████████ PREMADE CONTENT ███ -->
+		<div class="storyoverlay hidden goneReducedToAtoms" id="story2" onclick="hideintro('story2');">
+			<div class="storywindow">
+				<h2 style="margin-top: 0px;">Where do you go to hang out, relax and recollect?</h2>
+				<p>
+					A park? A bedroom? A particular spot in the city?
+					For me, it's a little different. <br>
+					I've discovered a world of imagination.<br>
+					<br>
+					I spend my time in this world of imagination.<br>
+					In worlds created by the dreams of many,<br>
+					A beautiful universe unbound by reality.<br>
+					<br>
+					I've long explored this "Magispace",<br>
+					Found places and creations that I love, becoming a regular to some...<br>
+					I've even created my own little space out there.<br>
+					<br>
+					Let me show you around,<br>
+					Come in and see my local place!<br>
+					A park? A bedroom? A particular spot in the city?
+					For me, it's a little different. <br>
+					I've discovered a world of imagination.<br>
+					<br>
+					I spend my time in this world of imagination.<br>
+					In worlds created by the dreams of many,<br>
+					A beautiful universe unbound by reality.<br>
+					<br>
+					I've long explored this "Magispace",<br>
+					Found places and creations that I love, becoming a regular to some...<br>
+					I've even created my own little space out there.<br>
+					<br>
+					Let me show you around,<br>
+					Come in and see my local place!<br>
+					A park? A bedroom? A particular spot in the city?
+					For me, it's a little different. <br>
+					I've discovered a world of imagination.<br>
+					<br>
+					I spend my time in this world of imagination.<br>
+					In worlds created by the dreams of many,<br>
+					A beautiful universe unbound by reality.<br>
+					<br>
+					I've long explored this "Magispace",<br>
+					Found places and creations that I love, becoming a regular to some...<br>
+					I've even created my own little space out there.<br>
+					<br>
+					Let me show you around,<br>
+					Come in and see my local place!<br>
+					A park? A bedroom? A particular spot in the city?
+					For me, it's a little different. <br>
+					I've discovered a world of imagination.<br>
+					<br>
+					I spend my time in this world of imagination.<br>
+					In worlds created by the dreams of many,<br>
+					A beautiful universe unbound by reality.<br>
+					<br>
+					I've long explored this "Magispace",<br>
+					Found places and creations that I love, becoming a regular to some...<br>
+					I've even created my own little space out there.<br>
+					<br>
+					Let me show you around,<br>
+					Come in and see my local place!<br>
+				</p>
+			</div>
+		</div>
+
 		<div class="contentbox">
 
 			<img src="img/roombkg.jpg" class="roombkg">
 
-			<!-- <a href="#" class="item" style="top: 36%; right: 25.5%;" id="item1" onmouseover="excitecursor(); showwindow('content1');" onmouseout="normalcursor(); hidewindow('content1');" onclick=""></a>
-			<div class="textwindow hidden windowTR" style="top: 36%; right: 25.5%;" id="content1">
-				<p>
-					<span class="itemname">iPod Themes</span><br>
-					<span class="itemsubtitle">2 Downloadable Projects</span><br>
-					<span class="itemdescription">No ads, no notifications, no calls, no texts, no internet, 1 month battery life: no interruptions.</span><br>
-					<img loading="lazy" class="plantselfie" src="img/selfipod.png" alt="A photo of yuuiko's iPod Themes">
-				</p>
-			</div> -->
+			<a href="#" class="storypin" style="top: 25%; right: 20%;"
+			id="item2"
+			onmouseover="excitecursor(); permashowwindow('content2');"
+			onmouseout="normalcursor(); permahidewindow('content2');"
+			onclick="permashowwindow('story2');"
+			onfocusin="permashowwindow('content2');"
+			onfocusout="permahidewindow('content2');"></a>
 
-			<a href="#" class="item" style="top: 25%; right: 20%;" id="item2" onmouseover="excitecursor(); showwindow('content2');" onmouseout="normalcursor(); hidewindow('content2');" onclick="gotolink('https://yuuiko.github.io/AQT/index.html')"></a>
 			<div class="textwindow hidden windowTR" style="top: 25%; right: 20%;" id="content2">
 				<p>
-					<span class="itemname">AquaTouch</span><br>
-					<span class="itemsubtitle">Downloadable Project</span><br>
-					<span class="itemdescription">Revolutionise your MacBook TouchBar</span><br>
-					<img loading="lazy" class="plantselfie" src="img/projaquatouch.jpg" alt="A photo by yuuiko">
+					<span class="itemname">A chat with a friend</span><br>
+					<span class="itemsubtitle">Description</span><br>
+					<!-- <span class="itemdescription">Revolutionise your MacBook TouchBar</span><br> -->
 				</p>
 			</div>
 
-			<a href="#" class="item" style="top: 24%; left: 14.5%;" id="item3" onmouseover="excitecursor(); showwindow('content3');" onmouseout="normalcursor(); hidewindow('content3');" onclick=""></a>
-			<div class="textwindow hidden windowTL" style="top: 24%; left: 14.5%;" id="content3">
-				<p>
-					<span class="itemname">Side Table</span><br>
-					<span class="itemsubtitle">Project</span><br>
-					<span class="itemdescription">A foldable bedside table I made</span><br>
-					<img loading="lazy" class="plantselfie" src="img/projtable.jpg" alt="A photo by yuuiko">
-				</p>
-			</div>
-
-			<a href="#" class="item" style="top: 7%; right: 20%;" id="item4" onmouseover="excitecursor(); showwindow('content4');" onmouseout="normalcursor(); hidewindow('content4');" onclick="gotolink('https://yuuiko.github.io/AQT/index.html')"></a>
-			<div class="textwindow hidden windowTR" style="top: 7%; right: 20%;" id="content4">
-				<p>
-					<span class="itemname">Linear Folders</span><br>
-					<span class="itemsubtitle">Downloadable Project</span><br>
-					<span class="itemdescription">Cleanup your desktop.</span><br>
-					<img loading="lazy" class="plantselfie" src="img/projLinearFolders.jpg" alt="A photo by yuuiko">
-				</p>
-			</div>
-
-			<a href="index.html" target="_self" class="item" style="top: 10%; right: 35%; z-index: 1000;"
+			<a href="index.html" target="_self" class="storypin" style="top: 10%; right: 35%; z-index: 1000;"
 			id="item5"></a>
 			<div class="textwindow windowTR" style="top: 10%; right: 35%; z-index: 1000;" id="content5">
 				<p>
