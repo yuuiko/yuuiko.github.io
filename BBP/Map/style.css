@@ -99,7 +99,7 @@ h2 {
 	z-index: -1;
 }
 
-/*█████████████████████████████████████████ MAIN CONTAINER / CURSOR SENSOR ███*/
+/*█████████████████████████████████████████ STORY OVERLAY (FULLSCREEN LAYER) ███*/
 .storymainwindow {
 	display: block;
 	position: fixed;
@@ -204,7 +204,7 @@ h2 {
 	display: block;
 	width: 100%;
 	height: 100%;
-	z-index: 900;
+	z-index: 999;
 
 	opacity: 100%;
 	background-color: #FFF0D5;
@@ -248,7 +248,7 @@ h2 {
 	display: block;
 	width: 100%;
 	height: 100%;
-	z-index: 901;
+	z-index: 998;
 
 	opacity: 0%;
 
@@ -269,17 +269,18 @@ h2 {
 	transition: all 1s cubic-bezier(0.65, 0, 0.35, 1);
 }
 
+/*█████████████████████████████████████████████████ STORY OVERLAY █████ */
 .storyoverlay {
 	position: fixed;
 	display: block;
 	box-sizing: border-box;
 	width: 100%;
 	height: 100%;
-	z-index: 1000;
+	z-index: 800;
 
 	opacity: 100%;
 
-	overflow: scroll;
+	overflow: none;
 
 	background-color: rgba(29, 36, 68, 0.5);
 	background-position: center;
@@ -289,17 +290,20 @@ h2 {
 
 	border-radius: 0px;
 
-	/* transform: scale(1) !important; */
-
 	transition: all 0.4s cubic-bezier(0.65, 0, 0.35, 1);
 }
 
+/*█████████████████████████████████████████████████ STORY CONTENT WINDOW █████ */
 .storywindow {
 	background-color: #FFF0D5;
 	color: black;
 	border-radius: 20px;
-	border: 20px solid #FFF0D5;
+	border: solid black;
+	border-width: 15px 0px 0px 15px;
 	overflow: scroll;
+
+	padding: 20px;
+	box-sizing: border-box;
 
 	position: absolute;
 	margin: auto;

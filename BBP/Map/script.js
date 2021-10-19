@@ -74,12 +74,21 @@ function permashowwindow(divID) {
 }
 
 function permahidewindow(divID) {
-	console.log("hidewindow fired");
+	console.log("PERMA hidewindow fired");
 	var item = document.getElementById(divID);
-	item.classList.add('hidden');
-	setTimeout(function () {
-		item.classList.add('goneReducedToAtoms');
-	}, 200);
+
+	//reject further interactions while animating.
+	if (item.classList.contains('goneReducedToAtoms')) {
+	}
+	else {
+		item.classList.add('hidden');
+
+		setTimeout(function () {
+			item.classList.remove('nointeract');
+			item.classList.add('goneReducedToAtoms');
+		}, 200);
+		item.classList.add('nointeract');
+	}
 }
 
 function pausevideo(divID) {

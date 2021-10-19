@@ -4,20 +4,20 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>Explore my Magispace</title>
+	<title>Explore my Home in the Magispace</title>
 
 	<link rel="stylesheet" href="style.css">
 	<script type="text/javascript" src="script.js"></script>
 
 	<style media="screen">
-		body {
-			background-color: #FFF0D5;
-		}
+	body {
+		background-color: #CCA68A;
+	}
 	</style>
 
 </head>
 
-<body>
+<body onload="setTimeout(function () {hidewindow('title')}, 5000);">
 	<div class="transitionoverlay" id="transitionoverlay"></div>
 
 	<script type="module" async>
@@ -46,197 +46,273 @@
 		</div>
 
 		<!-- █████████████████████████████████████████ INTROOVERLAY ███ -->
-		<!-- <div class="introoverlay" id="introoverlay" onclick="hideintro('introoverlay'); setTimeout(function () {hidewindow('title')}, 5000);">
-			<h1>Where do you go to hang out, relax and recollect?</h1>
-			<h2>
-				A park? A bedroom? A particular spot in the city?
-				For me, it's a little different. <br>
-				I've discovered a world of imagination.<br>
-				<br>
-				I spend my time in this world of imagination.<br>
-				In worlds created by the dreams of many,<br>
-				A beautiful universe unbound by reality.<br>
-				<br>
-				I've long explored this "Magispace",<br>
-				Found places and creations that I love, becoming a regular to some...<br>
-				I've even created my own little space out there.<br>
-				<br>
-				Let me show you around,<br>
-				Come in and see my local place!<br>
-				<br>
-				<span style="color: #8DDBD3">
-				For the best experience,<br>
-				I recommending watching videos wholly, with Headphones.<br>
-				</span>
-			</h2>
-		</div> -->
 
-		<div class="title" id="title" style="z-index: 1;">
-			<h1>Hello!</h1>
-		</div>
+<div class="title" id="title" style="z-index: 1; color: #1D2444;">
+	<h1>Hello there, Come in!</h1>
+</div>
 
-		<!-- <a class="topbutton" id="addbtn" onmouseover="toggleadd(); excitecursor();" onmouseout="normalcursor();">
-			+
-		</a> -->
+<!-- <a class="topbutton" id="addbtn" onmouseover="toggleadd(); excitecursor();" onmouseout="normalcursor();">
++
+</a> -->
 
-		<a class="topbutton" id="infobtn" onmouseover="permashowwindow('contentinfo'); excitecursor();" onmouseout="normalcursor();" onclick="permahidewindow('contentinfo');"></a>
+<a class="topbutton" id="infobtn" onmouseover="permashowwindow('contentinfo'); excitecursor();" onmouseout="normalcursor();" onclick="permahidewindow('contentinfo');"></a>
 
-		<!-- █████████████████████████████████████████ ADD / INFO WINDOWS ███ -->
-		<div class="actionwindow hidden goneReducedToAtoms" id="contentinfo">
-			<p>
-				<span class="itemname">About This Page</span><br>
-				<span style="margin-top: 20px;" class="itemdescription">
-					Hello Friend!!<br>
-					<br>
-					Where do you go to hang out, relax and recollect?<br>
-					I like to step away from reality and into the world of imagination. It's really quite another world in there, and this is my small corner of it!<br>
-					<br>
-					Collected here are the worlds that i've discovered, and some that I even regular!
-					Roam around with me, let me show you this small corner of "The Magispace".
-					<br>
-					<br>
-					<strong>Statement of Environment</strong><br>
-					This website is hosted on Github Pages, which has servers based in the United States. Some mentioned locations are "Seattle", and "one on each cost of the states". I pay full respect to the traditional and current owners of the land. <a style="color: black;" href="https://github.blog/2017-10-12-evolution-of-our-data-centers/" target="_blank">Read More</a><br>
-					<br>
-					With some eco-awareness in mind, I aim to avoid 3rd party javascript runners, sites and fonts, which should get less servers involved, and in turn reduce the energy impact that is required to run this site. <br>
-					This site was built on pure HTML, CSS and JS, and does not need to request resources from other servers to run, excluding embedded content.<br>
-					<br>
-					All credits go to the original artists, I do not claim to have created any of these wonderful places. Do go ahead and look into them if any fancy you!
-				</span><br>
-			</p>
-		</div>
+<!-- █████████████████████████████████████████ ADD / INFO WINDOWS ███ -->
+<div class="actionwindow" id="contentinfo">
+	<p>
+		<span class="itemname">Oh, Hello! <br>This is my room in the Magispace.</span><br>
+		<span style="margin-top: 20px;" class="itemdescription">
+			Hello Friend!!<br>
+			<br>
+			This is my home in the imaginary place of the Magispace. This is where it all started. <br>
+			<br>
+			This used to be an empty void, but now over time, I've created a space of my own in here, where I come back to at the end of every day. It's where I feel home, my quiet space, and where I can really be me.<br>
+			<br>
+			Collected here are some of the thoughts and memories that I've had while discovering the existance of this place.<br>
+			<br>
+			Come and have a read! You might find how this place developed as my understanding of it grew!.<br>
+			<br>
+			<hr>
+			<strong>Statement of Environment</strong><br>
+			This website is hosted on Github Pages, which has servers based in the United States. Some mentioned locations are "Seattle", and "one on each cost of the states". I pay full respect to the traditional and current owners of the land. <a style="color: black;" href="https://github.blog/2017-10-12-evolution-of-our-data-centers/" target="_blank">Read More</a><br>
+			<br>
+			With some eco-awareness in mind, I aim to avoid 3rd party javascript runners, sites and fonts, which should get less servers involved, and in turn reduce the energy impact that is required to run this site. <br>
+			This site was built on pure HTML, CSS and JS, and does not need to request resources from other servers to run, excluding embedded content.<br>
+			<br>
+			All credits go to the original artists, I do not claim to have created any of these wonderful places. Do go ahead and look into them if any fancy you!
+		</span><br>
+	</p>
+</div>
 
-		<div class="actionwindow hidden goneReducedToAtoms" onmouseover="blackcursor();" onmouseout="unblackcursor();" id="contentadd">
-			<p>
-				<span class="itemname">Add your own!</span><br>
-				<span style="margin-top: 20px;" class="itemdescription">
-					<input id="inpEmoji" title="Emoji Icon" onmouseover="textcursor();" onmouseout="untextcursor();" class="addemoji" type="text" name="Emoji" maxlength="1" value="🤨">
-					<input id="inpTitle" title="Title" onmouseover="textcursor();" onmouseout="untextcursor();" class="addtextbox" type="text" name="Title" placeholder="Title">
-					<input id="inpAuthor" title="Your Name" onmouseover="textcursor();" onmouseout="untextcursor();" class="addtextbox" type="text" name="YourName" placeholder="Your Name">
-					<textarea id="inpComment" title="Your Comment" onmouseover="textcursor();" onmouseout="untextcursor();" class="addtextarea" placeholder="Your Comment"></textarea>
-					<button id="addbtn2" titl="Add me somewhere" class="addokbtn" type="button" name="add" onclick="createelement(); toggleadd();" onmouseover="excitecursor()" onmouseout="normalcursor();">Add Me In Somewhere</button>
-				</span>
-			</p>
-		</div>
+<!-- █████████████████████████████████████████ STORY WINDOW MODALS ███ -->
 
+<!-- ---------------------- 1 --------- -->
+<div class="storyoverlay hidden goneReducedToAtoms" id="story1" onclick="hideintro('story1'); permahidewindow('content1'); permashowwindow('content2'); permahidewindow('content3'); permahidewindow('content4'); permahidewindow('content5'); permahidewindow('content6'); ">
+	<div class="storywindow">
+		<h2 style="margin-top: 0px;">1. Wondering.</h2>
+		<p>
+			The air is frigid and cold, but refreshing. The sun, golden, rises to stream its beams, gently caressing its tender warmth on all it touches. <br>
+			<br>
+			It passes through a window with a cold, olive green frame, stretching from floor to ceiling in a humble suburban cottage. Though, there was nothing special about that window anyway, all you could see out of it was only a brick wall to the right edge where an ugly water heater hanged off from.<br>
+			<br>
+			But it was there, in my childhood, where I sit, staring out at nothing, basking in that atmosphere. I don’t know why I was doing it, I wasn’t doing much at all.<br>
+			<br>
+			It seems like I was listening, to my thoughts, to my atmosphere, and to my being. I felt like I was part of something larger than myself. But i’m not sure what this is exactly<br>
+		</p>
+	</div>
+</div>
 
-		<!-- █████████████████████████████████████████ PREMADE CONTENT ███ -->
-		<div class="storyoverlay hidden goneReducedToAtoms" id="story2" onclick="hideintro('story2');">
-			<div class="storywindow">
-				<h2 style="margin-top: 0px;">Where do you go to hang out, relax and recollect?</h2>
-				<p>
-					A park? A bedroom? A particular spot in the city?
-					For me, it's a little different. <br>
-					I've discovered a world of imagination.<br>
-					<br>
-					I spend my time in this world of imagination.<br>
-					In worlds created by the dreams of many,<br>
-					A beautiful universe unbound by reality.<br>
-					<br>
-					I've long explored this "Magispace",<br>
-					Found places and creations that I love, becoming a regular to some...<br>
-					I've even created my own little space out there.<br>
-					<br>
-					Let me show you around,<br>
-					Come in and see my local place!<br>
-					A park? A bedroom? A particular spot in the city?
-					For me, it's a little different. <br>
-					I've discovered a world of imagination.<br>
-					<br>
-					I spend my time in this world of imagination.<br>
-					In worlds created by the dreams of many,<br>
-					A beautiful universe unbound by reality.<br>
-					<br>
-					I've long explored this "Magispace",<br>
-					Found places and creations that I love, becoming a regular to some...<br>
-					I've even created my own little space out there.<br>
-					<br>
-					Let me show you around,<br>
-					Come in and see my local place!<br>
-					A park? A bedroom? A particular spot in the city?
-					For me, it's a little different. <br>
-					I've discovered a world of imagination.<br>
-					<br>
-					I spend my time in this world of imagination.<br>
-					In worlds created by the dreams of many,<br>
-					A beautiful universe unbound by reality.<br>
-					<br>
-					I've long explored this "Magispace",<br>
-					Found places and creations that I love, becoming a regular to some...<br>
-					I've even created my own little space out there.<br>
-					<br>
-					Let me show you around,<br>
-					Come in and see my local place!<br>
-					A park? A bedroom? A particular spot in the city?
-					For me, it's a little different. <br>
-					I've discovered a world of imagination.<br>
-					<br>
-					I spend my time in this world of imagination.<br>
-					In worlds created by the dreams of many,<br>
-					A beautiful universe unbound by reality.<br>
-					<br>
-					I've long explored this "Magispace",<br>
-					Found places and creations that I love, becoming a regular to some...<br>
-					I've even created my own little space out there.<br>
-					<br>
-					Let me show you around,<br>
-					Come in and see my local place!<br>
-				</p>
-			</div>
-		</div>
+<!-- ---------------------- 2 --------- -->
+<div class="storyoverlay hidden goneReducedToAtoms" id="story2" onclick="hideintro('story2'); permahidewindow('content1'); permahidewindow('content2'); permashowwindow('content3'); permahidewindow('content4'); permahidewindow('content5'); permahidewindow('content6');">
+	<div class="storywindow">
+		<h2 style="margin-top: 0px;">2. Something Beyond Physical...</h2>
+		<p>
+			I wonder why I have such an active imagination. Is it imagination?<br>
+			<br>
+			When I see someone, I seem to be able to sense what they're going through, how they are feeling and why they feel what they feel. It seems to be surprisingly accurate, whats more is that I don't need to interaction with them in any way. <br>
+			<br>
+			The same thing sort of happens when I look at a well made item. Theres a kind of creator's touch behind it. Someobdy created it, and I can sense their drive and passion for what they created and all the emotional energy that has gone into the creation of that item.<br>
+			<br>
+			Its a little strange.
+		</p>
+	</div>
+</div>
 
-		<div class="contentbox">
+<!-- ---------------------- 3 --------- -->
+<div class="storyoverlay hidden goneReducedToAtoms" id="story3" onclick="hideintro('story3'); permahidewindow('content1'); permahidewindow('content2'); permahidewindow('content3'); permashowwindow('content4'); permahidewindow('content5'); permahidewindow('content6');">
+	<div class="storywindow">
+		<h2 style="margin-top: 0px;">3. Telepathic Experiences</h2>
+		<p>
+			I had a weird experience today, it was like I was able to talk to one of my close friends telepathically. I seemingly asked if he could bring something to school by just pure thought, wondering if it would work. <br>
+			<br>
+			To my surprise he brought that thing to school saying he thought i’d need it. A few weeks go by and this happens more than once, perhaps there’s something happening here, it’s kind of uncanny.
+		</p>
+	</div>
+</div>
 
-			<img src="img/roombkg.jpg" class="roombkg">
+<!-- ---------------------- 4 --------- -->
+<div class="storyoverlay hidden goneReducedToAtoms" id="story4" onclick="hideintro('story4'); permahidewindow('content1'); permahidewindow('content2'); permahidewindow('content3'); permahidewindow('content4'); permashowwindow('content5'); permahidewindow('content6');">
+	<div class="storywindow">
+		<h2 style="margin-top: 0px;">4. Immersive Media and the Internet</h2>
+		<p>
+			I didn’t have a great day today, and I’m not able to head out somewhere peaceful like I'm guessing normal people do. I instead head to bed and explore the net for some spacious and immersive media, that’s what my peaceful space is.<br>
+			<br>
+			It’s of note how all the media that I love explores a concept of imaginary ambience or environment, for example I dislike most pop music because it feels dry and spaceless, only talking about petty worldly subjects. I find myself greatly enjoying expressive ambient, instrumental and emerging music much more, which are, for me, a much better immersive experience that takes you to the world of the artist.<br>
+			<br>
+			I can spend ages in that space, and often fall asleep, dreaming on. Eventually i’ve created some kind of space for myself within there, it’s my solitude space, happy space and kind of my real home to me now.
+		</p>
+	</div>
+</div>
 
-			<a href="#" class="storypin" style="top: 25%; right: 20%;"
-			id="item2"
-			onmouseover="excitecursor(); permashowwindow('content2');"
-			onmouseout="normalcursor(); permahidewindow('content2');"
-			onclick="permashowwindow('story2');"
-			onfocusin="permashowwindow('content2');"
-			onfocusout="permahidewindow('content2');"></a>
+<!-- ---------------------- 5 --------- -->
+<div class="storyoverlay hidden goneReducedToAtoms" id="story5" onclick="hideintro('story5'); permahidewindow('content1'); permahidewindow('content2'); permahidewindow('content3'); permahidewindow('content4'); permahidewindow('content5'); permashowwindow('content6');">
+	<div class="storywindow">
+		<h2 style="margin-top: 0px;">5. Meeting people across the oceans</h2>
+		<p>
+			I have met and connected with a few people online, and they are now some of the most important people to me. No, not on a dating app, but only by pure interest within platforms that host interest-based communities. <br>
+			<br>
+			What I find so strange is that we have agreed that we have both somewhat felt each other even before meting online, where we both felt some connection to someone, only to discover that it was them. <br>
+			<br>
+			One night I began talking about such uncanny experiences: how I could feel emotions and deeper stories behind people, sense the passion of the creator behind objects, and communicate non-physically over long distances to those that were similar to me. <br>
+			<br>
+			It was then, while we talked about this, that we realised the idea of the Magispace. <br>
+			The idea that questions, and kind of solves, “Why do we feel connected? Why do we sense human spirit? Why can we seemingly visit the imagination of another person?, and finally, at least for me, How come I could sense backstories and emotions behind people and how they feel?”<br>
+			<br>
+			If our imagination and spirit were all within ourselves, all this connection would not be possible. We must be connected to some nonphysical world, where we can visit to “walk through memory lane”, imagine, dream and whatever. And this non physical world would be a global thing, like the earth and our galaxy are within the universe, our home thoughts, dreams, and imagination are all part of a wider world.
+		</p>
+	</div>
+</div>
 
-			<div class="textwindow hidden windowTR" style="top: 25%; right: 20%;" id="content2">
-				<p>
-					<span class="itemname">A chat with a friend</span><br>
-					<span class="itemsubtitle">Description</span><br>
-					<!-- <span class="itemdescription">Revolutionise your MacBook TouchBar</span><br> -->
-				</p>
-			</div>
+<!-- ---------------------- 6 --------- -->
+<div class="storyoverlay hidden goneReducedToAtoms" id="story6" onclick="hideintro('story6'); permahidewindow('content1'); permahidewindow('content2'); permahidewindow('content3'); permahidewindow('content4'); permahidewindow('content5'); permahidewindow('content6'); permashowwindow('contentoutside'); setTimeout(function () {permahidewindow('contentoutside')}, 2000);">
+	<div class="storywindow">
+		<h2 style="margin-top: 0px;">6. The Magispace</h2>
+		<p>
+			Everything is coming together. The concept of the magispace seems clear. <br>
+			<br>
+			I realised that all of the music, games, movies and more of the kind I loved had a depiction of the magispace from the creators view. Weather it be the “OS space” from KIVA’s Cytus II story, outlying attraction to the Marble Machine’s Collaborative engineering, high fantasy of the movies I loved, and the sense of environment and space that the ambient music artists I found create, these people seemed to be aware of or have an active connection to the creative / imaginative world of the magispace, and are actively developing their own and dwelling in it.<br>
+		</p>
+	</div>
+</div>
 
-			<a href="index.html" target="_self" class="storypin" style="top: 10%; right: 35%; z-index: 1000;"
-			id="item5"></a>
-			<div class="textwindow windowTR" style="top: 10%; right: 35%; z-index: 1000;" id="content5">
-				<p>
-					<span class="itemname">I'm still working on this place!</span><br>
-					<span class="itemsubtitle">This will be the prologue for the thing you saw outside.</span><br>
-					<span class="itemdescription">Click to head outside again.</span><br>
-				</p>
-			</div>
+<!-- █████████████████████████████████████████ ROOM CONTENT ███ -->
 
-		</div>
+<div class="contentbox">
+
+	<img src="img/roombkg.jpg" class="roombkg">
+
+	<!-- ---------------------- 1 --------- -->
+	<a href="#" class="storypin" style="top: 15%; left: 10%;"
+	id="item1"
+	onmouseover="permashowwindow('content1');"
+	onmouseout="permahidewindow('content1');"
+	onclick="permashowwindow('story1');"
+	onfocusin="permashowwindow('content1');"
+	onfocusout="permahidewindow('content1');"></a>
+
+	<div class="textwindow windowTL" style="top: 15%; left: 10%;" id="content1" onclick="permashowwindow('story1');">
+		<p>
+			<span class="itemname">1 - Wondering.</span><br>
+			<span class="itemsubtitle">Press to Read.</span><br>
+		</p>
 	</div>
 
+	<!-- ---------------------- 2 --------- -->
+	<a href="#" class="storypin" style="top: 30%; left: 20%;"
+	id="item2"
+	onmouseover="permashowwindow('content2');"
+	onmouseout="permahidewindow('content2');"
+	onclick="permashowwindow('story2');"
+	onfocusin="permashowwindow('content2');"
+	onfocusout="permahidewindow('content2');"></a>
+
+	<div class="textwindow hidden windowTL" style="top: 30%; left: 20%;" id="content2" onclick="permashowwindow('story2');">
+		<p>
+			<span class="itemname">2 - Something Beyond Physical.</span><br>
+			<span class="itemsubtitle">Press to Read.</span><br>
+		</p>
+	</div>
+
+	<!-- ---------------------- 3 --------- -->
+	<a href="#" class="storypin" style="top: 15%; left: 30%;"
+	id="item3"
+	onmouseover="permashowwindow('content3');"
+	onmouseout="permahidewindow('content3');"
+	onclick="permashowwindow('story3');"
+	onfocusin="permashowwindow('content3');"
+	onfocusout="permahidewindow('content3');"></a>
+
+	<div class="textwindow hidden windowTL" style="top: 15%; left: 30%;" id="content3" onclick="permashowwindow('story3');">
+		<p>
+			<span class="itemname">3 - Telepathic Experiences.</span><br>
+			<span class="itemsubtitle">Press to Read.</span><br>
+		</p>
+	</div>
+
+	<!-- ---------------------- 4 --------- -->
+	<a href="#" class="storypin" style="top: 30%; left: 40%;"
+	id="item4"
+	onmouseover="permashowwindow('content4');"
+	onmouseout="permahidewindow('content4');"
+	onclick="permashowwindow('story4');"
+	onfocusin="permashowwindow('content4');"
+	onfocusout="permahidewindow('content4');"></a>
+
+	<div class="textwindow hidden windowTL" style="top: 30%; left: 40%;" id="content4" onclick="permashowwindow('story4');">
+		<p>
+			<span class="itemname">4 - Immersive Media and the Internet.</span><br>
+			<span class="itemsubtitle">Press to Read.</span><br>
+		</p>
+	</div>
+
+	<!-- ---------------------- 5 --------- -->
+	<a href="#" class="storypin" style="top: 15%; left: 50%;"
+	id="item5"
+	onmouseover="permashowwindow('content5');"
+	onmouseout="permahidewindow('content5');"
+	onclick="permashowwindow('story5');"
+	onfocusin="permashowwindow('content5');"
+	onfocusout="permahidewindow('content5');"></a>
+
+	<div class="textwindow hidden windowTL" style="top: 15%; left: 50%;" id="content5" onclick="permashowwindow('story5');">
+		<p>
+			<span class="itemname">5 - Meeting a Friend.</span><br>
+			<span class="itemsubtitle">Press to Read.</span><br>
+		</p>
+	</div>
+
+	<!-- ---------------------- 6 --------- -->
+	<a href="#" class="storypin" style="top: 30%; left: 60%;"
+	id="item6"
+	onmouseover="permashowwindow('content6');"
+	onmouseout="permahidewindow('content6');"
+	onclick="permashowwindow('story6');"
+	onfocusin="permashowwindow('content6');"
+	onfocusout="permahidewindow('content6');"></a>
+
+	<div class="textwindow hidden windowTL" style="top: 30%; left: 60%;" id="content6" onclick="permashowwindow('story6');">
+		<p>
+			<span class="itemname">6 - The Magispace.</span><br>
+			<span class="itemsubtitle">Press to Read.</span><br>
+		</p>
+	</div>
+
+	<a href="index.html" target="_self" class="creditpin" style="top: 10%; right: 35%; border-color: #8DDBD3; border-width: 5px; box-shadow: 0px 0px 15px #8DDBD3"
+		id="itemoutside"
+		onmouseover="showwindow('contentoutside');"
+		onmouseout="hidewindow('contentoutside');"
+		onfocusin="showwindow('contentoutside');"
+		onfocusout="hidewindow('contentoutside');"></a>
+	<div class="textwindow windowTR hidden nointeract" style="top: 10%; right: 35%; z-index: 1000;" id="contentoutside">
+		<p>
+			<span class="itemname">Head outside, into the Magispace.</span><br>
+			<span class="itemsubtitle">Oh, it's much bigger than my personal room.</span><br>
+			<span class="itemdescription">Press to head outside.</span><br>
+		</p>
+	</div>
+
+</div>
+</div>
 
 
-	<!-- █████████████████████████████████████████ MOVE CURSOR with jquery ███ -->
-	<!-- FROM https://codepen.io/igcorreia/pen/pJvOpL -->
-	<!-- <script type="module" async>
-	var $box = $('.box'),
-	speed = 0;
 
-	function moveBox(e) {
-		$box.each(
-			function(index){
-				TweenLite.to($(this),0.02,{css: {left: e.pageX,top: e.pageY},delay:0+(index/750)});
-			}
-		);
-	}
+<!-- █████████████████████████████████████████ MOVE CURSOR with jquery ███ -->
+<!-- FROM https://codepen.io/igcorreia/pen/pJvOpL -->
+<!-- <script type="module" async>
+var $box = $('.box'),
+speed = 0;
 
-	$(window).on('mousemove', moveBox);
+function moveBox(e) {
+$box.each(
+function(index){
+TweenLite.to($(this),0.02,{css: {left: e.pageX,top: e.pageY},delay:0+(index/750)});
+}
+);
+}
 
-	</script> -->
+$(window).on('mousemove', moveBox);
+
+</script> -->
 </body>
 
 </html>
