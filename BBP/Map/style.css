@@ -39,8 +39,6 @@ ATO - content pins and windows
 body {
 	font-family: kollektif;
 
-	/* background-image: url('img/backdrop.jpg');
-	background-color: #001928; */
 	background-size: cover;
 
 	background-attachment: fixed;
@@ -107,7 +105,6 @@ h2 {
 	height: 100%;
 	margin: 0px;
 	padding: 0px;
-	/* overflow: scroll; */
 	z-index: -1;
 }
 
@@ -149,32 +146,10 @@ h2 {
 
 /*█████████████████████████████████████████████████ SCROLLBARS █████ */
 
-/* width */
-/* ::-webkit-scrollbar {
-	width: 8px;
-	height: 8px
-} */
-
-/* Track */
-/* ::-webkit-scrollbar-track {
-	background-color: rgba(0,0,0,0);
-} */
-
-/* Handle */
-/* ::-webkit-scrollbar-thumb {
-	background: #686D9F;
-	border-radius: 4px 4px;
-} */
-
 ::-webkit-scrollbar-corner {
 	display: none;
 	background: #000000;
 }
-
-/* Handle on hover */
-/* ::-webkit-scrollbar-thumb:hover {
-	background: #white;
-} */
 
 /* total width */
 ::-webkit-scrollbar {
@@ -387,71 +362,6 @@ h2 {
 	z-index: 199;
 }
 
-/*█████████████████████████████████████████ ADD WINDOW FORM STYLE ███*/
-/* .addemoji {
-	width: 50px;
-	height: 50px;
-	margin-bottom: 5px;
-	padding: 5px;
-
-	font-size: 45px;
-
-	border: 2px solid black;
-	border-radius: 5pt;
-
-	pointer-events: all;
-}
-.addtextbox {
-	width: calc(100% - 10px);
-	margin-bottom: 5pt;
-	padding: 5px;
-
-	font-size: 15px;
-	font-family: kollektif;
-
-	border: 2px solid black;
-	border-radius: 5pt;
-
-	pointer-events: all;
-}
-.addtextarea {
-	width: calc(100% - 10px);
-	margin-bottom: 5px;
-	padding: 5px;
-
-	border: 2px solid black;
-	border-radius: 5pt;
-
-	font-size: 15px;
-	font-family: kollektif;
-
-	pointer-events: all;
-	resize: vertical;
-}
-.addokbtn {
-	padding: 9px 10px 5px 10px;
-	margin-bottom: 5px;
-
-	background-color: #1F6457;
-	border: 2px solid black;
-	border-radius: 5pt;
-
-	color: white;
-	font-size: 15px;
-	font-family: kollektif;
-
-	pointer-events: all;
-	transition: 0.5s 0s cubic-bezier(0.22, 1, 0.36, 1);
-}
-.addokbtn:hover {
-	background-color: black;
-	transform: scale(1.1) translateX(8px);
-}
-.addokbtn:active {
-	background-color: black;
-	transform: scale(0.9);
-} */
-
 /* ████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████ */
 
 /*█████████████████████████████████████████ MAIN CONTENT BOUNDS ███*/
@@ -460,15 +370,12 @@ h2 {
 	position: relative;
 	margin: 0;
 	padding: 0;
-
-	/* z-index: -2; */
 }
 
 .roomcontentbox {
 	display: inline-block;
 	position: relative;
 	width: 100vw;
-	/* height: 100vh; */
 	margin: 0;
 	padding: 0;
 
@@ -489,14 +396,10 @@ h2 {
 
 /*█████████████████████████████████████████ INTEREST POINT STYLE ███*/
 .item {
-	/* display: block; */
 	position: absolute;
 	width: 15px;
 	height: 15px;
 	margin: 30px;
-	/* padding: 12px 20px 27px 20px; */
-	/* z-index: -; */
-	/* left: 50%; */
 
 	text-align: center;
 	font-size: 10pt;
@@ -504,11 +407,9 @@ h2 {
 	text-decoration: none;
 	color: black;
 
-	/* background-color: rgba(255,255,255,128); */
 	background-image: url('img/closebtnidle.png');
 	background-size: cover;
 
-	/* background-attachment: fixed; */
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
@@ -516,7 +417,6 @@ h2 {
 	border: 2px solid white;
 	border-radius: 50%;
 
-	/* cursor: none; */
 	transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 .item:hover {
@@ -544,14 +444,10 @@ h2 {
 
 /*█████████████████████████████████████████ CREDIT POINT STYLE ███*/
 .creditpin {
-	/* display: block; */
 	position: absolute;
 	width: 15px;
 	height: 15px;
 	margin: 30px;
-	/* padding: 12px 20px 27px 20px; */
-	/* z-index: -; */
-	/* left: 50%; */
 
 	text-align: center;
 	font-size: 10pt;
@@ -559,11 +455,9 @@ h2 {
 	text-decoration: none;
 	color: black;
 
-	/* background-color: rgba(255,255,255,128); */
 	background-image: url('img/closebtnidle.png');
 	background-size: cover;
 
-	/* background-attachment: fixed; */
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
@@ -571,14 +465,13 @@ h2 {
 	border: 2px solid white;
 	border-radius: 15%;
 
-	/* cursor: none; */
 	transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 .creditpin:hover {
 	transform: scale(2.5);
 	color: black;
-	background-color: rgba(255,255,255,0);
 
+	background-color: rgba(255,255,255,0);
 	background-image: url('img/visitbtn.png');
 
 	border: 2px solid rgba(255,255,255,10);
@@ -586,8 +479,8 @@ h2 {
 .creditpinactive {
 	transform: scale(2.5);
 	color: black;
-	background-color: rgba(255,255,255,0);
 
+	background-color: rgba(255,255,255,0);
 	background-image: url('img/visitbtn.png');
 
 	border: 2px solid rgba(255,255,255,10);
@@ -612,11 +505,9 @@ h2 {
 	text-decoration: none;
 	color: black;
 
-	/* background-color: rgba(255,255,255,128); */
 	background-image: url('img/closebtnidle.png');
 	background-size: cover;
 
-	/* background-attachment: fixed; */
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
@@ -624,7 +515,6 @@ h2 {
 	border: 2px solid white;
 	border-radius: 50%;
 
-	/* cursor: none; */
 	transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 .storypin:hover {
@@ -758,42 +648,12 @@ h2 {
 
 /*█████████████████████████████████████████ SYSTEM DARK MODE SUPPORT ███*/
 @media screen and (prefers-color-scheme: dark) {
-
-	/* body {
-		background-color: #BC967A;
-		transition: all 2s cubic-bezier(0.65, 0, 0.35, 1);
-	}
-	*/
-
 	.transitionoverlay {
 		background-color: #222
 	}
-
-	/* .title {
-		color: white;
-	} */
-
-	/* .topbutton {
-		background-color: white;
-		color: black;
-	} */
-
-	/* .item {
-		color: white;
-	} */
-
-	/* CURSORS */
-	/* .box {
-		background: rgba(255, 255, 255, 1);
-	}
-	.textcursor {
-		background: black;
-	}
-	.blackcursor {
-		background: black;
-	} */
 }
 
+/*█████████████████████████████████████████ TOO SMALL OVERLAY / MOBILE ███*/
 @media only screen and (orientation: landscape) and (max-height: 500px) {
 	.toosmalloverlay {
 		opacity: 100%;
@@ -813,9 +673,6 @@ h2 {
 	}
 
 	.title {
-		/* font-size: 12px !important; */
-		/* margin-top: 25px; */
-		/* color: red; */
 		transform: scale(0.8);
 		width: 550px;
 	}
@@ -860,10 +717,4 @@ h2 {
 	#contentadd {
 		top: 80px;
 	}
-
-	/* .textwindow {
-		left: 10vw !important;
-		margin: 45px 45px 45px 0px;
-		transform-origin: center !important;
-	} */
 }
