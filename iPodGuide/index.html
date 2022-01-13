@@ -119,13 +119,13 @@
 
 	/* Sidebar Styles */
 	.sidebar {
-		border-bottom-left-radius: 6px;
 		/* border: 1px solid rgba(150, 150, 150, .5); */
-		border-right: none;
-		-webkit-transform: translate3d(0, 0, 0);
+		/* border-right: none; */
+		/* -webkit-transform: translate3d(0, 0, 0); */
 		position: relative;
+		display: block;
 		height: 100vh;
-		width: 200px;
+		width: 540px;
 
 		transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 	}
@@ -139,14 +139,13 @@
 		margin: 0;
 		padding: 0;
 		position: relative;
-		height: calc(100% - 89px);
+		height: calc(100% - 121px);
 		overflow-y: auto;
 		overflow-x: hidden;
 
 	}
 
 	.menubtn {
-		position: absolute;
 		width: 20px;
 		height: 20px;
 		margin: 15px;
@@ -173,9 +172,14 @@
 	}
 
 	#closebtn {
+		position: absolute;
+
+		float: right;
+		right: 0px !important;
+
 		background-color: salmon;
 		z-index: 1;
-		left: 150px;
+		right: 150px;
 		border-radius: 50%;
 	}
 	#closebtn:hover {
@@ -183,6 +187,8 @@
 	}
 
 	#openbtn {
+		position: absolute;
+
 		background-color: #62C655;
 		left: 0px;
 		margin-left: -15px;
@@ -199,17 +205,16 @@
 	}
 
 	.btnhidden {
-		left: -150px !important;
+		left: -50px !important;
 	}
 
 	.tablink {
 		/**/
 		margin: 0 0 -1px 0px;
-		padding: 8px 12px 8px 24px;
-		width: 204px;
+		padding: 8px 8px 8px 16px;
+		width: calc(100% - 23px);
 		position: relative;
 		line-height: 28px;
-		/**/
 		font-family: 'Nunito', sans-serif;
 		font-weight: 500;
 	}
@@ -245,26 +250,27 @@
 	.tablink_last {
 		/**/
 		margin: 0 0 -1px 0px;
-		padding: 8px 12px 8px 48px;
-		width: 204px;
+		/* padding: 8px 12px 8px 48px; */
+		/* width: 204px; */
 		position: absolute;
-		line-height: 28px;
+		/* line-height: 28px; */
 		/**/
 		/*border-radius: 10px 0px 0px 10px;*/
-		bottom: -1px;
-		border-bottom-left-radius: 5px;
+		bottom: 0px;
+
+		/* border-bottom-left-radius: 5px; */
 	}
 
-	.tablink_last img {
+	/* .tablink_last img {
 		height: 28px;
 		margin-right: 12px;
 		margin-left: -36px;
 		float: left;
-	}
+	} */
 
 	.tablink_last::after {
 		/* tab lines */
-		content: " ";
+		/* content: " ";
 		display: block;
 		width: 100%;
 		height: 1px;
@@ -272,7 +278,9 @@
 		bottom: 0;
 		background: rgba(0, 0, 0, .15);
 		top: 0;
-		bottom: auto;
+		bottom: auto; */
+		top: 0;
+		/* bottom: auto; */
 	}
 
 	.tablink_last.active {
@@ -280,20 +288,9 @@
 		background-blend-mode: multiply;
 	}
 
-	.tablink_last. .tablink_last.active::after {
+	/* .tablink_last. .tablink_last.active::after {
 		display: none;
-	}
-
-	.tablink_last {
-		position: absolute;
-		bottom: -1px;
-		border-bottom-left-radius: 5px;
-	}
-
-	.tablink_last::after {
-		top: 0;
-		bottom: auto;
-	}
+	} */
 
 	/* Content Area Styles */
 	.content {
@@ -637,9 +634,11 @@
 	}
 
 	.titlecontainer {
-		height: calc(90vh - 66px);
+		height: 100%;
 		position: relative;
-		overflow: hidden;
+		overflow-y: scroll;
+		top: 0px;
+		padding: 20px 20px;
 	}
 
 	.centre {
@@ -752,6 +751,8 @@
 
 <body onload="loadfirst();">
 	<div class="sidebar" id="sidebar">
+		<a class="menubtn" id="closebtn" onclick="hidesidebar()"></a>
+
 		<h1>yuuiko's <br>iPod Guide</h1>
 		<!-- style="height: 100%; overflow-y: auto; overflow-x: hidden" -->
 		<ul>
@@ -786,14 +787,13 @@
 			</li> -->
 
 
-			<!-- <li class="tablink" onClick="openTab(event, 'support')">
-				<strong>Help, Feedback, Community<br>Support Yuuiko</strong>
+			<!-- <li class="tablink tablink_last" onClick="openTab(event, 'support')">
+				<strong>Join Discord<br>Support Yuuiko</strong>
 			</li> -->
 
 		</ul>
 	</div>
 
-	<a class="menubtn" id="closebtn" onclick="hidesidebar()"></a>
 	<a class="menubtn btnhidden" id="openbtn" onclick="showsidebar()"></a>
 
 
