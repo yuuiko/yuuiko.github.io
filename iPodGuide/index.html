@@ -2,6 +2,7 @@
 
 <head>
 	<link href="https://fonts.googleapis.com/css?family=Nunito:400,700" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta charset="UTF-8">
 
 	<!-- UL does a ruled table list! =D -->
@@ -124,6 +125,13 @@
 		-webkit-transform: translate3d(0, 0, 0);
 		position: relative;
 		height: 100vh;
+		width: 200px;
+
+		transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+	}
+
+	.sidebarhidden {
+		width: 0px;
 	}
 
 	.sidebar ul {
@@ -135,6 +143,63 @@
 		overflow-y: auto;
 		overflow-x: hidden;
 
+	}
+
+	.menubtn {
+		position: absolute;
+		width: 20px;
+		height: 20px;
+		margin: 15px;
+		top: 0px;
+
+		text-align: center;
+		font-size: 10pt;
+		vertical-align: middle;
+		text-decoration: none;
+		color: black;
+
+		background-size: cover;
+
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+
+		border: 2px solid white;
+
+		transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+	}
+	.menubtn:active {
+		transform: scale(0.9);
+	}
+
+	#closebtn {
+		background-color: salmon;
+		z-index: 1;
+		left: 150px;
+		border-radius: 50%;
+	}
+	#closebtn:hover {
+		transform: scale(1.3);
+	}
+
+	#openbtn {
+		background-color: #62C655;
+		left: 0px;
+		margin-left: -15px;
+		z-index: 1;
+
+		width: 35px;
+		height: 80px;
+
+		border-radius: 0% 15px 15px 0%;
+		border-left: none;
+	}
+	#openbtn:hover {
+		transform: translateX(10px);
+	}
+
+	.btnhidden {
+		left: -150px !important;
 	}
 
 	.tablink {
@@ -594,6 +659,25 @@
 		/* max-width: 600px; */
 		height: 100%;
 		/* margin: 2em 0; */
+		z-index: -10;
+	}
+
+	.nosupport {
+		width: 100%;
+		height: 100%;
+		position: relative;
+	}
+
+	.nosupport img {
+		width: 100%;
+		max-width: 300px;
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
+		position:absolute;
+		top: 50%; /* Move the image down, so its top is half way down the container */
+   	margin-top: 35px; /* Move the image back up half its height */
+		position: relative;
 	}
 
 	/* PDFObject automatically assigns the class name "pdfobject" to the <embed> element */
@@ -667,7 +751,7 @@
 </head>
 
 <body onload="loadfirst();">
-	<div class="sidebar">
+	<div class="sidebar" id="sidebar">
 		<h1>yuuiko's <br>iPod Guide</h1>
 		<!-- style="height: 100%; overflow-y: auto; overflow-x: hidden" -->
 		<ul>
@@ -709,11 +793,17 @@
 		</ul>
 	</div>
 
+	<a class="menubtn" id="closebtn" onclick="hidesidebar()"></a>
+	<a class="menubtn btnhidden" id="openbtn" onclick="showsidebar()"></a>
+
+
 	<div class="content">
 		<!-- ██████████████████████████████████████████████████████████████████████████████████          GETTING STARTED           -->
 		<div id="GettingStarted" class="tabcontent">
 			<div id="pdf1"></div>
 		</div>
+
+
 		<div id="support" class="tabcontent">
 				<div class="titlecontainer">
 						<div class="centre">
@@ -858,12 +948,14 @@
 		</div>
 </div>
 
+
 	</div>
 
 	<script src="pdfobject.js"></script>
 	<script>
 
 	var options = {
+		fallbackLink: "<div class='nosupport'><a href='[url]'><img src='nosupport.png' alt='Download PDF'></a></div>",
 		page: 1,
 		pdfOpenParams: {
 			navpanes: 1,
@@ -873,7 +965,7 @@
 	};
 
 	PDFObject.embed("iPodGuidev2-1.pdf", "#pdf1", options);
-	PDFObject.embed("sample-3pp.pdf", "#pdf2");
+	// PDFObject.embed("sample-3pp.pdf", "#pdf2");
 	</script>
 
 	<script>
@@ -897,6 +989,28 @@
 		});
 	}
 
+	</script>
+	<script type="text/javascript">
+		// SCRIPT FOR HIDING Sidebar
+
+		function showsidebar() {
+			console.log("showsidebar fired");
+			var sidebar = document.getElementById("sidebar");
+			var closebtn = document.getElementById("closebtn");
+			var openbtn = document.getElementById("openbtn");
+			sidebar.classList.remove('sidebarhidden');
+			closebtn.classList.remove('btnhidden');
+			openbtn.classList.add('btnhidden');
+		}
+		function hidesidebar() {
+			console.log("hidesidebar fired");
+			var sidebar = document.getElementById("sidebar");
+			var closebtn = document.getElementById("closebtn");
+			var openbtn = document.getElementById("openbtn");
+			sidebar.classList.add('sidebarhidden');
+			closebtn.classList.add('btnhidden');
+			openbtn.classList.remove('btnhidden');
+		}
 	</script>
 </body>
 
