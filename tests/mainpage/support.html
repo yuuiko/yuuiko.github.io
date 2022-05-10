@@ -17,40 +17,35 @@
 	<meta name="theme-color" content="#fff">
 
 	<link rel="stylesheet" href="style.css">
+	<script type="text/javascript" src="script.js"></script>
 
 </head>
-<body>
-	<div class="topnavContainer">
+<body onload="animatenavitem('navSupport')">
+	<div class="topnavContainer" id="topnavContainer">
 		<ul class="navgroup navleft">
-			<li><a href="hello.html" class="navItem">yuuiko says hello!<div class="selectedline"></div></a></li>
+			<li><a class="navItem" id="navHello" href="hello.html" >yuuiko says hello!<div class="selectedline"></div></a></li>
+			<li><a class="navItem" id="navclose" onclick="hideexpandedcompactmenu('topnavContainer');" style="display: none;">close menu</a></li>
 		</ul>
 
 		<ul class="navgroup navmiddle">
-			<li><a href="index.html" class="navItem">Creations<div class="selectedline"></div></a></li>
-			<li><a href="imagination.html" class="navItem">Imagination<div class="selectedline"></div></a></li>
-			<li><a href="talk.html" class="navItem">Contact<div class="selectedline"></div></a></li>
-			<li><a href="support.html" class="navItem navitemselected" style="color: #FFADD7">Support<div class="selectedline"></div></a></li>
+		  <li><a class="navItem" id="navCreations" href="index.html">Creations<div class="selectedline"></div></a></li>
+		  <li><a class="navItem" id="navImagination" href="imagination.html">Imagination<div class="selectedline"></div></a></li>
+		  <li><a class="navItem" id="navContact" href="talk.html">Contact<div class="selectedline"></div></a></li>
+			<li><a class="navItem navItemactive" id="navSupport" href="support.html" style="color: #FFADD7">Support<div class="selectedline"></div></a></li>
 		</ul>
 
 		<ul class="navgroup navright">
-			<li><a href="player.html" class="navItem">Player<div class="selectedline"></div></a></li>
+			<li><a class="navItem" id="navPlayer" href="player.html" >Player<div class="selectedline"></div></a></li>
 		</ul>
 	</div>
 
-	<div class="topnavContainer topnavContainerCompact">
+	<div class="topnavContainer topnavContainercompact" id="topnavcontainercompact">
 		<ul class="navgroup navleft">
 			<li><a href="#" class="navItem navitemselected">Support</a></li>
 		</ul>
 
-		<ul class="navgroup navmiddle">
-			<!-- <li><a href="#" class="navItem navitemselected">Creations<div class="selectedline"></div></a></li>
-			<li><a href="#" class="navItem navitemselected">Imagination<div class="selectedline"></div></a></li>
-			<li><a href="#" class="navItem">Contact<div class="selectedline"></div></a></li>
-			<li><a href="#" class="navItem" style="color: #FFADD7">Support<div class="selectedline"></div></a></li> -->
-		</ul>
-
 		<ul class="navgroup navright">
-			<li><a href="#" class="navItem">Menu<div class="selectedline"></div></a></li>
+			<li><a class="navItem" onclick="showexpandedcompactmenu('topnavContainer');">Menu<div class="selectedline"></div></a></li>
 		</ul>
 	</div>
 
