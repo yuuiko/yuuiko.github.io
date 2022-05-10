@@ -207,11 +207,15 @@
 		border-radius: 5px;
 		font-weight: bold;
 
-		transition: background 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+		transition: background 0.5s cubic-bezier(0.16, 1, 0.3, 1), color 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+
+	  /* transition-property: background, color;
+	  transition-duration: 0.5s;
+	  transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1); */
 	}
 
 	.navItem:hover {
-		/* color: #0000FF; */
+		color: #0000FF;
 	  background: #EEE;
 	}
 
@@ -223,6 +227,7 @@
 	.navitemselected {
 		color: black !important;
 		display: inline-block !important;
+		pointer-events: none;
 		padding: 0.5em 0.5em 0em;
 		margin: 0.5em 0.5em 0em;
 		/* text-decoration: underline; */
@@ -259,7 +264,7 @@
 	  bottom: 0;
 	  left: 0;
 	  /* transform : scaleX(0); */
-	} */
+	/* }  */
 
 	/* .navstartitem {
 		align-self: flex-start;
