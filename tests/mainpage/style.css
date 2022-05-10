@@ -189,8 +189,6 @@
 		margin: 0;
 		padding: 0;
 
-		/* background-color: green; */
-
 		flex-flow: row wrap;
 		/* This aligns items to the end line on main-axis */
 	}
@@ -213,7 +211,7 @@
 	  display: block;
 	  padding: 0.5em;
 		margin: 0.5em;
-	  color: #B7B7B7;
+	  color: #AAA;
 		line-height: 13px;
 
 		border-radius: 5px;
