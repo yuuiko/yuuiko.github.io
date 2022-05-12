@@ -25,12 +25,12 @@
 
 	.mainbody {
 		/* background-color: black; */
-		padding: 30px;
+		padding: 0px;
 		/* width: 1200px; */
 
 		/* box-shadow: 0px 20px 60px rgba(0, 0, 0, 0.5); */
 		width: 1100px;
-		margin-top: 80px;
+		margin-top: 150px;
 		margin-left: 50vw;
 		/* pad */
 
@@ -211,7 +211,7 @@
 	  display: block;
 	  padding: 0.5em;
 		margin: 0.5em;
-	  color: #AAA;
+	  color: #888;
 		line-height: 13px;
 
 		border-radius: 5px;
@@ -259,7 +259,7 @@
 	}
 
 	.selectedline {
-		background-color: rgba(0,0,0,0);
+		background-color: rgba(0,0,0,1);
 		width : 0%;
 		height : 4px;
 		border-radius: 0;
@@ -311,11 +311,6 @@
 			/* padding: 10px; */
 		}
 
-		.mainbody {
-			padding: 10px !important;
-			margin-top: 40px;
-		}
-
 		h1 {
 			font-size: 40px !important;
 			padding: 0px 10px 20px;
@@ -333,9 +328,9 @@
 		#topnavcontainercompact {display: flex !important;}
 	}
 
-	@media only screen and (max-width: 729px) {
+	@media only screen and (max-width: 789px) {
 
-		/* ============= NAV STYLING ================ */
+		/* ============= CONVERT NAV STYLING ================ */
 		#topnavcontainercompact {
 			display: flex !important;
 		}
@@ -346,14 +341,18 @@
 
 		#topnavContainer {
 			display: flex !important;
-			flex-flow: column wrap;
+			flex-flow: column;
+			overflow-y: scroll;
 
 			width: auto;
+			max-height: calc(100vh - 20px);
 			right: 0;
 			left: auto;
 			margin: 10px;
 			border-radius: 20px;
-			border: 2px solid rgba(255, 255, 255, 0.5);
+			border: 2px solid rgba(170, 170, 170, 1);
+			background-color: rgba(255, 255, 255, 0.9);
+			box-shadow: 0px 6px 12px rgba(0,0,0,0.16);
 		}
 		.navgroup {
 			flex-flow: column wrap;
@@ -364,10 +363,6 @@
 			flex-flow: row wrap;
 			border-bottom: 8px solid rgba(150,150,150,0.2);
 		}
-		#navclose {
-			display: block !important;
-			align-self: flex-end;
-		}
 		.navmiddle {
 			justify-content: flex-start;
 			/* padding-bottom: 20px; */
@@ -376,25 +371,68 @@
 		.navright {
 			justify-content: flex-start;
 		}
+		/* UNHIDE THE CLOSE BUTTON */
+		#navclose {
+			display: block !important;
+			align-self: flex-end;
+		}
 		.navItem {
 			padding: 1em;
-			margin: 0;
+			margin: 0px 6px;
 		}
 		.navitemselected {
-			padding: 1em 1em 0em 1em;
-			margin: 0;
+			padding: 1em;
+			margin: 0px 6px;
+			display: inline-block;
+			width: calc(100% - 2em - 12px);
 		}
-		/* .navgroup li {
-			margin-bottom: 0.5em 0.5em 0em 0.5em !important;
+
+		.selectedline {
+			display: inline-block;
+			margin-top: 4px !important;
+			float: right;
+			width: 4px;}
+		.navitemselected > .selectedline {
+			margin-top: 4px;
+			width: 40px;
+		}
+
+		.navgroup li {
+			overflow: hidden;
 		}
 		.navgroup li:last-child {
-			margin-bottom: 0.5em;
-		} */
-
+			margin-bottom: 6px;
+		}
+		.navgroup li:first-child {
+			margin-top: 6px;
+		}
+	 	.navleft li {
+			margin: 6px 0 !important;
+		}
+		#navPlayer {
+			border-radius: 5px 5px 13px 13px;
+		}
+		#navHello {
+			border-top-left-radius: 13px;
+			margin-right: 0;
+			width: 140px;
+		}
+		#navHello > .selectedline {
+			display: none;
+		}
+		#navHello[class="navitemselected"] {
+			width: 1000px;
+		}
+		#navclose {
+			border-top-right-radius: 13px;
+		}
 
 		.mainbody {
-			width: calc(100% - 20px) !important;
-			padding: 30px !important;
+			/* padding: 0px !important; */
+			margin: 100px 30px 20px 30px;
+			/* padding: 0px 40px; */
+			transform: none;
+			width: calc(100% - 60px) !important;
 		}
 		.container {
 			justify-content: center !important;
@@ -410,7 +448,7 @@
 	@media only screen and (max-width: 1151px) {
 		.mainbody {
 			width: 729px;
-			padding: 30px;
+			/* padding: 30px; */
 		}
 		.container {
 			/* justify-content: center; */
@@ -422,6 +460,14 @@
 	@media only screen and (min-width: 1151px) {
 		#topnavContainer {display: flex;}
 		#topnavcontainercompact {display: none;}
+	}
+
+	@media only screen and (prefers-color-scheme: dark) and (max-width: 789px) {
+		#topnavContainer {
+			border: 2px solid rgba(255, 255, 255, 0.4);
+			background-color: rgba(0,0,0,0.6);
+			box-shadow: 0px 6px 12px rgba(0,0,0,0.16);
+		}
 	}
 
 	@media (prefers-color-scheme: dark) {
@@ -456,7 +502,7 @@
 		}
 
 		.selectedline {
-			background-color: rgba(255,255,255,0);
+			background-color: rgba(255,255,255,1);
 			box-shadow: 0px 0px 10px rgba(251,228,197,1);
 			box-shadow: 0px 0px 10px rgba(251,228,197,1);
 		}

@@ -1,24 +1,24 @@
-// const height = document.querySelector("#height span");
-var width = window.innerWidth;
-
-// Insert values on load of page
-window.onload = function() {
-		if (width < 729) {
-				document.getElementById('topnavContainer').classList.add('goneReducedToAtoms');
-				document.getElementById('topnavContainer').classList.add('hidden');
-		}
-		else {
-			document.getElementById('topnavContainer').classList.remove('goneReducedToAtoms');
-			document.getElementById('topnavContainer').classList.remove('hidden');
-		}
-};
+// // const height = document.querySelector("#height span");
+// var width = window.innerWidth;
+//
+// // Insert values on load of page
+// window.onload = function() {
+// 		if (width < 729) {
+// 				document.getElementById('topnavContainer').classList.add('goneReducedToAtoms');
+// 				document.getElementById('topnavContainer').classList.add('hidden');
+// 		}
+// 		else {
+// 			document.getElementById('topnavContainer').classList.remove('goneReducedToAtoms');
+// 			document.getElementById('topnavContainer').classList.remove('hidden');
+// 		}
+// };
 
 window.onresize = function() {
 	width = window.innerWidth;
 
 	console.log("fired " + width);
 
-	if (width < 729) {
+	if (width < 789) {
 		document.getElementById('topnavContainer').classList.add('goneReducedToAtoms');
 		document.getElementById('topnavContainer').classList.add('hidden');
 	}
@@ -27,6 +27,24 @@ window.onresize = function() {
 		document.getElementById('topnavContainer').classList.remove('hidden');
 	}
 };
+
+function animatenavitem(divID) {
+	var item = document.getElementById(divID);
+	item.classList.add('navitemselected');
+	item.classList.remove('navItemactive');
+
+	// const height = document.querySelector("#height span");
+	var width = window.innerWidth;
+
+	// Insert values on load of page
+	if (width < 789) {
+		console.log("COMPACT MENUBAR FIRED ON LAUNCH, HIDE " + width);
+		setTimeout(function () {
+			document.getElementById('topnavContainer').classList.add('goneReducedToAtoms');
+			document.getElementById('topnavContainer').classList.add('hidden');
+		}, 250);
+	}
+}
 
 
 function showexpandedcompactmenu(divID) {
@@ -53,11 +71,6 @@ function hideexpandedcompactmenu(divID) {
 			item.classList.add('goneReducedToAtoms');
 		}, 200);
 	}
-}
-function animatenavitem(divID) {
-	var item = document.getElementById(divID);
-	item.classList.add('navitemselected');
-	item.classList.remove('navItemactive');
 }
 
 /* █ IRRELEVANTTT  ███████████████████████████████████████████ */
