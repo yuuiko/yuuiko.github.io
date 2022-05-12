@@ -275,6 +275,10 @@ a {
 	z-index: 99;
 }
 
+#navSupport {
+	color: #FF7FA0;
+}
+
 
 /* █████ SCRIPTING █████████████████████████████████████████████████ */
 .goneReducedToAtoms {
