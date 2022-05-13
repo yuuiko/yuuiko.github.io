@@ -619,4 +619,8 @@ a {
 		background-color: rgba(251,228,197,0.3);
 	}
 
+	.player{
+		border: 2px solid #444;
+	}
+
 }
