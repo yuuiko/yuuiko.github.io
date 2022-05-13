@@ -214,7 +214,6 @@ a {
 
 	display: flex;
 	justify-content: space-between;
-	transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 	transform-origin: top right;
 }
 
@@ -318,18 +317,6 @@ a {
 
 
 /* █████ SCRIPTING █████████████████████████████████████████████████ */
-.goneReducedToAtoms {
-	display: none !important;
-	cursor: none !important;
-	pointer-events: none !important;
-	user-select: none !important;
-}
-
-.hidden {
-	opacity: 0;
-	transform: scale(0.8);
-}
-
 .nointeract {
 	pointer-events: none;
 	-webkit-pointer-events: none;
@@ -438,13 +425,22 @@ a {
 		border-bottom: none;
 	}
 
+	#topnavContainer.reveal {
+		visibility: visible !important;
+		max-height: calc(100vh - 20px);
+		transition: visibility 0s, max-height 0.33s linear;
+	}
+
 	#topnavContainer {
+		visibility: hidden;
+		max-height: 0;
+		transition: max-height 0.33s linear, visibility 0s linear 0.33s;
+
 		display: flex !important;
 		flex-flow: column;
 		overflow-y: scroll;
 
 		width: auto;
-		max-height: calc(100vh - 20px);
 		right: 0;
 		left: auto;
 		margin: 10px;
