@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+
+	<style media="screen">
+	/* { box-sizing: border-box; } */
+
+	/* $duration: 30s; */
+
+	@-webkit-keyframes ticker {
+		0% {
+			-webkit-transform: translate3d(0, 0, 0);
+			transform: translate3d(0, 0, 0);
+			visibility: visible;
+		}
+
+		100% {
+			-webkit-transform: translate3d(-50%, 0, 0);
+			transform: translate3d(-50%, 0, 0);
+		}
+	}
+
+	@keyframes ticker {
+		0% {
+			-webkit-transform: translate3d(0, 0, 0);
+			transform: translate3d(0, 0, 0);
+			visibility: visible;
+		}
+
+		100% {
+			-webkit-transform: translate3d(-50%, 0, 0);
+			transform: translate3d(-50%, 0, 0);
+		}
+	}
+
+	.ticker-wrap {
+
+		/* position: fixed; */
+		/* bottom: 0; */
+		width: 100%;
+		overflow: hidden;
+		/* height: 4rem; */
+		/* background-color: rgba(#000, 0.9); */
+		/* padding-left: 100%; */
+		/* box-sizing: content-box; */
+	}
+
+	.ticker {
+
+		display: inline-block;
+		/* height: 4rem; */
+		/* line-height: 4rem; */
+		white-space: nowrap;
+		/* padding-right: 100%; */
+		/* box-sizing: content-box; */
+
+		-webkit-animation-iteration-count: infinite;
+		animation-iteration-count: infinite;
+
+		-webkit-animation-timing-function: linear;
+		animation-timing-function: linear;
+
+		-webkit-animation-name: ticker;
+		animation-name: ticker;
+
+		-webkit-animation-duration: 10s;
+		animation-duration: 10s;
+	}
+
+	.ticker__item {
+		display: inline-block;
+
+		padding: 0 2rem;
+		font-size: 2rem;
+		/* color: grey; */
+
+	}
+	</style>
+</head>
+<body>
+	<div class="ticker-wrap">
+		<div class="ticker">
+			<div class="ticker__item">111111111111111111111111111111111111111111111111</div>
+			<div class="ticker__item">222222222222222222222222222222222222222222222222</div>
+			<div class="ticker__item">333333333333333333333333333333333333333333333333</div>
+			<div class="ticker__item">444444444444444444444444444444444444444444444444</div>
+			<div class="ticker__item">111111111111111111111111111111111111111111111111</div>
+			<div class="ticker__item">222222222222222222222222222222222222222222222222</div>
+			<div class="ticker__item">333333333333333333333333333333333333333333333333</div>
+			<div class="ticker__item">444444444444444444444444444444444444444444444444</div>
+		</div>
+	</div>
+</body>
+</html>

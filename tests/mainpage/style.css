@@ -24,11 +24,46 @@ body {
 
 h1 {
 	font-size: 50px;
-	/* padding: 20px 20px 20px; */
+	/* padding: 15px 15px 0px;.comingsoontitle */
+}
+
+.h1link {
+	display: inline-block;
+	transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), text-shadow 0.5s cubic-bezier(0.16, 1, 0.3, 1) 0.2s;
+}
+.h1link:hover {
+	text-shadow: 0px 6px 12px rgba(0,0,0,0.4);
+	color: black !important;
+	transform: scale(1.03);
+	/* padding: 5px; */
+}
+.h1link:active {
+	text-shadow: 0px -3px 3px rgba(0,0,0,0.4);
+	transform: scale(1);
+}
+
+.h2title {
+	color: white;
+	font-style: italic;
+	/* font-size: 1.8em; */
+	text-shadow: 0px 3px 6px rgba(0,0,0,0.4);
+}
+
+h2 {
+	font-size: 1.8em;
+
+	/* color: white;
+	text-shadow: 0px 3px 6px rgba(0,0,0,0.4); */
+}
+
+h3 {
+	font-size: 1.4em;
+	margin-block-end: 0em;
 }
 
 p {
-	font-size: 30px;
+	font-size: 1.3em;
+	margin-block-start: 0em;
 }
 
 body p {
@@ -42,13 +77,11 @@ a {
 /* █████ MAIN CONTAINERS █████████████████████████████████████████████████ */
 .mainbody {
 	/* background-color: black; */
-	padding: 0px;
+	padding: 0px 10px;
 	/* width: 1200px; */
 
-	/* box-shadow: 0px 20px 60px rgba(0, 0, 0, 0.5); */
 	width: 1100px;
 	margin: 150px 0 80px 50vw;
-	/* pad */
 
 	/* Centre Horizontally */
 	transform: translateX(-50%);
@@ -65,6 +98,7 @@ a {
 	justify-content: left;
 	align-content: center;
 	align-self: center;
+	gap: 20px;
 
 	width: 100%;
 	height: 100%;
@@ -73,13 +107,11 @@ a {
 /* █████ ITEM BOX █████████████████████████████████████████████████ */
 .box {
 	display: flex;
-	margin: 10px;
+	/* margin: 10px 0 0 0; */
 	height: 220px;
 	width: 340px;
-	padding: 30px 0px 0px 0px;
+	padding: 30px 0 0 0;
 
-	color: white;
-	font-size: 10em;
 	text-align: center;
 	vertical-align: bottom;
 
@@ -109,6 +141,11 @@ a {
 	padding: 30px 30px;
 	margin: 0;
 	width: 100%;
+
+	font-size: 1.8em;
+	color: white;
+	font-weight: bold;
+
 	border-radius: 0px 0px 18px 18px;
 	background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.6));
 }
@@ -116,13 +153,13 @@ a {
 /* █████ COMING SOON BOX █████████████████████████████████████████████████ */
 .comingsoonbox {
 	display: flex;
-	margin: 10px;
+	/* margin: 10px; */
 	height: 220px;
 	width: 340px;
 	padding: 30px 0px 0px 0px;
 
 	color: white;
-	font-size: 10em;
+	font-size: 1.8em;
 	text-align: center;
 	vertical-align: bottom;
 
@@ -300,8 +337,29 @@ a {
 
 /* █████ EMBEDS █████████████████████████████████████████████████ */
 .player {
+	display: flex;
+	/* margin: 10px 0 0 0; */
+	/* height: 220px; */
+	width: 100%;
+	/* padding: 30px 0 0 0; */
+
+	/* text-align: center; */
+	/* vertical-align: bottom; */
+
+	background-color: black;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+
+	overflow: hidden;
+
+	box-shadow: 0px 6px 12px rgba(0,0,0,0.16);
+	border: 2px solid #AAA;
 	border-radius: 20px;
-	margin: 10px;
+	transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.player:hover{
+	transform: scale(1.01);
 }
 
 /* █████████████████████████████████████████████████████████████████████████████ */
@@ -317,7 +375,7 @@ a {
 
 	h1 {
 		font-size: 40px !important;
-		padding: 0px 10px 20px;
+		/* padding: 0px 10px 20px; */
 	}
 
 	p {
@@ -332,9 +390,10 @@ a {
 	#topnavcontainercompact {display: flex !important;}
 
 	.mainbody {
-		margin: 100px 10px 20px 10px;
+		margin: 100px 20px 20px 20px;
+		padding: 0px;
 		transform: none;
-		width: calc(100% - 20px) !important;
+		width: calc(100% - 40px) !important;
 	}
 	.container {
 		justify-content: center !important;
@@ -346,7 +405,6 @@ a {
 		width: 100%;
 	}
 	.player {
-		border-radius: 20px;
 		margin: 0;
 	}
 }
@@ -355,6 +413,7 @@ a {
 @media only screen and (min-width: 600px) and (max-width: 789px) {
 	.mainbody {
 		margin: 100px 30px 20px 30px;
+		padding: 0;
 		transform: none;
 		width: calc(100% - 60px) !important;
 	}
@@ -501,6 +560,11 @@ a {
 @media (prefers-color-scheme: dark) {
 	body {
 		background-color: #14161F;
+	}
+
+	h2 {
+		color: white;
+		text-shadow: 0px 3px 6px rgba(0,0,0,0.4);
 	}
 
 	.topnavContainer {
