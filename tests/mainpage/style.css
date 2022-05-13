@@ -275,11 +275,6 @@ a {
 }
 
 .navItemactive {
-	color: #0000FF;
-	background-color: rgba(150,150,150,0.3);
-}
-
-.navitemselected {
 	color: black !important;
 	display: inline-block !important;
 	pointer-events: none;
@@ -287,24 +282,28 @@ a {
 	margin: 0.5em 0.5em 0em;
 }
 
-.navitemselected > .selectedline {
-	background-color: rgba(0,0,0,1);
-	width : 100%;
-	height : 4px;
-	border-radius: 2px;
-	display: inline-block;
-	margin: 0;
+@keyframes revealSelectedLine {
+	0% {
+		width: 0;
+	}
+	100% {
+		width: 100%;
+	}
+}
+
+.navItemactive > .selectedline {
+	animation-name: revealSelectedLine;
+	animation-duration: 0.5s;
+	animation-fill-mode: forwards;
 }
 
 .selectedline {
 	background-color: rgba(0,0,0,1);
-	width : 0%;
-	height : 4px;
+	width: 0%;
+	height: 4px;
 	border-radius: 0;
 	display: inline-block;
 	margin: 0;
-
-	transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .topnavContainercompact {
@@ -477,7 +476,8 @@ a {
 		padding: 1em;
 		margin: 0px 6px;
 	}
-	.navitemselected {
+
+	.navItemactive {
 		padding: 1em;
 		margin: 0px 6px;
 		display: inline-block;
@@ -486,12 +486,15 @@ a {
 
 	.selectedline {
 		display: inline-block;
-		margin-top: 4px !important;
+		margin-top: 4px;
 		float: right;
-		width: 4px;}
-	.navitemselected > .selectedline {
+		width: 4px;
+	}
+
+	.navItemactive > .selectedline {
 		margin-top: 4px;
 		width: 40px;
+		animation: none;
 	}
 
 	.navgroup li {

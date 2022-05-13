@@ -1,22 +1,3 @@
-function animatenavitem(divID) {
-	var item = document.getElementById(divID);
-	item.classList.add('navitemselected');
-	item.classList.remove('navItemactive');
-
-	// const height = document.querySelector("#height span");
-	var width = window.innerWidth;
-
-	// Insert values on load of page
-	if (width < 789) {
-		console.log("COMPACT MENUBAR FIRED ON LAUNCH, HIDE " + width);
-		setTimeout(function () {
-			document.getElementById('topnavContainer').classList.add('goneReducedToAtoms');
-			document.getElementById('topnavContainer').classList.add('hidden');
-		}, 250);
-	}
-}
-
-
 function showexpandedcompactmenu(divID) {
 	console.log("showwindow fired");
 	var item = document.getElementById(divID);
