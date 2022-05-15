@@ -293,15 +293,17 @@ a {
 
 .navItemactive > .selectedline {
 	animation-name: revealSelectedLine;
-	animation-duration: 0.5s;
+	animation-duration: 0.4s;
 	animation-fill-mode: forwards;
+	anim
+	animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .selectedline {
 	background-color: rgba(0,0,0,1);
 	width: 0%;
 	height: 4px;
-	border-radius: 0;
+	border-radius: 2px;
 	display: inline-block;
 	margin: 0;
 }
@@ -427,26 +429,37 @@ a {
 	#topnavContainer.reveal {
 		visibility: visible !important;
 		max-height: calc(100vh - 20px);
-		transition: visibility 0s, max-height 0.33s linear;
+		opacity: 1;
+		backdrop-filter: blur(30px) saturate(120%);
+		-webkit-backdrop-filter: blur(30px) saturate(120%);
+
+		transform: scale(1);
+		transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1), transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), visibility 0s linear 0s;
 	}
 
 	#topnavContainer {
-		visibility: hidden;
-		max-height: 0;
-		transition: max-height 0.33s linear, visibility 0s linear 0.33s;
-
 		display: flex !important;
 		flex-flow: column;
 		overflow-y: scroll;
 
+		max-height: calc(100vh - 20px);
 		width: auto;
 		right: 0;
 		left: auto;
 		margin: 10px;
+
 		border-radius: 20px;
 		border: 2px solid rgba(170, 170, 170, 1);
 		background-color: rgba(255, 255, 255, 0.9);
 		box-shadow: 0px 6px 12px rgba(0,0,0,0.16);
+
+		transform: scale(0.9);
+		opacity: 0;
+
+		visibility: hidden;
+		/* transition: visibility 0s 0.6s, opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1); */
+		transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), visibility 0s linear 0.6s;
+
 	}
 	.navgroup {
 		flex-flow: column wrap;
@@ -596,7 +609,6 @@ a {
 	.navitemselected {
 		color: white !important;
 		text-shadow: 0px 0px 10px rgba(251,228,197,1);
-		text-shadow: 0px 0px 10px rgba(251,228,197,1);
 	}
 
 	.navitemselected > .selectedline {
@@ -606,7 +618,11 @@ a {
 	.selectedline {
 		background-color: rgba(255,255,255,1);
 		box-shadow: 0px 0px 10px rgba(251,228,197,1);
-		box-shadow: 0px 0px 10px rgba(251,228,197,1);
+	}
+
+	.navItemactive {
+		color: white !important;
+		text-shadow: 0px 0px 10px rgba(251,228,197,1);
 	}
 
 	.box {
