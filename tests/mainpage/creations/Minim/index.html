@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Minim - yuuiko</title>
+
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+	<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
+
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<meta name="msapplication-TileColor" content="#000000">
+	<meta name="theme-color" content="#fff" media="(prefers-color-scheme: light)">
+	<meta name="theme-color" content="#000" media="(prefers-color-scheme: dark)">
+
+	<link rel="stylesheet" href="../../style.css">
+	<script type="text/javascript" src="../../script.js"></script>
+
+	<style media="screen">
+		.paralaxsection {
+			/* background-image: url(img/projRMIT.jpg); */
+			background-position: left;
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			background-color: lightgrey;
+
+			box-sizing: border-box;
+			vertical-align: bottom;
+
+			display: flex;
+
+			width: 100%;
+			min-height: 600px;
+			padding: 50px 50px 50px 50px;
+		}
+		.textsection {
+			bottom: 0;
+			left: 0;
+			/* background-color: black; */
+			/* display: block; */
+			/* position: relative; */
+			align-self: flex-end;
+			margin-left: 50%;
+		}
+		.bodysection {
+			margin-left: 50%;
+		}
+	</style>
+
+</head>
+<body>
+	<div class="topnavContainer" id="topnavContainer">
+		<ul class="navgroup navleft">
+			<li><a class="navItem" id="navHello" href="../../hello.html" >yuuiko says hello!<div class="selectedline"></div></a></li>
+			<li><a class="navItem" id="navclose" onclick="hideexpandedcompactmenu('topnavContainer');" style="display: none;">close menu</a></li>
+		</ul>
+
+		<ul class="navgroup navmiddle">
+			<li><a class="navItem navItemactive" id="navCreations" href="../../index.html">Minim<div class="selectedline"></div></a></li>
+		  <li><a class="navItem" id="navCreations" href="../../index.html">Creations<div class="selectedline"></div></a></li>
+		  <li><a class="navItem" id="navImagination" href="../../imagination.html">Imagination<div class="selectedline"></div></a></li>
+		  <li><a class="navItem" id="navContact" href="../../talk.html">Contact<div class="selectedline"></div></a></li>
+			<li><a class="navItem" id="navSupport" href="../../support.html" >Support<div class="selectedline"></div></a></li>
+		</ul>
+
+		<ul class="navgroup navright">
+			<li><a class="navItem" id="navPlayer" href="../../player.html" >Player<div class="selectedline"></div></a></li>
+		</ul>
+	</div>
+
+	<div class="topnavContainer topnavContainercompact" id="topnavcontainercompact">
+		<ul class="navgroup navleft">
+			<li><a href="#" class="navItem navItemactive">Minim</a></li>
+		</ul>
+
+		<ul class="navgroup navright">
+			<li><a class="navItem" onclick="showexpandedcompactmenu('topnavContainer');">Menu</a></li>
+		</ul>
+	</div>
+
+	<!-- <div class="mainbody"> -->
+		<div class="paralaxsection" style="background-image: url(img/screen1.png);">
+			<div class="textsection">
+				<h1 style="color: #000">Minim</h1>
+				<h2 class="">
+					For greyscale iPod Classics
+				</h2>
+			</div>
+		</div>
+
+		<div class="paralaxsection" style="background-image: url(img/screen2.png);">
+			<div class="bodysection">
+				<h1 style="color: #000">Charming Full-Screen Album Art</h1>
+				<h2 class="h2title">
+					Something something
+				</h2>
+			</div>
+		</div>
+
+		<div class="paralaxsection" style="background-image: url(img/screen1.png);">
+			<div class="bodysection">
+				<h1 style="color: #000">Edge to edge design</h1>
+				<h2 class="h2title">
+					Something something
+				</h2>
+			</div>
+		</div>
+
+		<div class="paralaxsection" style="background-image: url(img/screen2.png);">
+			<div class="bodysection">
+				<h1 style="color: #000">Induvidually Designed Screens</h1>
+				<h2 class="h2title">
+					Not everything is just a list view
+				</h2>
+			</div>
+		</div>
+
+		<div class="paralaxsection" style="background-image: url(img/screen1.png);">
+			<div class="bodysection">
+				<h1 style="color: #000">Minimalist Icons</h1>
+				<h2 class="h2title">
+					Something something
+				</h2>
+			</div>
+		</div>
+
+		<div class="paralaxsection" style="background-image: url(img/screen2.png);">
+			<div class="bodysection">
+				<h1 style="color: #000">Chinese, Korean and Japanese Support</h1>
+				<h2 class="h2title">
+					Something something
+				</h2>
+			</div>
+		</div>
+
+		<div class="paralaxsection" style="background-image: url(img/projRMIT.png);">
+			<div class="bodysection">
+				<h1 style="color: #000">Supported Devices</h1>
+				<h2 class="h2title">
+					• iPod 1st Generation <br>
+					• iPod 2nd Generation<br>
+					• iPod 3rd Generation<br>
+					• iPod 4th Generation (Greyscale)<br>
+					<br>
+					• iPod Mini<br>
+					• iPod Mini 2nd Generation<br>
+				</h2>
+			</div>
+		</div>
+
+		<div class="paralaxsection" style="background-image: url(img/projRMIT.png); background-color: black;">
+			<div class="bodysection">
+				<h1 style="color: #FFF">Minim Plus</h1>
+				<h2 class="h2title">
+					Something something
+				</h2>
+			</div>
+		</div>
+
+<!-- </div> -->
+</body>
+</html>

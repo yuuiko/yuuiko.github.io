@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>sWiich Theme for Wii</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="../../style.css">
+    <script type="text/javascript" src="../../script.js"></script>
+
+    <style>
+        @font-face {
+            font-family: 'Kollektif';
+            src: url(fonts/Kollektif.ttf) format('truetype');
+        }
+        @font-face {
+            font-family: 'Kollektif';
+            src: url(fonts/Kollektif-Bold.ttf) format('truetype');
+            font-weight: bold;
+        }
+        body {
+            font-family: Kollektif;
+        }
+        p {
+            font-size: 25px;
+            letter-spacing: 1px;
+        }
+        .container-abstract {
+            padding: 0px 0px;
+            height: auto;
+        }
+        .artworksection {
+            width: 100%;
+        }
+
+        /*█████████████████████████████████████████████████████████████████████████████████████████████████████████ Sidenav ██████*/
+        .sidenav {
+            height: 100%;
+            width: 290px;
+            position: fixed;
+            z-index: 1;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0);
+            overflow-x: hidden;
+            padding-top: 14%;
+            opacity: 0.8;
+            text-shadow: 2px 2px 0px rgba(198,196,189, 0.6);
+        }
+        .sidenav:hover {
+            opacity: 100;
+            text-shadow: 2px 2px 0px rgba(198,196,189, 0.);
+            color: white;
+            width: 290px;
+        }
+        .sidenav-text {
+            opacity: 0;
+            transition: opacity 0.3s cubic-bezier(0, 0.55, 0.45, 1);
+        }
+        .sidenav:hover .sidenav-text {
+            opacity: 1;
+        }
+        .sidenav a {
+            padding: 6px 1px 6px 8px;
+            text-decoration: none;
+            font-size: 25px;
+            color: white;
+            display: block;
+            text-align: right;
+            transition: all 0.5s cubic-bezier(0, 0.55, 0.45, 1);
+        }
+        .sidenav a:hover {
+            color: #4040ff;
+            padding-right: 20px;
+        }
+        .sidenav a:active {
+            color: #4040ff;
+            padding-right: 0px;
+            margin-right: -20px;
+            font-size: 20px;
+        }
+        @media only screen and (max-width: 800px) {
+            .title {font-size: 100px;}
+            .starting {25px;}
+            .headertext {padding: 100px 50px;}
+            .abstract {padding: 100px 50px;}
+            .viewart {padding: 100px 50px;}
+        }
+
+        @media only screen and (max-width: 600px) {.title {font-size: 70px;}
+            .sidenav {height: auto}
+            .starting {20px;}
+            .headertext {padding: 100px 25px;}
+            .abstract {padding: 100px 25px;}
+            .viewart {padding: 100px 25px;}
+            p {font-size: 19px;}
+        }
+    </style>
+</head>
+<body>
+
+  <div class="topnavContainer" id="topnavContainer">
+    <ul class="navgroup navleft">
+      <li><a class="navItem" id="navHello" href="../../hello.html" >yuuiko says hello!<div class="selectedline"></div></a></li>
+      <li><a class="navItem" id="navclose" onclick="hideexpandedcompactmenu('topnavContainer');" style="display: none;">close menu</a></li>
+    </ul>
+
+    <ul class="navgroup navmiddle">
+      <li><a class="navItem navItemactive" id="navCreations" href="../../index.html">sWiich<div class="selectedline"></div></a></li>
+      <li><a class="navItem" id="navCreations" href="../../index.html">Creations<div class="selectedline"></div></a></li>
+      <li><a class="navItem" id="navImagination" href="../../imagination.html">Imagination<div class="selectedline"></div></a></li>
+      <li><a class="navItem" id="navContact" href="../../talk.html">Contact<div class="selectedline"></div></a></li>
+      <li><a class="navItem" id="navSupport" href="../../support.html" >Support<div class="selectedline"></div></a></li>
+    </ul>
+
+    <ul class="navgroup navright">
+      <li><a class="navItem" id="navPlayer" href="../../player.html" >Player<div class="selectedline"></div></a></li>
+    </ul>
+  </div>
+
+  <div class="topnavContainer topnavContainercompact" id="topnavcontainercompact">
+    <ul class="navgroup navleft">
+      <li><a href="#" class="navItem navItemactive">sWiich</a></li>
+    </ul>
+
+    <ul class="navgroup navright">
+      <li><a class="navItem" onclick="showexpandedcompactmenu('topnavContainer');">Menu</a></li>
+    </ul>
+  </div>
+
+    <!-- <div class="sidenav">
+        <a href="#hello"><span class="sidenav-text">top</span> — </a>
+        <br>
+        <a href="#artwork"><span class="sidenav-text">artwork abstract</span> — </a>
+        <br>
+        <a href="#skills1"><span class="sidenav-text">essential skill 1</span> — </a>
+        <br>
+        <a href="#skills2"><span class="sidenav-text">essential skill 2</span> — </a>
+        <br>
+        <a href="#creative"><span class="sidenav-text">creative practice</span> — </a>
+        <br>
+        <a href="#collab"><span class="sidenav-text">collaboration</span> — </a>
+        <br>
+    </div> -->
+    <div id="artwork" class="container-abstract bg-3 text-centre">
+      <img class="artworksection" src="img/0.gif">
+      <img class="artworksection" src="img/1.png">
+      <a href="https://rebrand.ly/yuuiko-switchthemelight"><img class="artworksection" src="img/2btn.png"></a>
+      <img class="artworksection" src="img/3.png">
+      <a href="http://patreon.com/yuuiko" target="_blank"><img class="artworksection" src="img/4btn.png"></a>
+      <img class="artworksection" src="img/5.png">
+      <a href="https://www.reddit.com/user/yyuuiko" target="_blank"><img class="artworksection" src="img/6btn.png"></a>
+      <img class="artworksection" src="img/7.png">
+        <!-- <img id="skills1" class="artworksection" src="img/Web%201920%20%E2%80%93%202.jpg">-->
+    </div>
+</body>
+</html>

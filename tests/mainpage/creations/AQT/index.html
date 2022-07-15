@@ -19,6 +19,9 @@
 	<meta name="msapplication-TileColor" content="#000000">
 	<meta name="theme-color" content="#ffffff">
 
+	<link rel="stylesheet" href="../../style.css">
+	<script type="text/javascript" src="../../script.js"></script>
+
 	<style>
 	@font-face {
 		font-family: 'Kollektif';
@@ -436,10 +439,11 @@
 	.trybtn {
 		display: block;
 		position: fixed;
-		top: 50px;
-		right: 50px;
-		background-color: rgba(0,0,0,0.2);
+		bottom: 50px;
+		left: calc(50% - 70px);
+		background-color: rgba(0,0,0,0.6);
 		color: #8DDBD3;
+		/* width: 90px; */
 		padding: 10px 18px;
 		font-weight: bold;
 		font-size: 25px;
@@ -454,6 +458,7 @@
 	.trybtn:hover {
 		background-color: #8DDBD3;
 		transform: scale(1.1);
+		text-decoration: none;
 	}
 	.trybtn:active {
 		transform: scale(0.9);
@@ -499,13 +504,13 @@
 	.footer {
 		padding: 50px 0px 50px 1.5vh;
 	}
-	.trybtn{
+	/* .trybtn{
 		border-radius: 0px 0px 0px 20px;
 		top: 0px;
 		right: 0px;
 		font-size: 18px;
 		transform-origin: top right;
-	}
+	} */
 }
 
 @media only screen and (min-width: 1000px) {
@@ -663,6 +668,36 @@ $(document).ready(function() {
 		window.scrollTo(0, 0);
 	}, 1300);
 	</script>
+
+	<div class="topnavContainer" id="topnavContainer">
+		<ul class="navgroup navleft">
+			<li><a class="navItem" id="navHello" href="../../hello.html" >yuuiko says hello!<div class="selectedline"></div></a></li>
+			<li><a class="navItem" id="navclose" onclick="hideexpandedcompactmenu('topnavContainer');" style="display: none;">close menu</a></li>
+		</ul>
+
+		<ul class="navgroup navmiddle">
+			<li><a class="navItem navItemactive" id="navCreations" href="../../index.html">AquaTouch<div class="selectedline"></div></a></li>
+			<li><a class="navItem" id="navCreations" href="../../index.html">Creations<div class="selectedline"></div></a></li>
+			<li><a class="navItem" id="navImagination" href="../../imagination.html">Imagination<div class="selectedline"></div></a></li>
+			<li><a class="navItem" id="navContact" href="../../talk.html">Contact<div class="selectedline"></div></a></li>
+			<li><a class="navItem" id="navSupport" href="../../support.html" >Support<div class="selectedline"></div></a></li>
+		</ul>
+
+		<ul class="navgroup navright">
+			<li><a class="navItem" id="navPlayer" href="../../player.html" >Player<div class="selectedline"></div></a></li>
+		</ul>
+	</div>
+
+	<div class="topnavContainer topnavContainercompact" id="topnavcontainercompact">
+		<ul class="navgroup navleft">
+			<li><a href="#" class="navItem navItemactive">AquaTouch</a></li>
+		</ul>
+
+		<ul class="navgroup navright">
+			<li><a class="navItem" onclick="showexpandedcompactmenu('topnavContainer');">Menu</a></li>
+		</ul>
+	</div>
+
 
 	<a class="trybtn" id="trybtn">
 		Try it out!
