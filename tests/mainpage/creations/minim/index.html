@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+i<!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
 	<meta charset="utf-8">
@@ -22,7 +22,7 @@
 	<style media="screen">
 		.paralaxsection {
 			/* background-image: url(img/projRMIT.jpg); */
-			background-position: left;
+			background-position: center;
 			background-size: cover;
 			background-repeat: no-repeat;
 			background-attachment: fixed;
@@ -31,10 +31,10 @@
 			box-sizing: border-box;
 			vertical-align: bottom;
 
-			display: flex;
+			/* display: flex; */
 
 			width: 100%;
-			min-height: 600px;
+			height: 90vh;
 			padding: 50px 50px 50px 50px;
 		}
 		.textsection {
@@ -43,11 +43,29 @@
 			/* background-color: black; */
 			/* display: block; */
 			/* position: relative; */
-			align-self: flex-end;
-			margin-left: 50%;
+			/* align-self: flex-end; */
+			/* margin-left: 50%; */
 		}
 		.bodysection {
-			margin-left: 50%;
+			/* margin-right: 50%; */
+		}
+
+		.previewimg {
+			background-position: center;
+			background-size: contain;
+			background-repeat: repeat;
+			background-attachment: fixed;
+			background-color: lightgrey;
+
+			box-sizing: border-box;
+			vertical-align: bottom;
+
+			/* display: flex; */
+
+			max-width: : 30vw;
+			/* min-width: 600px; */
+			min-height: 600px;
+			padding: 50px 50px 50px 50px;
 		}
 	</style>
 
@@ -92,25 +110,32 @@
 			</div>
 		</div>
 
-		<div class="paralaxsection" style="background-image: url(img/screen2.png);">
+		<div class="paralaxsection" style="background-image: url(img/screen1.jpg);">
+
+			<div class="previewimg" style="background-image: url(img/screen1.jpg);">
+			</div>
 			<div class="bodysection">
 				<h1 style="color: #000">Charming Full-Screen Album Art</h1>
 				<h2 class="h2title">
-					Something something
+					Not everything is just a list view
 				</h2>
 			</div>
 		</div>
 
-		<div class="paralaxsection" style="background-image: url(img/screen1.png);">
+		<div class="paralaxsection" style="background-image: url(img/screen2.jpg);">
+			<div class="previewimg" style="background-image: url(img/screen2.jpg);">
+			</div>
 			<div class="bodysection">
 				<h1 style="color: #000">Edge to edge design</h1>
 				<h2 class="h2title">
-					Something something
+					Not everything is just a list view
 				</h2>
 			</div>
 		</div>
 
-		<div class="paralaxsection" style="background-image: url(img/screen2.png);">
+		<div class="paralaxsection" style="background-image: url(img/screen3.jpg);">
+			<div class="previewimg" style="background-image: url(img/screen3.jpg);">
+			</div>
 			<div class="bodysection">
 				<h1 style="color: #000">Induvidually Designed Screens</h1>
 				<h2 class="h2title">
