@@ -1,0 +1,1054 @@
+<html>
+
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Nunito:400,700" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+	<title>yuuiko's iPod Guide</title>
+
+	<link rel="stylesheet" href="../../style.css">
+	<script type="text/javascript" src="../../script.js"></script>
+
+	<!-- UL does a ruled table list! =D -->
+
+	<style>
+	body {
+		color: #222;
+		padding: 16px;
+		/* font-family: "SF Pro Text", Helvetica, sans-serif; */
+		font-family: 'Nunito', Helvetica, sans-serif;
+		font-size: 14px;
+		margin: 0;
+		padding: 0 0 2px 0;btt://trigger_named/?trigger_name=LINK_BTTMainpage
+		background: transparent;
+		background: rgba(236, 236, 236, .7);
+		-webkit-backdrop-filter: blur(48px) saturate(200%);
+		-webkit-transform: translate3d(0, 0, 0);
+		display: flex;
+		-webkit-user-select: none;
+		overflow: hidden;
+	}
+
+	h1 {
+		/* font-family: "SF Pro Display", Helvetica, sans-serif; */
+		font-family: 'Nunito', sans-serif;
+		font-weight: 700;
+		margin: 0;
+		padding: 44px 16px 12px 16px;
+		font-size: 24px;
+		border-bottom: 1px solid rgba(0, 0, 0, .15);
+	}
+
+	h2 {
+		/* font-family: "SF Pro Display", Helvetica, sans-serif; */
+		font-family: 'Nunito', sans-serif;
+		font-size: 20px;
+		text-align: center;
+		font-weight: 600;
+		margin: 12px 0;
+	}
+
+	/* h3 {
+	font-family: "SF Pro Display", Helvetica, sans-serif;
+	text-transform: uppercase;
+	font-size: 13px;
+	font-weight: 600;
+	letter-spacing: .5px;
+	padding: 0 32px;
+	margin: 24px 0 12px 0;
+	color: rgba(180, 179, 178, 1);
+	} */
+
+	h3:first-of-type {
+		margin-top: 0;
+	}
+
+	small {
+		font-size: 12px;
+		line-height: 16px;
+		margin: -4px 32px 4px 32px;
+		padding: 0;
+		display: block;
+		color: rgba(180, 179, 178, 1);
+	}
+
+	a {
+		color: #1485FF;
+		text-decoration: none;
+		display: inline;
+	}
+
+	.inlineImg {
+		width: 70%;
+
+		/*Centring*/
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+
+		margin-top: 20px;
+		margin-bottom: 20px;
+
+		/*            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
+		border: solid 3px #FFFFFF;
+		border-radius: 15px;
+	}
+
+	.headerimage {
+		width: calc(100% - 32px);
+
+		background: rgba(245, 245, 245, 1);
+		border: 1px solid rgba(230, 230, 230, 1);
+		border-radius: 16px;
+		margin: 0 16px 16px 16px;
+		position: relative;
+	}
+
+	.video {
+		width: 94%;
+		height: 45%;
+		border-radius: 5px;
+		background-color: #000;
+		margin: 0 16px 16px 16px;
+		position: relative;
+		border-radius: 8px;
+		border: 1px solid rgba(230, 230, 230, 1);
+	}
+
+	.null {
+		background-color: rgba(255, 0, 0, .2);
+		opacity: 0.5;
+		transition: 0.2s;
+	}
+
+	/* Sidebar Styles */
+	.sidebar {
+		/* border: 1px solid rgba(150, 150, 150, .5); */
+		/* border-right: none; */
+		/* -webkit-transform: translate3d(0, 0, 0); */
+		position: relative;
+		display: block;
+		height: 100vh;
+		width: 540px;
+		top: 55px;
+
+		transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+	}
+
+	.sidebarhidden {
+		width: 0px;
+	}
+
+	.sidebar ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		position: relative;
+		height: calc(100% - 121px);
+		overflow-y: auto;
+		overflow-x: hidden;
+
+	}
+
+	.menubtn {
+		width: 20px;
+		height: 20px;
+		margin: 15px;
+		top: 0px;
+
+		text-align: center;
+		font-size: 10pt;
+		vertical-align: middle;
+		text-decoration: none;
+		color: black;
+
+		background-size: cover;
+
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+
+		border: 2px solid white;
+
+		transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+	}
+	.menubtn:active {
+		transform: scale(0.9);
+	}
+
+	#closebtn {
+		position: absolute;
+
+		float: right;
+		right: 0px !important;
+
+		background-color: salmon;
+		z-index: 1;
+		right: 150px;
+		border-radius: 50%;
+	}
+	#closebtn:hover {
+		transform: scale(1.3);
+	}
+
+	#openbtn {
+		position: absolute;
+
+		background-color: #62C655;
+		left: 0px;
+		top: 55px;
+		margin-left: -15px;
+		z-index: 1;
+
+		width: 35px;
+		height: 80px;
+
+		border-radius: 0% 15px 15px 0%;
+		border-left: none;
+	}
+	#openbtn:hover {
+		transform: translateX(10px);
+	}
+
+	.btnhidden {
+		left: -50px !important;
+	}
+
+	.tablink {
+		/**/
+		margin: 0 0 -1px 0px;
+		padding: 8px 8px 8px 16px;
+		width: calc(100% - 23px);
+		position: relative;
+		line-height: 28px;
+		font-family: 'Nunito', sans-serif;
+		font-weight: 500;
+	}
+
+	.tablink img {
+		height: 28px;
+		margin-right: 12px;
+		margin-left: -36px;
+		float: left;
+	}
+
+	.tablink::after {
+		/* tab lines */
+		content: " ";
+		display: block;
+		width: 100%;
+		height: 1px;
+		position: absolute;
+		bottom: 0;
+		background: rgba(0, 0, 0, .15);
+	}
+
+	.tablink.active {
+		background: rgba(30, 30, 30, .15);
+		background-blend-mode: multiply;
+		transition: 0.5s;
+	}
+
+	.tablink .tablink.active::after {
+		display: none;
+	}
+
+	.tablink_last {
+		/**/
+		margin: 0 0 -1px 0px;
+		/* padding: 8px 12px 8px 48px; */
+		/* width: 204px; */
+		position: absolute;
+		/* line-height: 28px; */
+		/**/
+		/*border-radius: 10px 0px 0px 10px;*/
+		bottom: 0px;
+
+		/* border-bottom-left-radius: 5px; */
+	}
+
+	/* .tablink_last img {
+		height: 28px;
+		margin-right: 12px;
+		margin-left: -36px;
+		float: left;
+	} */
+
+	.tablink_last::after {
+		/* tab lines */
+		/* content: " ";
+		display: block;
+		width: 100%;
+		height: 1px;
+		position: absolute;
+		bottom: 0;
+		background: rgba(0, 0, 0, .15);
+		top: 0;
+		bottom: auto; */
+		top: 0;
+		/* bottom: auto; */
+	}
+
+	.tablink_last.active {
+		background: rgba(30, 30, 30, .1);
+		background-blend-mode: multiply;
+	}
+
+	/* .tablink_last. .tablink_last.active::after {
+		display: none;
+	} */
+
+	/* Content Area Styles */
+	.content {
+		background: rgba(255, 255, 255, 1);
+		/* border-bottom-right-radius: 6px; */
+		/* border: 1px solid rgba(119, 118, 116, .5); */
+		border-left: 1px solid rgba(200, 200, 200, 1);
+		position: relative;
+		width: 100%;
+		height: 100vh;
+		overflow-y: scroll;
+		overflow-x: hidden;
+		-webkit-overflow-scrolling: touch;
+	}
+
+	.tabcontent {
+		/* padding-top: 66px; */
+		display: none;
+		position: relative;
+	}
+
+	.tabcontent .active {
+		display: block;
+	}
+
+	.tabcontent ul {
+		list-style-type: none;
+		margin: -16px -16px -16px 0;
+		padding: 0;
+		-webkit-transform: translate3d(0, 0, 0);
+	}
+
+	.tabcontent ul li {
+		padding: 8px 8px 8px 0;
+		border-bottom: 1px solid rgba(0, 0, 0, .1);
+	}
+
+	.tabcontent ul li:last-of-type {
+		border: none;
+	}
+
+	.tabcontent ul li img,
+	.tabcontent ul li .tbicon {
+		height: 36px;
+		float: left;
+		margin-right: 12px;
+	}
+
+	.tabcontent ul li .tbicon {
+		background: #000;
+		border-radius: 6px;
+		overflow: hidden;
+		display: inline-block;
+		min-width: 36px;
+		object-position: center center;
+	}
+
+	.tabcontent ul li .tbicon img {
+		width: auto;
+		max-height: 22px;
+		padding: 7px;
+		margin-right: 0;
+		position: relative;
+		object-position: center center;
+	}
+
+	img.invert {
+		-webkit-filter: invert();
+	}
+
+	.tabcontent ul li .form-switch a {
+		line-height: 36px;
+		color: #fff;
+		text-decoration: none;
+		background: none;
+	}
+
+	/*---------------- BODY -----------------*/
+
+	/*HEADING*/
+	header {
+		position: fixed;
+		z-index: 1;
+		top: 0px;
+		left: 241px;
+		right: 0px;
+
+		background: rgba(245, 245, 245, .8);
+		-webkit-backdrop-filter: blur(24px) saturate(400%) contrast(150%);
+		-webkit-transform: translate3d(0, 0, 0);
+		border-bottom: 1px solid rgba(0, 0, 0, .1);
+	}
+
+	section {
+		background: rgba(245, 245, 245, 1);
+		border: 1px solid rgba(230, 230, 230, 1);
+		border-radius: 16px;
+		padding: 16px;
+		margin: 0 16px 16px 16px;
+		position: relative;
+	}
+
+	section.tokenlist {
+		display: flex;
+		flex-wrap: wrap;
+		padding-bottom: 8px;
+	}
+
+	.button {
+		background: #1485FF;
+		display: block;
+		text-align: center;
+		border-radius: 4px;
+		margin: 32px 16px;
+		padding: 8px;
+		color: #fff;
+		text-decoration: none;
+		font-weight: 500;
+	}
+
+	.button:active,
+	.token.selected:active {
+		opacity: .8;
+	}
+
+	section p {
+		margin: 12px 0;
+	}
+
+	section p:first-of-type {
+		margin-top: 0;
+	}
+
+	section p:last-of-type {
+		margin-bottom: 0;
+	}
+
+	/* Single Page Style Overrides */
+	#about {
+		margin-left: 15px;
+	}
+
+	#about a {
+		background: none;
+		display: inline;
+		font-size: 13px;
+		color: rgba(16, 133, 255, 1);
+	}
+
+
+	/*--------------------DROPDOWN---------------------------*/
+
+	/* Style the sidenav links and the DROPDOWN BUTTON */
+	.dropdown-btn {
+		display: block;
+		border: none;
+		background: none;
+		width: 100%;
+		text-align: left;
+
+		margin: 0 10px 0px 0;
+		padding: 8px 12px 8px 24px;
+		width: 100%;
+		position: relative;
+		line-height: 28px;
+
+		font-family: 'Nunito', Helvetica, sans-serif;
+		font-size: 14px;
+	}
+
+	/* On mouse-over */
+	.dropdown-btn:hover {
+	}
+
+	.dropdown-btn:active {
+		color: #000000;
+	}
+
+	/* Add an active class to the active dropdown button */
+	.dropdownActive {
+		background-blend-mode: multiply;
+	}
+
+	/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+	.dropdown-container {
+		display: none;
+		background-color: rgba(255, 255, 255, 0.0);
+		padding-left: 30px;
+		margin-right: -30px;
+	}
+
+	/*SPECIAL STYLE FOR THE DROPDOWN BUTTONS*/
+	.dropdown-button {
+		border-radius: 30px 0px 0px 30px;
+	}
+
+	.dropdown-button.active {
+		background: rgba(30, 30, 30, .14);
+		background-blend-mode: multiply;
+	}
+
+	/* Optional: Style the caret down icon */
+	.characterGlyph {
+		float: right;
+		padding-right: 0px;
+
+		font-family: "SF Pro Text Heavy", sans-serif;
+		font-size: 14px;
+		color: #545454;
+	}
+
+
+	/*----------------BOTTOM NAV-----------------*/
+	.bottom-nav {
+		overflow: hidden;
+		background-color: rgba(240, 240, 240, 0.9);
+		position: fixed;
+		bottom: 0;
+		width: 100%;
+		z-index: 1;
+		border-top: 1px solid lightgrey;
+		background: rgba(245, 245, 245, .8);
+		-webkit-backdrop-filter: blur(24px) saturate(400%) contrast(150%);
+	}
+
+	.bottom-nav a {
+		float: left;
+		display: block;
+		color: black;
+		text-align: center;
+		padding: 8px 16px;
+		margin: 5px 5px 10px 5px;
+		border-radius: 20px;
+		text-decoration: none;
+		font-size: 17px;
+	}
+
+	.bottom-nav a:hover {
+		background: #FFF;
+		color: black;
+	}
+
+	.bottom-nav a.active {
+		background-color: dodgerblue;
+		color: white;
+	}
+
+	.explorebtn {
+		display: inline-block;
+		border-radius: 10px;
+		width: calc(100% - 20px);
+
+		background-color: rgba(240, 240, 240, 1);
+		padding: 10px;
+		margin-top: 5px;
+
+		transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+	}
+
+	.explorebtn:hover {
+		background-color: rgba(255, 255, 255, 1);
+		box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+		z-index: 2;
+	}
+	.explorebtn:active {
+		transform: scale(0.95);
+		box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4);
+	}
+
+
+	/*----------------MODAL BOX-----------------*/
+	/* The Modal (background) */
+	.modal {
+		display: block; /* Hidden by default */
+		position: fixed; /* Stay in place */
+		z-index: 1; /* Sit on top */
+		padding-top: 20vh; /* Location of the box */
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+
+		overflow: auto; /* Enable scroll if needed */
+		background-color: rgb(0, 0, 0); /* Fallback color */
+		background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+	}
+
+	/* Modal Content */
+	.modal-content {
+		background-color: #fefefe;
+		margin: auto;
+		padding: 8px 20px 20px 20px;
+		border-radius: 15px;
+		width: 80%;
+		max-width: 700px;
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	}
+
+	/* The Close Button */
+	.close {
+		color: #aaaaaa;
+		float: right;
+		font-size: 28px;
+		font-weight: bold;
+	}
+
+	.close:hover,
+	.close:focus {
+		color: #000;
+		text-decoration: none;
+		cursor: pointer;
+	}
+
+	ul {
+		list-style-type: none;
+		margin: -16px -16px -16px 0;
+		padding: 0;
+		-webkit-transform: translate3d(0, 0, 0);
+	}
+
+	.supportbtn {
+		display: inline-block;
+		border-radius: 10px;
+		width: calc(100% - 20px);
+
+		background-color: #eee;
+		padding: 10px;
+		margin-top: 5px;
+
+		transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+	}
+
+	.supportbtn:hover {
+		background-color: #fff;
+		box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+		z-index: 2;
+	}
+	.supportbtn:active {
+		transform: scale(0.95);
+		box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4);
+	}
+
+	.titlecontainer {
+		height: 100%;
+		position: relative;
+		overflow-y: scroll;
+		top: 0px;
+		padding: 20px 20px;
+	}
+
+	.centre {
+		margin: 0;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		-ms-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
+		overflow: hidden;
+		width: 70%;
+		padding: 10px;
+	}
+
+	.pdfobject-container {
+		width: 100%;
+		/* max-width: 600px; */
+		height: 100%;
+		/* margin: 2em 0; */
+		z-index: -10;
+	}
+
+	.nosupport {
+		width: 100%;
+		height: 100%;
+		position: relative;
+	}
+
+	.nosupport img {
+		width: 100%;
+		max-width: 300px;
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
+		position:absolute;
+		top: 50%; /* Move the image down, so its top is half way down the container */
+   	margin-top: 35px; /* Move the image back up half its height */
+		position: relative;
+	}
+
+	/* PDFObject automatically assigns the class name "pdfobject" to the <embed> element */
+	.pdfobject { border: solid 1px #666; }
+
+	</style>
+	<script>
+	var variables = {};
+
+	function openTab(evt, tabName) {
+		// Declare all variables
+		var i, tabcontent, tablinks;
+
+		// Get all elements with class="tabcontent" and hide them
+		tabcontent = document.getElementsByClassName("tabcontent");
+		for (i = 0; i < tabcontent.length; i++) {
+			tabcontent[i].style.display = "none";
+		}
+
+		// Get all elements with class="tablinks" and remove the class "active"
+		tablinks = document.getElementsByClassName("tablink");
+		for (i = 0; i < tablinks.length; i++) {
+			tablinks[i].className = tablinks[i].className.replace(" active", "");
+		}
+
+		// Get all elements with class="tablinks_last" and remove the class "active"
+		tablinks_last = document.getElementsByClassName("tablink_last");
+		for (i = 0; i < tablinks_last.length; i++) {
+			tablinks_last[i].className = tablinks_last[i].className.replace(" active", "");
+		}
+
+		// Show the current tab, and add an "active" class to the button that opened the tab
+		document.getElementById(tabName).style.display = "block";
+		evt.currentTarget.className += " active";
+	}
+
+	//---------- AUTO-OPEN ------------//
+	// Select the General tab by default
+	function loadfirst() {
+		openTab(event, 'GettingStarted');
+		document.getElementById('default').click();
+	}
+
+
+
+	//-----------SIMPLE HIDE/SHOW-----------//
+	function hideShow(theContainer) {
+		var x = document.getElementById(theContainer);
+		if (x.style.display === "none") {
+			x.style.display = "block";
+		} else {
+			x.style.display = "none";
+		}
+	}
+
+	function openSubTab(evt, tabName) {
+		// Declare all variables
+		var i, tabcontent, tablinks;
+
+		// Get all elements with class="tabcontent" and hide them
+		tabcontent = document.getElementsByClassName("tabcontent");
+		for (i = 0; i < tabcontent.length; i++) {
+			tabcontent[i].style.display = "none";
+		}
+
+		// Show the current tab, and add an "active" class to the button that opened the tab
+		document.getElementById(tabName).style.display = "block";
+	}
+
+	</script>
+</head>
+
+<body onload="loadfirst();">
+
+	<div class="topnavContainer" id="topnavContainer">
+		<ul class="navgroup navleft">
+			<li><a class="navItem" id="navHello" href="../../hello.html" >christopher yu says hello!<div class="selectedline"></div></a></li>
+			<li><a class="navItem" id="navclose" onclick="hideexpandedcompactmenu('topnavContainer');" style="display: none;">close menu</a></li>
+		</ul>
+
+		<ul class="navgroup navmiddle">
+			<li><a class="navItem navItemactive" id="navCreations" href="../../index.html">iPod Guide<div class="selectedline"></div></a></li>
+			<li><a class="navItem" id="navCreations" href="../../index.html">Creations<div class="selectedline"></div></a></li>
+			<li><a class="navItem" id="navImagination" href="../../imagination.html">Imagination<div class="selectedline"></div></a></li>
+			<li><a class="navItem" id="navContact" href="../../talk.html">Contact<div class="selectedline"></div></a></li>
+			<li><a class="navItem" id="navSupport" href="../../support.html" >Support<div class="selectedline"></div></a></li>
+		</ul>
+
+		<ul class="navgroup navright">
+			<li><a class="navItem" id="navPlayer" href="../../player.html" >Player<div class="selectedline"></div></a></li>
+		</ul>
+	</div>
+
+	<div class="topnavContainer topnavContainercompact" id="topnavcontainercompact">
+		<ul class="navgroup navleft">
+			<li><a href="#" class="navItem navItemactive">iPod Guide</a></li>
+		</ul>
+
+		<ul class="navgroup navright">
+			<li><a class="navItem" onclick="showexpandedcompactmenu('topnavContainer');">Menu</a></li>
+		</ul>
+	</div>
+
+
+	<div class="sidebar" id="sidebar">
+		<a class="menubtn" id="closebtn" onclick="hidesidebar()"></a>
+
+		<h1>yuuiko's <br>iPod Guide</h1>
+		<!-- style="height: 100%; overflow-y: auto; overflow-x: hidden" -->
+		<ul>
+			<li id="default" class="tablink" onClick="openTab(event, 'GettingStarted')">
+				iPod Classic Cheatsheet
+			</li>
+			<!-- <li class="tablink" onClick="openTab(event, 'AQT_strip')">
+				The Quick Strip
+			</li> -->
+
+			<!-- WEB WIDGET DROPOWN -->
+			<!-- <button class="tablink dropdown-btn" onClick="openTab(event, 'Web_Widgets')">Web Controls
+				<b class="fa characterGlyph"> &#x25BC; </b>
+			</button>
+
+			<div id="dropdown-container" class="dropdown-container">
+				<li class="tablink dropdown-button" onClick="openTab(event, 'Web_Widgets_GMail')">
+					Gmail
+				</li>
+				<li class="tablink dropdown-button" onClick="openTab(event, 'Web_Widgets_Youtube')">
+					YouTube
+				</li>
+				<li class="tablink dropdown-button" onClick="openTab(event, 'Web_Widgets_Netflix')">
+					Netflix
+				</li>
+			</div> -->
+			<!-- DROPOWN END -->
+
+
+			<!-- <li class="tablink" onClick="openTab(event, 'Updating')">
+				Updating AquaTouch
+			</li> -->
+
+
+			<!-- <li class="tablink tablink_last" onClick="openTab(event, 'support')">
+				<strong>Join Discord<br>Support Yuuiko</strong>
+			</li> -->
+
+		</ul>
+	</div>
+
+	<a class="menubtn btnhidden" id="openbtn" onclick="showsidebar()"></a>
+
+
+	<div class="content">
+		<!-- ██████████████████████████████████████████████████████████████████████████████████          GETTING STARTED           -->
+		<div id="GettingStarted" class="tabcontent">
+			<div id="pdf1"></div>
+		</div>
+
+
+		<div id="support" class="tabcontent">
+				<div class="titlecontainer">
+						<div class="centre">
+								<h2 style="text-align: left;">
+										Support, Feedback, Community<br>
+								</h2>
+								<p>
+										Since BetterTouchTool is paid, I've decided to make AquaTouch Free, so you can check it out and mess around, or even use it with no limitations. <br>
+										<br>
+										AquaTouch does take quite a lot of time to develop though... So if you don't mind...<br>
+										<br>
+										I'd love any support! and of course, I'll continue to improve both my skills and quality of my work!
+								</p>
+								<a class="explorebtn" onclick="openSubTab(event, 'spg9')">Support Yuuiko</a><br>
+								<a class="explorebtn" onclick="openSubTab(event, 'spg10')">Want a BetterTouchTool License?</a><br>
+								<br>
+								<a class="explorebtn" onclick="openSubTab(event, 'spg11')">AquaTouch Community</a>
+
+								<!-- <a onclick="openSubTab(event, 'spg9')">Support Yuuiko</a><br>
+								<a onclick="openSubTab(event, 'spg10')">Want a BetterTouchTool License?</a><br>
+								<br>
+								<a onclick="openSubTab(event, 'spg11')">Need Help or want to hang out? AquaTouch Community</a> -->
+						</div>
+				</div>
+		</div>
+
+		<!-- ████████████████████████████████████████████████████████████████-->
+		<div id="spg9" class="tabcontent">
+
+				<div class="titlecontainer">
+						<div class="centre">
+								<h2 style="text-align: left;">
+										Support, Feedback, Community<br>
+								</h2>
+								<p>
+										Since BetterTouchTool is paid, I've decided to make AquaTouch Free, so you can check it out and mess around, or even use it with no limitations. <br>
+										<br>
+										AquaTouch does take quite a lot of time to develop though... So if you don't mind...<br>
+										<br>
+										I'd love any support! and of course, I'll continue to improve both my skills and quality of my work!
+								</p>
+								<a class="explorebtn" onclick="openSubTab(event, 'spg9')">Support Yuuiko</a><br>
+								<a class="explorebtn" onclick="openSubTab(event, 'spg10')">Want a BetterTouchTool License?</a><br>
+								<br>
+								<a class="explorebtn" onclick="openSubTab(event, 'spg11')">AquaTouch Community</a>
+						</div>
+				</div>
+
+				<!-- MODAL -->
+				<div id="Support" class="modal" onclick="openSubTab(event, 'support')">
+
+						<!-- Modal content -->
+						<!-- Modal content -->
+						<div class="modal-content">
+							<span class="close" onclick="openSubTab(event, 'pg9')">&times;</span>
+							<h2 style="text-align: left; border-bottom: 1px solid #d4d4d4; padding-bottom: 5px;">🤍 Support Yuuiko </h2>
+							<p style="text-align: left; padding: 5px 5px;">
+								AquaTouch takes a long time to make, but since BetterTouchTool is paid, I've decided to make it free to use! <br>
+								<br>
+								I'd love any support! and I'll continue to improve my skills and quality of my work.
+							</p>
+
+							<a class="supportbtn" href="btt://trigger_named/?trigger_name=LINK_paypal" target="_blank"><span style="color: black;">Want to buy me a coffee? You can donate here: </span><br> https://paypal.me/chrisyuu</a>
+							<a class="supportbtn" href="btt://trigger_named/?trigger_name=LINK_patreon" target="_blank"><span style="color: black;">Join my patreon for more of my stuff! </span><br> https://www.patreon.com/yuuiko</a>
+
+						</div>
+				</div>
+		</div>
+
+		<!-- ████████████████████████████████████████████████████████████████-->
+		<div id="spg10" class="tabcontent">
+				<div class="titlecontainer">
+						<div class="centre">
+								<h2 style="text-align: left;">
+										Support, Feedback, Community<br>
+								</h2>
+								<p>
+										Since BetterTouchTool is paid, I've decided to make AquaTouch Free, so you can check it out and mess around, or even use it with no limitations. <br>
+										<br>
+										AquaTouch does take quite a lot of time to develop though... So if you don't mind...<br>
+										<br>
+										I'd love any support! and of course, I'll continue to improve both my skills and quality of my work!
+								</p>
+								<a onclick="openSubTab(event, 'spg9')">Support Yuuiko</a><br>
+								<a onclick="openSubTab(event, 'spg10')">Want a BetterTouchTool License?</a><br>
+								<br>
+								<a onclick="openSubTab(event, 'spg11')">Need Help or want to hang out? AquaTouch Community</a>
+						</div>
+				</div>
+				<!-- MODAL -->
+				<div id="Support" class="modal" onclick="openSubTab(event, 'support')">
+
+					<!-- Modal content -->
+					<div class="modal-content">
+						<span class="close" onclick="openSubTab(event, 'support')">&times;</span>
+						<h2 style="text-align: left; border-bottom: 1px solid #d4d4d4; padding-bottom: 5px;">🔖 BetterTouchTool License</h2>
+
+						<p>
+							Need a BetterTouchTool License? <br>
+							Get one through my link and i'll get 40%!
+						</p>
+
+						<a class="supportbtn" href="btt://trigger_named/?trigger_name=LINK_paddle" target="_blank">Purchase BetterTouchTool License via yuuiko</a>
+
+					</div>
+				</div>
+		</div>
+
+		<!-- ██████████████████████████████████████████████████████████████████████████████████          Help and Feedback           -->
+		<div id="spg11" class="tabcontent">
+		<div class="titlecontainer">
+				<div class="centre">
+						<h2 style="text-align: left;">
+								Support, Feedback, Community<br>
+						</h2>
+						<p>
+								Since BetterTouchTool is paid, I've decided to make AquaTouch Free, so you can check it out and mess around, or even use it with no limitations. <br>
+								<br>
+								AquaTouch does take quite a lot of time to develop though... So if you don't mind...<br>
+								<br>
+								I'd love any support! and of course, I'll continue to improve both my skills and quality of my work!
+						</p>
+						<a onclick="openSubTab(event, 'spg9')">Support Yuuiko</a><br>
+						<a onclick="openSubTab(event, 'spg10')">Want a BetterTouchTool License?</a><br>
+						<br>
+						<a onclick="openSubTab(event, 'spg11')">Need Help or want to hang out? AquaTouch Community</a>
+				</div>
+		</div><br>
+		<!-- MODAL -->
+		<div id="Support" class="modal" onclick="openSubTab(event, 'support')">
+
+			<!-- Modal content -->
+			<div class="modal-content">
+				<span class="close" onclick="openSubTab(event, 'support')">&times;</span>
+				<h2 style="text-align: left; border-bottom: 1px solid #d4d4d4; padding-bottom: 5px;">💬 AquaTouch Community</h2>
+
+				<a class="supportbtn" href="btt://trigger_named/?trigger_name=LINK_BTTUpdatesDownloads" target="_blank"><strong>Updates and Downloads Thread</strong><br>Subscribe for AquaTouch update notifications!</a>
+				<a class="supportbtn" href="btt://trigger_named/?trigger_name=LINK_discord" target="_blank"><strong>Discord Server</strong> Hangouts and Troubleshooting (most active)</a>
+				<a class="supportbtn" href="btt://trigger_named/?trigger_name=LINK_BTTMainpage" target="_blank"><strong>Folivora Forums</strong> Comments and Troubleshooting</a>
+
+			</div>
+		</div>
+</div>
+
+
+	</div>
+
+	<script src="pdfobject.js"></script>
+	<script>
+
+	var options = {
+		fallbackLink: "<div class='nosupport'><a href='[url]'><img src='nosupport.png' alt='Download PDF'></a></div>",
+		page: 1,
+		pdfOpenParams: {
+			navpanes: 1,
+			view: "FitH",
+			pagemode: "thumbs"
+		}
+	};
+
+	PDFObject.embed("iPodGuidev2-1.pdf", "#pdf1", options);
+	// PDFObject.embed("sample-3pp.pdf", "#pdf2");
+	</script>
+
+	<script>
+	// SCRIPT FOR DROPDOWNS
+
+	// Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict
+
+	var dropdown = document.getElementsByClassName("dropdown-btn");
+
+	var i;
+
+	for (i = 0; i < dropdown.length; i++) {
+		dropdown[i].addEventListener("click", function() {
+			this.classList.toggle("dropdownActive");
+			var dropdownContent = this.nextElementSibling;
+			if (dropdownContent.style.display === "block") {
+				dropdownContent.style.display = "none";
+			} else {
+				dropdownContent.style.display = "block";
+			}
+		});
+	}
+
+	</script>
+	<script type="text/javascript">
+		// SCRIPT FOR HIDING Sidebar
+
+		function showsidebar() {
+			console.log("showsidebar fired");
+			var sidebar = document.getElementById("sidebar");
+			var closebtn = document.getElementById("closebtn");
+			var openbtn = document.getElementById("openbtn");
+			sidebar.classList.remove('sidebarhidden');
+			closebtn.classList.remove('btnhidden');
+			openbtn.classList.add('btnhidden');
+		}
+		function hidesidebar() {
+			console.log("hidesidebar fired");
+			var sidebar = document.getElementById("sidebar");
+			var closebtn = document.getElementById("closebtn");
+			var openbtn = document.getElementById("openbtn");
+			sidebar.classList.add('sidebarhidden');
+			closebtn.classList.add('btnhidden');
+			openbtn.classList.remove('btnhidden');
+		}
+	</script>
+</body>
+
+</html>
