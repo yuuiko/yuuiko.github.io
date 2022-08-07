@@ -8,8 +8,33 @@
 	font-weight: bold;
 }
 
+/* html { font-family: 'Inter', sans-serif; } */
+
+@supports (font-variation-settings: normal) {
+  html { font-family: 'Inter var', sans-serif; }
+}
+
+@font-face {
+  font-family: 'Inter var';
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+  font-named-instance: 'Regular';
+  src: url("fonts/Inter-roman.var.woff2?v=3.19") format("woff2");
+}
+@font-face {
+  font-family: 'Inter var';
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: italic;
+  font-named-instance: 'Italic';
+  src: url("fonts/Inter-italic.var.woff2?v=3.19") format("woff2");
+}
+
+/* html { font-family: 'Inter', sans-serif; } */
+
 body {
-	font-family: Kollektif;
+	/* font-family: Kollektif; */
 	background-color: #F2F2F4;
 	transition: all 1s cubic-bezier(0.85, 0, 0.15, 1);
 	color: #8B8B8B;
@@ -23,26 +48,34 @@ body {
 }
 
 h1 {
+	font-family: Kollektif;
 	font-size: 50px;
 	/* padding: 15px 15px 0px;.comingsoontitle */
 }
 
 .h1link {
+	font-family: Kollektif;
+
 	display: inline-block;
 	transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), text-shadow 0.5s cubic-bezier(0.16, 1, 0.3, 1) 0.2s, color 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .h1link:hover {
+	font-family: Kollektif;
+
 	text-shadow: 0px 6px 12px rgba(0,0,0,0.4);
 	color: black !important;
 	transform: scale(1.03);
 	/* padding: 5px; */
 }
 .h1link:active {
+	font-family: Kollektif;
+
 	text-shadow: 0px -3px 3px rgba(0,0,0,0.4);
 	transform: scale(1);
 }
 
 .h2title {
+	font-family: 'Inter var', sans-serif; 
 	color: white;
 	font-style: italic;
 	/* font-size: 1.8em; */
@@ -50,6 +83,8 @@ h1 {
 }
 
 h2 {
+	font-family: Kollektif;
+
 	font-size: 1.8em;
 
 	/* color: white;
@@ -57,6 +92,8 @@ h2 {
 }
 
 h3 {
+	font-family: Kollektif;
+
 	font-size: 1.4em;
 	margin-block-end: 0em;
 }
@@ -67,7 +104,8 @@ p {
 }
 
 body p {
-	/* padding: 20px 20px 20px; */
+	color: white;
+	text-shadow: 0px 3px 6px rgba(0,0,0,0.4);
 }
 
 a {
@@ -137,6 +175,8 @@ a {
 }
 
 .title {
+	font-family: Kollektif;
+
 	align-self: flex-end;
 	padding: 30px 30px;
 	margin: 0;
@@ -158,6 +198,7 @@ a {
 	width: 340px;
 	padding: 30px 0px 0px 0px;
 
+	font-family: Kollektif;
 	color: white;
 	font-size: 1.8em;
 	text-align: center;
@@ -199,6 +240,8 @@ a {
 /* █████ TOP NAVIGATION █████████████████████████████████████████████████ */
 /* top bar  */
 .topnavContainer {
+	font-family: Kollektif;
+
 	width: 100%;
 	/* height: 55px; */
 	background-color: rgba(255,255,255,0.8);
