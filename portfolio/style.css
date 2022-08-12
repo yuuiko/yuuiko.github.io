@@ -75,7 +75,7 @@ h1 {
 }
 
 .h2title {
-	font-family: 'Inter var', sans-serif; 
+	font-family: 'Inter var', sans-serif;
 	color: white;
 	font-style: italic;
 	/* font-size: 1.8em; */
@@ -115,11 +115,11 @@ a {
 /* █████ MAIN CONTAINERS █████████████████████████████████████████████████ */
 .mainbody {
 	/* background-color: black; */
-	padding: 0px 10px;
+	padding: 150px 10px 0px 10px;
 	/* width: 1200px; */
 
 	width: 1100px;
-	margin: 150px 0 80px 50vw;
+	margin: 0 0 80px 50vw;
 
 	/* Centre Horizontally */
 	transform: translateX(-50%);
@@ -188,6 +188,18 @@ a {
 
 	border-radius: 0px 0px 18px 18px;
 	background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.6));
+}
+
+/* █████ IMAGE HEADER BOX █████████████████████████████████████████████████ */
+.header {
+	width: 100%;
+	height: 90vh;
+	background-color: white;
+
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
 }
 
 /* █████ COMING SOON BOX █████████████████████████████████████████████████ */
@@ -359,6 +371,36 @@ a {
 	color: #FF7FA0;
 }
 
+.trybtn {
+	/* display: block; */
+	/* position: fixed; */
+	/* bottom: 50px; */
+	/* left: calc(50% - 70px); */
+	background-color: rgba(0,0,0,0.6);
+	color: #8DDBD3;
+	/* width: 90px; */
+	padding: 10px 18px;
+	font-weight: bold;
+	font-size: 25px;
+	border-radius: 50px;
+	z-index: 10;
+	box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+
+	backdrop-filter: blur(30px);
+	-webkit-backdrop-filter: blur(30px) saturate(120%);
+
+	transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.trybtn:hover {
+	background-color: #8DDBD3;
+	color: #14161E;
+	transform: scale(1.1) !important;
+	text-decoration: none;
+}
+.trybtn:active {
+	color: #14161E;
+	transform: scale(0.9);
+}
 
 /* █████ SCRIPTING █████████████████████████████████████████████████ */
 .nointeract {
@@ -421,8 +463,8 @@ a {
 	#topnavcontainercompact {display: flex !important;}
 
 	.mainbody {
-		margin: 100px 20px 20px 20px;
-		padding: 0px;
+		margin: 0px 20px 20px 20px;
+		padding: 100px 0px 0px 0px;
 		transform: none;
 		width: calc(100% - 40px) !important;
 	}
@@ -443,8 +485,8 @@ a {
 /* █████ COMPACT MENUBAR (BODY) BREAKPOINT █████████████████████████████████████████████████ */
 @media only screen and (min-width: 600px) and (max-width: 789px) {
 	.mainbody {
-		margin: 100px 30px 20px 30px;
-		padding: 0;
+		margin: 0 30px 20px 30px;
+		padding: 100px 0px 0px 0px;
 		transform: none;
 		width: calc(100% - 60px) !important;
 	}
