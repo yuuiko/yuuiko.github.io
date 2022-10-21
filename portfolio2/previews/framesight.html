@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Frame Sight - Christopher Yu Portfolio</title>
+	<meta name="description" content="Your Touch Bar should have been this good. Redefine your Touch Bar with a new UI that's more ergonomic, more powerful, more memorable and more useful than ever before. ">
+	<meta name="google-site-verification" content="Zd_cTBnvzUsJl5n6oxO59_iPz9Tg7IMGPbqyVzJ7w9s" />
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+
+	<meta name="msapplication-TileColor" content="#000000">
+	<meta name="theme-color" content="#ffffff">
+
+	<style>
+	@font-face {
+		font-family: 'Kollektif';
+		src: url(../fonts/Kollektif.ttf) format('truetype');
+	}
+	@font-face {
+		font-family: 'Kollektif';
+		src: url(../fonts/Kollektif-Bold.ttf) format('truetype');
+		font-weight: bold;
+	}
+
+	/*█████████████████████████████████████████████████ TRANSITION OVERLAY █████ */
+	@-webkit-keyframes loadfade {
+		0% {
+			/* color: rgba(255,255,255,1); */
+			color: rgba(255,255,255,0);
+
+		}
+
+		50% {
+			/* color: rgba(255,255,255,0.4); */
+			color: rgba(255,255,255,0);
+		}
+
+		100% {
+			/* color: rgba(255,255,255,1); */
+			color: rgba(255,255,255,0);
+		}
+	}
+
+	.transitionoverlay {
+		position: fixed;
+		display: block;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 1000;
+
+		color: #32374d !important;
+		text-align: left;
+		font-size: 1px;
+		padding-top: 40vh;
+		font-weight: bold;
+
+		opacity: 93%;
+		background-color: #32374d;
+
+		pointer-events: none;
+		transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+
+		-webkit-animation-iteration-count: infinite;
+		animation-iteration-count: infinite;
+
+		-webkit-animation-timing-function: cubic-bezier(0.45, 0, 0.55, 1);
+		animation-timing-function: cubic-bezier(0.45, 0, 0.55, 1);
+
+		-webkit-animation-name: loadfade;
+		animation-name: loadfade;
+
+		-webkit-animation-duration: 4s;
+		animation-duration: 4s;
+	}
+
+	.transparent {
+		opacity: 0%;
+	}
+	.hidden {
+		display: none;
+	}
+
+	body {
+		font-family: Kollektif;
+		background-color: #FFF7EB;
+		transition: all 1s linear;
+	}
+
+	p {
+		font-size: 25px;
+		letter-spacing: 1px;
+	}
+
+	h1 {
+		font-weight: bold;
+	}
+
+	.container-abstract {
+		padding: 0px 0px;
+		height: auto;
+	}
+
+	/* width */
+	::-webkit-scrollbar {
+		width: 18px;
+		/* height: 8px */
+	}
+
+	/* Track */
+	::-webkit-scrollbar-track {
+		background-color: none;
+	}
+
+	/* Handle */
+	::-webkit-scrollbar-thumb {
+		background: #686D9F;
+		/* background-image: linear-gradient(90deg, #686D9F, #32374d); */
+		border-radius: 9px;
+		border: 6px solid #FFF7EB;
+	}
+
+	::-webkit-scrollbar-corner {
+		background: none;
+	}
+
+	/* Handle on hover */
+	::-webkit-scrollbar-thumb:hover {
+		background: #white;
+	}
+
+	#artwork {
+		box-shadow: 0px 0px p0px rgba(0, 0, 0, 0.0);
+		margin: 0px;
+		width: 100%;
+
+		border-top-left-radius: 0px;
+		border-top-right-radius: 0px;
+		transition: margin-top 1s cubic-bezier(0.85, 0, 0.15, 1);
+	}
+
+	.first {
+		border-top-left-radius: 0px;
+		border-top-right-radius: 0px;
+		transition: all 1s cubic-bezier(0.85, 0, 0.15, 1);
+	}
+
+	.artworksection {
+		width: 100%;
+	}
+
+	/*█████████████████████████████████████████████████████████████████████████████████████████████████████████ Sidenav ██████*/
+	.sidenav {
+		height: 100%;
+		width: 290px;
+		position: fixed;
+		z-index: 1;
+		right: 0;
+		background-color: rgba(0, 0, 0, 0);
+		overflow-x: hidden;
+		padding-top: 14%;
+		opacity: 0.8;
+		text-shadow: 2px 2px 0px rgba(198,196,189, 0.6);
+	}
+	.sidenav:hover {
+		opacity: 100;
+		text-shadow: 2px 2px 0px rgba(198,196,189, 0.);
+		color: white;
+		width: 290px;
+	}
+	.sidenav-text {
+		opacity: 0;
+		transition: opacity 0.3s cubic-bezier(0, 0.55, 0.45, 1);
+	}
+	.sidenav:hover .sidenav-text {
+		opacity: 1;
+	}
+	.sidenav a {
+		padding: 6px 1px 6px 8px;
+		text-decoration: none;
+		font-size: 25px;
+		color: white;
+		display: block;
+		text-align: right;
+		transition: all 0.5s cubic-bezier(0, 0.55, 0.45, 1);
+	}
+	.sidenav a:hover {
+		color: ;
+		padding-right: 20px;
+	}
+	.sidenav a:active {
+		color: #4040ff;
+		padding-right: 0px;
+		margin-right: -20px;
+		font-size: 20px;
+	}
+
+	/*█████████████████████████████████████████████████████████████████████████████████████████████████████████ Applists ██████*/
+	.applist {
+		height: 550px;
+		padding: 20px 20px 20px 8vh;
+		background-color: rgba(0, 0, 0, 0.2);
+		/* background-image: linear-gradient(90deg, #32374d, #1C1E2A, #1C1E2A, #1C1E2A, #1C1E2A, #1C1E2A, #1C1E2A); */
+		overflow-y: scroll;
+		overflow-x: hidden;
+	}
+
+	.icon {
+		width: 80px;
+		height: 80px;
+		margin-right: 20px;
+		opacity: 1;
+	}
+
+
+	.pvimg {
+		width: 1200px;
+		border-radius: 20px;
+		border: 8px solid black;
+		transform-origin: left;
+		opacity: 0.5;
+		transform: scale(0.98);
+		-webkit-transition: opacity 1s cubic-bezier(0.19, 1, 0.22, 1), filter 1s cubic-bezier(0.19, 1, 0.22, 1), transform 1s cubic-bezier(0.19, 1, 0.22, 1); /* Safari prior 6.1 */
+		transition: opacity 1s cubic-bezier(0.19, 1, 0.22, 1), filter 1s cubic-bezier(0.19, 1, 0.22, 1), transform 1s cubic-bezier(0.19, 1, 0.22, 1);
+	}
+
+	.label {
+		margin-bottom: -5px;
+		font-size: 20px;
+		font-weight: normal;
+		opacity: 0.4;
+		-webkit-transition: opacity 1s cubic-bezier(0.19, 1, 0.22, 1), filter 1s cubic-bezier(0.19, 1, 0.22, 1), transform 1s cubic-bezier(0.19, 1, 0.22, 1); /* Safari prior 6.1 */
+		transition: opacity 1s cubic-bezier(0.19, 1, 0.22, 1), filter 1s cubic-bezier(0.19, 1, 0.22, 1), transform 1s cubic-bezier(0.19, 1, 0.22, 1);
+	}
+
+	.item {
+		width: 100%;
+		max-width: 1300px;
+
+		height: auto;
+		padding: 0px 0px 40px 0px;
+		opacity: 1;
+	}
+
+	div:hover > table .pvimg {
+		opacity:1;
+		transform: scale(1);
+		filter: blur(0px);
+	}
+
+	div:hover > table .label {
+		opacity:1;
+		filter: blur(0px);
+	}
+
+	/*█████████████████████████████████████████████████████████████████████████████████████████████████████████ QS Demo ██████*/
+	.quickstripdemo {
+		background-color: white;
+		background-image: linear-gradient(174deg, #FFF, #FFF, #FFF, #FFF, #FFF, #FFF, #FFE0E3);
+		overflow: hidden;
+		padding: 20px 0px 80px 0px;
+	}
+
+	.touchbarimg {
+		height: 7vw;
+		border-radius: 25px;
+		border: 1.2vw solid black;
+		transform-origin: left;
+		margin: 20px 60px;
+		outline: none;
+		box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+
+		/* transform: scale(0.98); */
+		-webkit-transition: opacity 1s cubic-bezier(0.19, 1, 0.22, 1), filter 1s cubic-bezier(0.19, 1, 0.22, 1), transform 1s cubic-bezier(0.19, 1, 0.22, 1); /* Safari prior 6.1 */
+		transition: opacity 1s cubic-bezier(0.19, 1, 0.22, 1), filter 1s cubic-bezier(0.19, 1, 0.22, 1), transform 1s cubic-bezier(0.19, 1, 0.22, 1);
+	}
+
+	#qstop {
+
+	}
+
+	#qsbtm {
+		float: right;
+	}
+
+	.switcher {
+		display: grid;
+		grid-template-rows: 1fr ;
+		grid-template-columns: : 1fr 1fr 1fr 1fr ;
+		grid-template-areas:
+		'item1 item2 item3 item4';
+		grid-gap: 10px;
+		margin: 50px 1vh !important;
+		height: 80px;
+		-webkit-user-select: none;
+		-webkit-touch-callout: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+	}
+
+	.switcheritem {
+		text-align: center;
+		font-size: 6vw;
+		color: #FFB2B8;
+		transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+		user-select: none;
+	}
+	.switcheritem:hover {
+		padding-top: 20px;
+	}
+	.switcheritem:active {
+		padding-top: 40px;
+	}
+	.switcheritemactive{
+		color: black;
+		padding-top: 40px;
+		pointer-events: none;
+	}
+
+	#qsPlaying {
+		grid-area: item1;
+	}
+	#qsSchedules {
+		grid-area: item2;
+	}
+	#qsControls {
+		grid-area: item3;
+	}
+	#qsApps {
+		grid-area: item4;
+	}
+
+	.hidden {
+		display: none;
+	}
+
+	@keyframes ticker {
+		0% {
+			-webkit-transform: translateX(0);
+			transform: translateX(0);
+			opacity: 0%;
+		}
+
+		5% {
+			opacity: 100%;
+		}
+
+		95% {
+			opacity: 100%;
+		}
+
+		100% {
+			-webkit-transform: translateX(-50%);
+			transform: translateX(-50%);
+			opacity: 0%;
+		}
+	}
+
+	.ticker-wrap {
+		width: 100%;
+		overflow: hidden;
+		margin-bottom: 50px;
+	}
+
+	.ticker {
+		display: inline-block;
+		white-space: nowrap;
+		opacity: 100%;
+
+		-webkit-animation-iteration-count: infinite;
+		animation-iteration-count: infinite;
+
+		-webkit-animation-timing-function: linear;
+		animation-timing-function: linear;
+
+		-webkit-animation-name: ticker;
+		animation-name: ticker;
+
+		-webkit-animation-duration: 10s;
+		animation-duration: 10s;
+	}
+
+	.ticker__item {
+		display: inline-block;
+		text-align: left;
+		font-weight: bold;
+		font-size: 3.5vw;
+
+		padding: 0 2rem;
+		color: #999;
+	}
+
+	/*█████████████████████████████████████████████████████████████████████████████████████████████████████████ Footer ██████*/
+	.footer {
+		display: grid;
+		grid-template-rows: 1fr ;
+		grid-template-columns: : 0.5fr 1fr 1fr 1.5fr ;
+		grid-template-areas: 'footer0 footer1 footer2 footer3';
+		width: 100%;
+		padding: 50px 1vh 50px 4vh;
+		color: white;
+		vertical-align: bottom;
+		background-color: #272b3c;
+	}
+
+	.footericon {
+		width: 7vw;
+		height: 7vw;
+		border-radius: 50%;
+		border: 0.5vw solid black;
+		margin-right: 2vw;
+	}
+
+	.footerlink {
+		color: white;
+		font-size: 2.5vw;
+		margin: 0;
+	}
+	.footerlink:hover {
+		color: white;
+	}
+	.socialicon {
+		height: 3vw;
+		width: 3vw;
+		margin-right: 1vw;
+	}
+
+	.trybtn {
+		display: block;
+		position: fixed;
+		bottom: 50px;
+		left: 0px;
+		background-color: #FFB2CF;
+		color: white;
+		width: 200px;
+		height: 90px;
+		padding: 10px 18px;
+		font-weight: bold;
+		font-size: 50px;
+		text-align: right;
+		border-radius: 0 50px 50px 0;
+		z-index: 10;
+		box-shadow: 0px 10px 20px rgba(255, 0, 0, 0.3);
+		/* backdrop-filter: blur(7px); */
+		/* -webkit-backdrop-filter: blur(7px); */
+
+		transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+		transform-origin: left;
+
+	}
+	.trybtn:hover {
+		background-color: #FFB2CF;
+		color: white;
+		transform: scale(1.1);
+	}
+	.trybtn:active {
+		transform: scale(0.9);
+	}
+
+
+	/*█████████████████████████████████████████████████████████████████████████████████████████████████████████ RESPONSIVE ██████*/
+
+	@media only screen and (max-width: 800px) {
+		.title {font-size: 100px;}
+		.starting {25px;}
+		.headertext {padding: 100px 50px;}
+		.abstract {padding: 100px 50px;}
+		.viewart {padding: 100px 50px;}
+
+		.applist {
+			padding-left: 3vh;
+			overflow-x: scroll;
+		}
+		.quickstripdemo {
+			padding: 0px 0px 20px 0px;
+		}
+		.ticker-wrap {
+			margin-bottom: 20px;
+		}
+		.switcher {
+			margin-top: 30px !important;
+			margin-bottom: 30px !important;
+		}
+	}
+
+	@media only screen and (max-width: 600px) {.title {font-size: 70px;}
+	.sidenav {height: auto}
+	.starting {20px;}
+	.headertext {padding: 100px 25px;}
+	.abstract {padding: 100px 25px;}
+	.viewart {padding: 100px 25px;}
+	p {font-size: 19px;}
+	.switcher {
+		margin-top: 20px !important;
+		margin-bottom: 20px !important;
+	}
+	.footer {
+		padding: 50px 0px 50px 1.5vh;
+	}
+	.trybtn{
+		border-radius: 0px 0px 0px 20px;
+		top: 0px;
+		right: 0px;
+		font-size: 18px;
+		transform-origin: top right;
+	}
+}
+
+@media only screen and (min-width: 1600px) {
+	#artwork {
+		box-shadow: 0px 20px 60px rgba(0, 0, 0, 0.2);
+		margin-left: 50vw;
+		width: 1600px;
+		margin-top: 60px;
+		transform: translateX(-50%);
+
+		border-top-left-radius: 50px;
+		border-top-right-radius: 50px;
+	}
+
+	.ticker {
+		padding-top: 50px;
+	}
+
+	.switcheritem {
+		font-size: 60px;
+	}
+
+	.ticker__item {
+		font-size: 30px;
+	}
+
+	.first {
+		border-top-left-radius: 50px;
+		border-top-right-radius: 50px;
+	}
+
+	.applist {
+		padding-left: 5vh;
+	}
+
+	.touchbarimg {
+		height: 100px;
+		border-radius: 40px;
+		border: 19px solid black;
+		margin: 30px 90px;
+	}
+
+	.footericon {
+		width: 80px;
+		height: 80px;
+		border: 5px solid black;
+	}
+
+	.footerlink {
+		font-size: 30px;
+	}
+
+	.socialicon {
+		height: 30px;
+		width: 30px;
+		margin-right: 10px;
+	}
+
+	/* body {
+		background-color: #FFF7EB;
+	} */
+
+	.textcontent {
+		font-size: 1px;
+		opacity: 0;
+		position: fixed;
+		display: block;
+	}
+}
+</style>
+
+<script type="text/javascript">
+$(document).ready(function() {
+	$("#trybtn").click(function() {
+		$("html, body").animate({
+			scrollTop: $(
+				'html, body').get(0).scrollHeight
+			}, 500);
+		});
+	});
+	</script>
+</head>
+<body>
+	<script type="module" async>
+	// console.log('asyncdone');
+	//
+	// setTimeout(function () {
+	// 	let box = document.getElementById('transitionoverlay');
+	// 	box.classList.add('transparent');
+	// 	box.addEventListener('transitionend', function(e) {
+	// 		box.classList.add('hidden');
+	// 	}, {
+	// 		capture: false,
+	// 		once: true,
+	// 		passive: false
+	// 	});
+	// 	window.scrollTo(0, 0);
+	// }, 1300);
+	</script>
+
+<a class="trybtn" id="trybtn" href="../works.html">
+	back
+</a>
+
+<div id="artwork" class="container-abstract bg-3 text-centre">
+	<!-- <img class="artworksection first" src="img/1.png"> -->
+
+	<img class="artworksection first" src="../img/pg2.png">
+	<!-- <img class="artworksection" src="img/pg1-2.png">
+	<img class="artworksection" src="img/pg1-3.png"> -->
+
+	<!-- <img class="artworksection" src="img/5.png">  --> <!--More Works-->
+	<!-- <a href="mailto:christopher.yu7@icloud.com"><img class="artworksection" src="img/6.png"></a> -->
+	<!-- <img class="artworksection" src="img/7.png"> -->
+	<!-- <img class="artworksection" src="img/8.jpg"> -->
+	<!-- <div class="footer"> -->
+		<!-- <img src="img/9a.jpg"/> -->
+		<!-- <div style="grid-area: footer0;">
+		<img class="footericon" src="img/profile.png" alt="">
+	</div> -->
+	<!-- <div style="grid-area: footer1; left:0;">
+		<table>
+			<tr>
+				<td><img class="footericon" src="img/profile.png" alt=""></td>
+				<td>
+					<p class="footerlink">yuuiko creation.</p>
+					<a class="footerlink" href="https://patreon.com/yuuiko"><img src="img/social_Patreon.png" class="socialicon" alt="">patreon.com/yuuiko</a> &nbsp;
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div style="grid-area: footer2;">
+		<p class="footerlink">&nbsp;</p>
+		<a class="footerlink" href="https://reddit.com/u/yyuuiko"><img src="img/social_Reddit.png" class="socialicon" alt="">u/yyuuiko</a> &nbsp;
+	</div>
+	<div style="grid-area: footer3;">
+		<p class="footerlink">&nbsp;</p>
+		<a class="footerlink" href="https://discord.gg/GjHCg9h"><img src="img/social_Discord.png" class="socialicon" alt="">discord.gg/GjHCg9h</a> &nbsp;
+	</div> -->
+	<!-- <a href="https://patreon.com/yuuiko"><img class="footsection" src="img/9a.jpg"/></a>
+	<a href="https://reddit.com/u/yyuuiko"><img class="footsection" src="img/9b.jpg"/></a>
+	<a href="https://discord.gg/GjHCg9h"><img class="footsection" src="img/9c.jpg"/></a> -->
+<!-- </div> -->
+
+<!-- <a href="https://rebrand.ly/yuuiko-switchthemelight"><img class="artworksection" src="img/2btn.png"></a> -->
+</div>
+
+<script type="text/javascript">
+//███████████████████████████████████████████████████ FADE OUT TRANSITION ███//
+function unloadtransition (divID) {
+	let box = document.getElementById(divID);
+
+	box.classList.add('transparent');
+	box.addEventListener('transitionend', function(e) {
+		box.classList.add('hidden');
+	}, {
+		capture: false,
+		once: true,
+		passive: false
+	});
+	window.scrollTo(0, 0);
+}
+
+
+/* █ QS TABS  ███████████████████████████████████████████ */
+function showPlay() {
+	console.log("show play fired");
+	document.getElementById("qsPlaying").classList.add('switcheritemactive');
+	document.getElementById("qsSchedules").classList.remove('switcheritemactive');
+	document.getElementById("qsControls").classList.remove('switcheritemactive');
+	document.getElementById("qsApps").classList.remove('switcheritemactive');
+
+	document.getElementById("qsPlayingContent").classList.remove('hidden');
+	document.getElementById("qsSchedulesContent").classList.add('hidden');
+	document.getElementById("qsControlsContent").classList.add('hidden');
+	document.getElementById("qsAppsContent").classList.add('hidden');
+}
+
+function showSchedule() {
+	console.log("show wasdjfkajsdbfla fired");
+	document.getElementById("qsPlaying").classList.remove('switcheritemactive');
+	document.getElementById("qsSchedules").classList.add('switcheritemactive');
+	document.getElementById("qsControls").classList.remove('switcheritemactive');
+	document.getElementById("qsApps").classList.remove('switcheritemactive');
+
+	document.getElementById("qsPlayingContent").classList.add('hidden');
+	document.getElementById("qsSchedulesContent").classList.remove('hidden');
+	document.getElementById("qsControlsContent").classList.add('hidden');
+	document.getElementById("qsAppsContent").classList.add('hidden');
+}
+
+function showControl() {
+	console.log("snowctrly fired");
+	document.getElementById("qsPlaying").classList.remove('switcheritemactive');
+	document.getElementById("qsSchedules").classList.remove('switcheritemactive');
+	document.getElementById("qsControls").classList.add('switcheritemactive');
+	document.getElementById("qsApps").classList.remove('switcheritemactive');
+
+	document.getElementById("qsPlayingContent").classList.add('hidden');
+	document.getElementById("qsSchedulesContent").classList.add('hidden');
+	document.getElementById("qsControlsContent").classList.remove('hidden');
+	document.getElementById("qsAppsContent").classList.add('hidden');
+}
+
+function showApp() {
+	console.log("showapp fired");
+	document.getElementById("qsPlaying").classList.remove('switcheritemactive');
+	document.getElementById("qsSchedules").classList.remove('switcheritemactive');
+	document.getElementById("qsControls").classList.remove('switcheritemactive');
+	document.getElementById("qsApps").classList.add('switcheritemactive');
+
+	document.getElementById("qsPlayingContent").classList.add('hidden');
+	document.getElementById("qsSchedulesContent").classList.add('hidden');
+	document.getElementById("qsControlsContent").classList.add('hidden');
+	document.getElementById("qsAppsContent").classList.remove('hidden');
+}
+</script>
+</body>
+</html>

@@ -410,6 +410,37 @@ a {
 	transform: scale(0.9);
 }
 
+.visitbtn {
+	/* display: block; */
+	/* position: fixed; */
+	/* bottom: 50px; */
+	/* left: calc(50% - 70px); */
+	background-color: rgba(0,0,0,0.6);
+	color: #8DDBD3;
+	/* width: 90px; */
+	padding: 10px 18px;
+	font-weight: bold;
+	font-size: 25px;
+	border-radius: 50px;
+	z-index: 10;
+	box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+
+	backdrop-filter: blur(30px);
+	-webkit-backdrop-filter: blur(30px) saturate(120%);
+
+	transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.visitbtn:hover {
+	background-color: #8DDBD3;
+	color: #14161E;
+	transform: scale(1.1) !important;
+	text-decoration: none;
+}
+.visitbtn:active {
+	color: #14161E;
+	transform: scale(0.9);
+}
+
 /* █████ SCRIPTING █████████████████████████████████████████████████ */
 .nointeract {
 	pointer-events: none;
