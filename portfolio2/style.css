@@ -446,8 +446,8 @@ div:hover > table .label {
 	transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
 }
 .socialicon:hover {
-	border: 5px solid black;
-	transform: scale(1.3);
+	border: 3px solid black;
+	transform: scale(1.15);
 }
 .socialicon:active {
 	transform: scale(0.9);
@@ -718,8 +718,8 @@ div:hover > table .label {
 } */
 
 .footer {
-	grid-template-rows: 90px 90px ;
-	grid-template-columns: auto auto 90px 90px 90px;
+	grid-template-rows: 110px 110px ;
+	grid-template-columns: auto auto 110px 110px 110px;
 	padding: 200px 140px 200px 140px;
 	width: calc(100% - 280px);
 }

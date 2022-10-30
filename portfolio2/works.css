@@ -429,7 +429,7 @@ a {
 }
 .visitbtn:hover {
 	color: white;
-	transform: scale(1.05);
+	transform: scale(1.);
 }
 .visitbtn:active {
 	transform: scale(0.9);
