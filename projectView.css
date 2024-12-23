@@ -1,0 +1,316 @@
+<style>
+
+/* #### FONTS #### */
+
+@font-face {
+    font-family: koll;
+    src: url(fonts/Kollektif.ttf);
+}
+
+@font-face {
+    font-family: kollb;
+    src: url(fonts/Kollektif-Bold.ttf);
+}
+
+@font-face {
+    font-family: kollbi;
+    src: url(fonts/Kollektif-BoldItalic.ttf);
+}
+
+@font-face {
+    font-family: kolli;
+    src: url(fonts/Kollektif-Italic.ttf);
+}
+
+/* ############# MAIN #################### */
+body {
+    font-family: 'koll', 'Raleway', sans-serif;
+    
+    margin: 0;
+    padding: 0;
+    max-width: 600px;
+    
+    background: rgba(245, 245, 245, 0.6);
+    background-color: black;
+}
+
+h1 {
+    font-family: 'kollb', 'Raleway', sans-serif !important;
+    font-size: 30pt;
+}
+
+h2 {
+    font-family: 'kollb', 'Raleway', sans-serif !important;
+    font-size: 30pt;
+}
+
+p {
+    font-family: 'koll', 'Raleway', sans-serif !important;
+    font-size: 16pt;
+}
+
+strong {
+    font-family: 'kollb', Raleway, sans-serif !important;
+}
+
+/* ############# PROJECT FRAME #################### */
+
+iframe {
+    position: relative;
+}
+
+.iFrameContainer {
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    height: calc(100vh - 108px);
+    background-color: black;
+}
+
+.youtubeiFrameContainer {
+    position: fixed;
+    width: 100%;
+    top: -58px;
+    height: calc(100vh - 50px);
+    background-color: black;
+}
+
+/* ############# CIRCLE MENU #################### */
+
+.circlemenu {
+    position: fixed;
+    left: 30px;
+    top: 30px;
+
+    width: 50px;
+    height: 50px;
+    z-index: 100;
+    padding: 0px;
+    
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 30px;
+    border: 2px solid #fff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.0);
+    color: rgba(0, 0, 0, 0);
+
+    transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.circlemenu:hover {
+    width: 155px;
+    height: calc(50px * 4);
+    background-color: rgba(255, 255, 255, 1);
+    
+    border-radius: 10px;
+}
+
+.menubtn {
+    display: block;
+    color: black;
+    border-radius: 8px;
+    
+    text-overflow: clip;
+    white-space: nowrap;
+    
+
+    transition: all 0.5s cubic-bezier(0, 0.55, 0.45, 1);
+}
+
+.menubtn:hover {
+    background-color: #eee;
+}
+
+.menubtn:active {
+    background-color: #b1b1b1;
+    transform: scale(0.9);
+    border-radius: 10px;
+}
+
+.menuBtnText {
+    padding: 0px 0px;
+    text-overflow: clip;
+    white-space: nowrap;
+    text-decoration: none !important;
+}
+
+.menuBtnText:link {
+    text-decoration: none !important;
+}
+
+.menuBtnText:visited {
+    text-decoration: none !important;
+}
+
+.menuBtnText:hover {
+    text-decoration: none !important;
+}
+
+.menuBtnText:active {
+    text-decoration: none !important;
+}
+
+.menuicon {
+    vertical-align: middle;
+    width: 50px;
+    height: 50px;
+}
+
+/* ############# CONTENT SECTION ############ */
+.avoid-clicks {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+.contentContainer {
+    position: relative;
+    top: calc(100vh - 107px);
+    padding: 5px 10px 10px 10px;
+    pointer-events: all;
+
+    background-color: rgba(245, 245, 245, 0.6);
+
+    -webkit-backdrop-filter: blur(50px) brightness(1.15) saturate(1.2);
+    backdrop-filter: blur(50px) brightness(1.15) saturate(1.2);
+}
+
+.headerSection {
+    padding: 0px 50px;
+}
+
+.workTitle {
+    text-align: left;
+}
+
+.workDate {
+    text-align: right;
+    float: right;
+}
+
+.responsiveBR {
+    display: none;
+}
+
+.parallaxSection {
+    background-color: #313131;
+    background-repeat: repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    color: #e5e5e5;
+
+    margin: 10px auto 0px auto;
+}
+
+.darken {
+    width: 100%;
+    height: 100%;
+    padding: 0px 0px 500px 0px;
+    background-color: rgba(0, 0, 0, 0.51);
+}
+
+.txtBox {
+    padding: 20px 50px;
+    width: auto;
+    
+    background-color: rgba(0, 0, 0, 0) !important;
+    opacity: 50%;
+    backdrop-filter: blur(0px) brightness(1) saturate(1) !important;
+    -webkit-backdrop-filter: blur(0px) brightness(1) saturate(1) !important;
+
+    transition: padding 0.01s linear;
+    transition: all 3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.darken:hover > .txtBox {
+    opacity: 100%;
+    background-color: rgba(0, 0, 0, 0.6) !important;
+    
+    -webkit-backdrop-filter: blur(10px) brightness(1.15) saturate(1.2) !important;
+    backdrop-filter: blur(10px) brightness(1.15) saturate(1.2) !important;
+}
+
+/* ############# RESPONSIVE LAYOUTS #################### */
+
+@media screen and (max-width: 850px) {
+    .txtBox {
+        padding: 20px 20px 20px 20px !important;
+    }
+
+    .parallaxSection {
+        margin: 10px 0px 0px 0px !important;
+        
+        background-repeat: no-repeat !important;
+        background-attachment: inherit !important;
+        background-size: cover !important;
+    }
+
+    .headerSection {
+        padding: 20px !important;
+    }
+
+    .contentContainer {
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
+
+    .workTitle {
+        font-size: 34px !important;
+    }
+
+    .workDate {
+        font-size: 20px !important;
+    }
+
+}
+
+@media screen and (max-width: 1000px) {
+
+    .workDate {
+        text-align: left;
+        float: none;
+        font-size: 20pt;
+    }
+
+    .responsiveBR {
+        display: inherit;
+    }
+
+    .iFrameContainer {
+        height: calc(100vh - 158px);
+    }
+
+    .youtubeiFrameContainer {
+        top: -58px;
+        height: calc(100vh - 100px);
+    }
+
+    .contentContainer {
+        top: calc(100vh - 155px);
+    }
+
+}
+
+@media screen and (min-width: 1000px) {
+    .txtBox {
+        padding: 20px 30% 20px 50px !important;
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    .txtBox {
+        padding: 20px 50% 20px 50px !important;
+    }
+}
+
+
+</style >
