@@ -9,16 +9,36 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <style>
         @font-face {
-            font-family: 'Kollektif';
-            src: url(fonts/Kollektif.ttf) format('truetype');
+            font-family: koll;
+            src: url(fonts/Kollektif.ttf);
         }
+        
         @font-face {
-            font-family: 'Kollektif';
-            src: url(fonts/Kollektif-Bold.ttf) format('truetype');
-            font-weight: bold;
+            font-family: kollb;
+            src: url(fonts/Kollektif-Bold.ttf);
         }
+        
+        @font-face {
+            font-family: kollbi;
+            src: url(fonts/Kollektif-BoldItalic.ttf);
+        }
+        
+        @font-face {
+            font-family: kolli;
+            src: url(fonts/Kollektif-Italic.ttf);
+        }
+        
+        
         body {
-            font-family: Kollektif;
+            font-family: 'koll', sans-serif;
+            font-size: 14px;
+        }
+        a {
+            color: #0F31BA;
+            font-family: 'koll', 'Raleway', sans-serif;
+            font-size: 15px;
+            font-weight: 600;
+            text-decoration: none !important;
         }
         p {
             font-size: 25px;
@@ -77,6 +97,142 @@
             margin-right: -20px;
             font-size: 20px;
         }
+        
+        
+        /* ############# CIRCLEMENU #################### */
+        .circlemenuright {
+            position: fixed;
+            margin: 30px;
+            right: 0px;
+            
+            display: flex;
+            box-sizing: content-box;
+
+            width: 50px;
+            height: 50px;
+            z-index: 200;
+            padding: 0px;
+
+            overflow: hidden;
+            text-overflow: ellipsis;
+
+            background-color: rgba(229, 121, 71, 1);
+            border-radius: 25px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.0);
+
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .circlemenuright:hover {
+            width: 552px;
+            height: 50px;
+
+            border-radius: 25px;
+        }
+
+        .circlemenu {
+            position: fixed;
+            margin: 30px;
+            
+            display: flex;
+            box-sizing: border-box;
+
+            width: auto;
+            height: 50px;
+            z-index: 100;
+            padding: 0px;
+
+            overflow: hidden;
+            text-overflow: ellipsis;
+
+            background-color: rgba(0, 0, 0, 1);
+            border-radius: 25px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.0);
+
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+/*
+        .circlemenu:hover {
+            width: 680px;
+            height: 50px;
+            background-color: rgba(255, 255, 255, 0);
+
+            border-radius: 25px;
+        }
+*/
+
+
+        .selected {
+            background-color: white;
+        }
+
+        .menubtn {
+            display: block;
+            color: #FFF;
+            border-radius: 30px;
+            height: 50px;
+            text-align: center;
+            vertical-align: middle;
+            
+            padding-top: 0 !important;
+            
+            width: auto;
+            padding-right: 25px;
+            margin-right: 10px;
+
+            text-overflow: clip;
+            white-space: nowrap;
+
+
+            transition: all 0.5s cubic-bezier(.79,.96,.56,.98);
+        }
+
+        .insetbtn {
+            height: 40px;
+            margin: 5px;
+            padding: 10px 20px 10px 20px !important;
+        }
+
+        .btnBlack {
+            background-color: black;
+        }
+
+        .btntextonly {
+            display: block; 
+            padding: 16px 0px 0px 23px !important; 
+            margin: 0 !important;
+        }
+
+        .menubtn:hover {
+            background-color: #eee;
+            color: #000;
+        }
+
+        .menubtn:active {
+            background-color: #b1b1b1;
+            transform: scale(0.9);
+        }
+
+        .menuBtnText {
+            display: block; 
+            margin: 0 !important;
+            
+            text-overflow: clip;
+            white-space: nowrap;
+            font-family: 'kollbi', 'Raleway', sans-serif;
+            text-decoration: none !important;
+            vertical-align: middle;
+        }
+
+        .menuicon {
+            vertical-align: middle;
+            width: 50px;
+            height: 50px;
+        }
+                /* ############# END MENU #################### */
+
+        
+        
         @media only screen and (max-width: 800px) {
             .title {font-size: 100px;}
             .starting {25px;}
@@ -96,6 +252,67 @@
     </style>
 </head>
 <body>
+        <div class="circlemenuright">
+        <a href="../../index.html">
+            <div class="menubtn selected" style="padding-right: 0;">
+                <span class="menuBtn" style="text-decoration: none; padding: 0; margin: 0;">
+                    <img class="menuicon" src="homeicon_logo@2x.png">
+                </span>
+            </div>
+        </a>
+        <a href="../../index.html">
+            <div class="menubtn insetbtn">
+                <span class="menuBtnText" style="text-decoration: none;">
+                    PRODUCTS
+                </span>
+            </div>
+        </a>
+        <a href="time.html">
+            <div class="menubtn insetbtn">
+                <span class="menuBtnText" style="text-decoration: none;">
+                    CONCEPTS
+                </span>
+            </div>
+        </a>
+        <a>
+            <div class="menubtn insetbtn">
+                <span class="menuBtnText" style="text-decoration: none;">
+                    BLOG
+                </span>
+            </div>
+        </a>
+        <a href="space.html">
+            <div class="menubtn insetbtn">
+                <span class="menuBtnText" style="text-decoration: none;">
+                    CONTACT
+                </span>
+            </div>
+        </a>
+    </div>
+    
+    <div class="circlemenu">
+        <a href="time.html">
+            <div class="menubtn btnBlack" style="padding-left: 0px;">
+                <span class="menuBtnText btntextonly" style="display: block; border-radius: 0 50% 50% 0 !important;">
+                    FreshOS
+                </span>
+            </div>
+        </a>
+        <a href="time.html">
+            <div class="menubtn btnBlack">
+                <span class="menuBtnText btntextonly">
+                    FreshOS PLUS
+                </span>
+            </div>
+        </a>
+        <a href="time.html">
+            <div class="menubtn btnBlack" style="margin: 0;">
+                <span class="menuBtnText btntextonly">
+                    Install
+                </span>
+            </div>
+        </a>
+    </div>
     <!-- <div class="sidenav">
         <a href="#hello"><span class="sidenav-text">top</span> — </a>
         <br>
