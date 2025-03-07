@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<head>    
+    <style>
+        @font-face {
+            font-family: koll;
+            src: url(fonts/Kollektif.ttf);
+        }
+
+        @font-face {
+            font-family: kollb;
+            src: url(fonts/Kollektif-Bold.ttf);
+        }
+
+        @font-face {
+            font-family: kollbi;
+            src: url(fonts/Kollektif-BoldItalic.ttf);
+        }
+
+        @font-face {
+            font-family: kolli;
+            src: url(fonts/Kollektif-Italic.ttf);
+        }
+        
+        body {
+            background: #FFEDD5;
+        }
+        
+        /* ############# CIRCLE MENU #################### */
+        body {
+            font-family: 'koll', 'Raleway', sans-serif;
+        }
+        
+        a {text-decoration: none; }
+
+        .circlemenu {
+            position: fixed;
+            margin: 30px;
+            
+            display: flex;
+            box-sizing: border-box;
+
+            width: 50px;
+            height: 50px;
+            z-index: 100;
+            padding: 0px;
+
+            overflow: hidden;
+            text-overflow: ellipsis;
+
+            background-color: rgba(0, 0, 0, 1);
+            border-radius: 25px;
+/*            border: 2px solid #111;*/
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.0);
+
+            transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .circlemenu:hover {
+            width: 700px;
+            height: 50px;
+            background-color: rgba(255, 255, 255, 0);
+
+            border-radius: 25px;
+        }
+        
+        .selected {
+            background-color: white;
+        }
+
+        .menubtn {
+            display: block;
+            color: #FFF;
+            border-radius: 30px;
+            background-color: black;
+            
+            width: auto;
+            padding-right: 20px;
+            margin-right: 10px;
+
+            text-overflow: clip;
+            white-space: nowrap;
+
+
+            transition: all 0.5s cubic-bezier(0, 0.55, 0.45, 1);
+        }
+
+        .menubtn:hover {
+            background-color: #eee;
+            color: #000;
+        }
+
+        .menubtn:active {
+            background-color: #b1b1b1;
+            transform: scale(0.9);
+        }
+
+        .menuBtnText {
+            padding: 0px 0px;
+            text-overflow: clip;
+            white-space: nowrap;
+            text-decoration: none !important;
+        }
+
+        .menuicon {
+            vertical-align: middle;
+            width: 50px;
+            height: 50px;
+        }
+        
+        /* ############# END MENU #################### */
+        
+        .title {
+            position: absolute;
+            box-sizing: border-box; /*Include padding in width calcualation*/
+            
+            width: 100%;
+            height: auto;
+            padding: 50px 80px 50px 80px;
+            margin: 0;
+            
+            text-align: center;
+            font-size: 30px;
+            font-family: 'kollb', 'Raleway', sans-serif;
+                        
+            /* background: white;*/
+            text-overflow: ellipsis;
+            
+            top: 45%;
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+        }
+        
+        .number {
+            position: fixed;
+            text-align: right;
+            font-size: 400px;
+            font-family: 'kollb', 'Raleway', sans-serif;
+
+            pointer-events: none;
+            
+            color: rgba(245, 113, 56, 0.1);
+            
+            right: -80px;
+            bottom: -130px;
+        }
+        
+    </style>
+</head>
+
+<body>
+<!--
+    <div class="circlemenu">
+        <a href="index.html">
+            <div class="menubtn selected">
+                <span class="menuBtnText" style="text-decoration: none;">
+                    <img class="menuicon" src="homeicon@2x.png">HOME
+                </span>
+            </div>
+        </a> 
+        <a href="time.html">
+            <div class="menubtn">
+                <span class="menuBtnText" style="text-decoration: none;">
+                    <img class="menuicon" src="nexticon@2x.png">WORKS
+                </span>
+            </div>
+        </a>
+        <a>
+            <div class="menubtn">
+                <span class="menuBtnText" style="text-decoration: none;">
+                    <img class="menuicon" src="backicon@2x.png">BLOG
+                </span>
+            </div>
+        </a>
+        <a href="space.html">
+            <div class="menubtn">
+                <span class="menuBtnText" style="text-decoration: none;">
+                    <img class="menuicon" src="nexticon@2x.png">CONTACT
+                </span>
+            </div>
+        </a>
+    </div>
+-->
+    
+    <div class="title">
+        <h1>Whoops!</h1>
+        <h3>That page is coming soon!.</h3>
+        <a href="https://yuuiko.github.io/index.html">let's go home.</a>
+    </div>
+    
+    <div class="number">WIP</div>
+
+</body>
+
+</html>

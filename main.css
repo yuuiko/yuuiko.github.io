@@ -128,14 +128,16 @@
             border-radius: 25px;
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.0);
 
-            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+            transition-delay: 0.7s;
         }
 
         .circlemenuright:hover {
-            width: 552px;
+            width: 582px;
             height: 50px;
 
             border-radius: 25px;
+            transition-delay: 0s;
         }
 
         .circlemenu {
@@ -157,9 +159,8 @@
             border-radius: 25px;
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.0);
 
-            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
         }
-/*
         .circlemenu:hover {
             width: 680px;
             height: 50px;
@@ -167,7 +168,6 @@
 
             border-radius: 25px;
         }
-*/
 
 
         .selected {
