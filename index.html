@@ -3,6 +3,7 @@
 <head>
     <title>Hello! - yuuiko</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
     <script src="src/js/luxy.js" charset="utf-8"></script>
     <link rel="stylesheet" href="main.css">
 
@@ -32,28 +33,28 @@
                 </span>
             </div>
         </a>
-        <a href="WIP.html">
-            <div class="menubtn insetbtn">
+        <a>
+            <div class="menubtn insetbtn menubtnActive">
                 <span class="menuBtnText" style="text-decoration: none;">
                     PRODUCTS
                 </span>
             </div>
         </a>
-        <a href="WIP.html">
+        <a href="concepts.html">
             <div class="menubtn insetbtn">
                 <span class="menuBtnText" style="text-decoration: none;">
                     CONCEPTS
                 </span>
             </div>
         </a>
-        <a href="WIP.html">
+        <a onclick="showwindow('popPatreon')">
             <div class="menubtn insetbtn">
                 <span class="menuBtnText" style="text-decoration: none;">
                     PATREON
                 </span>
             </div>
         </a>
-        <a href="WIP.html">
+        <a onclick="showwindow('popContact')">
             <div class="menubtn insetbtn">
                 <span class="menuBtnText" style="text-decoration: none;">
                     CONTACT
@@ -61,32 +62,6 @@
             </div>
         </a>
     </div>
-    
-<!--
-    <div class="circlemenu">
-        <a href="time.html">
-            <div class="menubtn btnBlack" style="padding-left: 40px;">
-                <span class="menuBtnText btntextonly" style="display: block; border-radius: 0 50% 50% 0 !important;">
-                    FreshOS
-                </span>
-            </div>
-        </a>
-        <a href="time.html">
-            <div class="menubtn btnBlack">
-                <span class="menuBtnText btntextonly">
-                    FreshOS PLUS
-                </span>
-            </div>
-        </a>
-        <a href="time.html">
-            <div class="menubtn btnBlack">
-                <span class="menuBtnText btntextonly">
-                    Install
-                </span>
-            </div>
-        </a>
-    </div>
--->
     
     <div id="fadeoutunder"></div>
     
@@ -114,7 +89,8 @@
         <div class="margins">
 
             <br>
-            <!--
+            
+<!--
             <div class="contactcard " data-speed-y="-15" data-offset="-0">
                                 <img src="img_avatar.png" alt="Avatar" style="width:100%">
                 <div class="container">
@@ -127,8 +103,9 @@
                 </div>
             </div>
 -->
-<!--            <h1 style="margin-top: 120px; z-index: 3;">About</h1>-->
+
 <!--
+            <h1 style="margin-top: 120px; z-index: 3;">About</h1>
             <p class="intro">
                 I envision design that is essential and useful, design that elevates and builds on the good in our human nature. I wish to put this mentality into products and artworks that will help people create, work, or just live more comfortably, with a subtle feeling that the products that I made for them understand their needs for their current task.<br>
                 <br>
@@ -189,7 +166,7 @@
             </a>
             <br>
 
-            <a href="projects/minim/index.html" target="_blank" class="luxy-el" data-speed-y="-5" data-offset="0" style="display: block;">
+            <a href="projects/minim/index.html" class="luxy-el" data-speed-y="-5" data-offset="0" style="display: block;">
                 <div class="card" style="background-image: url('src/ip_minim.webp'); top: -140;">
                     <div class="containerlabel">
                         <h3><b>Minim</b></h3>
@@ -308,10 +285,45 @@
             <br>
             
 
+
             <!-- <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button> -->
 
         </div>
-    </div>
+    </div> <!-- luxy -->
+    
+    <!-- ---------------------- CONTACT --------- -->
+    <div class="popupbackground hidden disabled" id="popContact">
+        <div class="popupwindow">
+            <a class="exitbtn" onclick="hidewindow('popContact');">CLOSE</a>
+            <h1>Let's Chat!</h1>
+            <h2>For any reason, <br>I'd love a conversation!</h2>
+
+            <!--<p>
+            We thank Red Bull for helping out with our events!
+            </p>-->
+
+            <a class="linkbutton" href="mailto: yyuuiko@icloud.com" target="_blank">Email • chat.yuuiko@icloud.com</a>
+            <a class="linkbutton" href="https://discord.gg/GF4NnRCq8f" target="_blank">Discord • discord.gg/yuuiko</a>
+        </div>
+    </div> <!--flexcontainer-->
+    
+    <!-- ---------------------- PATREON --------- -->
+    <div class="popupbackground hidden disabled" id="popPatreon">
+        <div class="popupwindow">
+            <a class="exitbtn" onclick="hidewindow('popPatreon');">CLOSE</a>
+            <h1>Yuuiko on Patreon!</h1>
+            <h2>Grab my creations, <br>and check out my posts!</h2>
+
+            <!--<p>
+            We thank Red Bull for helping out with our events!
+            </p>-->
+
+            <a class="linkbutton" href="https://www.patreon.com/c/yuuiko" target="_blank">View Patreon</a>
+        </div>
+    </div> <!--flexcontainer-->
+
+    
+    
 
     <script>
         // ## INIT LUXY ## //
@@ -349,8 +361,51 @@
 
     </script>
 
+    <script>
+    
+    
+    /* █ SHOW / HIDE WINDOW AND DISABLE INTERACTION ███████████████████████████████████████████ */
+
+    function showwindow(divID) {
+        console.log("showwindow fired");
+
+        var item = document.getElementById(divID);
+
+        item.classList.remove('disabled'); //enable item (at this point its invisible because it's still "hidden")
+        setTimeout(function () {
+            item.classList.remove('hidden'); //remove "hidden" and animate-in
+        }, 10); //delay in ms
+    }
+
+    function hidewindow(divID) {
+        console.log("PERMA hidewindow fired");
+
+        var item = document.getElementById(divID);
+
+        //reject further interactions while animating. e.g. really quick double click.
+        if (item.classList.contains('disabled')) {
+            //do nothing
+        }
+        else {
+            item.classList.add('hidden'); //animate out
+            item.classList.add('nointeract'); //disable click interactions
+
+            setTimeout(function () {
+                item.classList.remove('nointeract'); //enable click interactions
+                item.classList.add('disabled');  //disable item, hide it from existence.
+
+            }, 200); //delay in ms, must match animation duration from CSS.
+        }
+    }
+
+    
+    </script>
+
+    
+
     <!--
     <script>
+
         // ## SCROLL TO TOP ##//
 
         //Get the button

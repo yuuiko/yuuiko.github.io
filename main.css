@@ -32,9 +32,10 @@
         body {
             margin: 0;
             
-            font-family: 'koll', sans-serif;
             font-size: 14px;
             color: #FFF;
+            
+            font-family: 'koll', 'Raleway', sans-serif;
             
             overflow: scroll;
             -webkit-user-select: none;
@@ -52,7 +53,7 @@
             
             font-family: 'kollbi', 'Raleway', sans-serif;
             font-weight: 700;
-            font-size: 80px;
+            font-size: 40px;
             
             text-align: center;
             
@@ -76,7 +77,6 @@
             font-family: 'kollb', 'Raleway', sans-serif;
             margin: 4px 0px 40px 0px;
             font-size: 15px;
-            
         }
         
         small {
@@ -102,9 +102,6 @@
             font-size: 20px;
         }
 
-        body {
-            font-family: 'koll', 'Raleway', sans-serif;
-        }
         
         /* ############# CIRCLE MENU #################### */
 
@@ -212,13 +209,17 @@
         }
 
         .menubtn:hover {
-            background-color: #eee;
-            color: #000;
+            background-color: rgba(233,233,233,0.4);
         }
 
         .menubtn:active {
-            background-color: #b1b1b1;
+            background-color: rgba(233,233,233,0.9);
             transform: scale(0.9);
+        }
+
+        .menubtnActive {
+            background-color: #eee;
+            color: #000;
         }
 
         .menuBtnText {
@@ -473,13 +474,13 @@
 
 	/*█████████████████████████████████████████████████ WINDOW █████ */
 	.popupwindow {
-		background-color: #FFF;
+		background-color: #FFEDD5;
 		color: black;
 		border-radius: 30px;
 /*		border: solid #e52617 4px;*/
 
 		overflow-x: hidden;
-		overflow-y: scroll;
+		overflow-y: hidden;
 
 		/* padding: 20px 0px; */
 		box-sizing: border-box;
@@ -491,8 +492,8 @@
 		bottom: 0;
 		left: 0;
 
-		max-width: 500px;
-		max-height: 370px;
+		max-width: 600px;
+		max-height: 600px;
         
         box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 
@@ -502,7 +503,7 @@
 		/* margin-bottom: 0px; */
 		text-align: center;
 		padding-bottom: 0px;
-		/* margin-top: 60px; */
+		padding-top: 90px;
 
 		margin: 20px 20px 20px 20px;
 	}
@@ -527,88 +528,166 @@
 		font-weight: bold;
 		padding: 0px 20px;
 	}
+
+.exitbtn {
+		display: inline-block;
+		position: fixed;
+
+		margin: 20px 20px;
+		padding: 8px 20px;
+
+		color: #000;
+		font-family: kollb;
+
+		border-radius: 30px;
+		border: 2px solid #000;
+		/*border-left: 0px;*/
+		background-color: white;
+
+		z-index: 5;
+
+		transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+		transform-origin: center;
+	}
+	.exitbtn:hover {
+		transform: scale(1.1);
+	}
+	.exitbtn:active {
+		transform: scale(0.98);
+	}
+
+	.linkbutton {
+		display: block;
+		margin: 10px 20px;
+		padding: 10px;
+
+		text-decoration: none;
+		text-align: center;
+		color: white;
+
+		border: 3px solid white;
+		border-radius: 30px;
+		background-color: salmon;
+		box-shadow: 0px 3px 8px rgba(0,0,0,0.2);
+
+		transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+	}
+	.linkbutton:hover {
+		transform: scale(1.04);
+	}
+	.linkbutton:active {
+		transform: scale(0.98);
+	}
+
+	/*█████████████████████████████████████████████████ INTERACTION MODIFIERS █████ */
+
+	.hidden {
+		opacity: 0;
+		transform: scale(0.8);
+	}
+
+	.disabled {
+		display: none !important;
+		cursor: none !important;
+		pointer-events: none !important;
+		user-select: none !important;
+	}
+
+	.nointeract {
+		pointer-events: none;
+		-webkit-pointer-events: none;
+	}
+
+	.disable-textselect {
+	  -webkit-user-select: none;
+	  -moz-user-select: none;
+	  -ms-user-select: none;
+	  user-select: none;
+	}
+
+/* /// POPUP WINDOWS ////////////////////////////////////////////////////////////////////////////// */
         
-        /**##### RESPONSIVE LAYOUTS ######**/
-        
-        @media screen and (max-width: 290px) {
-            #maintitle {
-                font-size: 25pt;
-                display: none !important;
-            }
-            
-            #maintitlesmall {
-                display: none !important;
-            }
-            
-            #maintitletiny {
-                display: inherit !important;
-            }
+    /**##### RESPONSIVE LAYOUTS ######**/
+
+    @media screen and (max-width: 290px) {
+        #maintitle {
+            font-size: 25pt;
+            display: none !important;
         }
-        
-        @media screen and (max-width: 350px) {
-            #maintitle {
-                font-size: 25pt;
-                display: none;
-            }
-            
-            #maintitlesmall {
-                display: inherit;
-            }
-            
-            #maintitletiny {
-                display: none;
-            }
-            
-            .margins {
-                margin-top: 500px;
-            }
+
+        #maintitlesmall {
+            display: none !important;
         }
-        
-        @media screen and (max-width: 500px) {
-            #maintitle {
-                font-size: 25pt;
-                display: none;
-            }
-            
-            #maintitlesmall {
-                display: inherit;
-            }
-            
-            #maintitletiny {
-                display: none;
-            }
+
+        #maintitletiny {
+            display: inherit !important;
         }
-        
-        @media screen and (max-width: 800px) {
-            
-            .intro {
-                padding: 0px !important;
-                width: 85% !important;
-                box-sizing: border-box;
-            }
-            
-            .card {
-                margin: 0px !important;
-                left: 0 !important;
-                width: 95% !important;
-                margin-right: 50px !important;
-                margin-top: 80px !important;
-            }
-            
-            .margins {
-                padding: 0px 0px 0px 20px !important;
-            }
-            
-            .title {
-                padding: 20px !important;
-            }
-            
+    }
+
+    @media screen and (max-width: 350px) {
+        #maintitle {
+            font-size: 25pt;
+            display: none;
         }
-        
-        @media screen and (min-width: 1200px) {
-            .margins {
-                padding: 0px 10% 0px 10%;
-            }
+
+        #maintitlesmall {
+            display: inherit;
         }
+
+        #maintitletiny {
+            display: none;
+        }
+
+        .margins {
+            margin-top: 500px;
+        }
+    }
+
+    @media screen and (max-width: 500px) {
+        #maintitle {
+            font-size: 25pt;
+            display: none;
+        }
+
+        #maintitlesmall {
+            display: inherit;
+        }
+
+        #maintitletiny {
+            display: none;
+        }
+    }
+
+    @media screen and (max-width: 800px) {
+
+        .intro {
+            padding: 0px !important;
+            width: 85% !important;
+            box-sizing: border-box;
+        }
+
+        .card {
+            margin: 0px !important;
+            left: 0 !important;
+            width: 95% !important;
+            margin-right: 50px !important;
+            margin-top: 80px !important;
+        }
+
+        .margins {
+            padding: 0px 0px 0px 20px !important;
+        }
+
+        .title {
+            padding: 20px !important;
+        }
+
+    }
+
+    @media screen and (min-width: 1200px) {
+        .margins {
+            padding: 0px 10% 0px 10%;
+        }
+    }
         
 </style>

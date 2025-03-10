@@ -16,7 +16,7 @@
 	<meta name="theme-color" content="#fff" media="(prefers-color-scheme: light)">
 	<meta name="theme-color" content="#000" media="(prefers-color-scheme: dark)">
 
-	<link rel="stylesheet" href="../../style.css">
+	<link rel="stylesheet" href="../../main.css">
 	<script type="text/javascript" src="../../script.js"></script>
 
 	<style media="screen">
@@ -72,10 +72,76 @@
 			min-height: 700px;
 			padding: 50px 50px 50px 50px;
 		}
+        .downloadbtn {
+/*            display: block;*/
+            margin: 10px;
+            padding: 10px 50px;
+
+            text-decoration: none;
+            text-align: center;
+            color: white;
+            font: kollb;
+
+            border: 3px solid white;
+            border-radius: 30px;
+            background-color: #000;
+            box-shadow: 0px 3px 8px rgba(0,0,0,0.2);
+
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .downloadbtn:hover {
+            transform: scale(1.04);
+        }
+        .downloadbtn:active {
+            transform: scale(0.98);
+        }
 	</style>
 
 </head>
 <body>
+        <div class="circlemenuright">
+        <a href="../../index.html">
+            <div class="menubtn selected" style="padding-right: 0;">
+                <span class="menuBtn" style="text-decoration: none; padding: 0; margin: 0;">
+                    <img class="menuicon" src="homeicon_logo@2x.png">
+                </span>
+            </div>
+        </a>
+        <a href="../../index.html">
+            <div class="menubtn insetbtn">
+                <span class="menuBtnText" style="text-decoration: none;">
+                    PRODUCTS
+                </span>
+            </div>
+        </a>
+        <a href="../../concepts.html">
+            <div class="menubtn insetbtn">
+                <span class="menuBtnText" style="text-decoration: none;">
+                    CONCEPTS
+                </span>
+            </div>
+        </a>
+        <a onclick="showwindow('popPatreon')">
+            <div class="menubtn insetbtn">
+                <span class="menuBtnText" style="text-decoration: none;">
+                    PATREON
+                </span>
+            </div>
+        </a>
+        <a onclick="showwindow('popContact')">
+            <div class="menubtn insetbtn">
+                <span class="menuBtnText" style="text-decoration: none;">
+                    CONTACT
+                </span>
+            </div>
+        </a>
+    </div>
+    
+    
+    
+    
+    
+    
 	<!-- <div class="mainbody"> -->
 		<div class="paralaxsection" style="background-image: url(img/screen1.png);">
 			<div class="textsection">
@@ -162,20 +228,92 @@
 					• iPod Mini 2nd Generation<br>
                     <br>
 
-                    <a href="https://www.patreon.com/posts/66771149" target="_blank">Early Access ⭢</a>
+                    <a href="https://www.patreon.com/posts/66771149" class="downloadbtn" target="_blank">Early Access ⭢</a>
 				</h2>
 			</div>
 		</div>
 
-		<!-- <div class="paralaxsection" style="background-image: url(img/projRMIT.png); background-color: black;">
+<!--
+		 <div class="paralaxsection" style="background-image: url(img/projRMIT.png); background-color: black;">
 			<div class="bodysection">
 				<h1 style="color: #FFF">Minim Plus</h1>
 				<h2 class="h2title">
-					Something something
+					MinimPlus
 				</h2>
 			</div>
-		</div> -->
+		</div> 
+-->
+    
+           <!-- ---------------------- CONTACT --------- -->
+    <div class="popupbackground hidden disabled" id="popContact">
+        <div class="popupwindow">
+            <a class="exitbtn" onclick="hidewindow('popContact');">CLOSE</a>
+            <h1>Let's Chat!</h1>
+            <h2>For any reason, <br>I'd love a conversation!</h2>
+
+            <!--<p>
+            We thank Red Bull for helping out with our events!
+            </p>-->
+
+            <a class="linkbutton" href="mailto: yyuuiko@icloud.com" target="_blank">Email • chat.yuuiko@icloud.com</a>
+            <a class="linkbutton" href="https://discord.gg/GF4NnRCq8f" target="_blank">Discord • discord.gg/yuuiko</a>
+        </div>
+    </div> <!--flexcontainer-->
+    
+    <!-- ---------------------- PATREON --------- -->
+    <div class="popupbackground hidden disabled" id="popPatreon">
+        <div class="popupwindow">
+            <a class="exitbtn" onclick="hidewindow('popPatreon');">CLOSE</a>
+            <h1>Yuuiko on Patreon!</h1>
+            <h2>Grab my creations, <br>and check out my posts!</h2>
+
+            <!--<p>
+            We thank Red Bull for helping out with our events!
+            </p>-->
+
+            <a class="linkbutton" href="https://www.patreon.com/c/yuuiko" target="_blank">View Patreon</a>
+        </div>
+    </div> <!--flexcontainer-->
+    
+    
 
 <!-- </div> -->
 </body>
+    <script>
+       /* █ SHOW / HIDE WINDOW AND DISABLE INTERACTION ███████████████████████████████████████████ */
+
+    function showwindow(divID) {
+        console.log("showwindow fired");
+
+        var item = document.getElementById(divID);
+
+        item.classList.remove('disabled'); //enable item (at this point its invisible because it's still "hidden")
+        setTimeout(function () {
+            item.classList.remove('hidden'); //remove "hidden" and animate-in
+        }, 10); //delay in ms
+    }
+
+    function hidewindow(divID) {
+        console.log("PERMA hidewindow fired");
+
+        var item = document.getElementById(divID);
+
+        //reject further interactions while animating. e.g. really quick double click.
+        if (item.classList.contains('disabled')) {
+            //do nothing
+        }
+        else {
+            item.classList.add('hidden'); //animate out
+            item.classList.add('nointeract'); //disable click interactions
+
+            setTimeout(function () {
+                item.classList.remove('nointeract'); //enable click interactions
+                item.classList.add('disabled');  //disable item, hide it from existence.
+
+            }, 200); //delay in ms, must match animation duration from CSS.
+        }
+    }
+
+    
+    </script>
 </html>
