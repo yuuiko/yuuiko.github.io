@@ -137,6 +137,14 @@
             transition-delay: 0s;
         }
 
+        .cmopen {
+            width: 582px;
+            height: 50px;
+
+            border-radius: 25px;
+            transition-delay: 0s;
+        }
+
         .circlemenu {
             position: fixed;
             margin: 30px;
@@ -252,7 +260,7 @@
             height: calc(100vh - 50px);
             
             overflow: hidden;
-            z-index: 50;
+            z-index: 500;
             
             color: black;
             text-align: left;
