@@ -1,4 +1,4 @@
-<style>
+/*<style>*/
 /* #### MAIN BODY #### */
         
         @font-face {
@@ -24,8 +24,8 @@
         
         .margins {
             margin-top: 800px;
-            padding: 0px 15px 0px 50px;
-            font-size: 30px
+            padding: 0 15px 0 50px;
+            font-size: 30px;
             transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
         }
         
@@ -38,6 +38,7 @@
             font-family: 'koll', 'Raleway', sans-serif;
             
             overflow: scroll;
+            user-select: none;
             -webkit-user-select: none;
             
             background-color: #282B3D;
@@ -49,7 +50,7 @@
         
         h1 {
             margin: 0;
-            padding: 20px 0px 20px 0px;
+            padding: 20px 0 20px  0;
             
             font-family: 'kollbi', 'Raleway', sans-serif;
             font-weight: 700;
@@ -57,7 +58,7 @@
             
             text-align: center;
             
-/*            border-bottom: 0px solid rgba(0, 0, 0, .15);*/
+/*            border-bottom: 0 solid rgba(0, 0, 0, .15);*/
         }
         
         h2 {
@@ -75,7 +76,7 @@
         
         h4 {
             font-family: 'kollb', 'Raleway', sans-serif;
-            margin: 4px 0px 40px 0px;
+            margin: 4px 0 40px 0;
             font-size: 15px;
         }
         
@@ -98,7 +99,7 @@
         }
         
         p {
-            margin: 4px 0px 40px 20px;
+            margin: 4px 0 40px 20px;
             font-size: 20px;
         }
 
@@ -108,7 +109,7 @@
         .circlemenuright {
             position: fixed;
             margin: 30px;
-            right: 0px;
+            right: 0;
             
             display: flex;
             box-sizing: content-box;
@@ -116,7 +117,7 @@
             width: 50px;
             height: 50px;
             z-index: 200;
-            padding: 0px;
+            padding: 0;
 
             overflow: hidden;
             text-overflow: ellipsis;
@@ -155,7 +156,7 @@
             width: 2px;
             height: 50px;
             z-index: 100;
-            padding: 0px;
+            padding: 0;
 
             overflow: hidden;
             text-overflow: ellipsis;
@@ -212,7 +213,7 @@
 
         .btntextonly {
             display: block; 
-            padding: 16px 0px 0px 23px !important; 
+            padding: 16px 0 0 23px !important; 
             margin: 0 !important;
         }
 
@@ -254,7 +255,7 @@
         #titlecover {
             position: fixed;
             
-            padding: 0px 0px;
+            padding: 0;
             top: 0;
             width: 100%;
             height: calc(100vh - 50px);
@@ -270,7 +271,7 @@
             background-color: #FFEDD5;
             
             box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-            border-radius: 0px 0px 50px 50px;
+            border-radius: 0 0 50px 50px;
             border-bottom: 2px solid #BFBFBF;
             
             transition: 1s cubic-bezier(0.19, 1, 0.22, 1);
@@ -320,7 +321,7 @@
             max-width: 600px;
             height: auto;
             right: 70px;
-            padding: 0px 40px;
+            padding: 0 40px;
             margin: 200px 10px 10px 10px;
             
 /*            background: white;*/
@@ -388,11 +389,11 @@
 /*            border: 1px solid #818181;*/
             width: auto;
 /*            min-width: 105px;*/
-/*            margin-top: 0px;*/
-/*            margin-bottom: 0px;*/
+/*            margin-top: 0;*/
+/*            margin-bottom: 0;*/
             z-index: 10;
 /*            position: relative;*/
-/*            padding: 0px 15px;*/
+/*            padding: 0 15px;*/
             position: relative;
             pointer-events: none;
             
@@ -439,7 +440,7 @@
             width: 100%;
             box-sizing: border-box;
             color: #FFF;
-            border-radius: 29px 29px 0px 0px;
+            border-radius: 29px 29px 0 0;
         }
         
         .off {
@@ -475,7 +476,7 @@
 		backdrop-filter: blur(10px);
 		-webkit-backdrop-filter: blur(10px);
 
-		border-radius: 0px;
+		border-radius: 0;
 
 		transition: all 0.4s cubic-bezier(0.65, 0, 0.35, 1);
 	}
@@ -490,7 +491,7 @@
 		overflow-x: hidden;
 		overflow-y: hidden;
 
-		/* padding: 20px 0px; */
+		/* padding: 20px 0; */
 		box-sizing: border-box;
 
 		position: absolute;
@@ -508,9 +509,9 @@
 	}
 
 	.popupwindow h1 {
-		/* margin-bottom: 0px; */
+		/* margin-bottom: 0; */
 		text-align: center;
-		padding-bottom: 0px;
+		padding-bottom: 0;
 		padding-top: 90px;
 
 		margin: 20px 20px 20px 20px;
@@ -520,7 +521,7 @@
 		text-align: center;
 		/* margin-bottom: 50px; */
 
-		margin: 0px 0px 50px 0px;
+		margin: 0 0 50px 0;
 	}
 
 	.popupwindow p {
@@ -530,11 +531,11 @@
 	}
 
 	.popupwindow h3 {
-		/* margin: 0px 20px; */
+		/* margin: 0 20px; */
 		/* padding-bottom: 20px; */
 		font-size: 15pt;
 		font-weight: bold;
-		padding: 0px 20px;
+		padding: 0 20px;
 	}
 
 .exitbtn {
@@ -549,7 +550,7 @@
 
 		border-radius: 30px;
 		border: 2px solid #000;
-		/*border-left: 0px;*/
+		/*border-left: 0;*/
 		background-color: white;
 
 		z-index: 5;
@@ -576,7 +577,7 @@
 		border: 3px solid white;
 		border-radius: 30px;
 		background-color: salmon;
-		box-shadow: 0px 3px 8px rgba(0,0,0,0.2);
+		box-shadow: 0 3px 8px rgba(0,0,0,0.2);
 
 		transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 	}
@@ -603,7 +604,6 @@
 
 	.nointeract {
 		pointer-events: none;
-		-webkit-pointer-events: none;
 	}
 
 	.disable-textselect {
@@ -669,13 +669,13 @@
     @media screen and (max-width: 800px) {
 
         .intro {
-            padding: 0px !important;
+            padding: 0 !important;
             width: 85% !important;
             box-sizing: border-box;
         }
 
         .card {
-            margin: 0px !important;
+            margin: 0 !important;
             left: 0 !important;
             width: 95% !important;
             margin-right: 50px !important;
@@ -683,7 +683,7 @@
         }
 
         .margins {
-            padding: 0px 0px 0px 20px !important;
+            padding: 0 0 0 20px !important;
         }
 
         .title {
@@ -694,8 +694,8 @@
 
     @media screen and (min-width: 1200px) {
         .margins {
-            padding: 0px 10% 0px 10%;
+            padding: 0 10% 0 10%;
         }
     }
         
-</style>
+/*</style>*/
