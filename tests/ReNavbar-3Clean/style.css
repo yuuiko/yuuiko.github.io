@@ -168,6 +168,12 @@ body {
 	width: calc(100% - 60px) !important;
 }
 
+.navitemright {
+	align-self: flex-end !important;
+	margin-left: auto;
+	/*right: 0;*/
+}
+
 /* █████████████████████████████████████████████████████████████████████████████ */
 /* █████ RESPONSIVE TRIGGERS ███████████████████████████████████████████████████ */
 /* █████████████████████████████████████████████████████████████████████████████ */
@@ -262,9 +268,9 @@ body {
 		overflow-y: scroll;
 
 		max-height: calc(100vh - 60px);
-		width: calc(100vw - 62px);
-		right: 0;
-		left: auto;
+		max-width: 250px;
+		right: auto;
+		left: 0;
 		margin: 30px;
 
 		border-radius: 30px;
