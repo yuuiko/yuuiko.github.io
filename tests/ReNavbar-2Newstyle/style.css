@@ -241,9 +241,11 @@ body {
 		display: flex !important;
 	}
 
+	/*
 	#topnavcontainercompact .navleft{
 		border-bottom: none;
 	}
+	*/
 
 	#topnavContainer.reveal {
 		visibility: visible !important;
@@ -285,11 +287,11 @@ body {
 	}
 	.navleft {
 		justify-content: flex-start;
-		flex-flow: row wrap;
+		flex-flow: column wrap;
 		align-items: stretch;
 		/*justify-content: space-between;*/
 		/*border-bottom: 8px solid rgba(150,150,150,0.2);*/
-		/*margin-bottom: 8px     /*??????????????????*/
+		margin-bottom: 20px !important;
 	}
 	.navmiddle {
 		justify-content: flex-start;

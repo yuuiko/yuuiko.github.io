@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>yuuiko</title>
+
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<!-- <link rel="mask-icon" href="safari-pinned-tab.svg" color="#222222"> -->
+	<meta name="msapplication-TileColor" content="#000000">
+	<meta name="theme-color" content="#fff" media="(prefers-color-scheme: light)">
+	<meta name="theme-color" content="#000" media="(prefers-color-scheme: dark)">
+
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+	<div class="topnavContainer" id="topnavContainer">
+		<ul class="navgroup navleft">
+			<li><a class="navItem navItemactive" id="navHello" href="#" >FreshOS<div class="selectedline"></div></a></li>
+			<li><a class="navItem" id="navHello1" href="#" >FreshOS Plus<div class="selectedline"></div></a></li>
+			<li><a class="navItem" id="navHello2" href="#" >Install<div class="selectedline"></div></a></li>
+			<li><a class="navItem" id="navclose" onclick="hideexpandedcompactmenu('topnavContainer');" style="display: none;">X</a></li>
+		</ul>
+
+		<!--
+        <ul class="navgroup navmiddle">
+            <li><a class="navItem navItemactive" id="navCreations" href="#">Creations<div class="selectedline"></div></a></li>
+            <li><a class="navItem" id="navImagination" href="#">Imagination<div class="selectedline"></div></a></li>
+            <li><a class="navItem" id="navContact" href="#">Contact<div class="selectedline"></div></a></li>
+            <li><a class="navItem" id="navSupport" href="#" >Support<div class="selectedline"></div></a></li>
+		</ul>
+        -->
+
+		<ul class="navgroup navright">
+            <li><a class="navItem navItemactive" id="navCreations" href="#">Creations<div class="selectedline"></div></a></li>
+            <li><a class="navItem" id="navImagination" href="#">Concepts<div class="selectedline"></div></a></li>
+            <li><a class="navItem" id="navSupport" href="#" >Support<div class="selectedline"></div></a></li>
+            <li><a class="navItem" id="navContact" href="#">Contact<div class="selectedline"></div></a></li>
+			<!--<li><a class="navItem" id="navPlayer" href="#" >Player<div class="selectedline"></div></a></li>-->
+		</ul>
+	</div>
+
+	<div class="topnavContainer topnavContainercompact" id="topnavcontainercompact">
+		<ul class="navgroup navleft">
+			<li><a href="#" class="navItem navitemselected" onclick="showexpandedcompactmenu('topnavContainer');">FreshOS v</a></li>
+		</ul>
+
+		<!--
+		<ul class="navgroup navright">
+			<li><a class="navItem" onclick="showexpandedcompactmenu('topnavContainer');">Menu</a></li>
+		</ul>
+		-->
+	</div>
+    
+    <script>
+    function showexpandedcompactmenu(divID) {
+        console.log("showwindow fired");
+        var item = document.getElementById(divID);
+        item.classList.add('reveal');
+    }
+
+    function hideexpandedcompactmenu(divID) {
+        console.log("PERMA hidewindow fired");
+        var item = document.getElementById(divID);
+        item.classList.remove('reveal');
+    }
+    </script>
+    
+</body>
+    
+
+</html>

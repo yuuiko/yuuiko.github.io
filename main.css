@@ -114,7 +114,8 @@
             display: flex;
             box-sizing: content-box;
 
-            width: 50px;
+            min-width: 50px;
+            width: 0%;
             height: 50px;
             z-index: 200;
             padding: 0;
@@ -131,7 +132,7 @@
         }
 
         .circlemenuright:hover {
-            width: 582px;
+            width: calc (100% - 60px);
             height: 50px;
 
             border-radius: 25px;
