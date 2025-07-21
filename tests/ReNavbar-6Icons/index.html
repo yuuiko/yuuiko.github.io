@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>yuuiko</title>
+
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<!-- <link rel="mask-icon" href="safari-pinned-tab.svg" color="#222222"> -->
+	<meta name="msapplication-TileColor" content="#000000">
+	<meta name="theme-color" content="#fff" media="(prefers-color-scheme: light)">
+	<meta name="theme-color" content="#000" media="(prefers-color-scheme: dark)">
+
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+	<div class="topnavContainer" id="topnavContainer">
+		<!--LARGE-->
+		<ul id="navleft" class="navgroup navleft fxBlur">
+			<li><a class="navItem navclose" onclick="hideexpandedcompactmenu('topnavContainer','navleft','navright');">current project<div class="itemicon" style="background-image: url(../../menuclose.png)"></div></a></li>
+			<li><a class="navItem navItemactive" id="navHello">FreshOS<div class="itemicon" style="background-image: url(../../homeicon_logo@2x.png)"></div></a></li>
+			<li><a class="navItem" id="navHello1" href="#" >FreshOS Plus<div class="itemicon" style="background-image: url(../../homeicon_logo@2x.png)"></div></a></li>
+			<li><a class="navItem" id="navHello2" href="#" >Install<div class="itemicon" style="background-image: url(../../homeicon_logo@2x.png)"></div></a></li>
+		</ul>
+
+		<ul id="navright" class="navgroup navright fxBlur">
+			<li><a class="navItem navclose" onclick="hideexpandedcompactmenu('topnavContainer','navleft','navright');">yuuiko<div class="itemicon" style="background-image: url(../../menuclose.png)"></div></a></li>
+            <li><a class="navItem navItemCategoryOn" id="navCreations" href="#">Creations</a></li>
+            <li><a class="navItem" id="navImagination" href="#">Concepts</a></li>
+            <li><a class="navItem" id="navSupport" href="#" >Support</a></li>
+            <li><a class="navItem" id="navContact" href="#">Contact</a></li>
+			<li><a id="navLogoL" class="navItem navlogo"></a></li>
+		</ul>
+	</div>
+
+	<div class="topnavContainer topnavContainercompact fxBlur" id="topnavcontainercompact">
+		<!--SMALL-->
+		<ul id="navleftXS" class="navgroup navleft">
+			<li><a href="#" class="navItem navItemactive" onclick="showexpandedcompactmenuL('topnavContainer','navleft','navright');">FreshOS&nbsp;&nbsp;▾</a></li>
+		</ul>
+		
+		<ul id="navleftS" class="navgroup navleft">
+			<li><a class="navItem navItemactive">FreshOS</a></li>
+			<li><a class="navItem" href="#" >FreshOS Plus</a></li>
+			<li><a class="navItem" href="#" >Install</a></li>
+		</ul>
+		
+		<ul id="navrightS" class="navgroup navright">
+			<li><a id="smalltopnav4" href="#" class="navItem" onclick="showexpandedcompactmenuR('topnavContainer','navright','navleft');">Creations&nbsp;&nbsp;▾</a></li>
+			<li><a class="navItem navlogo"></a></li>
+		</ul>
+	</div>
+    
+    <script>
+    function showexpandedcompactmenuL(container,RevealDiv,closeDIV) {
+        console.log("Show Menu LEFT");
+		
+		var delayInMilliseconds = 90;
+
+        var item1 = document.getElementById(container);
+        var item2 = document.getElementById(RevealDiv);
+        var item3 = document.getElementById(closeDIV);
+
+		item1.classList.add('hide');
+		
+		setTimeout(function() {
+			item1.classList.add('reveal');
+			item1.classList.add('left');
+
+			item2.classList.add('reveal');
+			item3.classList.remove('reveal');
+			
+			item1.classList.remove('right');
+			item1.classList.remove('hide');
+		}, delayInMilliseconds);
+    }
+	function showexpandedcompactmenuR(container,RevealDiv,closeDIV) {
+        console.log("Show Menu RIGHT");
+		
+		var delayInMilliseconds = 90;
+
+        var item1 = document.getElementById(container);
+        var item2 = document.getElementById(RevealDiv);
+        var item3 = document.getElementById(closeDIV);
+
+		item1.classList.add('hide');
+		
+		setTimeout(function() {
+			item1.classList.add('reveal');
+			item1.classList.add('right');
+
+			item2.classList.add('reveal');
+			item3.classList.remove('reveal');
+			
+			item1.classList.remove('left');
+			item1.classList.remove('hide');
+		}, delayInMilliseconds);
+    }
+    function hideexpandedcompactmenu(divID,divID2,divID3) {
+		var delayInMilliseconds = 200;
+		
+		var item1 = document.getElementById(divID);
+		var item2 = document.getElementById(divID2);
+		var item3 = document.getElementById(divID3);
+		
+		item1.classList.add('hide');
+		
+		setTimeout(function() {
+			console.log("HIDE Menu");
+			item1.classList.remove('reveal');
+			item1.classList.remove('left');
+			item1.classList.remove('right');
+			item2.classList.remove('reveal');
+			item3.classList.remove('reveal');
+			
+			item1.classList.remove('hide');
+		}, delayInMilliseconds);
+    }
+    </script>
+    
+</body>
+    
+
+</html>
