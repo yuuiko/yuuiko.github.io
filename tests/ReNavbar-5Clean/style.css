@@ -18,7 +18,7 @@ body {
 
 /* █████ ADD ONS █████████████████████████████████████████████████ */
 
-.sBlur {
+.fxBlur {
 	background-color: rgba(0,0,0,0.6);
 	backdrop-filter: blur(25px) saturate(120%);
 	-webkit-backdrop-filter: blur(25px) saturate(120%);
@@ -175,7 +175,20 @@ body {
 /* █████████████████████████████████████████████████████████████████████████████████████████████ */
 
 
+#navleftS{
+	display: none;
+}
+#navleftXS{
+	display: none;
+}
+
 /* █████ COMPACT MENUBAR BREAKPOINT █████████████████████████████████████████████████ */
+@media only screen and (max-width: 604px) {
+	/*XS menubar modifier (dual dropdown)*/
+	
+	#navleftS {display: none !important;}
+	#navleftXS {flex-flow: row; display: flex !important;}
+}
 @media only screen and (max-width: 856px) {
 	/*ACTIVAVTE small menubar mode*/
 	
@@ -183,12 +196,9 @@ body {
 	#navleft {display: none;}
 	#navright {display: none;}
 	#navLogoL {display: none;}
-	.navgroup {
-		box-shadow: 0 0 0 rgba(127.5,127.5,127.5,0.5);
-	}
-	.topnavContainer {
-		box-shadow: 0 6px 12px rgba(127.5,127.5,127.5,0.5);
-	}
+	.navgroup {box-shadow: 0 0 0 rgba(127.5,127.5,127.5,0.5);}
+	.topnavContainer {box-shadow: 0 6px 12px rgba(127.5,127.5,127.5,0.5);}
+	#navleftS {flex-flow: row; display: flex;}
 	
 	/*Reveal big menubar*/
 	#topnavcontainercompact {
@@ -273,9 +283,5 @@ body {
 		padding: 1em;
 		display: inline-block;
 		width: calc(100% - 2em - 6px);
-	}
-
-	.navgroup li {
-		overflow: hidden;
 	}
 }

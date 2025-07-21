@@ -20,14 +20,14 @@
     
 	<div class="topnavContainer" id="topnavContainer">
 		<!--LARGE-->
-		<ul id="navleft" class="navgroup navleft sBlur">
+		<ul id="navleft" class="navgroup navleft fxBlur">
 			<li><a class="navItem navclose" onclick="hideexpandedcompactmenu('topnavContainer','navleft','navright');" style="display: none;">CLOSE MENU</a></li>
 			<li><a class="navItem navItemactive" id="navHello">FreshOS<div class="selectedline"></div></a></li>
 			<li><a class="navItem" id="navHello1" href="#" >FreshOS Plus<div class="selectedline"></div></a></li>
 			<li><a class="navItem" id="navHello2" href="#" >Install<div class="selectedline"></div></a></li>
 		</ul>
 
-		<ul id="navright" class="navgroup navright sBlur">
+		<ul id="navright" class="navgroup navright fxBlur">
 			<li><a class="navItem navclose" onclick="hideexpandedcompactmenu('topnavContainer','navleft','navright');" style="display: none;">CLOSE MENU</a></li>
             <li><a class="navItem navItemCategoryOn" id="navCreations" href="#">Creations<div class="selectedline"></div></a></li>
             <li><a class="navItem" id="navImagination" href="#">Concepts<div class="selectedline"></div></a></li>
@@ -37,10 +37,16 @@
 		</ul>
 	</div>
 
-	<div class="topnavContainer topnavContainercompact sBlur" id="topnavcontainercompact">
+	<div class="topnavContainer topnavContainercompact fxBlur" id="topnavcontainercompact">
 		<!--SMALL-->
+		<ul id="navleftXS" class="navgroup navleft">
+			<li><a href="#" class="navItem navItemactive" onclick="showexpandedcompactmenuL('topnavContainer','navleft','navright');">FreshOS&nbsp;&nbsp;▾</a></li>
+		</ul>
+		
 		<ul id="navleftS" class="navgroup navleft">
-			<li><a id="smalltopnav" href="#" class="navItem navItemactive" onclick="showexpandedcompactmenuL('topnavContainer','navleft','navright');">FreshOS&nbsp;&nbsp;▾</a></li>
+			<li><a class="navItem navItemactive">FreshOS<div class="selectedline"></div></a></li>
+			<li><a class="navItem" href="#" >FreshOS Plus<div class="selectedline"></div></a></li>
+			<li><a class="navItem" href="#" >Install<div class="selectedline"></div></a></li>
 		</ul>
 		
 		<ul id="navrightS" class="navgroup navright">
