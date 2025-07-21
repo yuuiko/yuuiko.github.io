@@ -46,10 +46,10 @@ body {
 	
 	padding: 0;
 	margin: 30px;
-
 	border-radius: 30px;
 
 	display: flex;
+	user-select: none;
 	justify-content: space-between;
 }
 .topnavContainer.left {
@@ -70,6 +70,15 @@ body {
 	margin: 0;
 }
 
+/* ------ COMPACT CONTAINER --------------------------------------- */
+.topnavContainercompact {
+	align-items: flex-start;
+	z-index: 99;
+	width: calc(100% - 60px) !important;
+	display: none;
+	user-select: none;
+}
+
 /* ------ LEFT, MIDDLE or RIGHT Sections ---------------------------- */
 .navgroup {
 	display: flex;
@@ -84,6 +93,7 @@ body {
 	white-space: nowrap;
 	flex-wrap: nowrap;
 	overflow: clip;
+	user-select: none;
 	transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1),
 }
 
@@ -95,6 +105,7 @@ body {
 	flex-wrap: nowrap;
 	overflow: clip;
 	width: 100%;
+	user-select: none;
 	transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1),
 }
 
@@ -105,6 +116,7 @@ body {
 	white-space: nowrap;
 	flex-wrap: nowrap;
 	overflow: clip;
+	user-select: none;
 	transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1),
 }
 
@@ -112,9 +124,26 @@ body {
 /* ------ ITEMS --------------------------------------------------- */
 .navlogo  {
 	width: 13px;
+	height: 13px;
+	z-index: 101;
 	background-image: url(../../homeicon_logo@2x.png);
 	background-repeat: no-repeat;
 	background-size: cover;
+	overflow: visible;
+	
+	opacity: 1;
+	transform: scale(1);
+	user-select: none;
+	
+	transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+.navlogo:hover {
+	/*opacity: 0.5;*/
+	transform: scale(1.1);
+}
+.navlogo:active {
+	opacity: 0.5;
+	transform: scale(0.9);
 }
 .navItem {
     text-decoration: none;
@@ -131,22 +160,13 @@ body {
         background 0.5s cubic-bezier(0.16, 1, 0.3, 1),
         color 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
-
 .navItem:hover {
 	color: #84ECFF;
 	background-color: rgba(150,150,150,0.3);
 }
-
 .navItem:active {
 	color: #84ECFF;
 	background-color: rgba(150,150,150,0.6);
-}
-
-.topnavContainercompact {
-	align-items: flex-start;
-	z-index: 99;
-	width: calc(100% - 60px) !important;
-	display: none;
 }
 
 /* █████████████████████████████████████████████████████████████████████████████████████████████ */
@@ -251,9 +271,5 @@ body {
 
 	.navgroup li {
 		overflow: hidden;
-	}
-	
-	#navHello > .selectedline {
-		display: none;
 	}
 }
