@@ -10,7 +10,7 @@
 
 body {
 	font-family: Kollektif;
-	background-color: #FDF8F4;
+	background-color: #fff;
 	transition: all 1s cubic-bezier(0.85, 0, 0.15, 1);
 	color: #8B8B8B;
 	margin: 0;
@@ -47,7 +47,7 @@ body {
 	padding: 0;
 	margin: 30px;
 	border-radius: 30px;
-
+	
 	display: flex;
 	user-select: none;
 	justify-content: space-between;
@@ -84,6 +84,7 @@ body {
 	display: flex;
 	margin: 0;
 	/*padding: 0;*/
+	box-shadow: 0 6px 12px rgba(127.5,127.5,127.5,0.5);
 	flex-flow: row;
 }
 .navleft {
@@ -182,6 +183,12 @@ body {
 	#navleft {display: none;}
 	#navright {display: none;}
 	#navLogoL {display: none;}
+	.navgroup {
+		box-shadow: 0 0 0 rgba(127.5,127.5,127.5,0.5);
+	}
+	.topnavContainer {
+		box-shadow: 0 6px 12px rgba(127.5,127.5,127.5,0.5);
+	}
 	
 	/*Reveal big menubar*/
 	#topnavcontainercompact {
@@ -230,9 +237,8 @@ body {
 		margin: 30px;
 
 		border-radius: 30px;
-		border: 2px solid rgba(170, 170, 170, 1);
 		background-color: rgba(0, 0, 0, 1);
-		box-shadow: 0 6px 12px rgba(0,0,0,0.16);
+		box-shadow: 0 6px 6px rgba(127.5,127.5,127.5,0.5);
 
 		transform: scale(0.9);
 		opacity: 0;
