@@ -17,7 +17,9 @@
 	<meta name="theme-color" content="#000" media="(prefers-color-scheme: dark)">
 
 	<link rel="stylesheet" href="../../main.css">
-	<script type="text/javascript" src="../../script.js"></script>
+	
+	<link rel="stylesheet" href="../../navbar.css">
+    <script src="../../navbar.js" charset="utf-8"></script>
 
 	<style media="screen">
 		.paralaxsection {
@@ -99,47 +101,45 @@
 
 </head>
 <body>
-        <div class="circlemenuright">
-        <a href="../../index.html">
-            <div class="menubtn selected" style="padding-right: 0;">
-                <span class="menuBtn" style="text-decoration: none; padding: 0; margin: 0;">
-                    <img class="menuicon" src="homeicon_logo@2x.png">
-                </span>
-            </div>
-        </a>
-        <a href="../../index.html">
-            <div class="menubtn insetbtn">
-                <span class="menuBtnText" style="text-decoration: none;">
-                    PRODUCTS
-                </span>
-            </div>
-        </a>
-        <a href="../../concepts.html">
-            <div class="menubtn insetbtn">
-                <span class="menuBtnText" style="text-decoration: none;">
-                    CONCEPTS
-                </span>
-            </div>
-        </a>
-        <a onclick="showwindow('popPatreon')">
-            <div class="menubtn insetbtn">
-                <span class="menuBtnText" style="text-decoration: none;">
-                    PATREON
-                </span>
-            </div>
-        </a>
-        <a onclick="showwindow('popContact')">
-            <div class="menubtn insetbtn">
-                <span class="menuBtnText" style="text-decoration: none;">
-                    CONTACT
-                </span>
-            </div>
-        </a>
-    </div>
-    
-    
-    
-    
+    <!-- █████ MENUBAR █████████████████████████████████████████████████-->
+	<div class="topnavContainer" id="topnavContainer">
+		<!--LARGE-->
+		<ul id="navleft" class="navgroup navleft fxBlur">
+			<li><a class="navItem navclose" onclick="hideexpandedcompactmenu('topnavContainer','navleft','navright');">current project<div class="itemicon" style="background-image: url(../../menuclose.png)"></div></a></li>
+			
+			<li><a class="navItem navItemactive" id="navHello">Minim<div class="itemicon"></div></a></li>
+			<!--<li><a class="navItem" id="navHello1" href="#" >Minim Plus<div class="itemicon" style="background-image: url(../../homeicon_logo@2x.png)"></div></a></li>-->
+			<li><a class="navItem" id="navHello2" href="#downloadbtn" >Install<div class="itemicon"></div></a></li>
+		</ul>
+
+		<ul id="navright" class="navgroup navright fxBlur">
+			<li><a class="navItem navclose" onclick="hideexpandedcompactmenu('topnavContainer','navleft','navright');">yuuiko<div class="itemicon" style="background-image: url(../../menuclose.png)"></div></a></li>
+            <li><a class="navItem navItemCategoryOn" id="navCreations" href="../../projects.html">Projects</a></li>
+            <li><a class="navItem" id="navImagination" href="../../concepts.html">Concepts</a></li>
+            <li><a href="../../contact.html" class="navItem" id="navSupport">Chat</a></li>
+            <li><a href="../../patreon.html" class="navItem" id="navContact">Patreon</a></li>
+			<li><a href="../../index.html" id="navLogoL" class="navItem navlogo" style="background-image: url(../../homeicon_logo@2x.png)"></a></li>
+		</ul>
+	</div>
+
+	<div class="topnavContainer topnavContainercompact fxBlur" id="topnavcontainercompact">
+		<!--SMALL-->
+		<ul id="navleftXS" class="navgroup navleft">
+			<li><a href="#" class="navItem navItemactive" onclick="showexpandedcompactmenuL('topnavContainer','navleft','navright');">Minim&nbsp;&nbsp;▾</a></li>
+		</ul>
+		
+		<ul id="navleftS" class="navgroup navleft">
+			<li><a class="navItem navItemactive">Minim</a></li>
+			<!--<li><a class="navItem" href="#" >Minim Plus</a></li>-->
+			<li><a class="navItem" href="#downloadbtn">Install</a></li>
+		</ul>
+		
+		<ul id="navrightS" class="navgroup navright">
+			<li><a id="smalltopnav4" href="#" class="navItem" onclick="showexpandedcompactmenuR('topnavContainer','navright','navleft');">Projects&nbsp;&nbsp;▾</a></li>
+			<li><a href="../../index.html" class="navItem navlogo" style="background-image: url(../../homeicon_logo@2x.png)"></a></li>
+		</ul>
+	</div>
+	<!-- █████ MENUBAR █████████████████████████████████████████████████-->    
     
     
 	<!-- <div class="mainbody"> -->
@@ -228,7 +228,7 @@
 					• iPod Mini 2nd Generation<br>
                     <br>
 
-                    <a href="https://www.patreon.com/posts/66771149" class="downloadbtn" target="_blank">Early Access ⭢</a>
+                    <a href="https://www.patreon.com/posts/66771149" class="downloadbtn" id="downloadbtn" target="_blank">Early Access ⭢</a>
 				</h2>
 			</div>
 		</div>

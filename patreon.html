@@ -24,6 +24,8 @@
         </div>
     </noscript>
     
+    
+    
     <!-- █████ MENUBAR █████████████████████████████████████████████████-->
 	<div class="topnavContainer" id="topnavContainer">
 		<!--LARGE-->
@@ -34,9 +36,9 @@
 			<li><a class="navItem navclose" onclick="hideexpandedcompactmenu('topnavContainer','navleft','navright');">yuuiko<div class="itemicon" style="background-image: url(menuclose.png)"></div></a></li>
             <li><a href="projects.html" class="navItem" id="navCreations">Projects</a></li>
             <li><a href="concepts.html" class="navItem" id="navImagination">Concepts</a></li>
-            <li><a href="contact.html" class="navItem" id="navSupport">Chat</a></li>
-            <li><a href="patreon.html" class="navItem" id="navContact">Patreon</a></li>
-			<li><a id="navLogoL" class="navItem navlogo" style="background-image: url(homeicon_logo@2x.png)"></a></li>
+            <li><a href="contact.html" class="navItem" id="navSupport" onclick="showwindow('popContact')">Chat</a></li>
+            <li><a class="navItem navItemactive" id="navContact" onclick="showwindow('popPatreon')">Patreon</a></li>
+			<li><a href="index.html" id="navLogoL" class="navItem navlogo" style="background-image: url(homeicon_logo@2x.png)"></a></li>
 		</ul>
 	</div>
 
@@ -55,12 +57,13 @@
 		</ul>
 		
 		<ul id="navrightS" class="navgroup navright">
-			<li><a id="smalltopnav4" class="navItem" onclick="showexpandedcompactmenuR('topnavContainer','navright','navleft');">Menu&nbsp;&nbsp;▾</a></li>
-			<li><a class="navItem navlogo"></a></li>
+			<li><a id="smalltopnav4" href="#" class="navItem" onclick="showexpandedcompactmenuR('topnavContainer','navright','navleft');">Patreon&nbsp;&nbsp;▾</a></li>
+			<li><a href="index.html" class="navItem navlogo"></a></li>
 		</ul>
 	</div>
 	<!-- █████ MENUBAR █████████████████████████████████████████████████-->
-        
+    
+    <!--
     <div id="fadeoutunder"></div>
     
     <div id="titlecover">
@@ -81,103 +84,12 @@
             <h2>handmade software trinkets <br>and design works.</h2>
         </div>
     </div>
+    -->
 
-    <div id="luxy">
 
-        <div class="margins">
-
-            <br>
-            
-<!--
-            <div class="contactcard " data-speed-y="-15" data-offset="-0">
-                                <img src="img_avatar.png" alt="Avatar" style="width:100%">
-                <div class="container">
-                    <h2>Contact</h2>
-                    <p>
-                        Digital Design<br>
-                        Email: ---------------<br>
-                        Phone: ---- --- ---
-                    </p>
-                </div>
-            </div>
--->
-
-<!--
-            <h1 style="margin-top: 120px; z-index: 3;">About</h1>
-            <p class="intro">
-                I envision design that is essential and useful, design that elevates and builds on the good in our human nature. I wish to put this mentality into products and artworks that will help people create, work, or just live more comfortably, with a subtle feeling that the products that I made for them understand their needs for their current task.<br>
-                <br>
-                At the same time, I’m a human myself, and I need to build myself up to make this vision a reality.<br>
-                Here is my journey. <br>
-            </p>
--->
-                        
-
-            <div href="#" class="yearcard luxy-el" data-speed-y="-25" data-offset="380" style="display: block; color: black;">
-                <div class="container" style="color: white; z-index: 10">
-                    Projects
-                </div>
-            </div>
-            <br>
-            
-            <br><br><br>
-
-            <a href="projects.html" class="luxy-el" data-speed-y="0" data-offset="0" style="display: block;">
-                <div class="card" style="background-image: url('https://puu.sh/CfkW1/f8c1c58ef2.gif');">
-                    <div class="containerlabel">
-                        <h3><b>View Projects</b></h3>
-                        <h4>The Touch Bar, Reinvented.</h4>
-                    </div>
-                </div>
-            </a>
-            <br>
-            <br><br><br><br><br><br><br><br><br>
-
-<!-- ------------------------------------------------------------ -->
-            
-
-            <div href="#" class="yearcard luxy-el" data-speed-y="-25" data-offset="280" style="display: block; color: black;">
-                <div class="container" style="color: white; z-index: 10">
-                    Concepts
-                </div>
-            </div>
-            <br>
-
-            <a href="concepts.html" class="luxy-el" data-speed-y="-1" data-offset="0" style="display: block;">
-                <div class="card" style="background-image: url('src/ip_fresh.jpg'); top: -140;">
-                    <div class="containerlabel">
-                        <h3><b>View Concepts</b></h3>
-                        <h4>Your iPod, Refreshed.</h4>
-                    </div>
-                </div>
-            </a>
-            
-<!-- ------------------------------------------------------------ -->
-            
-
-        </div>
-    </div> <!-- luxy -->
-    
-    <!-- ---------------------- CONTACT --------- -->
-    <div class="popupbackground hidden disabled" id="popContact">
-        <div class="popupwindow">
-            <a class="exitbtn" onclick="hidewindow('popContact');">CLOSE</a>
-            <h1>Let's Chat!</h1>
-            <h2>For any reason, <br>I'd love a conversation!</h2>
-
-            <!--<p>
-            We thank Red Bull for helping out with our events!
-            </p>-->
-
-            <a class="linkbutton" href="mailto: yyuuiko@icloud.com" target="_blank">Email • yyuuiko@icloud.com</a>
-            <a class="linkbutton" href="https://discord.gg/GF4NnRCq8f" target="_blank">Discord • discord.gg/yuuiko</a>
-        </div>
-    </div> <!--flexcontainer-->
     
     <!-- ---------------------- PATREON --------- -->
-    <div class="popupbackground hidden disabled" id="popPatreon">
         <div class="popupwindow">
-            <a class="exitbtn" onclick="hidewindow('popPatreon');">CLOSE</a>
             <h1>Yuuiko on Patreon!</h1>
             <h2>Grab my creations, <br>and check out my posts!</h2>
 
@@ -187,8 +99,6 @@
 
             <a class="linkbutton" href="https://www.patreon.com/c/yuuiko" target="_blank">View Patreon</a>
         </div>
-    </div> <!--flexcontainer-->
-
     
     
 

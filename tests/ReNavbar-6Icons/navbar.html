@@ -14,10 +14,11 @@
 	<meta name="theme-color" content="#fff" media="(prefers-color-scheme: light)">
 	<meta name="theme-color" content="#000" media="(prefers-color-scheme: dark)">
 
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="navbar.css">
+	<script src="navbar.js" charset="utf-8"></script>
 </head>
 <body>
-    
+    <!-- █████ MENUBAR █████████████████████████████████████████████████-->
 	<div class="topnavContainer" id="topnavContainer">
 		<!--LARGE-->
 		<ul id="navleft" class="navgroup navleft fxBlur">
@@ -29,10 +30,10 @@
 
 		<ul id="navright" class="navgroup navright fxBlur">
 			<li><a class="navItem navclose" onclick="hideexpandedcompactmenu('topnavContainer','navleft','navright');">yuuiko<div class="itemicon" style="background-image: url(../../menuclose.png)"></div></a></li>
-            <li><a class="navItem navItemCategoryOn" id="navCreations" href="#">Creations</a></li>
+            <li><a class="navItem navItemCategoryOn" id="navCreations" href="#">Projects</a></li>
             <li><a class="navItem" id="navImagination" href="#">Concepts</a></li>
-            <li><a class="navItem" id="navSupport" href="#" >Support</a></li>
-            <li><a class="navItem" id="navContact" href="#">Contact</a></li>
+            <li><a class="navItem" id="navSupport" href="#" >Chat</a></li>
+            <li><a class="navItem" id="navContact" href="#">Patreon</a></li>
 			<li><a id="navLogoL" class="navItem navlogo"></a></li>
 		</ul>
 	</div>
@@ -54,75 +55,7 @@
 			<li><a class="navItem navlogo"></a></li>
 		</ul>
 	</div>
-    
-    <script>
-    function showexpandedcompactmenuL(container,RevealDiv,closeDIV) {
-        console.log("Show Menu LEFT");
-		
-		var delayInMilliseconds = 90;
-
-        var item1 = document.getElementById(container);
-        var item2 = document.getElementById(RevealDiv);
-        var item3 = document.getElementById(closeDIV);
-
-		item1.classList.add('hide');
-		
-		setTimeout(function() {
-			item1.classList.add('reveal');
-			item1.classList.add('left');
-
-			item2.classList.add('reveal');
-			item3.classList.remove('reveal');
-			
-			item1.classList.remove('right');
-			item1.classList.remove('hide');
-		}, delayInMilliseconds);
-    }
-	function showexpandedcompactmenuR(container,RevealDiv,closeDIV) {
-        console.log("Show Menu RIGHT");
-		
-		var delayInMilliseconds = 90;
-
-        var item1 = document.getElementById(container);
-        var item2 = document.getElementById(RevealDiv);
-        var item3 = document.getElementById(closeDIV);
-
-		item1.classList.add('hide');
-		
-		setTimeout(function() {
-			item1.classList.add('reveal');
-			item1.classList.add('right');
-
-			item2.classList.add('reveal');
-			item3.classList.remove('reveal');
-			
-			item1.classList.remove('left');
-			item1.classList.remove('hide');
-		}, delayInMilliseconds);
-    }
-    function hideexpandedcompactmenu(divID,divID2,divID3) {
-		var delayInMilliseconds = 200;
-		
-		var item1 = document.getElementById(divID);
-		var item2 = document.getElementById(divID2);
-		var item3 = document.getElementById(divID3);
-		
-		item1.classList.add('hide');
-		
-		setTimeout(function() {
-			console.log("HIDE Menu");
-			item1.classList.remove('reveal');
-			item1.classList.remove('left');
-			item1.classList.remove('right');
-			item2.classList.remove('reveal');
-			item3.classList.remove('reveal');
-			
-			item1.classList.remove('hide');
-		}, delayInMilliseconds);
-    }
-    </script>
+	<!-- █████ MENUBAR █████████████████████████████████████████████████-->
     
 </body>
-    
-
 </html>

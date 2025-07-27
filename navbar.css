@@ -8,16 +8,23 @@
 	font-weight: bold;
 }
 
+/*
 body {
 	font-family: Kollektif;
-	background-color: #222;
-	background-image: url(../../img/projRMIT.jpg);
-	background-size: cover;
-	background-repeat: no-repeat;
 	transition: all 1s cubic-bezier(0.85, 0, 0.15, 1);
 	color: #8B8B8B;
 	margin: 0;
 }
+*/
+
+/*
+body {
+	background-color: #222;
+	background-image: url(../../img/projRMIT.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+*/
 
 /* █████ ADD ONS █████████████████████████████████████████████████ */
 

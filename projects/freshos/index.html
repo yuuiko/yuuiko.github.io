@@ -4,6 +4,10 @@
     <title>FreshOS - yuuiko</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+	<link rel="stylesheet" href="../../navbar.css">
+    <script src="../../navbar.js" charset="utf-8"></script>
+
     <style>
         @font-face {
             font-family: koll;
@@ -39,6 +43,7 @@
             font-size: 15px;
             font-weight: 600;
             text-decoration: none !important;
+            outline: none; /* or outline: 0; */
         }
         p {
             font-size: 25px;
@@ -221,72 +226,47 @@
     </style>
 </head>
 <body>
-    <!-- ███ MENU RIGHT ██████████████████████████████████████████████████ -->
-    <div class="circlemenuright">
-        <a href="../../index.html">
-            <div class="menubtn" style="padding-right: 0;">
-                <span class="menuBtn" style="text-decoration: none; padding: 0; margin: 0;">
-                    <img class="menuicon" src="homeicon_logo@2x.png">
-                </span>
-            </div>
-        </a>
-        <a href="../../index.html">
-            <div class="menubtn insetbtn">
-                <span class="menuBtnText">
-                    PRODUCTS
-                </span>
-            </div>
-        </a>
-        <a href="time.html">
-            <div class="menubtn insetbtn">
-                <span class="menuBtnText">
-                    CONCEPTS
-                </span>
-            </div>
-        </a>
-        <a>
-            <div class="menubtn insetbtn">
-                <span class="menuBtnText">
-                    BLOG
-                </span>
-            </div>
-        </a>
-        <a href="#">
-            <div class="menubtn insetbtn">
-                <span class="menuBtnText">
-                    CONTACT
-                </span>
-            </div>
-        </a>
-    </div>
-    
-    <!-- ███ MENU LEFT ██████████████████████████████████████████████████ -->
-    <div class="circlemenu">
-        <a href="#">
-            <div class="menubtn btnBlack" style="padding-left: 0px;">
-                <span class="menuBtnText btntextonly" style="display: block; border-radius: 0 50% 50% 0 !important;">
-                    FreshOS
-                </span>
-            </div>
-        </a>
-        <a href="#">
-            <div class="menubtn btnBlack">
-                <span class="menuBtnText btntextonly">
-                    FreshOS PLUS
-                </span>
-            </div>
-        </a>
-        <a href="#">
-            <div class="menubtn btnBlack" style="margin: 0;">
-                <span class="menuBtnText btntextonly">
-                    Install
-                </span>
-            </div>
-        </a>
-    </div>
+    <!-- █████ MENUBAR █████████████████████████████████████████████████-->
+	<div class="topnavContainer" id="topnavContainer">
+		<!--LARGE-->
+		<ul id="navleft" class="navgroup navleft fxBlur">
+			<li><a class="navItem navclose" onclick="hideexpandedcompactmenu('topnavContainer','navleft','navright');">current project<div class="itemicon" style="background-image: url(../../menuclose.png)"></div></a></li>
+			<li><a class="navItem navItemactive" id="navHello">FreshOS<div class="itemicon" style="background-image: url(../../homeicon_logo@2x.png)"></div></a></li>
+			<!--<li><a class="navItem" id="navHello1" href="#" >FreshOS Plus<div class="itemicon" style="background-image: url(../../homeicon_logo@2x.png)"></div></a></li>-->
+			<li><a class="navItem" id="navHello2" href="#install" >Install<div class="itemicon" style="background-image: url(../../homeicon_logo@2x.png)"></div></a></li>
+		</ul>
+
+		<ul id="navright" class="navgroup navright fxBlur">
+			<li><a class="navItem navclose" onclick="hideexpandedcompactmenu('topnavContainer','navleft','navright');">yuuiko<div class="itemicon" style="background-image: url(../../menuclose.png)"></div></a></li>
+            <li><a class="navItem navItemCategoryOn" id="navCreations" href="../../projects.html">Projects</a></li>
+            <li><a class="navItem" id="navImagination" href="../../concepts.html">Concepts</a></li>
+            <li><a href="../../contact.html" class="navItem" id="navSupport">Chat</a></li>
+            <li><a href="../../patreon.html" class="navItem" id="navContact">Patreon</a></li>
+			<li><a href="../../index.html" id="navLogoL" class="navItem navlogo" style="background-image: url(../../homeicon_logo@2x.png)"></a></li>
+		</ul>
+	</div>
+
+	<div class="topnavContainer topnavContainercompact fxBlur" id="topnavcontainercompact">
+		<!--SMALL-->
+		<ul id="navleftXS" class="navgroup navleft">
+			<li><a href="#" class="navItem navItemactive" onclick="showexpandedcompactmenuL('topnavContainer','navleft','navright');">FreshOS&nbsp;&nbsp;▾</a></li>
+		</ul>
+		
+		<ul id="navleftS" class="navgroup navleft">
+			<li><a class="navItem navItemactive">FreshOS</a></li>
+			<!--<li><a class="navItem" href="#" >FreshOS Plus</a></li>-->
+			<li><a class="navItem" href="#install">Install</a></li>
+		</ul>
+		
+		<ul id="navrightS" class="navgroup navright">
+			<li><a id="smalltopnav4" href="#" class="navItem" onclick="showexpandedcompactmenuR('topnavContainer','navright','navleft');">Projects&nbsp;&nbsp;▾</a></li>
+			<li><a href="../../index.html" class="navItem navlogo" style="background-image: url(../../homeicon_logo@2x.png)"></a></li>
+		</ul>
+	</div>
+	<!-- █████ MENUBAR █████████████████████████████████████████████████-->
     
     <div class="main-container">
-      <img class="artworksection" src="img/0.png"><a href="https://forums.rockbox.org/index.php?topic=53574.0"><img class="artworksection" src="img/1btn.png"></a><img class="artworksection" src="img/2.png"><a href="../../index.html"><img class="artworksection" src="img/3btn.png"></a>
+      <img class="artworksection" src="img/0.png"><a href="https://forums.rockbox.org/index.php?topic=53574.0" id="install"><img class="artworksection" src="img/1btn.png"></a><img class="artworksection" src="img/2.png"><a href="../../index.html"><img class="artworksection" src="img/3btn.png"></a>
     </div>
     
 

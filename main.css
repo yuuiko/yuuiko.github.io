@@ -102,152 +102,6 @@
             margin: 4px 0 40px 20px;
             font-size: 20px;
         }
-
-        
-        /* ############# CIRCLE MENU #################### */
-
-        .circlemenuright {
-            position: fixed;
-            margin: 30px;
-            right: 0;
-            
-            display: flex;
-            box-sizing: content-box;
-
-            min-width: 50px;
-            width: 0%;
-            height: 50px;
-            z-index: 200;
-            padding: 0;
-
-            overflow: hidden;
-            text-overflow: ellipsis;
-
-            background-color: rgba(229, 121, 71, 1);
-            border-radius: 25px;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.0);
-
-            transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
-            transition-delay: 0.7s;
-        }
-
-        .circlemenuright:hover {
-            width: calc (100% - 60px);
-            height: 50px;
-
-            border-radius: 25px;
-            transition-delay: 0s;
-        }
-
-        .cmopen {
-            width: 582px;
-            height: 50px;
-
-            border-radius: 25px;
-            transition-delay: 0s;
-        }
-
-        .circlemenu {
-            position: fixed;
-            margin: 30px;
-            
-            display: flex;
-            box-sizing: border-box;
-
-            width: 2px;
-            height: 50px;
-            z-index: 100;
-            padding: 0;
-
-            overflow: hidden;
-            text-overflow: ellipsis;
-
-            background-color: rgba(0, 0, 0, 0);
-            border-radius: 25px;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.0);
-
-            transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-        .circlemenu:hover {
-            width: 680px;
-            height: 50px;
-            background-color: rgba(255, 255, 255, 0);
-
-            border-radius: 25px;
-        }
-
-
-        .selected {
-            background-color: white;
-        }
-
-        .menubtn {
-            display: block;
-            color: #FFF;
-            border-radius: 30px;
-            height: 50px;
-            text-align: center;
-            vertical-align: middle;
-            
-            padding-top: 0 !important;
-            
-            width: auto;
-            padding-right: 25px;
-            margin-right: 10px;
-
-            text-overflow: clip;
-            white-space: nowrap;
-
-
-            transition: all 0.5s cubic-bezier(.79,.96,.56,.98);
-        }
-
-        .insetbtn {
-            height: 18px;
-            margin: 5px;
-            padding: 12px 20px 10px 20px !important;
-        }
-
-        .btnBlack {
-            background-color: black;
-        }
-
-        .btntextonly {
-            display: block; 
-            padding: 16px 0 0 23px !important; 
-            margin: 0 !important;
-        }
-
-        .menubtn:hover {
-            background-color: rgba(233,233,233,0.4);
-        }
-
-        .menubtn:active {
-            background-color: rgba(233,233,233,0.9);
-            transform: scale(0.9);
-        }
-
-        .menubtnActive {
-            background-color: #eee;
-            color: #000;
-        }
-
-        .menuBtnText {
-            display: block; 
-            margin: 0 !important;
-            
-            text-overflow: clip;
-            white-space: nowrap;
-            font-family: 'kollbi', 'Raleway', sans-serif;
-            text-decoration: none !important;
-            vertical-align: middle;
-        }
-
-        .menuicon {
-            vertical-align: middle;
-            width: 50px;
-            height: 50px;
-        }
         
         /* ############# END MENU #################### */
         
@@ -350,7 +204,6 @@
         
         
         /* ######## CARDS ######## */
-        
         .card {
             position: relative;
             width: 50%;
@@ -485,7 +338,7 @@
 	/*█████████████████████████████████████████████████ WINDOW █████ */
 	.popupwindow {
 		background-color: #FFEDD5;
-		color: black;
+		color: black;        
 		border-radius: 30px;
 /*		border: solid #e52617 4px;*/
 
@@ -501,9 +354,12 @@
 		right: 0;
 		bottom: 0;
 		left: 0;
+        padding: 30px;
 
+        height: auto;
+        
 		max-width: 600px;
-		max-height: 600px;
+		max-height: 700px;
         
         box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 
@@ -511,7 +367,7 @@
 
 	.popupwindow h1 {
 		/* margin-bottom: 0; */
-		text-align: center;
+		text-align: left;
 		padding-bottom: 0;
 		padding-top: 90px;
 
@@ -519,16 +375,16 @@
 	}
 
 	.popupwindow h2 {
-		text-align: center;
+		text-align: left;
 		/* margin-bottom: 50px; */
 
-		margin: 0 0 50px 0;
+		margin: 0 0 50px 20px;
 	}
 
 	.popupwindow p {
 		margin: 20px 20px;
 		padding-bottom: 20px;
-        text-align: center;
+        text-align: left;
 	}
 
 	.popupwindow h3 {
@@ -539,7 +395,7 @@
 		padding: 0 20px;
 	}
 
-.exitbtn {
+    .exitbtn {
 		display: inline-block;
 		position: fixed;
 
