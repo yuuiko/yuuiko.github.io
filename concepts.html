@@ -176,9 +176,11 @@
         </div>
     </div> <!-- luxy -->
     
+    <div class="popupbackground2 hiddenns disabled" id="popupbackground2"></div>
+    
     <!-- ---------------------- NOTHING --------- -->
     <div class="popupbackground hidden disabled" id="popNothing">
-        <div class="popupwindow">
+        <div class="popupwindow" id="popNothing">
             <a class="exitbtn" onclick="hidewindow('popNothing');">CLOSE</a>
             <h1>Nothing Phone(2a)</h1>
             <h2>Award winner for Nothing 2a Community Edition Design</h2>
@@ -337,10 +339,13 @@
         console.log("showwindow fired");
 
         var item = document.getElementById(divID);
+        var bkg = document.getElementById("popupbackground2");
 
         item.classList.remove('disabled'); //enable item (at this point its invisible because it's still "hidden")
+        bkg.classList.remove('disabled'); //enable item (at this point its invisible because it's still "hidden")
         setTimeout(function () {
             item.classList.remove('hidden'); //remove "hidden" and animate-in
+            bkg.classList.remove('hiddenns'); //remove "hidden" and animate-in
         }, 10); //delay in ms
     }
 
@@ -348,6 +353,7 @@
         console.log("PERMA hidewindow fired");
 
         var item = document.getElementById(divID);
+        var bkg = document.getElementById("popupbackground2");
 
         //reject further interactions while animating. e.g. really quick double click.
         if (item.classList.contains('disabled')) {
@@ -356,10 +362,14 @@
         else {
             item.classList.add('hidden'); //animate out
             item.classList.add('nointeract'); //disable click interactions
+            bkg.classList.add('hiddenns'); //animate out
+            bkg.classList.add('nointeract'); //disable click interactions
 
             setTimeout(function () {
                 item.classList.remove('nointeract'); //enable click interactions
                 item.classList.add('disabled');  //disable item, hide it from existence.
+                bkg.classList.remove('nointeract'); //enable click interactions
+                bkg.classList.add('disabled');  //disable item, hide it from existence.
 
             }, 200); //delay in ms, must match animation duration from CSS.
         }
