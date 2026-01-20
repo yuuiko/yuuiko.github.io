@@ -40,6 +40,12 @@
             src: url(fonts/Kollektif-Bold.ttf) format('truetype');
             font-weight: bold;
         }
+        
+        .navlogo {
+            width: 40px;
+	       height: 40px;
+        }
+        
         body {
             font-family: Kollektif;
         }
@@ -138,7 +144,8 @@
 		<!--LARGE-->
 		<ul id="navleft" class="navgroup navleft fxBlur">
             <li><a class="navItem navItemactive">sWiich</a></li>
-			<li><a class="navItem" href="#" >Install</a></li>
+			<li><a class="navItem" href="#install" >Install</a></li>
+			<li><a class="navItem" href="#dark" >Dark Version</a></li>
 		</ul>
 
 		<ul id="navright" class="navgroup navright fxBlur">
@@ -147,7 +154,7 @@
             <li><a href="../concepts.html" class="navItem" id="navImagination">Concepts</a></li>
             <li><a href="../contact.html" class="navItem" id="navSupport">Chat</a></li>
             <li><a href="../patreon.html" class="navItem" id="navContact">Patreon</a></li>
-			<li><a href="../concepts.html" id="navLogoL" class="navItem navlogo" style="background-image: url(../homeicon_logo@2x.png)"></a></li>
+			<li><a href="../index.html" id="navLogoL" class="navItem navlogo" style="background-image: url(../homeicon_logo@2x.png)"></a></li>
 		</ul>
 	</div>
 
@@ -159,13 +166,13 @@
 		
 		<ul id="navleftS" class="navgroup navleft">
             <li><a class="navItem navItemactive">sWiich</a></li>
-			<!--<li><a class="navItem" href="#" >FreshOS Plus</a></li>-->
-			<li><a class="navItem" href="#" >Install</a></li>
+			<li><a class="navItem" href="#install" >Install</a></li>
+			<li><a class="navItem" href="#dark" >Dark Version</a></li>
 		</ul>
 		
 		<ul id="navrightS" class="navgroup navright">
 			<li><a id="smalltopnav4" href="#" class="navItem" onclick="showexpandedcompactmenuR('topnavContainer','navright','navleft');">Concepts&nbsp;&nbsp;▾</a></li>
-			<li><a href="concepts.html" class="navItem navlogo"></a></li>
+			<li><a href="../index.html" class="navItem navlogo"></a></li>
 		</ul>
 	</div>
 	<!-- █████ MENUBAR █████████████████████████████████████████████████-->
@@ -173,8 +180,8 @@
     <div id="artwork" class="container-abstract bg-3 text-centre">
       <img class="artworksection" src="img/0.gif">
       <img class="artworksection" src="img/1.png">
-      <a href="https://rebrand.ly/yuuiko-switchthemelight"><img class="artworksection" src="img/2btn.png"></a>
-      <img class="artworksection" src="img/3.png">
+      <a href="https://rebrand.ly/yuuiko-switchthemelight" id="install"><img class="artworksection" src="img/2btn.png"></a>
+      <img class="artworksection" id="dark" src="img/3.png">
       <a href="http://patreon.com/yuuiko" target="_blank"><img class="artworksection" src="img/4btn.png"></a>
       <img class="artworksection" src="img/5.png">
       <a href="https://www.reddit.com/user/yyuuiko" target="_blank"><img class="artworksection" src="img/6btn.png"></a>
