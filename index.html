@@ -79,9 +79,9 @@
                 yuuiko's<br>creations.
             </h1>
         </div>
-        <div class="titleSub">
+        <!-- <div class="titleSub">
             <h2>Products.<br>Ideas you can use right now.</h2>
-        </div>
+        </div> -->
     </div>
 
     <div id="luxy">
@@ -115,12 +115,12 @@
 -->
                         
 
-            <div href="#" class="yearcard luxy-el" data-speed-y="-25" data-offset="-500" style="display: block; color: black;">
+            <!-- <div href="#" class="yearcard luxy-el" data-speed-y="-25" data-offset="-500" style="display: block; color: black;">
                 <div class="container" style="color: white; z-index: 10">
                     Projects
                     <h1>Live projects you can enjoy right now!</h1>
                 </div>
-            </div>
+            </div> -->
             
             <br>
             <div href="#" class="yearcard luxy-el" data-speed-y="-25" data-offset="380" style="display: block; color: black;">
@@ -201,7 +201,7 @@
             </div>
             <br>
 
-            <a href="https://tenshukaku.com.au" target="_blank" class="luxy-el" data-speed-y="-1" data-offset="0" style="display: block;">
+            <a onclick="showwindow('popTen')" target="_blank" class="luxy-el" data-speed-y="-1" data-offset="0" style="display: block;">
                 <div class="card" style="background-image: url('src/ten.jpg'); top: -140;">
                     <div class="containerlabel">
                         <h3><b>Tenshukaku</b></h3>
@@ -210,7 +210,7 @@
                 </div>
             </a>
 
-            <a href="https://gmas-games-manga-anime-society.square.site" target="_blank" class="luxy-el" data-speed-y="-3" data-offset="-50" style="display: block;">
+            <a href="https://gmasclub.square.site" target="_blank" class="luxy-el" data-speed-y="-3" data-offset="-50" style="display: block;">
                 <div class="card" style="background-image: url('src/gmas.jpg'); top: -80; left: 40%; margin-right: 30px;">
                     <div class="containerlabel">
                         <h3><b>GMAS</b></h3>
@@ -297,6 +297,8 @@
         </div>
     </div> <!-- luxy -->
     
+    <div class="popupbackground2 hiddenns disabled" id="popupbackground2"></div>
+
     <!-- ---------------------- CONTACT --------- -->
     <div class="popupbackground hidden disabled" id="popContact">
         <div class="popupwindow">
@@ -325,6 +327,22 @@
             </p>-->
 
             <a class="linkbutton" href="https://www.patreon.com/c/yuuiko" target="_blank">View Patreon</a>
+        </div>
+    </div> <!--flexcontainer-->
+
+        <!-- ---------------------- FRAME SIGHT --------- -->
+    <div class="popupbackground hidden disabled" id="popTen">
+        <div class="popupwindow">
+            <a class="exitbtn" onclick="hidewindow('popTen');">CLOSE</a>
+            <h1>Tenshukaku</h1>
+            <h2>Anime Collectibles Retail Store</h2>
+
+            <p>
+            Branding - Social Media - Physical Popup Design <br><br>
+            webpage coming soon!
+            </p>
+
+<!--            <a class="linkbutton" href="https://www.patreon.com/c/yuuiko" target="_blank">View Patreon</a>-->
         </div>
     </div> <!--flexcontainer-->
 
@@ -372,14 +390,17 @@
     
     /* █ SHOW / HIDE WINDOW AND DISABLE INTERACTION ███████████████████████████████████████████ */
 
-    function showwindow(divID) {
+function showwindow(divID) {
         console.log("showwindow fired");
 
         var item = document.getElementById(divID);
+        var bkg = document.getElementById("popupbackground2");
 
         item.classList.remove('disabled'); //enable item (at this point its invisible because it's still "hidden")
+        bkg.classList.remove('disabled'); //enable item (at this point its invisible because it's still "hidden")
         setTimeout(function () {
             item.classList.remove('hidden'); //remove "hidden" and animate-in
+            bkg.classList.remove('hiddenns'); //remove "hidden" and animate-in
         }, 10); //delay in ms
     }
 
@@ -387,6 +408,7 @@
         console.log("PERMA hidewindow fired");
 
         var item = document.getElementById(divID);
+        var bkg = document.getElementById("popupbackground2");
 
         //reject further interactions while animating. e.g. really quick double click.
         if (item.classList.contains('disabled')) {
@@ -395,10 +417,14 @@
         else {
             item.classList.add('hidden'); //animate out
             item.classList.add('nointeract'); //disable click interactions
+            bkg.classList.add('hiddenns'); //animate out
+            bkg.classList.add('nointeract'); //disable click interactions
 
             setTimeout(function () {
                 item.classList.remove('nointeract'); //enable click interactions
                 item.classList.add('disabled');  //disable item, hide it from existence.
+                bkg.classList.remove('nointeract'); //enable click interactions
+                bkg.classList.add('disabled');  //disable item, hide it from existence.
 
             }, 200); //delay in ms, must match animation duration from CSS.
         }
