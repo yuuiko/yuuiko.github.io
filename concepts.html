@@ -27,64 +27,62 @@
     
     
     <!-- █████ MENUBAR █████████████████████████████████████████████████-->
-	<div class="topnavContainer" id="topnavContainer">
-		<!--LARGE-->
-		<ul id="navleft" class="navgroup navleft fxBlur" style="visibility: hidden;">
-		</ul>
+    <div class="topnavContainer" id="topnavContainer">
+        <!--LARGE-->
+        <ul id="navleft" class="navgroup navleft fxBlur" style="visibility: hidden;">
+        </ul>
 
-		<ul id="navright" class="navgroup navright fxBlur">
-			<li><a class="navItem navclose" onclick="hideexpandedcompactmenu('topnavContainer','navleft','navright');">yuuiko<div class="itemicon" style="background-image: url(menuclose.png)"></div></a></li>
+        <ul id="navright" class="navgroup navright fxBlur">
+            <li><a class="navItem navclose" onclick="hideexpandedcompactmenu('topnavContainer','navleft','navright');">yuuiko<div class="itemicon" style="background-image: url(menuclose.png)"></div></a></li>
             <li><a href="index.html" class="navItem" id="navCreations">Projects</a></li>
             <li><a class="navItem navItemactive" id="navImagination">Concepts</a></li>
             <li><a href="contact.html" class="navItem" id="navSupport">Chat</a></li>
             <li><a href="patreon.html" class="navItem" id="navContact">Patreon</a></li>
-			<li><a href="index.html" id="navLogoL" class="navItem navlogo" style="background-image: url(homeicon_logo@2x.png)"></a></li>
-		</ul>
-	</div>
+            <li><a href="concepts.html" id="navLogoL" class="navItem navlogo" style="background-image: url(homeicon_logo@2x.png)"></a></li>
+        </ul>
+    </div>
 
-	<div class="topnavContainer topnavContainercompact fxBlur" id="topnavcontainercompact">
-		<!--SMALL-->
-		<ul id="navleftXS" class="navgroup navleft">
-			<!--<li><a href="#" class="navItem navItemactive" onclick="showexpandedcompactmenuL('topnavContainer','navleft','navright');">FreshOS&nbsp;&nbsp;▾</a></li>-->
-		</ul>
-		
-		<ul id="navleftS" class="navgroup navleft">
-			<!--
-   <li><a class="navItem navItemactive">FreshOS</a></li>
-			<li><a class="navItem" href="#" >FreshOS Plus</a></li>
-			<li><a class="navItem" href="#" >Install</a></li>
-   -->
-		</ul>
-		
-		<ul id="navrightS" class="navgroup navright">
-			<li><a id="smalltopnav4" href="#" class="navItem" onclick="showexpandedcompactmenuR('topnavContainer','navright','navleft');">Concepts&nbsp;&nbsp;▾</a></li>
-			<li><a href="index.html" class="navItem navlogo"></a></li>
-		</ul>
-	</div>
-	<!-- █████ MENUBAR █████████████████████████████████████████████████-->
+    <div class="topnavContainer topnavContainercompact fxBlur" id="topnavcontainercompact">
+        <!--SMALL-->
+        <ul id="navleftXS" class="navgroup navleft">
+            <!--<li><a href="#" class="navItem navItemactive" onclick="showexpandedcompactmenuL('topnavContainer','navleft','navright');">FreshOS&nbsp;&nbsp;▾</a></li>-->
+        </ul>
+
+        <ul id="navleftS" class="navgroup navleft">
+            <!--
+    <li><a class="navItem navItemactive">FreshOS</a></li>
+            <li><a class="navItem" href="#" >FreshOS Plus</a></li>
+            <li><a class="navItem" href="#" >Install</a></li>
+    -->
+        </ul>
+
+        <ul id="navrightS" class="navgroup navright">
+            <li><a id="smalltopnav4" href="#" class="navItem" onclick="showexpandedcompactmenuR('topnavContainer','navright','navleft');">Concepts&nbsp;&nbsp;▾</a></li>
+            <li><a href="concepts.html" class="navItem navlogo"></a></li>
+        </ul>
+    </div>
+    <!-- █████ MENUBAR █████████████████████████████████████████████████-->
     
-<!--    <div id="fadeoutunder"></div>-->
+    <div id="fadeoutunder" style="background-color: cornflowerblue"></div>
     
-<!--
     <div id="titlecover">
         <div class="title">
-            <h2 style=" margin: 0;">Concepts to</h2>
+            <h2 style=" margin: 0;">welcome to</h2>
             <h1 id="maintitle" style="font-family: 'kollb', 'Raleway', sans-serif; font-size: 90px !important; text-align: left">
-                yuuiko's<br>creations.
+                yuuiko's<br>concepts.
             </h1>
             <h1 id="maintitlesmall" style="font-family: 'kollb', 'Raleway', sans-serif;">
-                yuuiko's<br>creations.
+                yuuiko's<br>concepts.
 
             </h1>
             <h1 id="maintitletiny" style="font-family: 'kollb', 'Raleway', sans-serif;">
-                yuuiko's<br>creations.
+                yuuiko's<br>concepts.
             </h1>
         </div>
         <div class="titleSub">
-            <h2>handmade software trinkets <br>and design works.</h2>
+            <h2>Concepts.<br>Award-winning design ideas.</h2>
         </div>
     </div>
--->
 
     <div id="luxy">
 
@@ -107,10 +105,12 @@
 -->
 
             <div class="luxy-el" data-speed-y="10">
-            <h1 class="yearcard" style="margin-top: 0px; z-index: 3;">CONCEPTS</h1>
+            <h1 class="yearcard" style="margin-top: 500px; z-index: 3;">CONCEPTS</h1>
+            <!--
             <h3 class="intro">
                 Designs created for study, hobby andd competitive purposes.<br>
             </h3>
+            -->
             </div>
                         
 
@@ -176,9 +176,11 @@
         </div>
     </div> <!-- luxy -->
     
+    <div class="popupbackground2 hiddenns disabled" id="popupbackground2"></div>
+    
     <!-- ---------------------- NOTHING --------- -->
     <div class="popupbackground hidden disabled" id="popNothing">
-        <div class="popupwindow">
+        <div class="popupwindow" id="popNothing">
             <a class="exitbtn" onclick="hidewindow('popNothing');">CLOSE</a>
             <h1>Nothing Phone(2a)</h1>
             <h2>Award winner for Nothing 2a Community Edition Design</h2>
@@ -337,10 +339,13 @@
         console.log("showwindow fired");
 
         var item = document.getElementById(divID);
+        var bkg = document.getElementById("popupbackground2");
 
         item.classList.remove('disabled'); //enable item (at this point its invisible because it's still "hidden")
+        bkg.classList.remove('disabled'); //enable item (at this point its invisible because it's still "hidden")
         setTimeout(function () {
             item.classList.remove('hidden'); //remove "hidden" and animate-in
+            bkg.classList.remove('hiddenns'); //remove "hidden" and animate-in
         }, 10); //delay in ms
     }
 
@@ -348,6 +353,7 @@
         console.log("PERMA hidewindow fired");
 
         var item = document.getElementById(divID);
+        var bkg = document.getElementById("popupbackground2");
 
         //reject further interactions while animating. e.g. really quick double click.
         if (item.classList.contains('disabled')) {
@@ -356,10 +362,14 @@
         else {
             item.classList.add('hidden'); //animate out
             item.classList.add('nointeract'); //disable click interactions
+            bkg.classList.add('hiddenns'); //animate out
+            bkg.classList.add('nointeract'); //disable click interactions
 
             setTimeout(function () {
                 item.classList.remove('nointeract'); //enable click interactions
                 item.classList.add('disabled');  //disable item, hide it from existence.
+                bkg.classList.remove('nointeract'); //enable click interactions
+                bkg.classList.add('disabled');  //disable item, hide it from existence.
 
             }, 200); //delay in ms, must match animation duration from CSS.
         }

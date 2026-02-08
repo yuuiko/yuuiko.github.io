@@ -3,11 +3,34 @@
 <head>
     <title>sWiich Theme for Wii</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+    <link rel="stylesheet" href="../navbar.css">
+    <script src="../navbar.js" charset="utf-8"></script>
+    
     <style>
+        @font-face {
+            font-family: koll;
+            src: url(../Kollektif.ttf);
+        }
+        
+        @font-face {
+            font-family: kollb;
+            src: url(../fonts/Kollektif-Bold.ttf);
+        }
+        
+        @font-face {
+            font-family: kollbi;
+            src: url(../fonts/Kollektif-BoldItalic.ttf);
+        }
+        
+        @font-face {
+            font-family: kolli;
+            src: url(../fonts/Kollektif-Italic.ttf);
+        }
         @font-face {
             font-family: 'Kollektif';
             src: url(fonts/Kollektif.ttf) format('truetype');
@@ -17,6 +40,12 @@
             src: url(fonts/Kollektif-Bold.ttf) format('truetype');
             font-weight: bold;
         }
+        
+        .navlogo {
+            width: 40px;
+	       height: 40px;
+        }
+        
         body {
             font-family: Kollektif;
         }
@@ -110,11 +139,49 @@
         <a href="#collab"><span class="sidenav-text">collaboration</span> — </a>
         <br>
     </div> -->
+        <!-- █████ MENUBAR █████████████████████████████████████████████████-->
+	<div class="topnavContainer" id="topnavContainer">
+		<!--LARGE-->
+		<ul id="navleft" class="navgroup navleft fxBlur">
+            <li><a class="navItem navItemactive">sWiich</a></li>
+			<li><a class="navItem" href="#install" >Install</a></li>
+			<li><a class="navItem" href="#dark" >Dark Version</a></li>
+		</ul>
+
+		<ul id="navright" class="navgroup navright fxBlur">
+			<li><a class="navItem navclose" onclick="hideexpandedcompactmenu('topnavContainer','navleft','navright');">yuuiko<div class="itemicon" style="background-image: url(menuclose.png)"></div></a></li>
+            <li><a href="../index.html" class="navItem navItemCategoryOn" id="navCreations">Projects</a></li>
+            <li><a href="../concepts.html" class="navItem" id="navImagination">Concepts</a></li>
+            <li><a href="../contact.html" class="navItem" id="navSupport">Chat</a></li>
+            <li><a href="../patreon.html" class="navItem" id="navContact">Patreon</a></li>
+			<li><a href="../index.html" id="navLogoL" class="navItem navlogo" style="background-image: url(../homeicon_logo@2x.png)"></a></li>
+		</ul>
+	</div>
+
+	<div class="topnavContainer topnavContainercompact fxBlur" id="topnavcontainercompact">
+		<!--SMALL-->
+		<ul id="navleftXS" class="navgroup navleft">
+			<li><a href="#" class="navItem navItemactive" onclick="showexpandedcompactmenuL('topnavContainer','navleft','navright');">sWiich&nbsp;&nbsp;▾</a></li>
+		</ul>
+		
+		<ul id="navleftS" class="navgroup navleft">
+            <li><a class="navItem navItemactive">sWiich</a></li>
+			<li><a class="navItem" href="#install" >Install</a></li>
+			<li><a class="navItem" href="#dark" >Dark Version</a></li>
+		</ul>
+		
+		<ul id="navrightS" class="navgroup navright">
+			<li><a id="smalltopnav4" href="#" class="navItem" onclick="showexpandedcompactmenuR('topnavContainer','navright','navleft');">Concepts&nbsp;&nbsp;▾</a></li>
+			<li><a href="../index.html" class="navItem navlogo"></a></li>
+		</ul>
+	</div>
+	<!-- █████ MENUBAR █████████████████████████████████████████████████-->
+    
     <div id="artwork" class="container-abstract bg-3 text-centre">
       <img class="artworksection" src="img/0.gif">
       <img class="artworksection" src="img/1.png">
-      <a href="https://rebrand.ly/yuuiko-switchthemelight"><img class="artworksection" src="img/2btn.png"></a>
-      <img class="artworksection" src="img/3.png">
+      <a href="https://rebrand.ly/yuuiko-switchthemelight" id="install"><img class="artworksection" src="img/2btn.png"></a>
+      <img class="artworksection" id="dark" src="img/3.png">
       <a href="http://patreon.com/yuuiko" target="_blank"><img class="artworksection" src="img/4btn.png"></a>
       <img class="artworksection" src="img/5.png">
       <a href="https://www.reddit.com/user/yyuuiko" target="_blank"><img class="artworksection" src="img/6btn.png"></a>

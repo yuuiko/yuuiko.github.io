@@ -1,10 +1,10 @@
 @font-face {
 	font-family: 'Kollektif';
-	src: url(../../fonts/Kollektif.ttf) format('truetype');
+	src: url(fonts/Kollektif.ttf) format('truetype');
 }
 @font-face {
 	font-family: 'Kollektif';
-	src: url(../../fonts/Kollektif-Bold.ttf) format('truetype');
+	src: url(fonts/Kollektif-Bold.ttf) format('truetype');
 	font-weight: bold;
 }
 
@@ -183,7 +183,7 @@ body {
 	transform: scale(0.9);
 }
 .navItem {
-    text-decoration: none;
+    text-decoration: none !important;
     display: block;
     padding: 1em;
     margin-right: 0.4em;
